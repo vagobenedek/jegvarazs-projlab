@@ -2,12 +2,12 @@
 
 public class Mezõ{
 	private Szereplõ[] szereplõk;
-	private Tárgy tárgyak;
+	private Tárgy tárgy;
 	private Épület épület;
 	private boolean feltört;
 	private int hóSzint;
 	private boolean védett;
-	public Mezõ(){}
+	public Mezõ(Tárgy t, Épület é,int hóSzint,boolean védett){}
 	public void hóvihar() {
 	}
 	

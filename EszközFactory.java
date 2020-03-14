@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class EszközFactory {
+	public EszközFactory(){}
 	public ArrayList<Eszköz> createEszköz(int i) {
 		return new ArrayList<Eszköz>();
 	}

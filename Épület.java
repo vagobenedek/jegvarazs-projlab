@@ -1,5 +1,8 @@
 
 
 public abstract class Épület extends Tárgy {
-    public Épület(){}
+    public Épület(){
+        System.out.println(">Épület konstruktor");
+        System.out.println("<Épület konstruktor");
+    }
 }

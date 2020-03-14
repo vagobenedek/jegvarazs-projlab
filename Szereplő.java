@@ -5,6 +5,7 @@ public abstract class Szereplõ {
 	private Eszköz e;
 	private Alkatrész a;
 	private int lépésszám;
+	public Szereplõ(int testhõ,int lépésszám){}
 	public void hóvihar() {
 	}
 	
