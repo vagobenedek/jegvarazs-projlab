@@ -1,7 +1,7 @@
 
 
-public class Tenger extends Mezõ {
+public class Tenger extends Mezo {
 	public Tenger(){}
-	public void rálép(Szereplõ sz) {
+	public void ralep(Szereplo sz) {
 	}
 }

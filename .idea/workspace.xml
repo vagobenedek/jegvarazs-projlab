@@ -1,18 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a5584c2-1319-48ab-945d-fe303bd5c9dd" name="Default Changelist" comment="" />
+    <list default="true" id="1c6f1418-e44a-48c7-a247-bfa03cd4258c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Eszkoz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SkeletonTesterClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jegvarazs-projlab.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alkatrész.java" beforeDir="false" afterPath="$PROJECT_DIR$/Alkatresz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlkatrészFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/AlkatreszFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Búvárruha.java" beforeDir="false" afterPath="$PROJECT_DIR$/Buvarruha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eszkimó.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eszkimo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eszköz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EszközFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/EszkozFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iglu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Iglu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Instabil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Instabil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jelzőfény.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jelzofeny.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jégmező.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jegmezo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JégmezőFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/JegmezoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kötél.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lapát.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lapat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mező.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mezo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MezőFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/MezoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patron.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pisztoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pisztoly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pálya.java" beforeDir="false" afterPath="$PROJECT_DIR$/Palya.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sarkkutató.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sarkkutato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stabil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stabil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Szereplő.java" beforeDir="false" afterPath="$PROJECT_DIR$/Szereplo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SzereplőFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/SzereploFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tárgy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Targy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TárgyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TargyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vezérlő.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vezerlo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Élelem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Elelem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Épület.java" beforeDir="false" afterPath="$PROJECT_DIR$/Epulet.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Repos" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectId" id="1Z7YuPVyBNhRlrtYAbmw4hB7i43" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Zcyr5KuUQPmvqjg5N16CEWcZ32" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -20,100 +64,27 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0a5584c2-1319-48ab-945d-fe303bd5c9dd" name="Default Changelist" comment="" />
-      <created>1584191824001</created>
+      <changelist id="1c6f1418-e44a-48c7-a247-bfa03cd4258c" name="Default Changelist" comment="" />
+      <created>1585152873029</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1584191824001</updated>
+      <updated>1585152873029</updated>
+      <workItem from="1585152876400" duration="2098000" />
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="1">
-          <value>
-            <State>
-              <option name="BEK_SORT_TYPE" value="1" />
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="roots">
-                    <value>
-                      <list>
-                        <option value="$PROJECT_DIR$/Repos" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="OPEN_TABS">
-      <set>
-        <option value="1" />
-      </set>
-    </option>
-  </component>
   <component name="WindowStateProjectService">
-    <state x="72" y="216" width="816" height="732" key="#Intentions" timestamp="1584196243418">
-      <screen x="0" y="30" width="1920" height="1050" />
+    <state x="618" y="370" key="com.intellij.ide.util.TipDialog" timestamp="1585152877923">
+      <screen x="0" y="23" width="1792" height="1022" />
     </state>
-    <state x="72" y="216" width="816" height="732" key="#Intentions/0.30.1920.1050@0.30.1920.1050" timestamp="1584196243418" />
-    <state x="285" y="267" key="#com.intellij.ide.util.MemberChooser" timestamp="1584196164254">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="285" y="267" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050@0.30.1920.1050" timestamp="1584196164254" />
-    <state x="210" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584195376175">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="210" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1584195376175" />
-    <state x="635" y="264" key="FileChooserDialogImpl" timestamp="1584200010506">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="635" y="264" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1584200010506" />
-    <state x="440" y="129" key="SettingsEditor" timestamp="1584200012829">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="440" y="129" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1584200012829" />
-    <state x="289" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584199736088">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="289" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050@0.30.1920.1050" timestamp="1584199736088" />
-    <state x="143" y="263" width="672" height="678" key="search.everywhere.popup" timestamp="1584197705553">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="143" y="263" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1584197705553" />
+    <state x="618" y="370" key="com.intellij.ide.util.TipDialog/0.23.1792.1022@0.23.1792.1022" timestamp="1585152877923" />
   </component>
 </project>

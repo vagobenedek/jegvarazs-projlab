@@ -1,5 +1,5 @@
 
 
-public class Pisztoly extends Alkatrész {
+public class Pisztoly extends Alkatresz {
     public Pisztoly(){}
 }

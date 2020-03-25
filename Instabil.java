@@ -1,13 +1,14 @@
 
 
-public class Instabil extends Jégmezõ {
-	private int teherbírás;
-	public Instabil(int teherbírás){
+public class Instabil extends Jegmezo {
+	private int teherbiras;
+	public Instabil(int teherbiras){
 
 	}
-	public void átfordul() {
+	public Instabil(){}
+	public void atfordul() {
 	}
 	
-	public void rálép(Szereplõ sz) {
+	public void ralep(Szereplo sz) {
 	}
 }

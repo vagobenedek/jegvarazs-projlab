@@ -1,7 +1,7 @@
 
 
-public class Stabil extends Jégmezõ {
+public class Stabil extends Jegmezo {
 	public Stabil(){}
-	public void rálép(Szereplõ sz) {
+	public void ralep(Szereplo sz) {
 	}
 }

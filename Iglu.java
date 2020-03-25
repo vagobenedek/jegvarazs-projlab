@@ -1,10 +1,10 @@
 
 
-public class Iglu extends Épület {
+public class Iglu extends Epulet {
 	public Iglu(){}
-	public void hóvihar() {
+	public void hovihar() {
 	}
 	
-	public void setVédelem(Mezõ m) {
+	public void setVedelem(Mezo m) {
 	}
 }

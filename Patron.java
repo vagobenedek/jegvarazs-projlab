@@ -1,5 +1,5 @@
 
 
-public class Patron extends Alkatrész {
+public class Patron extends Alkatresz {
     public Patron(){}
 }
