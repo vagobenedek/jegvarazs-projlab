@@ -2,44 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c6f1418-e44a-48c7-a247-bfa03cd4258c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Eszkoz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SkeletonTesterClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jegvarazs-projlab.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alkatrész.java" beforeDir="false" afterPath="$PROJECT_DIR$/Alkatresz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AlkatrészFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/AlkatreszFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Búvárruha.java" beforeDir="false" afterPath="$PROJECT_DIR$/Buvarruha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eszkimó.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eszkimo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eszköz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EszközFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/EszkozFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Iglu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Iglu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Instabil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Instabil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jelzőfény.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jelzofeny.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jégmező.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jegmezo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JégmezőFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/JegmezoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kötél.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lapát.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lapat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mező.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mezo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MezőFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/MezoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Patron.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patron.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pisztoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pisztoly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pálya.java" beforeDir="false" afterPath="$PROJECT_DIR$/Palya.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sarkkutató.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sarkkutato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stabil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Stabil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Szereplő.java" beforeDir="false" afterPath="$PROJECT_DIR$/Szereplo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SzereplőFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/SzereploFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tenger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tárgy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Targy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TárgyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/TargyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vezérlő.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vezerlo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Élelem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Elelem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Épület.java" beforeDir="false" afterPath="$PROJECT_DIR$/Epulet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonTesterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/SkeletonTesterClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +42,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585152873029</updated>
-      <workItem from="1585152876400" duration="2098000" />
+      <workItem from="1585152876400" duration="2661000" />
     </task>
     <servers />
   </component>
