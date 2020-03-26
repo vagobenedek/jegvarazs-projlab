@@ -1,4 +1,6 @@
-
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Mezo{
 	private Szereplo[] szereplok;
@@ -12,14 +14,20 @@ public class Mezo{
 	public void hovihar() {
 	}
 	
-	public void ralep(Szereplo sz) {
+	public void ralep(Szereplo sz) throws IOException {
+		System.out.println(">Mezo.ralep()");
+		System.out.println("<Mezo.ralep()");
 	}
 	
 	public void lelep(Szereplo sz) {
+		System.out.println(">Mezo.lelep()");
+		System.out.println("<Mezo.lelep()");
 	}
 	
 	public Mezo getSzomszed(int irany) {
-		return new Mezo();
+		System.out.println(">Mezo.getSzomszed()");
+		System.out.println("<Mezo.getSzomszed()");
+		return null;
 	}
 	
 	public void hoasaa() {
@@ -43,6 +51,12 @@ public class Mezo{
 	public void iglutEpit() {
 	}
 	
-	public void huzzKi(Szereplo sz) {
+	public void huzzKi(Szereplo sz) throws IOException {
+		System.out.println(">Mezo.huzzki()");
+		System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		if (br.readLine().equals("1"))
+			new Sarkkutato().huzdKi(sz);
+		System.out.println("<Mezo.huzzki()");
 	}
 }

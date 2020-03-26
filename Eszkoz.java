@@ -1,4 +1,4 @@
-
+import java.io.IOException;
 
 public abstract class Eszkoz extends Targy {
 	public Eszkoz(){}
@@ -6,5 +6,5 @@ public abstract class Eszkoz extends Targy {
 	public void felvesz(Szereplo Sz) {
 	}
 	
-	abstract public void hasznal(Szereplo sz);
+	abstract public void hasznal(Szereplo sz) throws IOException;
 }
