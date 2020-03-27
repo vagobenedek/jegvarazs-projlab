@@ -4,11 +4,27 @@ import java.io.InputStreamReader;
 
 public class SkeletonTesterClass {
     public void InitTest() throws IOException {
-    	//lepTest();
-        feltorHoasasTest();
+        System.out.println("Szkeleton teszt");
+        System.out.println("1.: Init\n2.: Mezo asasa\n3.: Alkatreszek osszeszerelese\n 4.: Eszkoz hasznalata\n" +
+                "5.: Lep\n6.: Kepesseg hasznalata\n7.: Targy felvetele\n");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int number = Integer.parseInt(br.readLine());
+        switch(number){
+            case 1:break;
+            case 2:
+                feltorHoasasTest();
+                break;
+            case 3: break;
+            case 4: break;
+            case 5:
+                lepTest();
+                break;
+            case 6: break;
+            case 7: break;
+        }
+
     }
-    
-    private void lepTest() throws IOException {
+    public static void lepTest() throws IOException {
         System.out.println("Lep szekvencia");
         System.out.println("Van meg lepes szamom?");
         System.out.println("1.: Van\t2.: Nincs");
@@ -20,7 +36,7 @@ public class SkeletonTesterClass {
         }
     }
     
-    private void feltorHoasasTest() throws IOException {
+    public static void feltorHoasasTest() throws IOException {
     	System.out.println("Feltor + hoasas szekvenciak");
     	System.out.println("Van ho a mezon?");
     	System.out.println("1.: Igen\n2.: Nincs");

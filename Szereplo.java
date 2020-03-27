@@ -40,7 +40,7 @@ public abstract class Szereplo {
 			System.out.println("1.: Igen\t 2.: Nem");
 			string = br.readLine();
 			if (string.equals("1")){
-				new Mezo().huzzKi(this);
+				new Mezo().huzzKi(new Eszkimo());
 			}
 			System.out.println("<Szereplo.tesoTeVizbeEstel()");
 		}
@@ -71,20 +71,20 @@ public abstract class Szereplo {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String string = br.readLine();
 		if(string.equals("1")) {
-			new Mezo().lelep(this);
-			new Stabil().ralep(this);
+			new Mezo().lelep(new Eszkimo());
+			new Stabil().ralep(new Sarkkutato());
 		}
 		else if(string.equals("2")) {
-			new Mezo().lelep(this);
-			new Instabil().ralep(this);
+			new Mezo().lelep(new Eszkimo());
+			new Instabil().ralep(new Sarkkutato());
 		}
 		else if(string.equals(("3"))) {
-			new Mezo().lelep(this);
-			new Tenger().ralep(this);
+			new Mezo().lelep(new Eszkimo());
+			new Tenger().ralep(new Sarkkutato());
 		}
 		else if(string.equals(("4"))) {
-			new Mezo().lelep(this);
-			new Lyuk().ralep(this);
+			new Mezo().lelep(new Eszkimo());
+			new Lyuk().ralep(new Sarkkutato());
 		}
 		System.out.println("<Szereplo.lep()");
 
