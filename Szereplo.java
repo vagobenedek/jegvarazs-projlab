@@ -20,7 +20,10 @@ public abstract class Szereplo {
 	public void felvesz() {
 	}
 	
-	public void feltor() {
+	public void feltor() throws IOException {
+		System.out.println(">Szereplo.feltor()");
+		new Mezo().feltor();
+		System.out.println("<Szereplo.feltor()");
 	}
 	
 	public void hasznal() {
@@ -45,7 +48,10 @@ public abstract class Szereplo {
 		System.out.println("<Szereplo.tesoTeVizbeEstel()");
 	}
 	
-	public void hoasas() {
+	public void hoAsas() {
+		System.out.println(">Szereplo.hoAsas()");
+		new Mezo().hoAso();
+		System.out.println("<Szereplo.hoAsas()");
 	}
 	
 	public void kepessegHasznalat(int i) {

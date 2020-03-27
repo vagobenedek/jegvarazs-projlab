@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a5584c2-1319-48ab-945d-fe303bd5c9dd" name="Default Changelist" comment="" />
+    <list default="true" id="1c6f1418-e44a-48c7-a247-bfa03cd4258c" name="Default Changelist" comment="Lep szekvencia">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Elelem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Elelem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Epulet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Epulet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eszkoz.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eszkoz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Instabil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Instabil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mezo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mezo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonTesterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/SkeletonTesterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Szereplo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Szereplo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Repos" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectId" id="1Z7YuPVyBNhRlrtYAbmw4hB7i43" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Zcyr5KuUQPmvqjg5N16CEWcZ32" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -20,6 +37,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="jegvarazs-projlab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -38,34 +72,55 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0a5584c2-1319-48ab-945d-fe303bd5c9dd" name="Default Changelist" comment="" />
-      <created>1584191824001</created>
+      <changelist id="1c6f1418-e44a-48c7-a247-bfa03cd4258c" name="Default Changelist" comment="" />
+      <created>1585152873029</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1584191824001</updated>
+      <updated>1585152873029</updated>
+      <workItem from="1585152876400" duration="2661000" />
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lep szekvencia" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lep szekvencia" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="72" y="216" width="816" height="732" key="#Intentions" timestamp="1584196243418">
+    <state x="414" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585222470227">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="72" y="216" width="816" height="732" key="#Intentions/0.30.1920.1050@0.30.1920.1050" timestamp="1584196243418" />
-    <state x="285" y="267" key="#com.intellij.ide.util.MemberChooser" timestamp="1584196164254">
+    <state x="414" y="209" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1585222470227" />
+    <state x="808" y="443" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585221199671">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="285" y="267" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050@0.30.1920.1050" timestamp="1584196164254" />
-    <state x="210" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584195376175">
+    <state x="808" y="443" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1585221199670" />
+    <state x="584" y="149" key="CommitChangelistDialog2" timestamp="1585227116597">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="210" y="305" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1584195376175" />
-    <state x="289" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584197915197">
+    <state x="584" y="149" key="CommitChangelistDialog2/0.30.1920.1050@0.30.1920.1050" timestamp="1585227116597" />
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom" timestamp="1585227117007">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="289" y="475" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1920.1050@0.30.1920.1050" timestamp="1584197915197" />
-    <state x="143" y="263" width="672" height="678" key="search.everywhere.popup" timestamp="1584197705553">
+    <state width="1877" height="277" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1585227117007" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center" timestamp="1585227117006">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="143" y="263" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1584197705553" />
+    <state width="1877" height="277" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1585227117006" />
+    <state width="1877" height="277" key="GridCell.Tab.0.left" timestamp="1585227117006">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1585227117006" />
+    <state width="1877" height="277" key="GridCell.Tab.0.right" timestamp="1585227117007">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="277" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1585227117007" />
+    <state x="618" y="370" key="com.intellij.ide.util.TipDialog" timestamp="1585152877923">
+      <screen x="0" y="23" width="1792" height="1022" />
+    </state>
+    <state x="618" y="370" key="com.intellij.ide.util.TipDialog/0.23.1792.1022@0.23.1792.1022" timestamp="1585152877923" />
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1585224539999">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1585224539999" />
   </component>
 </project>
