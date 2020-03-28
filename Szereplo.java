@@ -26,7 +26,39 @@ public abstract class Szereplo {
 		System.out.println("<Szereplo.feltor()");
 	}
 	
-	public void hasznal() {
+	public void hasznal() throws IOException {
+		System.out.println("Van nálam eszkoz? Ha igen, milyen?");
+		System.out.println("1.: Nincs nálam eszkoz.\n2.: Van, kotel.\n3.: Van, lapat.\n4.: Van, elelem.");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String str = br.readLine();
+		if(str.equals("1")){
+			System.out.println(">Szereplo.hasznal()");
+			System.out.println("Nincs nálam eszköz, ezért az eszközhasználat nem lehetséges.");
+			System.out.println("<Szereplo.hasznal()");
+		}
+		if(str.equals("2")){
+			System.out.println(">Szereplo.hasznal()");
+			//Mivel a kötelet önmagában nem tudja használni, nem történik semmi.
+			//Kötelet akkor lehet használni, ha egy mezőtől huzdKi() kérés érkezik.
+			System.out.println("Kotel használata nem lehetséges.");
+			System.out.println("<Szereplo.hasznal()");
+		}
+		if(str.equals("3")){
+			System.out.println(">Szereplo.hasznal()");
+			//Egy szereplő létrehozása, aki használni fogja a kötelet
+			Szereplo sz = new Eszkimo();
+			//Meghívjuk a Lapát használ() függvényét.
+			new Lapat().hasznal(sz);
+			System.out.println("<Szereplo.hasznal()");
+		}
+		if(str.equals("4")){
+			System.out.println(">Szereplo.hasznal()");
+			//Egy szereplő létrehozása, aki használni fogja az élelmet
+			Szereplo sz = new Eszkimo();
+			//Meghívjuk az Élelem használ() függvényét.
+			new Elelem().hasznal(sz);
+			System.out.println("<Szereplo.hasznal()");
+		}
 	}
 	
 	public void tesoTeVizbeEstel() throws IOException {
@@ -54,7 +86,7 @@ public abstract class Szereplo {
 		System.out.println("<Szereplo.hoAsas()");
 	}
 	
-	public void kepessegHasznalat(int i) {
+	public void kepessegHasznalat(int i) throws IOException {
 	}
 	
 	public void alkatreszFelvetele(Alkatresz a) {
@@ -94,6 +126,8 @@ public abstract class Szereplo {
 	}
 	
 	public void etkezes() {
+		System.out.println("\t\t>Szereplo.etkezes()");
+		System.out.println("\t\t<Szereplo.etkezes()");
 	}
 	
 	public void elsut() {

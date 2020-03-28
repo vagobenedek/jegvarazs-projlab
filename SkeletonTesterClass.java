@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Random;
 
 public class SkeletonTesterClass {
     public void InitTest() throws IOException {
@@ -15,15 +16,48 @@ public class SkeletonTesterClass {
                 feltorHoasasTest();
                 break;
             case 3: break;
-            case 4: break;
+            case 4:
+                eszkozHasznalatTest();
+                break;
             case 5:
                 lepTest();
                 break;
-            case 6: break;
+            case 6:
+                kepessegHasznalatTest();
+                break;
             case 7: break;
         }
 
     }
+
+    public static void kepessegHasznalatTest() throws IOException {
+        System.out.println("Képesség használat szekvencia");
+        System.out.println("Milyen Szereplo vagyok?");
+        System.out.println("1.: Eszkimo\n2.: Sarkkutato");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        if(str.equals("1")) {
+            Random rand = new Random();
+            new Eszkimo().kepessegHasznalat(rand.nextInt(1000));
+        }
+        if(str.equals("2")) {
+            System.out.println("Melyik irányban szeretném alkalmazni a képességem?");
+            System.out.println("1.: Észak\n2.: Kelet\n3.: Dél\n4.: Nyugat");
+            BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+            String string = buffer.readLine();
+            System.out.println(Integer.parseInt(string));
+            new Sarkkutato().kepessegHasznalat(Integer.parseInt(string));
+        }
+    }
+
+    public static void eszkozHasznalatTest() throws IOException {
+        System.out.println("Eszkoz használat szekvencia");
+            //Egy szereplő létrehozása, aki használni fogja az élelmet
+            Szereplo sz = new Eszkimo();
+            //Meghívjuk az adott szereplő használ() függvényét.
+            sz.hasznal();
+    }
+
     public static void lepTest() throws IOException {
         System.out.println("Lep szekvencia");
         System.out.println("Van meg lepes szamom?");

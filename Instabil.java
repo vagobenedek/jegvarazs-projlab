@@ -22,4 +22,11 @@ public class Instabil extends Jegmezo {
 		}
 		System.out.println("<Instabil.ralep()");
 	}
+
+	public int getTeherBiras() throws IOException {
+		System.out.println("\t\t>Instabil.getTeherBiras()");
+		System.out.println("\t\t<Instabil.getTeherBiras()");
+		//random visszatérési érték
+		return 1;
+	}
 }

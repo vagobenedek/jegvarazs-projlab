@@ -18,7 +18,27 @@ public class Mezo{
 		System.out.println(">Mezo.ralep()");
 		System.out.println("<Mezo.ralep()");
 	}
-	
+
+	public int getTeherBiras() throws IOException {
+		System.out.println("\t>Mezo.getTeherBiras()");
+		System.out.println("Milyen típusú mezőn állok?");
+		System.out.println("1.: Stabil\n2.: Instabil\n3.: Tenger");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String str = br.readLine();
+		if(str.equals("1")) {
+			new Stabil().getTeherBiras();
+		}
+		if(str.equals("2")) {
+			new Instabil().getTeherBiras();
+		}
+		if(str.equals("3")) {
+			new Tenger().getTeherBiras();
+		}
+		System.out.println("\t<Mezo.getTeherBiras()");
+		//random visszatérési érték
+		return 1;
+	}
+
 	public void lelep(Szereplo sz) {
 		System.out.println(">Mezo.lelep()");
 		System.out.println("<Mezo.lelep()");
@@ -63,6 +83,12 @@ public class Mezo{
 	}
 	
 	public void iglutEpit() {
+		System.out.println("\t>Mezo.iglutEpit()");
+		//Mező, amin áll az eszkimó. Erre fog kerülni az iglu.
+		Mezo m = new Mezo();
+		//Ezt a mezőt most konstruktorban adjuk át
+		new Iglu(m);
+		System.out.println("\t<Mezo.iglutEpit()");
 	}
 	
 	public void huzzKi(Szereplo sz) throws IOException {
