@@ -2,10 +2,12 @@
 
 public class Elelem extends Eszkoz {
 	public Elelem(){
-		System.out.println(">�lelem konstruktor");
-		System.out.println("<�lelem konstruktor");
+		super();
 	}
 	@Override
 	public void hasznal(Szereplo Sz) {
+		System.out.println("\t>Elelem.hasznal()");
+			Sz.etkezes();
+		System.out.println("\t<Elelem.hasznal()");
 	}
 }

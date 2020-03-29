@@ -1,5 +1,8 @@
 
 
 public class Pisztoly extends Alkatresz {
-    public Pisztoly(){}
+    public Pisztoly(){
+        System.out.println(">Pisztoly konstruktor");
+        System.out.println("<Pisztoly konstruktor");
+    }
 }
