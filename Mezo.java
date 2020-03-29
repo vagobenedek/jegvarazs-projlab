@@ -9,6 +9,7 @@ public class Mezo{
 	private boolean feltort;
 	private int hoSzint;
 	private boolean vedett;*/
+	
 	public Mezo(Targy t, Epulet e, int hoSzint, boolean vedett){}
 	public Mezo(){}
 	public void hovihar() throws IOException {
@@ -65,12 +66,15 @@ public class Mezo{
 		return null;
 	}
 	
+	// Ha nincs lapat -> 1  db hoCsokkento() hivodik.
+	// Ha van lapat -> 2 db hoCsokkento() hivodik.
 	public void hoAso() {
 		System.out.println("\t>Mezo.hoAso()");
 		this.hoCsokkento();
 		System.out.println("\t<Mezo.hoAso()");
 	}
 	
+	// Csokkenti a hoszintet eggyel.
 	public void hoCsokkento() {
 		System.out.println("\t\t>Mezo.hoCsokkento()");
 		System.out.println("\t\t<Mezo.hoCsokkento()");
@@ -81,6 +85,8 @@ public class Mezo{
 		System.out.println("<Mezo.hoNovelo()");
 	}
 	
+	// Ha fel van torve a jegtabla -> nem csinal semmit.
+	// Ha nincs feltorve -> feltori.
 	public void feltor() throws IOException {
 		System.out.println("\t>Mezo.feltor()");
 		System.out.println("\t\tFel van mar torve a mezo?");

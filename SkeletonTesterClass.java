@@ -9,7 +9,7 @@ public class SkeletonTesterClass {
         boolean end = false;
         while (!end) {
             System.out.println("Szkeleton teszt");
-            System.out.println("1.: Init\n2.: Mezo asasa\n3.: Alkatreszek osszeszerelese\n4.: Eszkoz hasznalata\n" +
+            System.out.println("1.: Init\n2.: Mezo asasa/feltorese\n3.: Alkatreszek osszeszerelese\n4.: Eszkoz hasznalata\n" +
                     "5.: Lep\n6.: Kepesseg hasznalata\n7.: Targy felvetele\n8.: Kilepes");
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             int number = Integer.parseInt(br.readLine());
@@ -45,6 +45,56 @@ public class SkeletonTesterClass {
     public static void initTest() throws IOException {
         Vezerlo v = new Vezerlo();
     }
+    
+    // Feltor es hoasas szekvenciak tesztje.
+    public static void feltorHoasasTest() throws IOException {
+    	System.out.println("Feltor + hoasas szekvenciak");
+    	System.out.println("Van ho a mezon?");
+    	System.out.println("1.: Igen\n2.: Nincs");
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	String str = br.readLine();
+    	if(str.equals("1")) {
+    		new Eszkimo().hoAsas();
+    	}
+    	if(str.equals("2")) {
+    		new Eszkimo().feltor();
+    	}
+    }
+    
+    public static void alkatreszekOsszeszereleseTest() throws IOException {
+        System.out.println("Alkatrészek összeszerelése szekvencia");
+        System.out.println("Minden alkatrész egy mezőn van?");
+        System.out.println("1.: Igen\n2.: Nem");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        if(str.equals("1")){
+            new Vezerlo().gyozelem();
+        }
+        if(str.equals("2")){
+            System.out.println("A játék még nem ért véget!");
+        }
+    }
+    
+    public static void eszkozHasznalatTest() throws IOException {
+        System.out.println("Eszkoz használat szekvencia");
+            //Egy szereplő létrehozása, aki használni fogja az élelmet
+            Szereplo sz = new Eszkimo();
+            //Meghívjuk az adott szereplő használ() függvényét.
+            sz.hasznal();
+    }
+    
+    public static void lepTest() throws IOException {
+        System.out.println("Lep szekvencia");
+        System.out.println("Van meg lepes szamom?");
+        System.out.println("1.: Van\t2.: Nincs");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        if(br.readLine().equals("1")){
+            System.out.println("Melyik iranyba akarsz lepni?");
+            System.out.println("1.: Fel\t2.: Jobbra\t3.: Le\t4.: Balra");
+            new Eszkimo().lep(Integer.parseInt(br.readLine()));
+        }
+    }
+    
     public static void kepessegHasznalatTest() throws IOException {
         System.out.println("Képesség használat szekvencia");
         System.out.println("Milyen Szereplo vagyok?");
@@ -63,40 +113,6 @@ public class SkeletonTesterClass {
             System.out.println(Integer.parseInt(string));
             new Sarkkutato().kepessegHasznalat(Integer.parseInt(string));
         }
-    }
-
-    public static void eszkozHasznalatTest() throws IOException {
-        System.out.println("Eszkoz használat szekvencia");
-            //Egy szereplő létrehozása, aki használni fogja az élelmet
-            Szereplo sz = new Eszkimo();
-            //Meghívjuk az adott szereplő használ() függvényét.
-            sz.hasznal();
-    }
-
-    public static void lepTest() throws IOException {
-        System.out.println("Lep szekvencia");
-        System.out.println("Van meg lepes szamom?");
-        System.out.println("1.: Van\t2.: Nincs");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        if(br.readLine().equals("1")){
-            System.out.println("Melyik iranyba akarsz lepni?");
-            System.out.println("1.: Fel\t2.: Jobbra\t3.: Le\t4.: Balra");
-            new Eszkimo().lep(Integer.parseInt(br.readLine()));
-        }
-    }
-    
-    public static void feltorHoasasTest() throws IOException {
-    	System.out.println("Feltor + hoasas szekvenciak");
-    	System.out.println("Van ho a mezon?");
-    	System.out.println("1.: Igen\n2.: Nincs");
-    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    	String str = br.readLine();
-    	if(str.equals("1")) {
-    		new Eszkimo().hoAsas();
-    	}
-    	if(str.equals("2")) {
-    		new Eszkimo().feltor();
-    	}
     }
 
     public static void targyFelveteleTest() throws IOException {
@@ -119,20 +135,6 @@ public class SkeletonTesterClass {
         }
         if(str.equals("2")) {
             System.out.println("Tárgy felvételéhez először fel kell törni");
-        }
-    }
-
-    public static void alkatreszekOsszeszereleseTest() throws IOException {
-        System.out.println("Alkatrészek összeszerelése szekvencia");
-        System.out.println("Minden alkatrész egy mezőn van?");
-        System.out.println("1.: Igen\n2.: Nem");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String str = br.readLine();
-        if(str.equals("1")){
-            new Vezerlo().gyozelem();
-        }
-        if(str.equals("2")){
-            System.out.println("A játék még nem ért véget!");
         }
     }
     
