@@ -1,6 +1,8 @@
+import java.io.IOException;
+
 public class Palya {
 	/*private Mezo mezok;*/
-	public Palya(int szelesseg, int magassag){
+	public Palya(int szelesseg, int magassag) throws IOException {
 		System.out.println(">Palya konstruktor");
 		JegmezoFactory jf = new JegmezoFactory();
 		jf.createJegmezo(1);
@@ -19,8 +21,10 @@ public class Palya {
 		new Elelem().addEszkozToMezo(new Mezo());
 		System.out.println("<Palya konstruktor");
 	}
-	public void hovihar() {
+	public void hovihar() throws IOException {
 		System.out.println(">Palya.hovihar()");
+		Mezo m = new Mezo();
+		m.hovihar();
 		System.out.println("<Palya.hovihar()");
 	}
 }

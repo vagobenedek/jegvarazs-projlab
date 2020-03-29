@@ -42,7 +42,7 @@ public class SkeletonTesterClass {
         }
     }
 
-    public static void initTest() {
+    public static void initTest() throws IOException {
         Vezerlo v = new Vezerlo();
     }
     

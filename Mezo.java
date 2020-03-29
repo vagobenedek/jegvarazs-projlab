@@ -12,7 +12,22 @@ public class Mezo{
 	
 	public Mezo(Targy t, Epulet e, int hoSzint, boolean vedett){}
 	public Mezo(){}
-	public void hovihar() {
+	public void hovihar() throws IOException {
+		System.out.println(">Mezo.hovihar()");
+		hoNovelo();
+		System.out.println("Van iglu a mezon?");
+		System.out.println("1.: Nincs\n2.: Van");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String str = br.readLine();
+		if(str.equals("1")) {
+			System.out.println("Van szereplo a mezon?");
+			System.out.println("1.: Nincs\n2.: Van");
+			str = br.readLine();
+			if (str.equals("2")){
+				new Sarkkutato().hovihar();
+			}
+		}
+		System.out.println("<Mezo.hovihar()");
 	}
 	
 	public void ralep(Szereplo sz) throws IOException {
@@ -66,6 +81,8 @@ public class Mezo{
 	}
 	
 	public void hoNovelo() {
+		System.out.println(">Mezo.hoNovelo()");
+		System.out.println("<Mezo.hoNovelo()");
 	}
 	
 	// Ha fel van torve a jegtabla -> nem csinal semmit.
