@@ -153,7 +153,7 @@ public class SkeletonTesterClass {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
         if(str.equals("1")){
-            System.out.println(">Vezerlo.gyzelem()");
+            System.out.println(">Listenerrel figyeli a vezérlő, hogy a játéknak vége e: Vezerlo.gyozelem() hívódik majd meg");
             System.out.println("Gratulalok! Gyoztel!");
             System.out.println("<Vezerlo.gyozelem()");
         }
