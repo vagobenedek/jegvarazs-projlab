@@ -44,7 +44,7 @@ public class SkeletonTesterClass {
 
     public static void initTest() throws IOException {
         /*Letrejon egy Vezerlo peldany, melynek konstruktorában lefut az init szekvencia
-        Tuladjonképpen itt épül fel a játék*/
+        Tuladjonkeppen itt epul fel a jatek*/
         new Vezerlo("init");
     }
     public static void kepessegHasznalatTest() throws IOException {
@@ -59,7 +59,7 @@ public class SkeletonTesterClass {
         }
         if(str.equals("2")) {
             System.out.println("Melyik iranyban szeretnam alkalmazni a kepessegem?");
-            System.out.println("1.: Észak\n2.: Kelet\n3.: Dél\n4.: Nyugat");
+            System.out.println("1.: Eszak\n2.: Kelet\n3.: Del\n4.: Nyugat");
             BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
             String string = buffer.readLine();
             System.out.println(Integer.parseInt(string));
@@ -68,7 +68,7 @@ public class SkeletonTesterClass {
     }
 
     public static void eszkozHasznalatTest() throws IOException {
-        System.out.println("Eszkoz használat szekvencia");
+        System.out.println("Eszkoz hasznalat szekvencia");
             //Egy szereplő létrehozása, aki használni fogja az élelmet
             Szereplo sz = new Eszkimo();
             //Meghívjuk az adott szereplő használ() függvényét.

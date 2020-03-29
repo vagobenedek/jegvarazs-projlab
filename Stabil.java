@@ -14,7 +14,7 @@ public class Stabil extends Jegmezo {
 	public int getTeherBiras() throws IOException {
 		System.out.println("\t\t>Stabil.getTeherBiras()");
 		System.out.println("\t\t<Stabil.getTeherBiras()");
-		//random visszatérési érték
+		//random visszateresi ertek
 		return 1;
 	}
 }

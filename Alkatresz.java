@@ -14,8 +14,8 @@ public abstract class Alkatresz extends Targy {
 	public void felvesz(Szereplo sz) throws IOException {
 		System.out.println(">Alkatresz.felvesz(Szereplo)");
 
-		//az atadott szereplo alkatreszFelvetele függvenyet hivjuk meg
-		//itt most egy random alkatreszt hoztam letre és adtam at a függveny parameterekent
+		//az atadott szereplo alkatreszFelvetele fuggvenyet hivjuk meg
+		//itt most egy random alkatreszt hoztam letre es adtam at a fuggveny parameterekent
 		sz.alkatreszFelvetele(new Pisztoly());
 
 		System.out.println("<Alkatresz.felvesz(Szereplo)");

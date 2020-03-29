@@ -17,7 +17,7 @@ public class Tenger extends Mezo {
 	public int getTeherBiras() throws IOException {
 		System.out.println("\t\t>Tenger.getTeherBiras()");
 		System.out.println("\t\t<Tenger.getTeherBiras()");
-		//random visszatérési érték
+		//random visszateresi értek
 		return 1;
 	}
 }

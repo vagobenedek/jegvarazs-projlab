@@ -42,31 +42,31 @@ public abstract class Szereplo {
 	}
 	
 	public void hasznal() throws IOException {
-		System.out.println("Van nálam eszkoz? Ha igen, milyen?");
-		System.out.println("1.: Nincs nálam eszkoz.\n2.: Van, kotel.\n3.: Van, lapat.\n4.: Van, elelem.");
+		System.out.println("Van nalam eszkoz? Ha igen, milyen?");
+		System.out.println("1.: Nincs nalam eszkoz.\n2.: Van, kotel.\n3.: Van, lapat.\n4.: Van, elelem.");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();
 		if(str.equals("1")){
 			System.out.println(">Szereplo.hasznal()");
-			System.out.println("Nincs nálam eszköz, ezért az eszközhasználat nem lehetséges.");
+			System.out.println("Nincs nalam eszkoz, ezert az eszkozhasznalat nem lehetseges.");
 			System.out.println("<Szereplo.hasznal()");
 		}
 		if(str.equals("2")){
 			System.out.println(">Szereplo.hasznal()");
 			//Mivel a kotelet onmagaban nem tudja hasznalni, nem tortenik semmi.
 			//Kotelet akkor lehet hasznalni, ha egy mezotol huzdKi() keres erkezik.
-			System.out.println("Kotel használata nem lehetséges.");
+			System.out.println("Kotel hasznalata nem lehetseges.");
 			System.out.println("<Szereplo.hasznal()");
 		}
 		if(str.equals("3")){
 			System.out.println(">Szereplo.hasznal()");
-			//Meghívjuk a Lapát használ() függvényét.
+			//Meghivjuk a Lapat hasznal() fuggvenyet.
 			new Lapat().hasznal(new Eszkimo());
 			System.out.println("<Szereplo.hasznal()");
 		}
 		if(str.equals("4")){
 			System.out.println(">Szereplo.hasznal()");
-			//Meghívjuk az Élelem használ() függvényét.
+			//Meghivjuk az Elelem hasznal() fuggvenyet.
 			new Elelem().hasznal(new Eszkimo());
 			System.out.println("<Szereplo.hasznal()");
 		}
@@ -87,7 +87,7 @@ public abstract class Szereplo {
 			//lekerdezi annak a mezonek szomszedjat, amelyiken a szereplo van
 			//parameterkent az iranyt adja meg (ebben az esetben most egy tetszoleges szam:0)
 			new Mezo().getSzomszed(0);
-			System.out.println("Van a szomszedos mezőn Szereplő?");
+			System.out.println("Van a szomszedos mezon Szereplo?");
 			System.out.println("1.: Igen\t 2.: Nem");
 			//ha a felhasznalo egyest irt be
 			if (br.readLine().equals("1")){
@@ -116,7 +116,7 @@ public abstract class Szereplo {
 	 * @throws IOException
 	 */
 	public void alkatreszFelvetele(Alkatresz a) throws IOException {
-		//a függvény meghívásával a paraméterbe kapott alkatrészt átállítja saját magának
+		//a fuggveny meghivasaval a parameterbe kapott alkatreszt atallitja sajat maganak
 		System.out.println(">Szereplo.alkatreszFelvetele(Alkatresz a)");
 
 		//menu
@@ -146,7 +146,7 @@ public abstract class Szereplo {
 	 * @throws IOException
 	 */
 	public void eszkozFelvetele(Eszkoz e) throws IOException{
-		//a függvény meghívásával a paraméterbe kapott eszközt átállítja saját magának
+		//a fuggveny meghivasaval a parameterbe kapott eszkozt atallatja sajat maganak
 		System.out.println(">Szereplo.eszkozFelvetele(Eszkoz e)");
 		System.out.println("<Szereplo.eszkozFelvetele(Eszkoz e)");
 	}
@@ -160,9 +160,9 @@ public abstract class Szereplo {
 		System.out.println(">Szereplo.lep()");
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
 		new Mezo().getSzomszed(irany);
-		System.out.println("Milyen mezőre lépünk?");
+		System.out.println("Milyen mezore lepunk?");
 		//kiirja a lehetosegeket, hogy milyen mezokre lephetunk
-		System.out.println("1.: Stabil mező\t2.: Instabil mező\t3.: Tengerre\t4.: Lyuk");
+		System.out.println("1.: Stabil mezo\t2.: Instabil mezo\t3.: Tengerre\t4.: Lyuk");
 		// a beolvasasert felelos objektum
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String string = br.readLine();
