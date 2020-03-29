@@ -1,36 +1,32 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Vezerlo {
 	private Szereplo aktualisSzereplo;
 	private ArrayList<Szereplo> szereplok;
-	public Vezerlo(){
+	public Vezerlo() throws IOException {
 		System.out.println(">Vezerlo konstruktor");
                 new Palya(1,1);
 		System.out.println("<Vezerlo konstruktor");
 	}
-	public void init() {
-		System.out.println(">Vezérlő.init()");
-		System.out.println("<Vezérlő.init()");
-	}
-	
 	public void jatekVege() {
-		System.out.println(">Vez�rl�.j�t�kV�ge()");
-		System.out.println("<Vez�rl�.j�t�kV�ge()");
+		System.out.println(">Vezerlo.jatekVege()");
+		System.out.println("<Vezerlo.jatekVege()");
 	}
 	
 	public void kovetkezoSzereplo() {
-		System.out.println(">Vez�rl�.k�vetkez�Szerepl�()");
-		System.out.println("<Vez�rl�.k�vetkez�Szerepl�()");
+		System.out.println(">Vezerlo.kovetkezoSzereplo()");
+		System.out.println("<Vezerlo.kovetkezoSzereplo()");
 	}
 	
 	public void hoviharSzamlala() {
-		System.out.println(">Vez�rl�.h�viharSz�ml�l�()");
-		System.out.println("<Vez�rl�.h�viharSz�ml�l�()");
+		System.out.println(">Vezerlo.hoviharSzamlalo()");
+		System.out.println("<Vezerlo.hoviharSzamlalo()");
 	}
 	
 	public void hoviharSzamlaloCsokkentes() {
-		System.out.println(">Vez�rl�.h�viharSz�ml�l�Cs�kkent�s()");
-		System.out.println("<Vez�rl�.h�viharSz�ml�l�Cs�kkent�s()");
+		System.out.println(">Vezerlo.hoviharSzamlaloCsokkentes()");
+		System.out.println("<Vezerlo.hoviharSzamlaloCsokkentes()");
 	}
 	
 	public void gyozelem() {
@@ -39,7 +35,7 @@ public class Vezerlo {
 	}
 	
 	public void lepesekFeltoltese() {
-		System.out.println(">Vez�rl�.l�p�sekFelt�lt�se()");
-		System.out.println("<Vez�rl�.l�p�sekFelt�lt�se()");
+		System.out.println(">Vezerlo.lepesekFeltoltese()");
+		System.out.println("<Vezerlo.lepesekFeltoltese()");
 	}
 }

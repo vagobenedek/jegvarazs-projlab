@@ -51,8 +51,8 @@ public abstract class Szereplo {
 		}
 		if(str.equals("2")){
 			System.out.println(">Szereplo.hasznal()");
-			//Mivel a kötelet önmagában nem tudja használni, nem történik semmi.
-			//Kötelet akkor lehet használni, ha egy mezőtől huzdKi() kérés érkezik.
+			//Mivel a kotelet onmagaban nem tudja hasznalni, nem tortenik semmi.
+			//Kotelet akkor lehet hasznalni, ha egy mezotol huzdKi() keres erkezik.
 			System.out.println("Kotel használata nem lehetséges.");
 			System.out.println("<Szereplo.hasznal()");
 		}
