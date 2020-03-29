@@ -18,9 +18,9 @@ public class Instabil extends Jegmezo {
 	 */
 	public void ralep(Szereplo sz) throws IOException {
 		System.out.println(">Instabil.ralep()");
-		System.out.println("Van még hely a mezőn?");
+		System.out.println("Van meg hely a mezon?");
 		System.out.println("1.: Igen\t2.: Nem");
-		//a beolvasásértfelelös eszköz;
+		//a beolvasasertfelelos eszkoz;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String string = br.readLine();
 		//ha a felhasznalo kettest irt be, akkor a szereplo beleesik a vizbe
@@ -33,7 +33,7 @@ public class Instabil extends Jegmezo {
 	public int getTeherBiras() throws IOException {
 		System.out.println("\t\t>Instabil.getTeherBiras()");
 		System.out.println("\t\t<Instabil.getTeherBiras()");
-		//random visszatérési érték
+		//random visszateresi ertek
 		return 1;
 	}
 }

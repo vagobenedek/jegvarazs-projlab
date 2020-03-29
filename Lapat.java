@@ -7,7 +7,7 @@ public class Lapat extends Eszkoz {
 	@Override
 	public void hasznal(Szereplo Sz) {
 		System.out.println("\t>Lapat.hasznal()");
-		//Meghívjuk a hóÁsás függvényt
+		//Meghivjuk a hoAsas fuggvenyt
 		Sz.hoAsas();
 		System.out.println("\t<Lapat.hasznal()");
 	}
