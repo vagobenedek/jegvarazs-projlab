@@ -9,6 +9,7 @@ public class Mezo{
 	private boolean feltort;
 	private int hoSzint;
 	private boolean vedett;*/
+	
 	public Mezo(Targy t, Epulet e, int hoSzint, boolean vedett){}
 	public Mezo(){}
 	public void hovihar() throws IOException {
@@ -28,7 +29,13 @@ public class Mezo{
 		}
 		System.out.println("<Mezo.hovihar()");
 	}
-	
+
+	/**
+	 * ez a fuggveny felel a mezo raleptetesere
+	 * a parameterkent kapott szereplot lepteti ra
+	 * @param sz: Szereplo
+	 * @throws IOException
+	 */
 	public void ralep(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.ralep()");
 		System.out.println("<Mezo.ralep()");
@@ -54,23 +61,36 @@ public class Mezo{
 		return 1;
 	}
 
+	/**
+	 * ez a fuggveny lepteti le a parameterkent kapott szereplot, a mezorol
+	 * @param sz : Szereplo
+	 */
 	public void lelep(Szereplo sz) {
 		System.out.println(">Mezo.lelep()");
 		System.out.println("<Mezo.lelep()");
 	}
-	
+
+	/**
+	 * a mezo szomszedjat adja vissza a kapott parameternek megfeleloen
+	 * @param irany: int
+	 * @return Mezo
+	 */
 	public Mezo getSzomszed(int irany) {
 		System.out.println(">Mezo.getSzomszed()");
 		System.out.println("<Mezo.getSzomszed()");
+		//ebben az esetben nem kell semmit visszaadni
 		return null;
 	}
 	
+	// Ha nincs lapat -> 1  db hoCsokkento() hivodik.
+	// Ha van lapat -> 2 db hoCsokkento() hivodik.
 	public void hoAso() {
 		System.out.println("\t>Mezo.hoAso()");
 		this.hoCsokkento();
 		System.out.println("\t<Mezo.hoAso()");
 	}
 	
+	// Csokkenti a hoszintet eggyel.
 	public void hoCsokkento() {
 		System.out.println("\t\t>Mezo.hoCsokkento()");
 		System.out.println("\t\t<Mezo.hoCsokkento()");
@@ -81,6 +101,8 @@ public class Mezo{
 		System.out.println("<Mezo.hoNovelo()");
 	}
 	
+	// Ha fel van torve a jegtabla -> nem csinal semmit.
+	// Ha nincs feltorve -> feltori.
 	public void feltor() throws IOException {
 		System.out.println("\t>Mezo.feltor()");
 		System.out.println("\t\tFel van mar torve a mezo?");
@@ -107,13 +129,23 @@ public class Mezo{
 		new Iglu(m);
 		System.out.println("\t<Mezo.iglutEpit()");
 	}
-	
+
+	/**
+	 * a Szereplo kihuzasaert felel, akit parametrben kapunk
+	 * @param sz : Szereplo
+	 * @throws IOException
+	 */
 	public void huzzKi(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.huzzki()");
 		System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
+		// a beolvasert felelos objektum
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		if (br.readLine().equals("1"))
-			new Sarkkutato().huzdKi(sz);
+		// ha van a szereplon kotel, vagyis egyest irt be
+		if (br.readLine().equals("1")) {
+			//szolunk a mezon allo szereplonek, hogy huzza ki a parameterkent kapott szereplot
+			//majd ezt a parametert adjuk tovabb
+			new Sarkkutato().huzdKi(new Eszkimo());
+		}
 		System.out.println("<Mezo.huzzki()");
 	}
 }

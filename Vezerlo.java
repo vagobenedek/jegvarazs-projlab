@@ -2,18 +2,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Vezerlo {
-	/*private Szereplo aktualisSzereplo;
-	private ArrayList<Szereplo> szereplok;*/
+	private Szereplo aktualisSzereplo;
+	private ArrayList<Szereplo> szereplok;
 	public Vezerlo() throws IOException {
 		System.out.println(">Vezerlo konstruktor");
-		Palya p = new Palya(1,1);
+                new Palya(1,1);
 		System.out.println("<Vezerlo konstruktor");
 	}
-	public void init() {
-		System.out.println(">Vezerlo.init()");
-		System.out.println("<Vezerlo.init()");
-	}
-	
 	public void jatekVege() {
 		System.out.println(">Vezerlo.jatekVege()");
 		System.out.println("<Vezerlo.jatekVege()");
@@ -33,9 +28,13 @@ public class Vezerlo {
 		System.out.println(">Vezerlo.hoviharSzamlaloCsokkentes()");
 		System.out.println("<Vezerlo.hoviharSzamlaloCsokkentes()");
 	}
-	
+
+	/**
+	 *Az Vezerlo gyozelem fuggvenye
+	 */
 	public void gyozelem() {
 		System.out.println(">Vezerlo.gyzelem()");
+		System.out.println("Gratulalok! Gyoztel!");
 		System.out.println("<Vezerlo.gyozelem()");
 	}
 	

@@ -10,13 +10,20 @@ public class Instabil extends Jegmezo {
 	public Instabil(){}
 	public void atfordul() {
 	}
-	
+
+	/**
+	 * a parameterkent kaptt szereplot ralepteti az instabil mezore
+	 * @param sz: Szereplo
+	 * @throws IOException
+	 */
 	public void ralep(Szereplo sz) throws IOException {
 		System.out.println(">Instabil.ralep()");
 		System.out.println("Van még hely a mezőn?");
 		System.out.println("1.: Igen\t2.: Nem");
+		//a beolvasásértfelelös eszköz;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String string = br.readLine();
+		//ha a felhasznalo kettest irt be, akkor a szereplo beleesik a vizbe
 		if (string.equals("2")){
 			sz.tesoTeVizbeEstel();
 		}
