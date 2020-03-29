@@ -4,12 +4,12 @@ public class Vezerlo {
 	private Szereplo aktualisSzereplo;
 	private ArrayList<Szereplo> szereplok;
 	public Vezerlo(){
-		System.out.println(">Vez�rl� konstruktor");
-		System.out.println("<Vez�rl� konstruktor");
+		System.out.println(">Vezerlo konstruktor");
+		System.out.println("<Vezerlo konstruktor");
 	}
 	public void init() {
-		System.out.println(">Vez�rl�.init()");
-		System.out.println("<Vez�rl�.init()");
+		System.out.println(">Vezérlő.init()");
+		System.out.println("<Vezérlő.init()");
 	}
 	
 	public void jatekVege() {
@@ -33,8 +33,8 @@ public class Vezerlo {
 	}
 	
 	public void gyozelem() {
-		System.out.println(">Vez�rl�.gy�zelem()");
-		System.out.println("<Vez�rl�.gy�zelem()");
+		System.out.println(">Vezerlo.gyzelem()");
+		System.out.println("<Vezerlo.gyozelem()");
 	}
 	
 	public void lepesekFeltoltese() {

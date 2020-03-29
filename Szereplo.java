@@ -17,7 +17,7 @@ public abstract class Szereplo {
 	public void hovihar() {
 	}
 	
-	public void felvesz() {
+	public void felvesz(){
 	}
 	
 	public void feltor() throws IOException {
@@ -90,9 +90,15 @@ public abstract class Szereplo {
 	}
 	
 	public void alkatreszFelvetele(Alkatresz a) {
+		//a függvény meghívásával a paraméterbe kapott alkatrészt átállítja saját magának
+		System.out.println(">Szereplo.alkatreszFelvetele(Alkatresz a)");
+		System.out.println("<Szereplo.alkatreszFelvetele(Alkatresz a)");
 	}
 	
 	public void eszkozFelvetele(Eszkoz e) {
+		//a függvény meghívásával a paraméterbe kapott eszközt átállítja saját magának
+		System.out.println(">Szereplo.eszkozFelvetele(Eszkoz e)");
+		System.out.println("<Szereplo.eszkozFelvetele(Eszkoz e)");
 	}
 	
 	public void lep(int irany) throws IOException {

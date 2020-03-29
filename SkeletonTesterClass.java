@@ -6,7 +6,7 @@ import java.util.Random;
 public class SkeletonTesterClass {
     public void InitTest() throws IOException {
         System.out.println("Szkeleton teszt");
-        System.out.println("1.: Init\n2.: Mezo asasa\n3.: Alkatreszek osszeszerelese\n 4.: Eszkoz hasznalata\n" +
+        System.out.println("1.: Init\n2.: Mezo asasa\n3.: Alkatreszek osszeszerelese\n4.: Eszkoz hasznalata\n" +
                 "5.: Lep\n6.: Kepesseg hasznalata\n7.: Targy felvetele\n");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int number = Integer.parseInt(br.readLine());
@@ -15,7 +15,9 @@ public class SkeletonTesterClass {
             case 2:
                 feltorHoasasTest();
                 break;
-            case 3: break;
+            case 3:
+                alkatreszekOsszeszereleseTest();
+                break;
             case 4:
                 eszkozHasznalatTest();
                 break;
@@ -25,7 +27,9 @@ public class SkeletonTesterClass {
             case 6:
                 kepessegHasznalatTest();
                 break;
-            case 7: break;
+            case 7:
+                targyFelveteleTest();
+                break;
         }
 
     }
@@ -82,6 +86,43 @@ public class SkeletonTesterClass {
     	if(str.equals("2")) {
     		new Eszkimo().feltor();
     	}
+    }
+
+    public static void targyFelveteleTest() throws IOException {
+        System.out.println("Tárgy felvetele szekvencia");
+        System.out.println("Fel van törve a jégtábla?");
+        System.out.println("1.: igen\n2.: Nem");
+
+        //a felhasználó által beolvasott szám megjelenítése
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        if(str.equals("1")) {
+            //csak a tesztelés miatt lett egy szereplő (eszkimó) és egy alkatrész (pisztoly) létrehozva
+            //alapvetően a mező tudni fogja milyen tárgy van benne elraktározva
+            Szereplo sz = new Eszkimo();
+            Targy t = new Pisztoly();
+            //a mező tárolja a rálépett szereplőt és a tárgyat is
+            //mikor a szereplő feltöri a jeget a rajta lévő tárgyat a tárgy felvesz függvényével teheti meg
+            //amelynek az adott szereplőt kell átadni
+            t.felvesz(sz);
+        }
+        if(str.equals("2")) {
+            System.out.println("Tárgy felvételéhez először fel kell törni");
+        }
+    }
+
+    public static void alkatreszekOsszeszereleseTest() throws IOException {
+        System.out.println("Alkatrészek összeszerelése szekvencia");
+        System.out.println("Minden alkatrész egy mezőn van?");
+        System.out.println("1.: Igen\n2.: Nem");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        if(str.equals("1")){
+            new Vezerlo().gyozelem();
+        }
+        if(str.equals("2")){
+            System.out.println("A játék még nem ért véget!");
+        }
     }
     
     public void Tabulators(){
