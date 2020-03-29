@@ -8,6 +8,7 @@ public abstract class Szereplo {
 	private Alkatresz a;
 	private int lepesszam;
 	private Mezo m;*/
+	
 	public Szereplo(){
 		System.out.println(">Szereplo konstruktor");
 		System.out.println("<Szereplo konstruktor");
@@ -23,6 +24,7 @@ public abstract class Szereplo {
 	public void felvesz(){
 	}
 	
+	// A Szereplo feltori a jegtablat -> meghivodik az adott Mezo feltor() fuggvenye.
 	public void feltor() throws IOException {
 		System.out.println(">Szereplo.feltor()");
 		new Mezo().feltor();
@@ -83,6 +85,7 @@ public abstract class Szereplo {
 		System.out.println("<Szereplo.tesoTeVizbeEstel()");
 	}
 	
+	// A Szereplo assa a havat -> meghivodik az adott Mezo hoAso() fuggvenye.
 	public void hoAsas() {
 		System.out.println(">Szereplo.hoAsas()");
 		new Mezo().hoAso();
