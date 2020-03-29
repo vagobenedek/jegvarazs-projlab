@@ -133,10 +133,8 @@ public class Mezo{
 	
 	public void iglutEpit() {
 		System.out.println("\t>Mezo.iglutEpit()");
-		//Mezo, amin all az eszkimo. Erre fog kerulni az iglu.
-		Mezo m = new Mezo();
-		//Ezt a mezot most konstruktorban adjuk at
-		new Iglu(m);
+		//A mezo, amit atadunk az az a mezo, amin all az eszkimo. Erre fog kerulni az iglu.
+		new Iglu(new Mezo());
 		System.out.println("\t<Mezo.iglutEpit()");
 	}
 
