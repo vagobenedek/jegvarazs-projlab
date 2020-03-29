@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c6f1418-e44a-48c7-a247-bfa03cd4258c" name="Default Changelist" comment="">
+    <list default="true" id="a59ced5b-53c7-43e2-8d72-49f418f8dac6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SkeletonTesterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/SkeletonTesterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Iglu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Iglu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mezo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mezo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,9 +224,5 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1585224539999" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/jegvarazs_projlab$Main.ic" NAME="Main Coverage Results" MODIFIED="1585422182133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/jegvarazs_projlab$init.ic" NAME="init Coverage Results" MODIFIED="1585442663188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
