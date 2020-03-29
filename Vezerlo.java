@@ -5,6 +5,7 @@ public class Vezerlo {
 	private ArrayList<Szereplo> szereplok;
 	public Vezerlo(){
 		System.out.println(">Vezerlo konstruktor");
+                new Palya(1,1);
 		System.out.println("<Vezerlo konstruktor");
 	}
 	public void init() {
