@@ -3,7 +3,7 @@
 public class Iglu extends Epulet {
 	public Iglu(Mezo m){
 		System.out.println("\t\t>Iglu konstruktor");
-		//A mező amint létrejön, védelmet állít be a mezőnek
+		//A mezo amint letrejon, vedelmet allit be a mezonek
 		setVedelem(m);
 		System.out.println("\t\t<Iglu konstruktor");
 	}

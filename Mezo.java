@@ -53,7 +53,7 @@ public class Mezo{
 
 	public int getTeherBiras() throws IOException {
 		System.out.println("\t>Mezo.getTeherBiras()");
-		System.out.println("Milyen típusú mezőn állok?");
+		System.out.println("Milyen tipusu mezon allok?");
 		System.out.println("1.: Stabil\n2.: Instabil\n3.: Tenger");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();
@@ -67,7 +67,7 @@ public class Mezo{
 			new Tenger().getTeherBiras();
 		}
 		System.out.println("\t<Mezo.getTeherBiras()");
-		//random visszatérési érték
+		//random visszateresi ertek
 		return 1;
 	}
 
@@ -133,9 +133,9 @@ public class Mezo{
 	
 	public void iglutEpit() {
 		System.out.println("\t>Mezo.iglutEpit()");
-		//Mező, amin áll az eszkimó. Erre fog kerülni az iglu.
+		//Mezo, amin all az eszkimo. Erre fog kerulni az iglu.
 		Mezo m = new Mezo();
-		//Ezt a mezőt most konstruktorban adjuk át
+		//Ezt a mezot most konstruktorban adjuk at
 		new Iglu(m);
 		System.out.println("\t<Mezo.iglutEpit()");
 	}

@@ -7,7 +7,7 @@ public class Eszkimo extends Szereplo {
 	}
 	public void kepessegHasznalat(int i) {
 		System.out.println(">Eszkimo.kepessegHasznalat()");
-		//Mező létrehozása, amire az iglut építjük és iglutÉpít() függvénym eghívása
+		//Mezo letrehozasa, amire az iglut epitjuk es iglutEpit() fuggveny meghivasa
 		new Mezo().iglutEpit();
 		System.out.println("<Eszkimo.kepessegHasznalat()");
 	}
