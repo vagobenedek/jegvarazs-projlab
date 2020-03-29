@@ -28,9 +28,13 @@ public class Vezerlo {
 		System.out.println(">Vezerlo.hoviharSzamlaloCsokkentes()");
 		System.out.println("<Vezerlo.hoviharSzamlaloCsokkentes()");
 	}
-	
+
+	/**
+	 *Az Vezerlo gyozelem fuggvenye
+	 */
 	public void gyozelem() {
 		System.out.println(">Vezerlo.gyzelem()");
+		System.out.println("Gratulalok! Gyoztel!");
 		System.out.println("<Vezerlo.gyozelem()");
 	}
 	

@@ -111,14 +111,43 @@ public abstract class Szereplo {
 	
 	public void kepessegHasznalat(int i) throws IOException {
 	}
-	
-	public void alkatreszFelvetele(Alkatresz a) {
+
+	/**
+	 * Alkatresz felveteleer felelos fugveny
+	 * @param a alkatreszt adja meg
+	 * @throws IOException
+	 */
+	public void alkatreszFelvetele(Alkatresz a) throws IOException {
 		//a függvény meghívásával a paraméterbe kapott alkatrészt átállítja saját magának
 		System.out.println(">Szereplo.alkatreszFelvetele(Alkatresz a)");
+
+		//menu
+		System.out.println("Van mar nala alkatresz?");
+		System.out.println("1.: Van");
+		System.out.println("2.: Nincs");
+
+		//a felhasznalo altal beolvasott szam megjelenitese
+		BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
+		String read = buff.readLine();
+		if(read.equals("1")){
+			//ha van nala alkatresz akkor a kicserelodik a ketto
+			//a szereplonel levo bekerul a mezobe
+			//a mezoben levot pedig felveszi a szereplo
+			new Pisztoly().addAlkatreszToMezo(new Mezo());
+		}
+
+		//ha nincsen nala meg alkatresz akkor csak siman felveszi az uj alkatreszt
+		if(read.equals("2")){ }
+
 		System.out.println("<Szereplo.alkatreszFelvetele(Alkatresz a)");
 	}
-	
-	public void eszkozFelvetele(Eszkoz e) {
+
+	/**
+	 * Az eszkoz felveteleert felelo fuggveny
+	 * @param e az eszkozt adja meg
+	 * @throws IOException
+	 */
+	public void eszkozFelvetele(Eszkoz e) throws IOException{
 		//a függvény meghívásával a paraméterbe kapott eszközt átállítja saját magának
 		System.out.println(">Szereplo.eszkozFelvetele(Eszkoz e)");
 		System.out.println("<Szereplo.eszkozFelvetele(Eszkoz e)");

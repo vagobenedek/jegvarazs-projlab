@@ -99,40 +99,64 @@ public class SkeletonTesterClass {
     	}
     }
 
+    /**
+     * Targy (eszkoz + alkatresz) felvetelet tesztelo fuggveny
+     * @throws IOException
+     */
     public static void targyFelveteleTest() throws IOException {
-        System.out.println("Tárgy felvetele szekvencia");
-        System.out.println("Fel van törve a jégtábla?");
+        System.out.println("Targy felvetele szekvencia");
+        System.out.println("Fel van torve a jegtabla?");
         System.out.println("1.: igen\n2.: Nem");
 
-        //a felhasználó által beolvasott szám megjelenítése
+        //a felhasznalo altal beolvasott szam megjelenitese
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
         if(str.equals("1")) {
-            //csak a tesztelés miatt lett egy szereplő (eszkimó) és egy alkatrész (pisztoly) létrehozva
-            //alapvetően a mező tudni fogja milyen tárgy van benne elraktározva
-            Szereplo sz = new Eszkimo();
-            Targy t = new Pisztoly();
-            //a mező tárolja a rálépett szereplőt és a tárgyat is
-            //mikor a szereplő feltöri a jeget a rajta lévő tárgyat a tárgy felvesz függvényével teheti meg
-            //amelynek az adott szereplőt kell átadni
-            t.felvesz(sz);
+            //alapvetoen a mezo tudni fogja milyen targy van benne elraktarozva
+            //a mezo tarolja a ralepett szereplot és a targyat is
+            //mikor a szereplo feltori a jeget a rajta levo targyat a targy felvesz fuggvenyevel teheti meg
+            //amelynek az adott szereplot kell atadni
+
+            //menu
+            System.out.println("Mit szeretne felvenni?");
+            System.out.println("1.: Alkatreszt");
+            System.out.println("2. Eszkozt");
+
+            //a felhasznalo altal beolvasott szam megjelenitese
+            BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
+            String read = buff.readLine();
+
+            if(read.equals("1")){
+                //alkatresz felvetele a felvesz(Szereplo) fuggvennyel
+                new Pisztoly().felvesz(new Eszkimo());
+            }
+            if(read.equals("2")){
+                //eszkoz felvetele a felvesz(Szereplo) fuggvennyel
+                new Kotel().felvesz(new Eszkimo());
+            }
         }
         if(str.equals("2")) {
-            System.out.println("Tárgy felvételéhez először fel kell törni");
+            System.out.println("Targy felvetelehez eloszor fel kell torni");
         }
     }
 
+    /**
+     * Alkatreszek osszeszereleset tesztelo fuggveny
+     * @throws IOException
+     */
     public static void alkatreszekOsszeszereleseTest() throws IOException {
-        System.out.println("Alkatrészek összeszerelése szekvencia");
-        System.out.println("Minden alkatrész egy mezőn van?");
+        System.out.println("Alkatreszek osszeszerelese szekvencia");
+        System.out.println("Minden alkatresz egy mezon van?");
         System.out.println("1.: Igen\n2.: Nem");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
         if(str.equals("1")){
-            new Vezerlo().gyozelem();
+            System.out.println(">Vezerlo.gyzelem()");
+            System.out.println("Gratulalok! Gyoztel!");
+            System.out.println("<Vezerlo.gyozelem()");
         }
         if(str.equals("2")){
-            System.out.println("A játék még nem ért véget!");
+            System.out.println("A jatek meg nem ert veget!");
         }
     }
     
