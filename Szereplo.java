@@ -18,6 +18,9 @@ public abstract class Szereplo {
 		return null;
 	}
 	public void hovihar() {
+		System.out.println(">Szereplo.hovihar()");
+		System.out.println("Szereplo testhoje csokken");
+		System.out.println("<Szereplo.hovihar()");
 	}
 	
 	public void felvesz(){

@@ -1,9 +1,10 @@
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Vezerlo {
 	/*private Szereplo aktualisSzereplo;
 	private ArrayList<Szereplo> szereplok;*/
-	public Vezerlo(){
+	public Vezerlo() throws IOException {
 		System.out.println(">Vezerlo konstruktor");
 		Palya p = new Palya(1,1);
 		System.out.println("<Vezerlo konstruktor");
