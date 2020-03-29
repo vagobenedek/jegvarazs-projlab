@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1c6f1418-e44a-48c7-a247-bfa03cd4258c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eszkimo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eszkimo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Iglu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Iglu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Instabil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Instabil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lapat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lapat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mezo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mezo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonTesterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/SkeletonTesterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vezerlo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vezerlo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,8 @@
       <workItem from="1585152876400" duration="2661000" />
       <workItem from="1585430621964" duration="13589000" />
       <workItem from="1585444418304" duration="233000" />
-      <workItem from="1585504172666" duration="4000" />
+      <workItem from="1585504172666" duration="600000" />
+      <workItem from="1585505612096" duration="1232000" />
     </task>
     <task id="LOCAL-00001" summary="Lep szekvencia">
       <created>1585227221916</created>
@@ -213,11 +212,11 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="552" y="287" key="Vcs.Push.Dialog.v2/0.30.1920.1050@0.30.1920.1050" timestamp="1585485722425" />
-    <state x="508" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1585422264684">
-      <screen x="0" y="0" width="1474" height="864" />
+    <state x="618" y="370" key="com.intellij.ide.util.TipDialog" timestamp="1585505612740">
+      <screen x="0" y="23" width="1792" height="1022" />
     </state>
     <state x="508" y="293" key="com.intellij.ide.util.TipDialog/0.0.1474.864/1920.-115.1920.1160@0.0.1474.864" timestamp="1585422264684" />
-    <state x="618" y="370" key="com.intellij.ide.util.TipDialog/0.23.1792.1022@0.23.1792.1022" timestamp="1585152877923" />
+    <state x="618" y="370" key="com.intellij.ide.util.TipDialog/0.23.1792.1022@0.23.1792.1022" timestamp="1585505612740" />
     <state x="769" y="471" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585486937282">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

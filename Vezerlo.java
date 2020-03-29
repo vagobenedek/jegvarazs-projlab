@@ -12,6 +12,11 @@ public class Vezerlo {
 		new Palya(1,1);
 		System.out.println("<Vezerlo konstruktor");
 	}
+
+	/**
+	 * A Vezerlo alabb lathato fuggvenyei mind listenereken keresztul hivodnak majd meg
+	 * bizonyos esemenyke bekovetkeztekor
+	 */
 	public void jatekVege() {
 		System.out.println(">Vezerlo.jatekVege()");
 		System.out.println("<Vezerlo.jatekVege()");

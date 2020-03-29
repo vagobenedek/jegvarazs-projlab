@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class SkeletonTesterClass {
 
-    public void Test() throws IOException {
+    public static void Test() throws IOException {
         boolean end = false;
         while (!end) {
             System.out.println("Szkeleton teszt");
