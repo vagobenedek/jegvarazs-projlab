@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c6f1418-e44a-48c7-a247-bfa03cd4258c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlkatreszFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/AlkatreszFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Elelem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Elelem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eszkimo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eszkimo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eszkoz.java" beforeDir="false" afterPath="$PROJECT_DIR$/Eszkoz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EszkozFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/EszkozFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JegmezoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/JegmezoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jelzofeny.java" beforeDir="false" afterPath="$PROJECT_DIR$/Jelzofeny.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mezo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mezo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Palya.java" beforeDir="false" afterPath="$PROJECT_DIR$/Palya.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Patron.java" beforeDir="false" afterPath="$PROJECT_DIR$/Patron.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pisztoly.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pisztoly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sarkkutato.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sarkkutato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkeletonTesterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/SkeletonTesterClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Szereplo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Szereplo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SzereploFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/SzereploFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vezerlo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Vezerlo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +96,7 @@
       <workItem from="1585152876400" duration="2661000" />
       <workItem from="1585430621964" duration="13589000" />
       <workItem from="1585444418304" duration="233000" />
+      <workItem from="1585501305566" duration="2039000" />
     </task>
     <task id="LOCAL-00001" summary="Lep szekvencia">
       <created>1585227221916</created>
@@ -140,6 +157,10 @@
     </state>
     <state x="707" y="397" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1680.1010/1680.0.1366.728/-1680.0.1680.1010@0.0.1680.1010" timestamp="1585492492789" />
     <state x="808" y="443" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1585221199670" />
+    <state x="662" y="426" width="467" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585501748311">
+      <screen x="0" y="23" width="1792" height="1022" />
+    </state>
+    <state x="662" y="426" width="467" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1792.1022@0.23.1792.1022" timestamp="1585501748311" />
     <state x="511" y="114" key="CommitChangelistDialog2" timestamp="1585495248201">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>

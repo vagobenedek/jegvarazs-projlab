@@ -3,8 +3,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Sarkkutato extends Szereplo {
-	public Sarkkutato() {
-		super();
+	public Sarkkutato(){}
+	public Sarkkutato(String s) {
+		super(s);
 	}
 	public void kepessegHasznalat(int i) throws IOException {
 		System.out.println(">Sarkkutato.kepessegHasznalat()");

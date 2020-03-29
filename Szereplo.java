@@ -8,8 +8,8 @@ public abstract class Szereplo {
 	private Alkatresz a;
 	private int lepesszam;
 	private Mezo m;*/
-	
-	public Szereplo(){
+	public Szereplo(){}
+	public Szereplo(String s){
 		System.out.println(">Szereplo konstruktor");
 		System.out.println("<Szereplo konstruktor");
 	}
@@ -23,6 +23,8 @@ public abstract class Szereplo {
 		System.out.println("<Szereplo.getMezo()");
 		return null;
 	}
+	/*Csokkenti a szerplo testhojet
+	Csak akkor hivdik meg, ha hoviar aldozata lesz, es nincs igluban*/
 	public void hovihar() {
 		System.out.println(">Szereplo.hovihar()");
 		System.out.println("Szereplo testhoje csokken");
@@ -213,6 +215,7 @@ public abstract class Szereplo {
 		new Mezo().ralep(new Eszkimo());
 		System.out.println("<Szereplo.huzdKi()");
 	}
+	//A parameterkent kapott mezon elhelyezi a szereplot
 	public void addSzerploToMezo(Mezo m){
 		System.out.println(">Szereplo.addSzereploToMezo()");
 		System.out.println("<Szereplo.addSzereploToMezo()");

@@ -4,9 +4,12 @@ import java.util.ArrayList;
 public class Vezerlo {
 	private Szereplo aktualisSzereplo;
 	private ArrayList<Szereplo> szereplok;
-	public Vezerlo() throws IOException {
+	public Vezerlo(){
+	}
+	public Vezerlo(String s) throws IOException {
 		System.out.println(">Vezerlo konstruktor");
-                new Palya(1,1);
+		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
+		new Palya(1,1);
 		System.out.println("<Vezerlo konstruktor");
 	}
 	public void jatekVege() {

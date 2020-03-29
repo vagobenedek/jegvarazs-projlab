@@ -4,27 +4,27 @@ public class Palya {
 	/*private Mezo mezok;*/
 	public Palya(int szelesseg, int magassag) throws IOException {
 		System.out.println(">Palya konstruktor");
-		JegmezoFactory jf = new JegmezoFactory();
-		jf.createJegmezo(1);
+		//A JegmezoFactory legyartja, es visszaadja a szamukra szukseges jegmezoket
+		new JegmezoFactory().createJegmezo(1);
+		//A jegmezok elredezese utan, nehany jegtablara egy hovihar segitsegevel haat teszunk
 		hovihar();
-		SzereploFactory sf = new SzereploFactory();
-		sf.createSzereplo(1);
-		Szereplo s = new Eszkimo();
-		s.addSzerploToMezo(new Mezo());
-		AlkatreszFactory af = new AlkatreszFactory();
-		af.createAlkatresz(3);
+		/*Letrehozzuk az egyes szereploket, akatreszeket, eszkozoket a factory-k seitsegevel.
+		Majd elhelyezzuk oket a palya megyes mezoin
+		 */
+		new SzereploFactory().createSzereplo(1);
+		new Eszkimo().addSzerploToMezo(new Mezo());
+		new AlkatreszFactory().createAlkatresz(3);
 		new Pisztoly().addAlkatreszToMezo(new Mezo());
 		new Patron().addAlkatreszToMezo(new Mezo());
 		new Jelzofeny().addAlkatreszToMezo(new Mezo());
-		EszkozFactory ef = new EszkozFactory();
-		ef.createEszkoz(1);
+		new EszkozFactory().createEszkoz(1);
 		new Elelem().addEszkozToMezo(new Mezo());
 		System.out.println("<Palya konstruktor");
 	}
 	public void hovihar() throws IOException {
 		System.out.println(">Palya.hovihar()");
-		Mezo m = new Mezo();
-		m.hovihar();
+		//Egyes kivalaszott mezokre a hovihar fuggveny segitsegevel havat teszunk
+		new Mezo().hovihar();
 		System.out.println("<Palya.hovihar()");
 	}
 }

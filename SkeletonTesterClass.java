@@ -43,10 +43,12 @@ public class SkeletonTesterClass {
     }
 
     public static void initTest() throws IOException {
-        Vezerlo v = new Vezerlo();
+        /*Letrejon egy Vezerlo peldany, melynek konstruktorában lefut az init szekvencia
+        Tuladjonképpen itt épül fel a játék*/
+        new Vezerlo("init");
     }
     public static void kepessegHasznalatTest() throws IOException {
-        System.out.println("Képesség használat szekvencia");
+        System.out.println("Kepesseg hasznalat szekvencia");
         System.out.println("Milyen Szereplo vagyok?");
         System.out.println("1.: Eszkimo\n2.: Sarkkutato");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -56,7 +58,7 @@ public class SkeletonTesterClass {
             new Eszkimo().kepessegHasznalat(rand.nextInt(1000));
         }
         if(str.equals("2")) {
-            System.out.println("Melyik irányban szeretném alkalmazni a képességem?");
+            System.out.println("Melyik iranyban szeretnam alkalmazni a kepessegem?");
             System.out.println("1.: Észak\n2.: Kelet\n3.: Dél\n4.: Nyugat");
             BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
             String string = buffer.readLine();

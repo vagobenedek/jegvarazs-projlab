@@ -3,10 +3,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class Eszkoz extends Targy {
-	public Eszkoz(){
+	public Eszkoz(){}
+	public Eszkoz(String s){
 		System.out.println(">Eszkoz konstruktor");
 		System.out.println("<Eszkoz konstruktor");
 	}
+
+	//A parameterkent kapott mezon elhelyezi a szereplot
 	public void addEszkozToMezo(Mezo m){
 		System.out.println(">Eszkoz.addEszkozToMezo()");
 		System.out.println("<Eszkoz.addEszkozToMezo()");

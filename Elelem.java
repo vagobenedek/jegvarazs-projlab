@@ -1,8 +1,9 @@
 
 
 public class Elelem extends Eszkoz {
-	public Elelem(){
-		super();
+	public Elelem(){}
+	public Elelem(String s){
+		super(s);
 	}
 	@Override
 	public void hasznal(Szereplo Sz) {

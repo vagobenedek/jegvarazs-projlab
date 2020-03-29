@@ -12,9 +12,18 @@ public class Mezo{
 	
 	public Mezo(Targy t, Epulet e, int hoSzint, boolean vedett){}
 	public Mezo(){}
+	public Mezo(String s){
+		System.out.println(">Mezo konstruktor");
+		System.out.println("<Mezo konstruktor");
+	}
+
 	public void hovihar() throws IOException {
 		System.out.println(">Mezo.hovihar()");
+		//Noveli a mezon levo hoegysegek szamat
 		hoNovelo();
+		/*Amennyiben van iglu a mezon, nem foglalkoznk azzal, hogy van-e szereplo a mezon
+		Amennyiben nincs iglu, megkerdezzuk hogy szereplo van-e
+		A kapott valasznak megfeleloen cselekszunk*/
 		System.out.println("Van iglu a mezon?");
 		System.out.println("1.: Nincs\n2.: Van");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,6 +33,7 @@ public class Mezo{
 			System.out.println("1.: Nincs\n2.: Van");
 			str = br.readLine();
 			if (str.equals("2")){
+				//Ha vedetlen szereplo talalhato a mezon, lemegy egy testhoje
 				new Sarkkutato().hovihar();
 			}
 		}
