@@ -58,18 +58,14 @@ public abstract class Szereplo {
 		}
 		if(str.equals("3")){
 			System.out.println(">Szereplo.hasznal()");
-			//Egy szereplő létrehozása, aki használni fogja a kötelet
-			Szereplo sz = new Eszkimo();
 			//Meghívjuk a Lapát használ() függvényét.
-			new Lapat().hasznal(sz);
+			new Lapat().hasznal(new Eszkimo());
 			System.out.println("<Szereplo.hasznal()");
 		}
 		if(str.equals("4")){
 			System.out.println(">Szereplo.hasznal()");
-			//Egy szereplő létrehozása, aki használni fogja az élelmet
-			Szereplo sz = new Eszkimo();
 			//Meghívjuk az Élelem használ() függvényét.
-			new Elelem().hasznal(sz);
+			new Elelem().hasznal(new Eszkimo());
 			System.out.println("<Szereplo.hasznal()");
 		}
 	}
