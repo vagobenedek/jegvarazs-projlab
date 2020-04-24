@@ -3,11 +3,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class Szereplo {
-	/*private int testho;
+	private int testho;
 	private Eszkoz e;
 	private Alkatresz a;
 	private int lepesszam;
-	private Mezo m;*/
+	private Mezo m;
 	public Szereplo(){}
 	public Szereplo(String s){
 		System.out.println(">Szereplo konstruktor");
@@ -21,10 +21,47 @@ public abstract class Szereplo {
 	public Mezo getMezo(){
 		System.out.println(">Szereplo.getMezo()");
 		System.out.println("<Szereplo.getMezo()");
-		return null;
+		return m;
 	}
+
+	public void setTestho(int testho) {
+		this.testho = testho;
+	}
+
+	public void setEszkoz(Eszkoz e) {
+		this.e = e;
+	}
+
+	public void setAlkatresz(Alkatresz a) {
+		this.a = a;
+	}
+
+	public void setLepesszam(int lepesszam) {
+		this.lepesszam = lepesszam;
+	}
+
+	public void setM(Mezo m) {
+		this.m = m;
+	}
+
+	public int getTestho() {
+		return testho;
+	}
+
+	public Eszkoz getEszkoz() {
+		return e;
+	}
+
+	public Alkatresz getAlkatresz() {
+		return a;
+	}
+
+	public int getLepesszam() {
+		return lepesszam;
+	}
+
 	/*Csokkenti a szerplo testhojet
-	Csak akkor hivdik meg, ha hoviar aldozata lesz, es nincs igluban*/
+        Csak akkor hivdik meg, ha hoviar aldozata lesz, es nincs igluban*/
 	public void hovihar() {
 		System.out.println(">Szereplo.hovihar()");
 		System.out.println("Szereplo testhoje csokken");
@@ -78,6 +115,13 @@ public abstract class Szereplo {
 	 */
 	public void tesoTeVizbeEstel() throws IOException {
 		System.out.println(">Szereplo.tesoTeVizbeEstel()");
+		if (true/*this.getEszkoz().toString().equals("Buvarruha")*/){
+			for (int i = 0; i<4;i++){
+				Mezo mezo = this.getMezo().getSzomszed(i);
+				mezo.huzzKi(this);
+
+			}
+		}/*
 		System.out.println("Van rajtad buvarruha?");
 		System.out.println("1.: Van\n2.: Nincs");
 		// a beolvasasert felelos objektum
@@ -95,7 +139,7 @@ public abstract class Szereplo {
 				new Mezo().huzzKi(new Eszkimo());
 			}
 			System.out.println("<Szereplo.tesoTeVizbeEstel()");
-		}
+		}*/
 
 		System.out.println("<Szereplo.tesoTeVizbeEstel()");
 	}
@@ -159,8 +203,11 @@ public abstract class Szereplo {
 	public void lep(int irany) throws IOException {
 		System.out.println(">Szereplo.lep()");
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
+		Mezo mezo = getMezo().getSzomszed(irany);
+		this.m.lelep(this);
+		mezo.ralep(this);
 		new Mezo().getSzomszed(irany);
-		System.out.println("Milyen mezore lepunk?");
+		/*System.out.println("Milyen mezore lepunk?");
 		//kiirja a lehetosegeket, hogy milyen mezokre lephetunk
 		System.out.println("1.: Stabil mezo\t2.: Instabil mezo\t3.: Tengerre\t4.: Lyuk");
 		// a beolvasasert felelos objektum
@@ -186,7 +233,7 @@ public abstract class Szereplo {
 			new Mezo().lelep(new Eszkimo());
 			//ez az Instabil osztaly ralep fuggvenyet hivja meg
 			new Lyuk().ralep(new Sarkkutato());
-		}
+		}*/
 		System.out.println("<Szereplo.lep()");
 
 	}
@@ -209,10 +256,12 @@ public abstract class Szereplo {
 	 */
 	public void huzdKi(Szereplo sz) throws IOException {
 		System.out.println(">Szereplo.huzdKi()");
-		//hasznaljuk a kotelet, ami a szereplonek van
+		getEszkoz().hasznal(sz);
+		this.getMezo().ralep(sz);
+		/*//hasznaljuk a kotelet, ami a szereplonek van
 		new Kotel().hasznal(new Eszkimo());
 		//raleptetjuk arra mezore a parameterkent kapott szereplot, amelyiken ez a Szereplo all
-		new Mezo().ralep(new Eszkimo());
+		new Mezo().ralep(new Eszkimo());*/
 		System.out.println("<Szereplo.huzdKi()");
 	}
 	//A parameterkent kapott mezon elhelyezi a szereplot

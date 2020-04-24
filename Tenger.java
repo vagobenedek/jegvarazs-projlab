@@ -11,7 +11,7 @@ public class Tenger extends Mezo {
 	public void ralep(Szereplo sz) throws IOException {
 		System.out.println(">Tenger.ralep()");
 		//a Tengeren egybol vizbeesik a szereplo
-		new Eszkimo().tesoTeVizbeEstel();
+		sz.tesoTeVizbeEstel();
 		System.out.println("<Tenger.ralep()");
 	}
 	public int getTeherBiras() throws IOException {

@@ -1,20 +1,79 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class Mezo{
-	/*private Szereplo[] szereplok;
+	private ArrayList<Szereplo> szereplok;
 	private Targy targy;
 	private Epulet epulet;
 	private boolean feltort;
 	private int hoSzint;
-	private boolean vedett;*/
+	private int teherbiras;
+	private boolean vedett;
 	
-	public Mezo(Targy t, Epulet e, int hoSzint, boolean vedett){}
+	public Mezo(Targy t, Epulet e, int hoSzint,int teherbiras, boolean vedett){
+		targy = t;
+		epulet = e;
+		feltort = false;
+		this.hoSzint = hoSzint;
+		this.teherbiras=teherbiras;
+		this.vedett=vedett;
+	}
 	public Mezo(){}
 	public Mezo(String s){
 		System.out.println(">Mezo konstruktor");
 		System.out.println("<Mezo konstruktor");
+	}
+
+	public ArrayList<Szereplo> getSzereplok() {
+		return szereplok;
+	}
+
+	public Targy getTargy() {
+		return targy;
+	}
+
+	public Epulet getEpulet() {
+		return epulet;
+	}
+
+	public boolean isFeltort() {
+		return feltort;
+	}
+
+	public int getHoSzint() {
+		return hoSzint;
+	}
+
+	public boolean isVedett() {
+		return vedett;
+	}
+
+	public void addSzereplo(Szereplo szereplo) {
+		this.szereplok.add(szereplo);
+	}
+	public void removeSzereplo(Szereplo szereplo){
+		this.szereplok.remove(szereplo);
+	}
+	public void setTargy(Targy targy) {
+		this.targy = targy;
+	}
+
+	public void setEpulet(Epulet epulet) {
+		this.epulet = epulet;
+	}
+
+	public void setFeltort(boolean feltort) {
+		this.feltort = feltort;
+	}
+
+	public void setHoSzint(int hoSzint) {
+		this.hoSzint = hoSzint;
+	}
+
+	public void setVedett(boolean vedett) {
+		this.vedett = vedett;
 	}
 
 	public void hovihar() throws IOException {
@@ -48,6 +107,8 @@ public class Mezo{
 	 */
 	public void ralep(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.ralep()");
+		sz.setM(this);
+		addSzereplo(sz);
 		System.out.println("<Mezo.ralep()");
 	}
 
@@ -68,7 +129,7 @@ public class Mezo{
 		}
 		System.out.println("\t<Mezo.getTeherBiras()");
 		//random visszateresi ertek
-		return 1;
+		return teherbiras;
 	}
 
 	/**
@@ -77,6 +138,8 @@ public class Mezo{
 	 */
 	public void lelep(Szereplo sz) {
 		System.out.println(">Mezo.lelep()");
+		sz.setM(null);
+		this.removeSzereplo(sz);
 		System.out.println("<Mezo.lelep()");
 	}
 
@@ -146,6 +209,11 @@ public class Mezo{
 	public void huzzKi(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.huzzki()");
 		System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
+		for (Szereplo szereplo: this.getSzereplok()){
+			if(szereplo.getEszkoz().equals("Kotel")){
+				szereplo.huzdKi(sz);
+			}
+		}/*
 		// a beolvasert felelos objektum
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		// ha van a szereplon kotel, vagyis egyest irt be
@@ -153,7 +221,7 @@ public class Mezo{
 			//szolunk a mezon allo szereplonek, hogy huzza ki a parameterkent kapott szereplot
 			//majd ezt a parametert adjuk tovabb
 			new Sarkkutato().huzdKi(new Eszkimo());
-		}
+		}*/
 		System.out.println("<Mezo.huzzki()");
 	}
 }

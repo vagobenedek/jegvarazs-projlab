@@ -4,8 +4,8 @@ import java.io.InputStreamReader;
 
 public class Instabil extends Jegmezo {
 	private int teherbiras;
-	public Instabil(int teherbiras){
-
+	public Instabil(Targy t, Epulet e, int hoSzint,int teherbiras, boolean vedett){
+		//super(t,e,hoSzint,teherbiras,vedett);
 	}
 	public Instabil(){}
 	public void atfordul() {
@@ -18,7 +18,14 @@ public class Instabil extends Jegmezo {
 	 */
 	public void ralep(Szereplo sz) throws IOException {
 		System.out.println(">Instabil.ralep()");
-		System.out.println("Van meg hely a mezon?");
+		sz.setM(this);
+		this.addSzereplo(sz);
+		if (this.getTeherBiras()<this.getSzereplok().size()){
+			for (Szereplo szereplo:this.getSzereplok()){
+				szereplo.tesoTeVizbeEstel();
+			}
+		}
+		/*System.out.println("Van meg hely a mezon?");
 		System.out.println("1.: Igen\t2.: Nem");
 		//a beolvasasertfelelos eszkoz;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -26,7 +33,7 @@ public class Instabil extends Jegmezo {
 		//ha a felhasznalo kettest irt be, akkor a szereplo beleesik a vizbe
 		if (string.equals("2")){
 			sz.tesoTeVizbeEstel();
-		}
+		}*/
 		System.out.println("<Instabil.ralep()");
 	}
 
@@ -34,6 +41,6 @@ public class Instabil extends Jegmezo {
 		System.out.println("\t\t>Instabil.getTeherBiras()");
 		System.out.println("\t\t<Instabil.getTeherBiras()");
 		//random visszateresi ertek
-		return 1;
+		return teherbiras;
 	}
 }
