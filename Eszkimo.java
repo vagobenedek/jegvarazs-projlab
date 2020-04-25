@@ -18,4 +18,10 @@ public class Eszkimo extends Szereplo {
 		new Mezo().iglutEpit();
 		System.out.println("<Eszkimo.kepessegHasznalat()");
 	}
+	
+	@Override
+	public void hitByMedve() {
+		// TODO Auto-generated method stub
+		
+	}
 }

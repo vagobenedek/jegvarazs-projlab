@@ -14,7 +14,7 @@ public class Palya {
 		/*Letrehozzuk az egyes szereploket, akatreszeket, eszkozoket a factory-k seitsegevel.
 		Majd elhelyezzuk oket a palya megyes mezoin
 		 */
-		new SzereploFactory().createSzereplo(1);
+		new KarakterFactory().createKarakter(1);
 		new Eszkimo().addSzerploToMezo(new Mezo());
 		new AlkatreszFactory().createAlkatresz(3);
 		new Pisztoly().addAlkatreszToMezo(new Mezo());

@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public abstract class Szereplo {
+public abstract class Szereplo implements IKarakter {
 	private int testho;
 	private Eszkoz e;
 	private Alkatresz a;

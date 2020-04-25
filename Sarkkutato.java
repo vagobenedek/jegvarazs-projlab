@@ -21,4 +21,10 @@ public class Sarkkutato extends Szereplo {
 		new Mezo().getTeherBiras();
 		System.out.println("<Sarkkutato.kepessegHasznalat()");
 	}
+	
+	@Override
+	public void hitByMedve() {
+		// TODO Auto-generated method stub
+		
+	}
 }

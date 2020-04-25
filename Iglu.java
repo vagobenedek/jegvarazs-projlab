@@ -1,7 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Iglu extends Epulet {
+public class Iglu implements IEpulet {
 	public Iglu(Mezo m) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Iglu letrejott\n");
@@ -15,5 +15,11 @@ public class Iglu extends Epulet {
 	public void setVedelem() {
 		System.out.println("\t\t\t>Iglu.setVedelem()");
 		System.out.println("\t\t\t<Iglu.setVedelem()");
+	}
+	
+	@Override
+	public void felvesz(Szereplo sz) throws IOException {
+		// TODO Auto-generated method stub
+		
 	}
 }

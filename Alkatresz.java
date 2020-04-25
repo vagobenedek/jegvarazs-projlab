@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public abstract class Alkatresz extends Targy {
+public abstract class Alkatresz implements ITargy {
 
 	String nev;
 
