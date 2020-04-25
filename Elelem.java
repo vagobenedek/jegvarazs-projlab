@@ -11,9 +11,15 @@ public class Elelem extends Eszkoz {
 		super(s);
 	}
 	@Override
-	public void hasznal(Szereplo Sz) {
+	public void hasznal(Szereplo Sz) throws IOException {
+		Sz.etkezes();
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Elelem hasznalata\n");
+		f.close();
+		/*
 		System.out.println("\t>Elelem.hasznal()");
 			Sz.etkezes();
 		System.out.println("\t<Elelem.hasznal()");
+		 */
 	}
 }

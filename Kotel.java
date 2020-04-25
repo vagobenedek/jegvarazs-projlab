@@ -14,6 +14,11 @@ public class Kotel extends Eszkoz {
 	 * @param sz
 	 */
 	public void hasznal(Szereplo sz) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Kotel hasznalata\n");
+		f.close();
+		sz.getMezo().lelep(sz);
+		/*
 		System.out.println(">Kotel.hasznal()");
 		//lekeri a szereplo mezojet
 		new Eszkimo().getMezo();
@@ -21,5 +26,6 @@ public class Kotel extends Eszkoz {
 		mezo.lelep(sz);
 		new Mezo().lelep(new Eszkimo());
 		System.out.println("<Kotel.hasznal()");
+		 */
 	}
 }

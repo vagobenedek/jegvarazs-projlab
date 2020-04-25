@@ -16,10 +16,10 @@ public class Sarkkutato extends Szereplo {
 		f.close();
 	}
 	public void kepessegHasznalat(int i) throws IOException {
-		System.out.println(">Sarkkutato.kepessegHasznalat()");
-		new Mezo().getSzomszed(i);
-		new Mezo().getTeherBiras();
-		System.out.println("<Sarkkutato.kepessegHasznalat()");
+		getMezo().getSzomszed(i).getTeherBiras();
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Sarkkutato kepesseg hasznalata sikeres\n");
+		f.close();
 	}
 	
 	@Override

@@ -76,8 +76,10 @@ public class Mezo {
 	public void addKarakter(IKarakter szereplo) {
 		this.szereplok.add(szereplo);
 	}
+
 	public void setAlkatresz(Alkatresz a){this.alkatresz=a;}
 	public void setEszkoz(Eszkoz e){this.eszkoz=e;}
+
 	public void removeSzereplo(Szereplo szereplo){
 		this.szereplok.remove(szereplo);
 	}
@@ -145,6 +147,11 @@ public class Mezo {
 	}
 
 	public int getTeherBiras() throws IOException {
+
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Teherbiras lekerdezese\n");
+		f.close();
+		/*
 		System.out.println("\t>Mezo.getTeherBiras()");
 		System.out.println("Milyen tipusu mezon allok?");
 		System.out.println("1.: Stabil\n2.: Instabil\n3.: Tenger");
@@ -160,7 +167,9 @@ public class Mezo {
 			new Tenger().getTeherBiras();
 		}
 		System.out.println("\t<Mezo.getTeherBiras()");
+		*/
 		//random visszateresi ertek
+
 		return teherbiras;
 	}
 
@@ -168,11 +177,20 @@ public class Mezo {
 	 * ez a fuggveny lepteti le a parameterkent kapott szereplot, a mezorol
 	 * @param sz : Szereplo
 	 */
-	public void lelep(Szereplo sz) {
+	public void lelep(Szereplo sz) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Szereplo lelep a mezorol\n");
+		f.close();
+
+		sz.setM(null);
+		this.removeSzereplo(sz);
+
+		/*
 		System.out.println(">Mezo.lelep()");
 		sz.setM(null);
 		this.removeSzereplo(sz);
 		System.out.println("<Mezo.lelep()");
+		 */
 	}
 
 	/**
@@ -180,25 +198,37 @@ public class Mezo {
 	 * @param irany: int
 	 * @return Mezo
 	 */
-	public Mezo getSzomszed(int irany) {
-		System.out.println(">Mezo.getSzomszed()");
-		System.out.println("<Mezo.getSzomszed()");
+	public Mezo getSzomszed(int irany) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Szomszéd lekérdezése\n");
+		f.close();
 		//ebben az esetben nem kell semmit visszaadni
 		return null;
 	}
 	
 	// Ha nincs lapat -> 1  db hoCsokkento() hivodik.
 	// Ha van lapat -> 2 db hoCsokkento() hivodik.
-	public void hoAso() {
+	public void hoAso(int lapat) throws IOException {
+		for (int i=0; i<=lapat; i++){
+			this.hoCsokkento();
+		}
+
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Mezo hoasas\n");
+		f.close();
+		/*
 		System.out.println("\t>Mezo.hoAso()");
 		this.hoCsokkento();
 		System.out.println("\t<Mezo.hoAso()");
+		 */
 	}
 	
 	// Csokkenti a hoszintet eggyel.
-	public void hoCsokkento() {
-		System.out.println("\t\t>Mezo.hoCsokkento()");
-		System.out.println("\t\t<Mezo.hoCsokkento()");
+	public void hoCsokkento() throws IOException {
+		hoSzint -= 1;
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Hoszint eggyel csokkent\n");
+		f.close();
 	}
 	
 	public void hoNovelo() throws IOException {
@@ -258,10 +288,10 @@ public class Mezo {
 	}
 	
 	public void iglutEpit() throws IOException {
-		System.out.println("\t>Mezo.iglutEpit()");
-		//A mezo, amit atadunk az az a mezo, amin all az eszkimo. Erre fog kerulni az iglu.
-		new Iglu(new Mezo());
-		System.out.println("\t<Mezo.iglutEpit()");
+		new Iglu(this);
+		FileWriter output = new FileWriter("./kimenet.txt", true);
+		output.write("Iglu epitese sikeres\n");
+		output.close();
 	}
 
 	/**

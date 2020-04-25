@@ -13,10 +13,10 @@ public class Eszkimo extends Szereplo {
 		f.close();
 	}
 	public void kepessegHasznalat(int i) throws IOException {
-		System.out.println(">Eszkimo.kepessegHasznalat()");
-		//Mezo letrehozasa, amire az iglut epitjuk es iglutEpit() fuggveny meghivasa
-		new Mezo().iglutEpit();
-		System.out.println("<Eszkimo.kepessegHasznalat()");
+		getMezo().iglutEpit();
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Eszkimo kepesseg hasznalata sikeres\n");
+		f.close();
 	}
 	
 	@Override

@@ -26,9 +26,14 @@ public abstract class Szereplo implements IKarakter {
 	 * a metodus a Szereplo mezojet adja meg
 	 * @return Mezo
 	 */
-	public Mezo getMezo(){
+	public Mezo getMezo() throws IOException {
+		/*
 		System.out.println(">Szereplo.getMezo()");
 		System.out.println("<Szereplo.getMezo()");
+		 */
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Mezo lekerdezese\n");
+		f.close();
 		return m;
 	}
 
@@ -89,6 +94,15 @@ public abstract class Szereplo implements IKarakter {
 	}
 	
 	public void hasznal() throws IOException {
+		if (e != null){
+			e.hasznal(this);
+		}
+		else {
+			FileWriter f = new FileWriter("./kimenet.txt", true);
+			f.append("Nincs eszkoz a szereplonel\n");
+			f.close();
+		}
+		/*
 		System.out.println("Van nalam eszkoz? Ha igen, milyen?");
 		System.out.println("1.: Nincs nalam eszkoz.\n2.: Van, kotel.\n3.: Van, lapat.\n4.: Van, elelem.");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -117,6 +131,7 @@ public abstract class Szereplo implements IKarakter {
 			new Elelem().hasznal(new Eszkimo());
 			System.out.println("<Szereplo.hasznal()");
 		}
+		 */
 	}
 
 	/**
@@ -155,10 +170,16 @@ public abstract class Szereplo implements IKarakter {
 	}
 	
 	// A Szereplo assa a havat -> meghivodik az adott Mezo hoAso() fuggvenye.
-	public void hoAsas() throws IOException {
+	public void hoAsas(int lapat) throws IOException {
+		getMezo().hoAso(lapat);
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Szereplo havat as\n");
+		f.close();
+/*
 		System.out.println(">Szereplo.hoAsas()");
 		new Mezo().hoAso();
 		System.out.println("<Szereplo.hoAsas()");
+ */
 	}
 	
 	public void kepessegHasznalat(int i) throws IOException {
@@ -250,9 +271,14 @@ public abstract class Szereplo implements IKarakter {
 		m.epit(this);
 	}
 	
-	public void etkezes() {
+	public void etkezes() throws IOException {
+		/*
 		System.out.println("\t\t>Szereplo.etkezes()");
 		System.out.println("\t\t<Szereplo.etkezes()");
+		 */
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Etkezes sikeres\n");
+		f.close();
 	}
 	
 	public void elsut() {
