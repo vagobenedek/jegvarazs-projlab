@@ -205,7 +205,23 @@ public class Mezo{
 
 	}
 	
-	public void epit(Szereplo sz) {
+	public void epit(Szereplo sz) throws IOException {
+		int count = 0;
+		if(szereplok.size()  >= 3) {
+			for (Szereplo szereplo : szereplok) {
+				if (szereplo.getAlkatresz() != null) {
+					count++;
+				}
+			}
+		}
+		if (count == 3)
+		{
+			//dosomething
+		} else {
+			FileWriter output = new FileWriter("./kimenet.txt", true);
+			output.write("A szereplőnek nem sikerült összeszerelni az alkatrészeket.\n");
+			output.close();
+		}
 	}
 	
 	public void targyFelvetele(Szereplo sz) throws IOException {
