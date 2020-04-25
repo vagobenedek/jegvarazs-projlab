@@ -191,6 +191,7 @@ public class Mezo{
 	// Ha fel van torve a jegtabla -> nem csinal semmit.
 	// Ha nincs feltorve -> feltori.
 	public void feltor() throws IOException {
+
 		System.out.println("\t>Mezo.feltor()");
 		System.out.println("\t\tFel van mar torve a mezo?");
 		System.out.println("\t\t1.: Igen\t2.: Nincs");
@@ -200,12 +201,23 @@ public class Mezo{
     		System.out.println("\t\tthis.feltort = true;");
     	}
 		System.out.println("\t<Mezo.feltor()");
+
+
 	}
 	
 	public void epit(Szereplo sz) {
 	}
 	
-	public void targyFelvetele(Szereplo sz) {
+	public void targyFelvetele(Szereplo sz) throws IOException {
+		//0425
+		if(feltort) {
+			targy.felvesz(sz);
+		}
+		else {
+			FileWriter output = new FileWriter("./kimenet.txt", true);
+			output.write("Szereplo targyfelvetele meghiusult.\n");
+			output.close();
+		}
 	}
 	
 	public void iglutEpit() throws IOException {

@@ -166,28 +166,23 @@ public abstract class Szereplo {
 	 * @throws IOException
 	 */
 	public void alkatreszFelvetele(Alkatresz a) throws IOException {
-		//a fuggveny meghivasaval a parameterbe kapott alkatreszt atallitja sajat maganak
-		System.out.println(">Szereplo.alkatreszFelvetele(Alkatresz a)");
 
-		//menu
-		System.out.println("Van mar nala alkatresz?");
-		System.out.println("1.: Van");
-		System.out.println("2.: Nincs");
-
-		//a felhasznalo altal beolvasott szam megjelenitese
-		BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
-		String read = buff.readLine();
-		if(read.equals("1")){
-			//ha van nala alkatresz akkor a kicserelodik a ketto
-			//a szereplonel levo bekerul a mezobe
-			//a mezoben levot pedig felveszi a szereplo
-			new Pisztoly().addAlkatreszToMezo(new Mezo());
+		//0425
+		if(a==null)
+		{
+			this.a = a;
 		}
+		else
+		{
+			Alkatresz temp = this.a;
+			this.a = a;
+			temp.addAlkatreszToMezo(m);
+		}
+		FileWriter output = new FileWriter("./kimenet.txt", true);
+		output.write("Szereplo eszkozfelvetele sikeres.\n");
+		output.write("Felvett targy: " + a.getNev() + ".\n");
+		output.close();
 
-		//ha nincsen nala meg alkatresz akkor csak siman felveszi az uj alkatreszt
-		if(read.equals("2")){ }
-
-		System.out.println("<Szereplo.alkatreszFelvetele(Alkatresz a)");
 	}
 
 	/**
@@ -196,9 +191,12 @@ public abstract class Szereplo {
 	 * @throws IOException
 	 */
 	public void eszkozFelvetele(Eszkoz e) throws IOException{
-		//a fuggveny meghivasaval a parameterbe kapott eszkozt atallatja sajat maganak
-		System.out.println(">Szereplo.eszkozFelvetele(Eszkoz e)");
-		System.out.println("<Szereplo.eszkozFelvetele(Eszkoz e)");
+
+		this.e = e;
+		FileWriter output = new FileWriter("./kimenet.txt", true);
+		output.write("Szereplo targyfelvetele sikeres.\n");
+		output.write("Felvett targy: " + e.getNev() + ".\n");
+		output.close();
 	}
 
 	/**
@@ -245,6 +243,7 @@ public abstract class Szereplo {
 	}
 	
 	public void osszerak() {
+
 	}
 	
 	public void etkezes() {

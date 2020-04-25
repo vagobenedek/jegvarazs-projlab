@@ -10,7 +10,7 @@ public abstract class Targy {
 		f.close();
 	}
 	public void felvesz(Szereplo sz) throws IOException {
-		System.out.println(">Targy.felvesz(Szereplo sz)");
-		System.out.println("<Targy.felvesz(Szereplo sz)");
+
 	}
+
 }

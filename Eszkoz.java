@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class Eszkoz extends Targy {
+
+	String nev;
+
 	public Eszkoz() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Eszkoz letrejott\n");
@@ -13,6 +16,12 @@ public abstract class Eszkoz extends Targy {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Eszkoz letrejott\n");
 		f.close();
+
+		nev = s;
+	}
+
+	public String getNev() {
+		return nev;
 	}
 
 	//A parameterkent kapott mezon elhelyezi a szereplot
@@ -26,15 +35,11 @@ public abstract class Eszkoz extends Targy {
 	 * @param Sz szereplot adja meg
 	 */
 	@Override
-	public void felvesz(Szereplo Sz) {
-		System.out.println("<Eszkoz.felvesz(Szereplo sz)");
-
-		// ha van nala eszkoz a regi eldobasra kerul es az uj kerul a helyere
-		//ezert itt nincsen kerdes
-		//ha van nala ha nincsen, akkor is fel tudja venni
-
-		System.out.println(">Eszkoz.felvesz(Szereplo sz)");
+	public void felvesz(Szereplo Sz) throws IOException {
+		//0425
+		Sz.eszkozFelvetele(this);
 	}
 	
 	abstract public void hasznal(Szereplo sz) throws IOException;
+
 }

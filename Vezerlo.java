@@ -42,10 +42,10 @@ public class Vezerlo {
 	/**
 	 *Az Vezerlo gyozelem fuggvenye
 	 */
-	public void gyozelem() {
-		System.out.println(">Vezerlo.gyzelem()");
-		System.out.println("Gratulalok! Gyoztel!");
-		System.out.println("<Vezerlo.gyozelem()");
+	public void gyozelem() throws IOException {
+		FileWriter output = new FileWriter("./kimenet.txt", true);
+		output.write(".A szereplonek sikerult osszeszerelni az alkatreszeket.\n");
+		output.close();
 	}
 	
 	public void lepesekFeltoltese() {
