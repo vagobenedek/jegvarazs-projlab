@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.Dictionary;
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 public class Interpreter {
     HashMap<String, Mezo> mezok;
@@ -13,6 +14,11 @@ public class Interpreter {
 
     public void Translate(String command) throws IOException {
         String[] splitted = command.split("\\s+");
+
+        //TODO: atalakitani
+        StringTokenizer split = new StringTokenizer(command);
+        String split0 = split.nextToken();
+        split.hasMoreTokens();
 
         if (splitted[0].equals("stabil")){
             mezok.put(splitted[1], new Stabil());

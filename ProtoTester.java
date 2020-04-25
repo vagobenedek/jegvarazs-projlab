@@ -1,9 +1,28 @@
 import java.io.*;
 
 public class ProtoTester {
+
+    //TODO: ezzel mukodjon
+    public static void test1(String[] args) throws IOException {
+        int numberOfTests;
+
+        if (args.length == 0){
+            System.out.println("A program nem kapott argumentumot.");
+            return;
+        } else {
+            if (args[0].equals("all")){
+                numberOfTests = Integer.parseInt(args[1]);
+            } else {
+                numberOfTests = 1;
+
+            }
+        }
+    }
+
     public static void Test() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int number = Integer.parseInt(br.readLine());
+
         switch (number) {
             case 1:
                 FileWriter output = new FileWriter("./kimenet.txt", true);
@@ -13,6 +32,7 @@ public class ProtoTester {
                 Interpreter i = new Interpreter();
                 BufferedReader reader;
                 try {
+                    //TODO: bemeneti mappabol szedje
                     reader = new BufferedReader(new FileReader("C:/Bemeneti/1_bemenet.txt"));
                     String line = reader.readLine();
                     while (line != null) {
