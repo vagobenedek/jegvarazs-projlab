@@ -240,18 +240,17 @@ public class Mezo {
 	// Ha fel van torve a jegtabla -> nem csinal semmit.
 	// Ha nincs feltorve -> feltori.
 	public void feltor() throws IOException {
-
-		System.out.println("\t>Mezo.feltor()");
-		System.out.println("\t\tFel van mar torve a mezo?");
-		System.out.println("\t\t1.: Igen\t2.: Nincs");
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    	String str = br.readLine();
-    	if(str.equals("2")) {
-    		System.out.println("\t\tthis.feltort = true;");
-    	}
-		System.out.println("\t<Mezo.feltor()");
-
-
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		
+		if(hoSzint == 0) {
+			feltort = true;
+			f.append("A mezo feltort.\n");
+		}
+		else {
+			f.append("A mezo nem tort fel.\n");
+		}
+		
+		f.close();
 	}
 	
 	public void epit(Szereplo sz) throws IOException {

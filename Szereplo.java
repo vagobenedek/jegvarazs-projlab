@@ -88,9 +88,11 @@ public abstract class Szereplo implements IKarakter {
 	
 	// A Szereplo feltori a jegtablat -> meghivodik az adott Mezo feltor() fuggvenye.
 	public void feltor() throws IOException {
-		System.out.println(">Szereplo.feltor()");
-		new Mezo().feltor();
-		System.out.println("<Szereplo.feltor()");
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A szereplo feltori a jeget.\n");
+		f.close();
+		
+		m.feltor();
 	}
 	
 	public void hasznal() throws IOException {
