@@ -7,7 +7,7 @@ public class Elelem extends Eszkoz {
 		f.append("Elelem letrejott\n");
 		f.close();
 	}
-	public Elelem(String s){
+	public Elelem(String s) throws IOException {
 		super(s);
 	}
 	@Override

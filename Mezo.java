@@ -12,6 +12,11 @@ public class Mezo{
 	private int hoSzint;
 	private int teherbiras;
 	private boolean vedett;
+	private Mezo[] szomszedMezok = new Mezo[4];
+
+	public void setSzomszedMezo(Mezo szomszedMezo, int irany) {
+		szomszedMezok[irany] = szomszedMezo;
+	}
 	
 	public Mezo(Targy t, Epulet e, int hoSzint,int teherbiras, boolean vedett) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);

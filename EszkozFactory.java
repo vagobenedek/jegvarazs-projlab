@@ -10,7 +10,7 @@ public class EszkozFactory {
 		f.close();
 	}
 	//A factory legyartja a megfelelo szamu egyseget
-	public ArrayList<Eszkoz> createEszkoz(int i) {
+	public ArrayList<Eszkoz> createEszkoz(int i) throws IOException {
 		System.out.println(">EszkozFactory.createEszkoz()");
 		//Letrehozza a megfelelo szamu eszkozt, majd visszaadja azokat egy listaban
 		Eszkoz e = new Elelem("init");

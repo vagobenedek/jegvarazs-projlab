@@ -13,7 +13,6 @@ public class Comparator {
         boolean found = false;
         if (args[0].equals("all")){
             numberOfTests = Integer.parseInt(args[1]);
-
         }
         else {
             numberOfTests = 1;
