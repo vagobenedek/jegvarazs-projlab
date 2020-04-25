@@ -1,0 +1,2 @@
+A szereplő testhője 0.
+A játéknak vége: vesztettél.

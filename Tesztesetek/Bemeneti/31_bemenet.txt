@@ -1,0 +1,4 @@
+stabil stl1 1
+eszkimo eszki stl1
+settestho eszki 1
+hovihar stl1

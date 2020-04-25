@@ -1,0 +1,5 @@
+stabil stl2 0
+Eszkimo e stl2
+feltor e
+setHoszint stl2 2
+feltor e

@@ -1,0 +1,3 @@
+A szereplő testhője 1.
+A hószint az stl1 mezőn: 2.
+A hószint az stl2 mezőn: 1.

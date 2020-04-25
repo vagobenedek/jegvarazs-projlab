@@ -1,0 +1,5 @@
+stabil stl1 2
+iglu iglu1 stl1
+eszkimo eszki stl1
+settestho eszki 2
+jegesmedve jmedve stl1

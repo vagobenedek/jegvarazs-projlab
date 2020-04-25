@@ -1,0 +1,9 @@
+stabil stl1 0
+eszkimo eszki stl1
+torekenyaso aso1 stl1
+feltor eszki 
+felvesz eszki
+sethoszint stl1 7
+hasznal eszki aso1
+hasznal eszki aso1
+hasznal eszki aso1

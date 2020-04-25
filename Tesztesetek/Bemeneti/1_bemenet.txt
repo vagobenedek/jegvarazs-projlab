@@ -1,0 +1,7 @@
+stabil stl1 5
+stabil stl2 5
+stabil stl3
+setszomszed stl1 0 stl2
+setszomszed stl1 1 stl3
+eszkimo e stl1
+lep e 0
