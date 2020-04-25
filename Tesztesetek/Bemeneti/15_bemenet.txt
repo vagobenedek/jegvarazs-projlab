@@ -1,0 +1,11 @@
+stabil stl1 0
+stabil stl2 0
+eszkimo e stl1
+kotel k1 stl1
+lapat l1 stl2
+feltor e
+felvesz e
+setszomszed stl1 0 stl2
+lep e 0
+feltor e
+felvesz e

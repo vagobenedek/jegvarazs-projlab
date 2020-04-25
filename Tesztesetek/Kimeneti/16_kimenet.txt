@@ -1,0 +1,4 @@
+Szereplő tárgyfelvétele sikeres.
+Felvett alkatrész: pisztoly.
+Szereplő tárgyfelvétele meghíúsult.
+Szereplő tárgyfelvétele meghiúsult.

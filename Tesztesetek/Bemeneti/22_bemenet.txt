@@ -1,0 +1,7 @@
+stabil stl1 0
+eszkimo eszki stl1
+lapat lapat1 stl1
+feltor eszki 
+felvesz eszki
+sethoszint stl1 5
+hasznal eszki lapat1

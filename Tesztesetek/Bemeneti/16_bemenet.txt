@@ -1,0 +1,14 @@
+stabil stl1 0
+stabil stl2 0
+stabil stl3 2
+eszkimo e stl1
+eszkimo e2 stl2
+eszkimo e3 stl3
+pisztoly p1 stl1
+jelzofeny j1 stl2
+patron  pa1 stl3
+feltor e
+felvesz e
+felvesz e2
+feltor e3
+felvesz e3

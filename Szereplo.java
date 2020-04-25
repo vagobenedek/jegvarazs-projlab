@@ -3,7 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public abstract class Szereplo {
+public abstract class Szereplo implements IKarakter {
 	private int testho;
 	private Eszkoz e;
 	private Alkatresz a;
@@ -61,6 +61,8 @@ public abstract class Szereplo {
 	public Alkatresz getAlkatresz() {
 		return a;
 	}
+
+
 
 	public int getLepesszam() {
 		return lepesszam;
@@ -242,8 +244,8 @@ public abstract class Szereplo {
 
 	}
 	
-	public void osszerak() {
-
+	public void osszerak() throws IOException {
+		m.epit(this);
 	}
 	
 	public void etkezes() {

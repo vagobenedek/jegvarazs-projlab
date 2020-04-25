@@ -1,0 +1,3 @@
+stabil stl1 5
+eszkimo eszki stl1
+asas eszki

@@ -6,12 +6,13 @@ import java.util.ArrayList;
 
 public class Mezo {
 	private ArrayList<Szereplo> szereplok;
-	private Targy targy;
-	private Epulet epulet;
+	private ITargy targy;
+	private IEpulet epulet;
 	private boolean feltort;
 	private int hoSzint;
 	private int teherbiras;
-	private boolean vedett;
+	private boolean hovihartolVedett;
+	private boolean medvetolVedett;
 	private Mezo[] szomszedMezok = new Mezo[4];
 	private Eszkoz eszkoz;
 	private Alkatresz alkatresz;
@@ -21,7 +22,7 @@ public class Mezo {
 		szomszedMezok[irany] = szomszedMezo;
 	}
 	
-	public Mezo(Targy t, Epulet e, int hoSzint,int teherbiras, boolean vedett) throws IOException {
+	public Mezo(ITargy t, IEpulet e, int hoSzint,int teherbiras, boolean hovihartolVedett, boolean medvetolVedett) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo letrejott\n");
 		f.close();
@@ -30,7 +31,8 @@ public class Mezo {
 		feltort = false;
 		this.hoSzint = hoSzint;
 		this.teherbiras=teherbiras;
-		this.vedett=vedett;
+		this.hovihartolVedett = hovihartolVedett;
+		this.medvetolVedett = medvetolVedett;
 	}
 	public Mezo() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -47,11 +49,11 @@ public class Mezo {
 		return szereplok;
 	}
 
-	public Targy getTargy() {
+	public ITargy getTargy() {
 		return targy;
 	}
 
-	public Epulet getEpulet() {
+	public IEpulet getEpulet() {
 		return epulet;
 	}
 
@@ -63,8 +65,12 @@ public class Mezo {
 		return hoSzint;
 	}
 
-	public boolean isVedett() {
-		return vedett;
+	public boolean isHovihartolVedett() {
+		return hovihartolVedett;
+	}
+	
+	public boolean isMedvetolVedett() {
+		return medvetolVedett;
 	}
 
 	public void addSzereplo(Szereplo szereplo) {
@@ -75,11 +81,11 @@ public class Mezo {
 	public void removeSzereplo(Szereplo szereplo){
 		this.szereplok.remove(szereplo);
 	}
-	public void setTargy(Targy targy) {
+	public void setTargy(ITargy targy) {
 		this.targy = targy;
 	}
 
-	public void setEpulet(Epulet epulet) {
+	public void setEpulet(IEpulet epulet) {
 		this.epulet = epulet;
 	}
 
@@ -91,8 +97,12 @@ public class Mezo {
 		this.hoSzint = hoSzint;
 	}
 
-	public void setVedett(boolean vedett) {
-		this.vedett = vedett;
+	public void setHovihartolVedett(boolean hovihartolVedett) {
+		this.hovihartolVedett = hovihartolVedett;
+	}
+	
+	public void setMedvetolVedett(boolean medvetolVedett) {
+		this.medvetolVedett = medvetolVedett;
 	}
 
 	public void hovihar() throws IOException {
@@ -215,7 +225,23 @@ public class Mezo {
 
 	}
 	
-	public void epit(Szereplo sz) {
+	public void epit(Szereplo sz) throws IOException {
+		int count = 0;
+		if(szereplok.size()  >= 3) {
+			for (Szereplo szereplo : szereplok) {
+				if (szereplo.getAlkatresz() != null) {
+					count++;
+				}
+			}
+		}
+		if (count == 3)
+		{
+			//dosomething
+		} else {
+			FileWriter output = new FileWriter("./kimenet.txt", true);
+			output.write("A szereplőnek nem sikerült összeszerelni az alkatrészeket.\n");
+			output.close();
+		}
 	}
 	
 	public void targyFelvetele(Szereplo sz) throws IOException {

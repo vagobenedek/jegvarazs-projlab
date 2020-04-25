@@ -1,0 +1,8 @@
+stabil stl1 0
+lyuk ly1 2
+setszomszed stl1 0 ly1
+eszkimo e stl1
+buvarruha b1 stl1
+feltor e
+felvesz e
+lep e 0

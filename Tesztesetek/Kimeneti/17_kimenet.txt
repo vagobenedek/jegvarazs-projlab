@@ -1,0 +1,3 @@
+Szereplő tárgyfelvétele sikeres.
+Felvett alkatrész: pisztoly.
+Korábbi alkatrész mezőbe került vissza.

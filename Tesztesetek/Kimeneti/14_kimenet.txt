@@ -1,0 +1,4 @@
+Szereplő tárgyfelvétele sikeres.
+Felvett tárgy: kötél.
+Szereplő tárgyfelvétele meghíúsult.
+Szereplő tárgyfelvétele meghiúsult.

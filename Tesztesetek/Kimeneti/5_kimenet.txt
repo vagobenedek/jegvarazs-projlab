@@ -1,0 +1,2 @@
+A szereplő vízbe esett.
+A játéknak vége: vesztettél.
