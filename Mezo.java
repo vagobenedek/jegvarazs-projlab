@@ -209,25 +209,24 @@ public class Mezo {
 	// Ha nincs lapat -> 1  db hoCsokkento() hivodik.
 	// Ha van lapat -> 2 db hoCsokkento() hivodik.
 	public void hoAso(int lapat) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Mezo hoasas\n");
+		
 		for (int i=0; i<=lapat; i++){
 			this.hoCsokkento();
 		}
-
-		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Mezo hoasas\n");
+		
+		f.append("A hoszint a mezon: " + this.hoSzint + ".\n");
 		f.close();
-		/*
-		System.out.println("\t>Mezo.hoAso()");
-		this.hoCsokkento();
-		System.out.println("\t<Mezo.hoAso()");
-		 */
 	}
 	
 	// Csokkenti a hoszintet eggyel.
 	public void hoCsokkento() throws IOException {
-		hoSzint -= 1;
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Hoszint eggyel csokkent\n");
+		if(hoSzint > 0) {
+			hoSzint -= 1;
+			f.append("Hoszint eggyel csokkent\n");
+		}
 		f.close();
 	}
 	

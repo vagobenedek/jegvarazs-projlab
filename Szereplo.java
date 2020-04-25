@@ -171,15 +171,11 @@ public abstract class Szereplo implements IKarakter {
 	
 	// A Szereplo assa a havat -> meghivodik az adott Mezo hoAso() fuggvenye.
 	public void hoAsas(int lapat) throws IOException {
-		getMezo().hoAso(lapat);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szereplo havat as\n");
 		f.close();
-/*
-		System.out.println(">Szereplo.hoAsas()");
-		new Mezo().hoAso();
-		System.out.println("<Szereplo.hoAsas()");
- */
+		
+		getMezo().hoAso(lapat);
 	}
 	
 	public void kepessegHasznalat(int i) throws IOException {

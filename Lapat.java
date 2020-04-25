@@ -8,17 +8,13 @@ public class Lapat extends Eszkoz {
 		f.append("Lapat letrejott\n");
 		f.close();
 	}
+	
 	@Override
 	public void hasznal(Szereplo Sz) throws IOException {
-		Sz.hoAsas(1);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Lapat hasznalata\n");
 		f.close();
-		/*
-		System.out.println("\t>Lapat.hasznal()");
-		//Meghivjuk a hoAsas fuggvenyt
-		Sz.hoAsas();
-		System.out.println("\t<Lapat.hasznal()");
-		 */
+		
+		Sz.hoAsas(1);
 	}
 }
