@@ -1,9 +1,14 @@
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class Alkatresz extends Targy {
-	public Alkatresz(){}
+	public Alkatresz() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Alkatresz letrejott\n");
+		f.close();
+	}
 
 	/**
 	 * Az alkatresz felvesz fuggvenye

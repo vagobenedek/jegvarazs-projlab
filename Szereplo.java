@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -8,10 +9,15 @@ public abstract class Szereplo {
 	private Alkatresz a;
 	private int lepesszam;
 	private Mezo m;
-	public Szereplo(){}
-	public Szereplo(String s){
-		System.out.println(">Szereplo konstruktor");
-		System.out.println("<Szereplo konstruktor");
+	public Szereplo() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Jelzofeny letrejott\n");
+		f.close();
+	}
+	public Szereplo(String s) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Jelzofeny letrejott\n");
+		f.close();
 	}
 
 	/**
@@ -145,7 +151,7 @@ public abstract class Szereplo {
 	}
 	
 	// A Szereplo assa a havat -> meghivodik az adott Mezo hoAso() fuggvenye.
-	public void hoAsas() {
+	public void hoAsas() throws IOException {
 		System.out.println(">Szereplo.hoAsas()");
 		new Mezo().hoAso();
 		System.out.println("<Szereplo.hoAsas()");

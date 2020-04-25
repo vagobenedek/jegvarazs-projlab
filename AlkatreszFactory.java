@@ -1,13 +1,16 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class AlkatreszFactory {
 	//Konstruktoraban letrehozzuk a Factoryt
-	public AlkatreszFactory(){
-		System.out.println(">AlkatreszFactory konstruktor");
-		System.out.println("<AlkatreszFactory konstruktor");
+	public AlkatreszFactory() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("AlkatreszFactory letrejott\n");
+		f.close();
 	}
 	//A factory legyartja a megfelelo szamu egyseget
-	public ArrayList<Alkatresz> createAlkatresz(int i) {
+	public ArrayList<Alkatresz> createAlkatresz(int i) throws IOException {
 		System.out.println(">AlkatreszFactory.createAlkatresz()");
 		/*Legeneraljuk az osszes jatekhoz szukseges alkatreszt
 		Ez egyelore a lent lathato 3 db alkatreszt jelenti*/

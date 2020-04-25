@@ -1,12 +1,18 @@
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class Eszkoz extends Targy {
-	public Eszkoz(){}
-	public Eszkoz(String s){
-		System.out.println(">Eszkoz konstruktor");
-		System.out.println("<Eszkoz konstruktor");
+	public Eszkoz() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Eszkoz letrejott\n");
+		f.close();
+	}
+	public Eszkoz(String s) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Eszkoz letrejott\n");
+		f.close();
 	}
 
 	//A parameterkent kapott mezon elhelyezi a szereplot

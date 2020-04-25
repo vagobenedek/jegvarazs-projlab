@@ -1,11 +1,13 @@
-
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Iglu extends Epulet {
-	public Iglu(Mezo m){
-		System.out.println("\t\t>Iglu konstruktor");
+	public Iglu(Mezo m) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Iglu letrejott\n");
+		f.close();
 		//Az iglu amint letrejon, vedelmet allit be a mezonek
 		setVedelem();
-		System.out.println("\t\t<Iglu konstruktor");
 	}
 	public void hovihar() {
 	}

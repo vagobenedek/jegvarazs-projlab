@@ -1,7 +1,12 @@
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Stabil extends Jegmezo {
-	public Stabil(){}
+	public Stabil() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Stabil letrejott\n");
+		f.close();
+	}
 
 	/**
 	 * a parameterkent kaptt szereplot ralepteti a stabil mezore

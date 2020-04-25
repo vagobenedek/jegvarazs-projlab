@@ -1,9 +1,12 @@
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Palya {
 	/*private Mezo mezok;*/
 	public Palya(int szelesseg, int magassag) throws IOException {
-		System.out.println(">Palya konstruktor");
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Palya letrejott\n");
+		f.close();
 		//A JegmezoFactory legyartja, es visszaadja a szamukra szukseges jegmezoket
 		new JegmezoFactory().createJegmezo(1);
 		//A jegmezok elredezese utan, nehany jegtablara egy hovihar segitsegevel haat teszunk
@@ -19,7 +22,6 @@ public class Palya {
 		new Jelzofeny().addAlkatreszToMezo(new Mezo());
 		new EszkozFactory().createEszkoz(1);
 		new Elelem().addEszkozToMezo(new Mezo());
-		System.out.println("<Palya konstruktor");
 	}
 	public void hovihar() throws IOException {
 		System.out.println(">Palya.hovihar()");

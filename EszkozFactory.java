@@ -1,10 +1,13 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class EszkozFactory {
 	//Konstruktoraban letrehozzuk a Factoryt
-	public EszkozFactory(){
-		System.out.println(">EszkozFactory konstruktor");
-		System.out.println("<EszkozFactory konstruktor");
+	public EszkozFactory() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("EszkozFactory letrejott\n");
+		f.close();
 	}
 	//A factory legyartja a megfelelo szamu egyseget
 	public ArrayList<Eszkoz> createEszkoz(int i) {

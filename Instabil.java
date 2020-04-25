@@ -1,13 +1,21 @@
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Instabil extends Jegmezo {
 	private int teherbiras;
-	public Instabil(Targy t, Epulet e, int hoSzint,int teherbiras, boolean vedett){
+	public Instabil(Targy t, Epulet e, int hoSzint,int teherbiras, boolean vedett) throws IOException {
 		//super(t,e,hoSzint,teherbiras,vedett);
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Instabil letrejott\n");
+		f.close();
 	}
-	public Instabil(){}
+	public Instabil() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Instabil letrejott\n");
+		f.close();
+	}
 	public void atfordul() {
 	}
 

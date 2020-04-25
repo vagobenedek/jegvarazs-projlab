@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -7,10 +8,11 @@ public class Vezerlo {
 	public Vezerlo(){
 	}
 	public Vezerlo(String s) throws IOException {
-		System.out.println(">Vezerlo konstruktor");
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Vezerlo letrejott\n");
+		f.close();
 		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
 		new Palya(1,1);
-		System.out.println("<Vezerlo konstruktor");
 	}
 
 	/**

@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -12,7 +13,10 @@ public class Mezo{
 	private int teherbiras;
 	private boolean vedett;
 	
-	public Mezo(Targy t, Epulet e, int hoSzint,int teherbiras, boolean vedett){
+	public Mezo(Targy t, Epulet e, int hoSzint,int teherbiras, boolean vedett) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Mezo letrejott\n");
+		f.close();
 		targy = t;
 		epulet = e;
 		feltort = false;
@@ -20,10 +24,15 @@ public class Mezo{
 		this.teherbiras=teherbiras;
 		this.vedett=vedett;
 	}
-	public Mezo(){}
-	public Mezo(String s){
-		System.out.println(">Mezo konstruktor");
-		System.out.println("<Mezo konstruktor");
+	public Mezo() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Mezo letrejott\n");
+		f.close();
+	}
+	public Mezo(String s) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Mezo letrejott\n");
+		f.close();
 	}
 
 	public ArrayList<Szereplo> getSzereplok() {
@@ -194,7 +203,7 @@ public class Mezo{
 	public void targyFelvetele(Szereplo sz) {
 	}
 	
-	public void iglutEpit() {
+	public void iglutEpit() throws IOException {
 		System.out.println("\t>Mezo.iglutEpit()");
 		//A mezo, amit atadunk az az a mezo, amin all az eszkimo. Erre fog kerulni az iglu.
 		new Iglu(new Mezo());
