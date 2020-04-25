@@ -5,14 +5,12 @@ import java.util.ArrayList;
 public class Vezerlo {
 	private Szereplo aktualisSzereplo;
 	private ArrayList<Szereplo> szereplok;
-	public Vezerlo(){
-	}
-	public Vezerlo(String s) throws IOException {
+	public Vezerlo() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Vezerlo letrejott\n");
 		f.close();
 		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
-		new Palya(1,1);
+		new Palya(10,10);
 	}
 
 	/**

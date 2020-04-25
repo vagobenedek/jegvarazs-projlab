@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Mezo{
+public class Mezo {
 	private ArrayList<Szereplo> szereplok;
 	private Targy targy;
 	private Epulet epulet;
@@ -13,6 +13,9 @@ public class Mezo{
 	private int teherbiras;
 	private boolean vedett;
 	private Mezo[] szomszedMezok = new Mezo[4];
+	private Eszkoz eszkoz;
+	private Alkatresz alkatresz;
+
 
 	public void setSzomszedMezo(Mezo szomszedMezo, int irany) {
 		szomszedMezok[irany] = szomszedMezo;
@@ -67,6 +70,8 @@ public class Mezo{
 	public void addSzereplo(Szereplo szereplo) {
 		this.szereplok.add(szereplo);
 	}
+	public void setAlkatresz(Alkatresz a){this.alkatresz=a;}
+	public void setEszkoz(Eszkoz e){this.eszkoz=e;}
 	public void removeSzereplo(Szereplo szereplo){
 		this.szereplok.remove(szereplo);
 	}
@@ -91,13 +96,17 @@ public class Mezo{
 	}
 
 	public void hovihar() throws IOException {
-		System.out.println(">Mezo.hovihar()");
 		//Noveli a mezon levo hoegysegek szamat
 		hoNovelo();
+		if (true){													//Ez itt még elég szar, bocsi :(
+			for (int i = 0; i != szereplok.size(); i++){
+				szereplok.get(i).hovihar();
+			}
+		}
 		/*Amennyiben van iglu a mezon, nem foglalkoznk azzal, hogy van-e szereplo a mezon
 		Amennyiben nincs iglu, megkerdezzuk hogy szereplo van-e
 		A kapott valasznak megfeleloen cselekszunk*/
-		System.out.println("Van iglu a mezon?");
+		/*System.out.println("Van iglu a mezon?");
 		System.out.println("1.: Nincs\n2.: Van");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();
@@ -109,8 +118,7 @@ public class Mezo{
 				//Ha vedetlen szereplo talalhato a mezon, lemegy egy testhoje
 				new Sarkkutato().hovihar();
 			}
-		}
-		System.out.println("<Mezo.hovihar()");
+		}*/
 	}
 
 	/**
@@ -183,9 +191,11 @@ public class Mezo{
 		System.out.println("\t\t<Mezo.hoCsokkento()");
 	}
 	
-	public void hoNovelo() {
-		System.out.println(">Mezo.hoNovelo()");
-		System.out.println("<Mezo.hoNovelo()");
+	public void hoNovelo() throws IOException {
+		hoSzint++;
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Hoszint megnott\n");
+		f.close();
 	}
 	
 	// Ha fel van torve a jegtabla -> nem csinal semmit.

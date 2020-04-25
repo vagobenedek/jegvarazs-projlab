@@ -25,9 +25,11 @@ public abstract class Eszkoz extends Targy {
 	}
 
 	//A parameterkent kapott mezon elhelyezi a szereplot
-	public void addEszkozToMezo(Mezo m){
-		System.out.println(">Eszkoz.addEszkozToMezo()");
-		System.out.println("<Eszkoz.addEszkozToMezo()");
+	public void addEszkozToMezo(Mezo m) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Eszkoz hozaadodott a mezohoz\n");
+		f.close();
+		m.setEszkoz(this);
 	}
 
 	/**

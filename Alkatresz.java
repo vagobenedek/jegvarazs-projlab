@@ -17,7 +17,6 @@ public abstract class Alkatresz extends Targy {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Alkatresz letrejott\n");
 		f.close();
-
 		nev = s;
 	}
 
@@ -46,7 +45,7 @@ public abstract class Alkatresz extends Targy {
 		//0425
 		m.setTargy(this);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("Korabbi alkatresz mezobe kerult vissza.\n");
+		output.write("Alkatresz hozaadodott a mezohoz.\n");
 		output.close();
 	}
 }

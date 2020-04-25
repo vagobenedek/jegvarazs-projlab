@@ -1,6 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class AlkatreszFactory {
 	//Konstruktoraban letrehozzuk a Factoryt
@@ -10,15 +11,18 @@ public class AlkatreszFactory {
 		f.close();
 	}
 	//A factory legyartja a megfelelo szamu egyseget
-	public ArrayList<Alkatresz> createAlkatresz(int i) throws IOException {
-		System.out.println(">AlkatreszFactory.createAlkatresz()");
+	public List<Alkatresz> createAlkatresz(int i) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("AlkatreszFactory letrehozta az alkatreszeket\n");
+		f.close();
 		/*Legeneraljuk az osszes jatekhoz szukseges alkatreszt
 		Ez egyelore a lent lathato 3 db alkatreszt jelenti*/
-		Alkatresz pi = new Pisztoly("init");
-		Alkatresz pa = new Patron("init");
-		Alkatresz j = new Jelzofeny("init");
-		System.out.println("<AlkatreszFactory.createAlkatresz()");
-		return new ArrayList<Alkatresz>();
+		List<Alkatresz> alkatreszek = new ArrayList<>();
+
+		alkatreszek.add(new Pisztoly("init"));
+		alkatreszek.add(new Patron("init"));
+		alkatreszek.add(new Jelzofeny("init"));
+		return alkatreszek;
 	}
 	
 	public void addAlkatreszToMezo(Mezo m) {
