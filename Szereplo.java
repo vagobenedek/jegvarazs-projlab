@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public abstract class Szereplo implements IKarakter {
 	private int testho;
@@ -20,6 +21,9 @@ public abstract class Szereplo implements IKarakter {
 		f.close();
 		this.testho = testho;
 
+	}
+
+	public Szereplo(String s) {
 	}
 
 	/**

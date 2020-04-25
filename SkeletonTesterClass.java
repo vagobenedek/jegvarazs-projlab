@@ -94,7 +94,7 @@ public class SkeletonTesterClass {
     	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     	String str = br.readLine();
     	if(str.equals("1")) {
-    		new Eszkimo().hoAsas();
+    		new Eszkimo().hoAsas(0);
     	}
     	if(str.equals("2")) {
     		new Eszkimo().feltor();

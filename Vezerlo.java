@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Vezerlo {
 	private Szereplo aktualisSzereplo;
 	private ArrayList<Szereplo> szereplok;
-	public Vezerlo() throws IOException {
+	public Vezerlo(String init) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Vezerlo letrejott\n");
 		f.close();

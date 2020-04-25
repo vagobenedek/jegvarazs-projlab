@@ -27,9 +27,9 @@ public class Instabil extends Jegmezo {
 	public void ralep(Szereplo sz) throws IOException {
 		System.out.println(">Instabil.ralep()");
 		sz.setM(this);
-		this.addSzereplo(sz);
+		this.addKarakter(sz);
 		if (this.getTeherBiras()<this.getSzereplok().size()){
-			for (Szereplo szereplo:this.getSzereplok()){
+			for (IKarakter szereplo : this.getSzereplok()){
 				szereplo.tesoTeVizbeEstel();
 			}
 		}
