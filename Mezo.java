@@ -227,9 +227,10 @@ public class Mezo{
 		if (count == 3)
 		{
 			//dosomething
+			sz.elsut();
 		} else {
 			FileWriter output = new FileWriter("./kimenet.txt", true);
-			output.write("A szereplőnek nem sikerült összeszerelni az alkatrészeket.\n");
+			output.write("A szereplonek nem sikerult osszeszerelni az alkatreszeket.\n");
 			output.close();
 		}
 	}
