@@ -1,0 +1,10 @@
+stabil stl1 1
+instabil istl2 0 1
+instabil istl3 0 1
+instabil istl4 0 1
+instabil istl5 0 1
+setszomszed stl1 0 istl2
+setszomszed stl1 1 istl3
+setszomszed stl1 2 istl4
+setszomszed stl1 3 istl5
+lep jegesmedve 0

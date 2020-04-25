@@ -1,0 +1,7 @@
+Stabil stl1 0
+Eszkimo eszki stl1
+settestho eszki 2
+elelem etel1 stl1
+feltor eszki
+felvesz eszki
+hasznal eszki etel1

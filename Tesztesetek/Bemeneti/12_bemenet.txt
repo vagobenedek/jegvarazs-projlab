@@ -1,0 +1,3 @@
+stabil stl1 2
+eszkimo e stl1
+kepesseg e 0

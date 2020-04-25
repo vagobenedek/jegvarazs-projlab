@@ -1,0 +1,2 @@
+A mező feltört.
+A mező nem tört fel.

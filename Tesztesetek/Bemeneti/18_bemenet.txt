@@ -1,0 +1,20 @@
+stabil stl1 0
+stabil stl2 0
+stabil stl3 0
+setszomszed stl1 0 stl2
+setszomszed stl3 1 stl2
+sarkkutato s1 stl1
+eszkimo e1 stl2
+eszkimo e2 stl3
+pisztoly p1 stl1
+jelzofeny j1 stl2
+patron pa1 stl3
+feltor s1
+feltor e1
+feltor e2
+felvesz e1
+felvesz e2
+felvesz s1
+lep s1 0
+lep e2 1
+osszeszerel e1

@@ -1,0 +1,2 @@
+A mezőn van eszköz.
+A szereplőnél nincs eszköz.

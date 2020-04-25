@@ -1,0 +1,8 @@
+stabil stl1 0
+sator sator1 stl1
+eszkimo eszki stl1
+feltor eszki
+felvesz eszki 
+hasznal eszki sator1
+settestho eszki 5
+hovihar stl1

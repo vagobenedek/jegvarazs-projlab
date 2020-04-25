@@ -1,0 +1,4 @@
+A szereplő használja a képességét.
+A mező teherbírása: *.
+A szereplő használja a képességét.
+A mező teherbírása: 2.

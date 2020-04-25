@@ -1,0 +1,5 @@
+stabil stl1 1
+iglu iglu1 stl1
+eszkimo eszki stl1
+settestho eszki 5
+hovihar stl1

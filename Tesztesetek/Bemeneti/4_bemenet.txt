@@ -1,0 +1,11 @@
+stabil stl1 5
+stabil stl2 0
+tenger t1 2
+setszomszed stl1 0 t1
+setszomszed t1 0 stl2
+eszkimo e stl1
+eszkimo e2 stl2
+kotel k1 stl2
+feltor e2
+felvesz e2
+lep e 0

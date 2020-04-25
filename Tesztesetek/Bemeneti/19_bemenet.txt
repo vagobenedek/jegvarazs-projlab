@@ -1,0 +1,13 @@
+stabil stl1 0
+pisztoly piszt stl1
+eszkimo eszki1 stl1
+feltor eszki1
+felvesz eszki1
+stabil stl2 0
+jelzofeny jelzo stl2
+eszkimo eszki2 stl2
+feltor eszki2
+felvesz eszki2
+setszomszed stl1 0 stl2
+lep eszki1 0
+osszeszerel eszki1

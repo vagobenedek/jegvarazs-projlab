@@ -1,0 +1,8 @@
+stabil stl1 2
+stabil stl2 3
+instalbil instl1 2 2
+setszomszed stl1 0 stl2
+setszomszed stl1 1 instl1
+sarkkutato s stl1
+kepesseg s 0
+kepesseg s 1

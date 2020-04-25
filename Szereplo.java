@@ -62,6 +62,8 @@ public abstract class Szereplo implements IKarakter {
 		return a;
 	}
 
+
+
 	public int getLepesszam() {
 		return lepesszam;
 	}
@@ -242,8 +244,8 @@ public abstract class Szereplo implements IKarakter {
 
 	}
 	
-	public void osszerak() {
-
+	public void osszerak() throws IOException {
+		m.epit(this);
 	}
 	
 	public void etkezes() {
