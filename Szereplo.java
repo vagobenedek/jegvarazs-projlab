@@ -7,17 +7,19 @@ public abstract class Szereplo implements IKarakter {
 	private int testho;
 	private Eszkoz e;
 	private Alkatresz a;
-	private int lepesszam;
+	private int lepesszam = 4;
 	private Mezo m;
 	public Szereplo() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Jelzofeny letrejott\n");
 		f.close();
 	}
-	public Szereplo(String s) throws IOException {
+	public Szereplo(int testho, String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Jelzofeny letrejott\n");
 		f.close();
+		this.testho = testho;
+
 	}
 
 	/**
