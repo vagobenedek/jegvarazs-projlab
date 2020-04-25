@@ -1,5 +1,6 @@
 
 public class Jegesmedve implements IKarakter {
+	private Mezo mezo;
 
 	@Override
 	public void lep(int irany) {
@@ -35,6 +36,25 @@ public class Jegesmedve implements IKarakter {
 	public void hitByMedve() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public Eszkoz getEszkoz() {
+		return null;
+	}
+
+	@Override
+	public Alkatresz getAlkatresz() {
+		return null;
+	}
+
+	@Override
+	public void addKarakterToMezo(Mezo m) {
+		this.setM(m);
+		m.addKarakter(this);
+	}
+	public void setM(Mezo m){
+		this.mezo = m;
 	}
 
 }

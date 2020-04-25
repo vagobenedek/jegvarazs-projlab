@@ -11,13 +11,13 @@ public class SzereploFactory {
 		f.close();
 	}
 	//A factory legyartja a megfelelo szamu egyseget
-	public ArrayList<Szereplo> createSzereplo(int n) throws IOException {
+	public List<IKarakter>  createSzereplo(int n) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("SzereploFactory letrehozta a karaktereket\n");
 		f.close();
 		List<IKarakter> karakterek = new ArrayList<>();
 		for (int i = 0; i != n; i++){
-			List.add(new Eszkimo());
+			karakterek.add(new Eszkimo());
 		}
 		return karakterek;
 	}

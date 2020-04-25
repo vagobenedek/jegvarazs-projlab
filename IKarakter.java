@@ -7,4 +7,7 @@ public interface IKarakter {
 	public void tesoTeVizbeEstel() throws IOException;
 	public void huzdKi(Szereplo sz) throws IOException;
 	public void hitByMedve();
+	public Eszkoz getEszkoz();
+	public Alkatresz getAlkatresz();
+	public void addKarakterToMezo(Mezo m);
 }

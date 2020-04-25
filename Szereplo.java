@@ -276,4 +276,8 @@ public abstract class Szereplo implements IKarakter {
 		System.out.println(">Szereplo.addSzereploToMezo()");
 		System.out.println("<Szereplo.addSzereploToMezo()");
 	}
+	public void addKarakterToMezo(Mezo m){
+		m.addKarakter(this);
+		this.setM(m);
+	}
 }

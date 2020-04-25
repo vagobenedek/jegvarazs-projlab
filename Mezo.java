@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Mezo {
-	private ArrayList<Szereplo> szereplok;
+	private ArrayList<IKarakter> szereplok;
 	private ITargy targy;
 	private IEpulet epulet;
 	private boolean feltort;
@@ -45,7 +45,7 @@ public class Mezo {
 		f.close();
 	}
 
-	public ArrayList<Szereplo> getSzereplok() {
+	public ArrayList<IKarakter> getSzereplok() {
 		return szereplok;
 	}
 
@@ -73,7 +73,7 @@ public class Mezo {
 		return medvetolVedett;
 	}
 
-	public void addSzereplo(Szereplo szereplo) {
+	public void addKarakter(IKarakter szereplo) {
 		this.szereplok.add(szereplo);
 	}
 	public void setAlkatresz(Alkatresz a){this.alkatresz=a;}
@@ -140,7 +140,7 @@ public class Mezo {
 	public void ralep(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.ralep()");
 		sz.setM(this);
-		addSzereplo(sz);
+		addKarakter(sz);
 		System.out.println("<Mezo.ralep()");
 	}
 
@@ -228,7 +228,7 @@ public class Mezo {
 	public void epit(Szereplo sz) throws IOException {
 		int count = 0;
 		if(szereplok.size()  >= 3) {
-			for (Szereplo szereplo : szereplok) {
+			for (IKarakter szereplo : szereplok) {
 				if (szereplo.getAlkatresz() != null) {
 					count++;
 				}
@@ -272,7 +272,7 @@ public class Mezo {
 	public void huzzKi(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.huzzki()");
 		System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
-		for (Szereplo szereplo: this.getSzereplok()){
+		for (IKarakter szereplo: this.getSzereplok()){
 			if(szereplo.getEszkoz().equals("Kotel")){
 				szereplo.huzdKi(sz);
 			}
