@@ -26,8 +26,8 @@ public class ProtoTester {
                 Interpreter interpreter = new Interpreter();
                 BufferedReader reader;
                 //TODO: bemeneti mappabol szedje
-                //reader = new BufferedReader(new FileReader("./Tesztesetek/Bemeneti/1_bemenet.txt"));
-                reader = new BufferedReader(new FileReader("./Tesztesetek/Bemeneti"+ (numberOfTests == 1?args[0]:i) +"_bemenet.txt"));
+                reader = new BufferedReader(new FileReader("./Tesztesetek/Bemeneti/1_bemenet.txt"));
+                //reader = new BufferedReader(new FileReader("./Tesztesetek/Bemeneti"+ (numberOfTests == 1?args[0]:i) +"_bemenet.txt"));
                 System.out.println(reader);
                 while ((line = reader.readLine()) != null) {
                     System.out.println(line);
