@@ -212,8 +212,12 @@ public class Mezo {
 		return szomszedMezok[irany];
 	}
 
-	// Ha nincs lapat -> 1  db hoCsokkento() hivodik.
-	// Ha van lapat -> 2 db hoCsokkento() hivodik.
+	/**
+	 * A parameternek megfelelo alkalommal hivja meg a hoCsokkento() metodust. 
+	 * Ezutan fajlba irja a hoSzint attributum erteket.
+	 * @param lapat Megmondja, hogy lapattal (1) vagy lapat nelkul (0) tortenik az asas.
+	 * @throws IOException
+	 */
 	public void hoAso(int lapat) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo hoasas\n");
@@ -226,7 +230,10 @@ public class Mezo {
 		f.close();
 	}
 
-	// Csokkenti a hoszintet eggyel.
+	/**
+	 * Ha a hoszint nagyobb 0-nal, csokkenti a hoszintet 1-gyel és ezt fajlba irva jelzi.
+	 * @throws IOException
+	 */
 	public void hoCsokkento() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		if(hoSzint > 0) {
@@ -236,6 +243,10 @@ public class Mezo {
 		f.close();
 	}
 
+	/**
+	 * Noveli a hoszintet 1-gyel, majd ezt fajlba irva jelzi.
+	 * @throws IOException
+	 */
 	public void hoNovelo() throws IOException {
 		setHoSzint(getHoSzint()+1);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -243,14 +254,14 @@ public class Mezo {
 		f.close();
 	}
 
-	// Ha fel van torve a jegtabla -> nem csinal semmit.
-	// Ha nincs feltorve -> feltori.
+	/**
+	 * A boolean feltort attributum erteket igazba allitja, majd fajlba irva jelzi a mezo feltoreset.
+	 * @throws IOException
+	 */
 	public void feltor() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		this.feltort=true;
 		f.append("A mezo feltort.\n");
-
-
 		f.close();
 	}
 
