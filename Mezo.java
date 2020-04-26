@@ -212,8 +212,12 @@ public class Mezo {
 		return szomszedMezok[irany];
 	}
 
-	// Ha nincs lapat -> 1  db hoCsokkento() hivodik.
-	// Ha van lapat -> 2 db hoCsokkento() hivodik.
+	/**
+	 * A parameternek megfelelo alkalommal hivja meg a hoCsokkento() metodust. 
+	 * Ezutan fajlba irja a hoSzint attributum erteket.
+	 * @param lapat Megmondja, hogy lapattal (1) vagy lapat nelkul (0) tortenik az asas.
+	 * @throws IOException
+	 */
 	public void hoAso(int lapat) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo hoasas\n");
