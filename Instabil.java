@@ -51,4 +51,5 @@ public class Instabil extends Jegmezo {
 		//random visszateresi ertek
 		return teherbiras;
 	}
+
 }

@@ -4,8 +4,17 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class Eszkoz implements ITargy {
+	private Mezo m;
 
 	String nev;
+
+	public Mezo getM() {
+		return m;
+	}
+
+	public void setM(Mezo m) {
+		this.m = m;
+	}
 
 	public Eszkoz() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
