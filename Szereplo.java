@@ -271,7 +271,7 @@ public abstract class Szereplo implements IKarakter{
 	public void hasznal() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		if (getEszkoz() != null){
-			f.append("A szereplonel van eszkoz.");
+			f.append("A szereplonel van eszkoz.\n");
 			if(getEszkoz().getNev().equals("Sator")){
 				this.setEpitettSatratElozoKorben(true);
 			}

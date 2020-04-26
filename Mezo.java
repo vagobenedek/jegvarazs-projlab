@@ -387,7 +387,7 @@ abstract public  class Mezo {
 		//0425
 		if(isFeltort() && targy != null) {
 			targy.felvesz(sz);
-
+			setTargy(null);
 		}
 		else {
 			FileWriter output = new FileWriter("./kimenet.txt", true);

@@ -1,15 +1,83 @@
+1
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Szereplo lep
+Mezo lekerdezese
+Szomszed lekerdezese.
+Szereplo lelep a mezorol.
+A Szereplo stabil mezon all
+
+2
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Szereplo lep
+Mezo lekerdezese
+Szomszed lekerdezese.
+Szereplo lelep a mezorol.
+A szereplo instabil mezon all.
+Teherbiras lekerdezese.
+
+3
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Tenger letrejott
 Jelzofeny letrejott
 Eszkimo letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
 Eszkoz letrejott.
+Buvarruha letrejott.
 Eszkoz hozaadodott a mezohoz.
+Eszkoz letrejott.
+Buvarruha letrejott.
 Eszkoz hozaadodott a mezohoz.
 A szereplo feltori a jeget.
 Mezo lekerdezese
@@ -18,10 +86,126 @@ A mezo feltort.
 Mezo lekerdezese
 Eszkoz felveteti magat a szereplovel.
 Szereplo targyfelvetele sikeres.
-Felvett targy: Sator.
+Felvett targy: null.
+Szereplo lep
+Mezo lekerdezese
+Szomszed lekerdezese.
+Szereplo lelep a mezorol.
+A Szereplo stabil mezon all
+
+4
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Tenger letrejott
 Jelzofeny letrejott
 Eszkimo letrejott.
-Vezerlo letrejott.
-30
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Eszkoz letrejott.
+Kotel letrejott
+Eszkoz hozaadodott a mezohoz.
+Eszkoz letrejott.
+Kotel letrejott
+Eszkoz hozaadodott a mezohoz.
+A szereplo feltori a jeget.
+Mezo lekerdezese
+Mezo lekerdezese
+A mezo feltort.
+Mezo lekerdezese
+Eszkoz felveteti magat a szereplovel.
+Szereplo targyfelvetele sikeres.
+Felvett targy: null.
+Szereplo lep
+Mezo lekerdezese
+Szomszed lekerdezese.
+Szereplo lelep a mezorol.
+A Szereplo stabil mezon all
 
+5
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Tenger letrejott
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Szereplo lep
+Mezo lekerdezese
+Szomszed lekerdezese.
+Szereplo lelep a mezorol.
+A Szereplo stabil mezon all
 
+6
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Eszkoz letrejott.
+Buvarruha letrejott.
+Eszkoz hozaadodott a mezohoz.
+Eszkoz letrejott.
+Buvarruha letrejott.
+Eszkoz hozaadodott a mezohoz.
+A szereplo feltori a jeget.
+Mezo lekerdezese
+Mezo lekerdezese
+A mezo feltort.
+Mezo lekerdezese
+Eszkoz felveteti magat a szereplovel.
+Szereplo targyfelvetele sikeres.
+Felvett targy: null.
+Szereplo lep
+Mezo lekerdezese
+Szomszed lekerdezese.
+Szereplo lelep a mezorol.
+A szereplo instabil mezon all.
+Teherbiras lekerdezese.
+Az Instabil mez oatfordult

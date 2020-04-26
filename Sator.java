@@ -32,7 +32,7 @@ public class Sator extends Eszkoz implements IEpulet {
 	public void hasznal(Szereplo sz) throws IOException {
 		// TODO Auto-generated method stub
 		mezo.satratEpit(this);
-		
+		sz.setEszkoz(null);
 	}
 
 	/**

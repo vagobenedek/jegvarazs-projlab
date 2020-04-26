@@ -1,6 +1,2 @@
-<<<<<<< HEAD
 2
-=======
-2
->>>>>>> branch 'master' of https://github.com/vagobenedek/jegvarazs-projlab.git
 A szereplo instabil mezon all.
