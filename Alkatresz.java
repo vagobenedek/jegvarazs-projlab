@@ -6,6 +6,9 @@ import java.io.InputStreamReader;
 public abstract class Alkatresz implements ITargy {
 	private Mezo m;
 
+	/**
+	 * nev parameter, alkatresz nevet adja meg
+	 */
 	String nev;
 
 	public Mezo getM() {
@@ -29,6 +32,10 @@ public abstract class Alkatresz implements ITargy {
 		nev = s;
 	}
 
+	/**
+	 * Lekerdezi az alkatresz nevet
+	 * @return nev
+	 */
 	public String getNev() {
 		return nev;
 	}
@@ -41,14 +48,16 @@ public abstract class Alkatresz implements ITargy {
 	 */
 	@Override
 	public void felvesz(Szereplo sz) throws IOException {
-
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Szereplo felveszi az alkatreszt\n");
+		f.close();
 		sz.alkatreszFelvetele(this);
 	}
 
 	/**
 	 * Az alkatreszt a mezohoz ado fuggveny
-	 *
 	 * @param m mezot adja meg
+	 * @throws IOException
 	 */
 	public void addAlkatreszToMezo(Mezo m) throws IOException {
 		//0425

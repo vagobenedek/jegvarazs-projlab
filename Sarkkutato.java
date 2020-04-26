@@ -20,5 +20,7 @@ public class Sarkkutato extends Szereplo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Sarkkutato kepesseg hasznalata sikeres\n");
 		f.close();
+		getjListener().hoviharSzamlaloCsokkentoListener();
+		setLepesszam(getLepesszam()-1);
 	}
 }

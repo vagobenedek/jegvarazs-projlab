@@ -4,17 +4,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class Eszkoz implements ITargy {
-	private Mezo m;
 
+	/**
+	 * nev parameter, eszkoz nevet adja meg
+	 */
 	String nev;
-
-	public Mezo getM() {
-		return m;
-	}
-
-	public void setM(Mezo m) {
-		this.m = m;
-	}
 
 	public Eszkoz() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -29,6 +23,10 @@ public abstract class Eszkoz implements ITargy {
 		nev = s;
 	}
 
+	/**
+	 * Lekerdezi az eszkoz nevet
+	 * @return nev
+	 */
 	public String getNev() {
 		return nev;
 	}
@@ -48,6 +46,9 @@ public abstract class Eszkoz implements ITargy {
 	@Override
 	public void felvesz(Szereplo Sz) throws IOException {
 		//0425
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Eszkoz felveteti magat a szereplovel\n");
+		f.close();
 		Sz.eszkozFelvetele(this);
 	}
 	

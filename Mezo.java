@@ -109,8 +109,11 @@ public class Mezo {
 
 	public void hovihar() throws IOException {
 		//Noveli a mezon levo hoegysegek szamat
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Mezon hovihar tamadt\n");
+		f.close();
 		hoNovelo();
-		if (true){													//Ez itt még elég szar, bocsi :(
+		if (!this.isHovihartolVedett()){
 			for (int i = 0; i != szereplok.size(); i++){
 				szereplok.get(i).hovihar();
 			}
@@ -252,7 +255,12 @@ public class Mezo {
 		
 		f.close();
 	}
-	
+
+	/**
+	 * Szereplo osszeszerel fuggvenye hivja meg, megvizsgalja, hogy minden alkatresz egy mezon van e
+	 * @param sz
+	 * @throws IOException
+	 */
 	public void epit(Szereplo sz) throws IOException {
 		int count = 0;
 		if(szereplok.size()  >= 3) {
@@ -272,10 +280,15 @@ public class Mezo {
 			output.close();
 		}
 	}
-	
+
+	/**
+	 * Tárgy felvétele
+	 * @param sz
+	 * @throws IOException
+	 */
 	public void targyFelvetele(Szereplo sz) throws IOException {
 		//0425
-		if(feltort) {
+		if(isFeltort() && targy != null) {
 			targy.felvesz(sz);
 		}
 		else {
@@ -299,9 +312,9 @@ public class Mezo {
 	 */
 	public void huzzKi(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.huzzki()");
-		System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
+		//System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
 		for (IKarakter szereplo: this.getSzereplok()){
-			if(szereplo.getEszkoz().getNev().equals("Kotel")){
+			if(szereplo.getEszkoz()!=null && szereplo.getEszkoz().getNev().equals("Kotel")){
 				szereplo.huzdKi(sz);
 			}
 		}/*

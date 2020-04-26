@@ -9,6 +9,12 @@ public abstract class Targy {
 		f.append("Targy letrejott\n");
 		f.close();
 	}
+
+	/**
+	 * Targy fekvesz fuggvenye
+	 * @param sz
+	 * @throws IOException
+	 */
 	public void felvesz(Szereplo sz) throws IOException {
 
 	}

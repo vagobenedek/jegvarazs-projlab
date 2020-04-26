@@ -41,6 +41,9 @@ public abstract class Szereplo implements IKarakter{
 		f.close();
 		return m;
 	}
+	public JegvarazsListener getjListener(){
+	    return jListener;
+    }
 	public void setjListener(JegvarazsListener jListener){
 		this.jListener=jListener;
 	}
@@ -88,13 +91,23 @@ public abstract class Szereplo implements IKarakter{
 
 	/*Csokkenti a szerplo testhojet
         Csak akkor hivdik meg, ha hoviar aldozata lesz, es nincs igluban*/
-	public void hovihar() {
-		System.out.println(">Szereplo.hovihar()");
-		System.out.println("Szereplo testhoje csokken");
-		System.out.println("<Szereplo.hovihar()");
+	public void hovihar() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Szereplo mezojen hovihar tamadt\n");
+		f.close();
+		if (0 < getTestho()){
+			setTestho(getTestho()-1);
+		}
+		else {
+			//SZABI
+		}
 	}
 	
-	public void felvesz(){
+	public void felvesz() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A szereplo megprobalja felvenni a targyat\n");
+		f.close();
+		m.targyFelvetele(this);
 	}
 	
 	// A Szereplo feltori a jegtablat -> meghivodik az adott Mezo feltor() fuggvenye.
@@ -104,6 +117,9 @@ public abstract class Szereplo implements IKarakter{
 		f.close();
 		
 		m.feltor();
+
+        getjListener().hoviharSzamlaloCsokkentoListener();
+        setLepesszam(getLepesszam()-1);
 	}
 	
 	public void hasznal() throws IOException {
@@ -156,13 +172,15 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void tesoTeVizbeEstel() throws IOException {
 		System.out.println(">Szereplo.tesoTeVizbeEstel()");
-		if (this.getEszkoz().toString().equals("Buvarruha")){
+		if (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha")){
 			for (int i = 0; i<4;i++){
 				Mezo mezo = this.getMezo().getSzomszed(i);
 				mezo.huzzKi(this);
-
 			}
-		}/*
+		}
+		else
+            getjListener().jatekVegeListener();
+		/*
 		System.out.println("Van rajtad buvarruha?");
 		System.out.println("1.: Van\n2.: Nincs");
 		// a beolvasasert felelos objektum
@@ -192,10 +210,12 @@ public abstract class Szereplo implements IKarakter{
 		f.close();
 		
 		getMezo().hoAso(lapat);
+
+        getjListener().hoviharSzamlaloCsokkentoListener();
+        setLepesszam(getLepesszam()-1);
 	}
 	
-	public void kepessegHasznalat(int i) throws IOException {
-	}
+	abstract public void kepessegHasznalat(int i) throws IOException ;
 
 	/**
 	 * Alkatresz felveteleer felelos fugveny
@@ -203,9 +223,8 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void alkatreszFelvetele(Alkatresz a) throws IOException {
-
 		//0425
-		if(a==null)
+		if(this.a==null)
 		{
 			this.a = a;
 		}
@@ -215,11 +234,13 @@ public abstract class Szereplo implements IKarakter{
 			this.a = a;
 			temp.addAlkatreszToMezo(m);
 		}
+
+        getjListener().hoviharSzamlaloCsokkentoListener();
+        setLepesszam(getLepesszam()-1);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("Szereplo eszkozfelvetele sikeres.\n");
+		output.write("Szereplo alkatreszfelvetele sikeres.\n");
 		output.write("Felvett targy: " + a.getNev() + ".\n");
 		output.close();
-
 	}
 
 	/**
@@ -230,6 +251,8 @@ public abstract class Szereplo implements IKarakter{
 	public void eszkozFelvetele(Eszkoz e) throws IOException{
 
 		this.e = e;
+        getjListener().hoviharSzamlaloCsokkentoListener();
+        setLepesszam(getLepesszam()-1);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
 		output.write("Szereplo targyfelvetele sikeres.\n");
 		output.write("Felvett targy: " + e.getNev() + ".\n");
@@ -242,12 +265,16 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void lep(int irany) throws IOException {
-		System.out.println(">Szereplo.lep()");
+		FileWriter output = new FileWriter("./kimenet.txt", true);
+		output.write("Szereplo lep\n");
+		output.close();
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
 		Mezo mezo = getMezo().getSzomszed(irany);
 		this.m.lelep(this);
 		mezo.ralep(this);
-		new Mezo().getSzomszed(irany);
+        getjListener().hoviharSzamlaloCsokkentoListener();
+        setLepesszam(getLepesszam()-1);
+		//new Mezo().getSzomszed(irany);
 		/*System.out.println("Milyen mezore lepunk?");
 		//kiirja a lehetosegeket, hogy milyen mezokre lephetunk
 		System.out.println("1.: Stabil mezo\t2.: Instabil mezo\t3.: Tengerre\t4.: Lyuk");
@@ -275,12 +302,17 @@ public abstract class Szereplo implements IKarakter{
 			//ez az Instabil osztaly ralep fuggvenyet hivja meg
 			new Lyuk().ralep(new Sarkkutato());
 		}*/
-		System.out.println("<Szereplo.lep()");
 
 	}
-	
-	public void osszerak() {
 
+	/**
+	 * Osszerak fuggveny
+	 * @throws IOException
+	 */
+	public void osszerak() throws IOException {
+        getMezo().epit(this);
+        getjListener().hoviharSzamlaloCsokkentoListener();
+        setLepesszam(getLepesszam()-1);
 	}
 	
 	public void etkezes() throws IOException {
@@ -292,9 +324,12 @@ public abstract class Szereplo implements IKarakter{
 		f.append("Etkezes sikeres\n");
 		f.close();
 	}
-	
+
+	/**
+	 * Mezo epit fuggvenye hivja meg
+	 */
 	public void elsut() {
-		jListener.gyozelemListener();
+		getjListener().gyozelemListener();
 	}
 
 	/**
@@ -323,6 +358,6 @@ public abstract class Szereplo implements IKarakter{
 	}
 	
 	public void hitByMedve() {
-		
+        getjListener().jatekVegeListener();
 	}
 }

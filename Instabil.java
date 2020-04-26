@@ -16,7 +16,13 @@ public class Instabil extends Jegmezo {
 		f.append("Instabil letrejott\n");
 		f.close();
 	}
-	public void atfordul() {
+	public void atfordul() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Az Instabil mez oatfordult\n");
+		f.close();
+		for (IKarakter szereplo : this.getSzereplok()){
+			szereplo.tesoTeVizbeEstel();
+		}
 	}
 
 	/**
@@ -25,13 +31,13 @@ public class Instabil extends Jegmezo {
 	 * @throws IOException
 	 */
 	public void ralep(Szereplo sz) throws IOException {
-		System.out.println(">Instabil.ralep()");
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A Szereplo Instabil mezore lepett\n");
+		f.close();
 		sz.setM(this);
 		this.addKarakter(sz);
 		if (this.getTeherBiras()<this.getSzereplok().size()){
-			for (IKarakter szereplo : this.getSzereplok()){
-				szereplo.tesoTeVizbeEstel();
-			}
+			atfordul();
 		}
 		/*System.out.println("Van meg hely a mezon?");
 		System.out.println("1.: Igen\t2.: Nem");
@@ -42,7 +48,6 @@ public class Instabil extends Jegmezo {
 		if (string.equals("2")){
 			sz.tesoTeVizbeEstel();
 		}*/
-		System.out.println("<Instabil.ralep()");
 	}
 
 	public int getTeherBiras() throws IOException {

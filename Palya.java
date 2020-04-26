@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Palya {
 	/*private Mezo mezok;*/
-	public Palya(int szelesseg, int magassag) throws IOException {
+	public Palya(int szelesseg, int magassag, List<IKarakter> karakterek) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Palya letrejott\n");
 		f.close();
@@ -18,7 +18,6 @@ public class Palya {
 		/*Letrehozzuk az egyes szereploket, akatreszeket, eszkozoket a factory-k seitsegevel.
 		Majd elhelyezzuk oket a palya megyes mezoin
 		 */
-		List<IKarakter> karakterek =  new SzereploFactory().createSzereplo(3);
 		for (int i = 0; i != karakterek.size(); i++){
 			karakterek.get(i).addKarakterToMezo(mezok.get(i));
 		}
