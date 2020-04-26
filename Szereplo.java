@@ -103,7 +103,11 @@ public abstract class Szereplo implements IKarakter{
 		}
 	}
 	
-	public void felvesz(){
+	public void felvesz() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A szereplo megprobalja felvenni a targyat\n");
+		f.close();
+		m.targyFelvetele(this);
 	}
 	
 	// A Szereplo feltori a jegtablat -> meghivodik az adott Mezo feltor() fuggvenye.
@@ -220,9 +224,8 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void alkatreszFelvetele(Alkatresz a) throws IOException {
-
 		//0425
-		if(a==null)
+		if(this.a==null)
 		{
 			this.a = a;
 		}
@@ -236,10 +239,9 @@ public abstract class Szereplo implements IKarakter{
         getjListener().hoviharSzamlaloCsokkentoListener();
         setLepesszam(getLepesszam()-1);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("Szereplo eszkozfelvetele sikeres.\n");
+		output.write("Szereplo alkatreszfelvetele sikeres.\n");
 		output.write("Felvett targy: " + a.getNev() + ".\n");
 		output.close();
-
 	}
 
 	/**
@@ -264,7 +266,6 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void lep(int irany) throws IOException {
-		System.out.println(">Szereplo.lep()");
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
 		Mezo mezo = getMezo().getSzomszed(irany);
 		this.m.lelep(this);
@@ -299,7 +300,6 @@ public abstract class Szereplo implements IKarakter{
 			//ez az Instabil osztaly ralep fuggvenyet hivja meg
 			new Lyuk().ralep(new Sarkkutato());
 		}*/
-		System.out.println("<Szereplo.lep()");
 
 	}
 

@@ -45,6 +45,9 @@ public abstract class Eszkoz implements ITargy {
 	@Override
 	public void felvesz(Szereplo Sz) throws IOException {
 		//0425
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Eszkoz felveteti magat a szereplovel\n");
+		f.close();
 		Sz.eszkozFelvetele(this);
 	}
 	
