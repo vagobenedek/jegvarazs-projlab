@@ -107,14 +107,17 @@ public abstract class Szereplo implements IKarakter{
 	}
 	
 	public void hasznal() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
 		if (e != null){
 			e.hasznal(this);
+			if(e == null) {
+				f.append("A szereplonel nincs eszkoz.\n");
+			}
 		}
 		else {
-			FileWriter f = new FileWriter("./kimenet.txt", true);
 			f.append("Nincs eszkoz a szereplonel\n");
-			f.close();
 		}
+		f.close();
 		/*
 		System.out.println("Van nalam eszkoz? Ha igen, milyen?");
 		System.out.println("1.: Nincs nalam eszkoz.\n2.: Van, kotel.\n3.: Van, lapat.\n4.: Van, elelem.");
