@@ -1,4 +1,4 @@
-Szereplő tárgyfelvétele sikeres.
-Felvett alkatrész: pisztoly.
-Szereplő tárgyfelvétele meghíúsult.
-Szereplő tárgyfelvétele meghiúsult.
+Szereplo targyfelvetele sikeres.
+Felvett alkatresz: pisztoly.
+Szereplo targyfelvetele meghiusult.
+Szereplo targyfelvetele meghiusult.

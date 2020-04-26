@@ -1,2 +1,2 @@
-A mezőn van eszköz.
-A szereplőnél nincs eszköz.
+A mezon van eszkoz.
+A szereplonel nincs eszkoz.

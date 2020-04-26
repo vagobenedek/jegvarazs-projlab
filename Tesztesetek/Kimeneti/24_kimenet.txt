@@ -1,3 +1,3 @@
-A szereplő testhője 1.
-A hószint az stl1 mezőn: 2.
-A hószint az stl2 mezőn: 1.
+A szereplo testhoje 1.
+A hoszint a stabil mezon: 2.
+A hoszint a stabil mezon: 1.
