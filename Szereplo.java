@@ -296,7 +296,11 @@ public abstract class Szereplo implements IKarakter{
 		System.out.println("<Szereplo.lep()");
 
 	}
-	
+
+	/**
+	 * Osszerak fuggveny
+	 * @throws IOException
+	 */
 	public void osszerak() throws IOException {
         getMezo().epit(this);
         getjListener().hoviharSzamlaloCsokkentoListener();
@@ -312,7 +316,10 @@ public abstract class Szereplo implements IKarakter{
 		f.append("Etkezes sikeres\n");
 		f.close();
 	}
-	
+
+	/**
+	 * Mezo epit fuggvenye hivja meg
+	 */
 	public void elsut() {
 		getjListener().gyozelemListener();
 	}

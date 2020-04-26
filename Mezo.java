@@ -252,7 +252,12 @@ public class Mezo {
 		
 		f.close();
 	}
-	
+
+	/**
+	 * Szereplo osszeszerel fuggvenye hivja meg, megvizsgalja, hogy minden alkatresz egy mezon van e
+	 * @param sz
+	 * @throws IOException
+	 */
 	public void epit(Szereplo sz) throws IOException {
 		int count = 0;
 		if(szereplok.size()  >= 3) {
@@ -272,7 +277,12 @@ public class Mezo {
 			output.close();
 		}
 	}
-	
+
+	/**
+	 * Tárgy felvétele
+	 * @param sz
+	 * @throws IOException
+	 */
 	public void targyFelvetele(Szereplo sz) throws IOException {
 		//0425
 		if(isFeltort()) {

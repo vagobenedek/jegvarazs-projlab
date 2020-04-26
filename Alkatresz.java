@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 
 public abstract class Alkatresz implements ITargy {
 
+	/**
+	 * nev parameter, alkatresz nevet adja meg
+	 */
 	String nev;
 
 	public Alkatresz() throws IOException {
@@ -20,6 +23,10 @@ public abstract class Alkatresz implements ITargy {
 		nev = s;
 	}
 
+	/**
+	 * Lekerdezi az alkatresz nevet
+	 * @return nev
+	 */
 	public String getNev() {
 		return nev;
 	}
@@ -38,8 +45,8 @@ public abstract class Alkatresz implements ITargy {
 
 	/**
 	 * Az alkatreszt a mezohoz ado fuggveny
-	 *
 	 * @param m mezot adja meg
+	 * @throws IOException
 	 */
 	public void addAlkatreszToMezo(Mezo m) throws IOException {
 		//0425
