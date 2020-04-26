@@ -1,3 +1,4 @@
+24
 A szereplo testhoje 1.
 A hoszint a stabil mezon: 2.
 A hoszint a stabil mezon: 1.
