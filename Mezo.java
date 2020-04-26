@@ -226,7 +226,10 @@ public class Mezo {
 		f.close();
 	}
 
-	// Csokkenti a hoszintet eggyel.
+	/**
+	 * Ha a hoszint nagyobb 0-nal, csokkenti a hoszintet 1-gyel és ezt fajlba irva jelzi.
+	 * @throws IOException
+	 */
 	public void hoCsokkento() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		if(hoSzint > 0) {
@@ -236,6 +239,10 @@ public class Mezo {
 		f.close();
 	}
 
+	/**
+	 * Noveli a hoszintet 1-gyel, majd ezt fajlba irva jelzi.
+	 * @throws IOException
+	 */
 	public void hoNovelo() throws IOException {
 		setHoSzint(getHoSzint()+1);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -243,14 +250,14 @@ public class Mezo {
 		f.close();
 	}
 
-	// Ha fel van torve a jegtabla -> nem csinal semmit.
-	// Ha nincs feltorve -> feltori.
+	/**
+	 * A boolean feltort attributum erteket igazba allitja, majd fajlba irva jelzi a mezo feltoreset.
+	 * @throws IOException
+	 */
 	public void feltor() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		this.feltort=true;
 		f.append("A mezo feltort.\n");
-
-
 		f.close();
 	}
 

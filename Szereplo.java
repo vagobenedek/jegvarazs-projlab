@@ -123,13 +123,17 @@ public abstract class Szereplo implements IKarakter{
 		m.targyFelvetele(this);
 	}
 	
-	// A Szereplo feltori a jegtablat -> meghivodik az adott Mezo feltor() fuggvenye.
+	/**
+	 * Amennyiben a mezon ahol a szereplo tartozkodik a hoszint 0, meghivja a mezo feltor fuggvenyet.
+	 * Ezutan csokkenti a hoviharszamlalot, majd a lepesszamot is eggyel.
+	 * Ha a hoszint nem egyenlo 0-val, kiirodik, hogy a mezo nem tort fel.
+	 */
 	public void feltor() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplo feltori a jeget.\n");
 		f.close();
-		if(m.getHoSzint()==0){
-			m.feltor();
+		if(getMezo().getHoSzint()==0){
+			getMezo().feltor();
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam()-1);}
 		else {
@@ -224,7 +228,12 @@ public abstract class Szereplo implements IKarakter{
 		System.out.println("<Szereplo.tesoTeVizbeEstel()");
 	}
 	
-	// A Szereplo assa a havat -> meghivodik az adott Mezo hoAso() fuggvenye.
+	/**
+	 * A lapat parameter megadja, hogy rendelkezik-e a szereplo lapattal. Ennek megfelelo mennyisegu hoszint fog eltunni.
+	 * Ezutan a hovihar szamlalo erteke csokken, majd a szereplo lepesszama is eggyel kevesebb lesz.
+	 * @param lapat 0 eseten a szereplo nem rendelkezik lapattal. 1 eseten a szereplo rendelkezik lapattal.
+	 * @throws IOException
+	 */
 	public void hoAsas(int lapat) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szereplo havat as\n");

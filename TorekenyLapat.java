@@ -22,6 +22,7 @@ public class TorekenyLapat extends Lapat {
 	 * majd csokkenti az elettartamat 1-gyel.
 	 * A hoAsas() 1-es parametert kap, ezert 2 egyseg ho lesz ellapatolva.
 	 * Amennyiben az elettartam kisebb vagy egyenlo 0, a szereplotol eltunik a torekeny lapat.
+	 * @param sz A torekeny lapatot hasznalo szereplo.
 	 */
 	@Override
 	public void hasznal(Szereplo sz) throws IOException {
