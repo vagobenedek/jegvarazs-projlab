@@ -6,6 +6,7 @@ public class TorekenyLapat extends Lapat {
 	
 	public TorekenyLapat() throws IOException {
 		super();
+		this.elettartam = 3;
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Torekeny lapat letrejott\n");
 		f.close();
@@ -16,11 +17,12 @@ public class TorekenyLapat extends Lapat {
 		f.append("Torekeny lapat hasznalata\n");
 		f.close();
 		
-		elettartam -= 1;
+		
 		if (elettartam <= 0){
 			sz.setEszkoz(null);
 		} else {
 			sz.hoAsas(1);
+			elettartam--;
 		}
 	}
 
