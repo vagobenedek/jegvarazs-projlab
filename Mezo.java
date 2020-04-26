@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Mezo {
+abstract public  class Mezo {
 	/**
 	 * Mezon allo szereploket tarolja
 	 */
@@ -230,12 +230,8 @@ public class Mezo {
 	 * @param sz: Szereplo
 	 * @throws IOException
 	 */
-	public void ralep(IKarakter sz) throws IOException {
-		System.out.println(">Mezo.ralep()");
-		sz.setM(this);
-		addKarakter(sz);
-		System.out.println("<Mezo.ralep()");
-	}
+	abstract public void ralep(IKarakter sz) throws IOException ;
+
 
 	/**
 	 * sator epitesenel beallitja a mezo vedelmet
@@ -287,7 +283,7 @@ public class Mezo {
 	 */
 	public Mezo getSzomszed(int irany) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Szomszéd lekérdezése\n");
+		f.append("Szomszed lekerdezese\n");
 		f.close();
 		//ebben az esetben nem kell semmit visszaadni
 		return szomszedMezok[irany];
