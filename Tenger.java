@@ -14,10 +14,11 @@ public class Tenger extends Mezo {
 	 * @throws IOException
 	 */
 	public void ralep(Szereplo sz) throws IOException {
-		System.out.println(">Tenger.ralep()");
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A Szereplo tengerbe esett\n");
+		f.close();
 		//a Tengeren egybol vizbeesik a szereplo
 		sz.tesoTeVizbeEstel();
-		System.out.println("<Tenger.ralep()");
 	}
 	public int getTeherBiras() throws IOException {
 		System.out.println("\t\t>Tenger.getTeherBiras()");

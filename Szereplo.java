@@ -192,11 +192,10 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void tesoTeVizbeEstel() throws IOException {
 		System.out.println(">Szereplo.tesoTeVizbeEstel()");
-		if (this.getEszkoz().getNev().equals("Buvarruha")){
+		if (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha")){
 			for (int i = 0; i<4;i++){
 				Mezo mezo = this.getMezo().getSzomszed(i);
 				mezo.huzzKi(this);
-
 			}
 		}
 		else
@@ -284,6 +283,9 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void lep(int irany) throws IOException {
+		FileWriter output = new FileWriter("./kimenet.txt", true);
+		output.write("Szereplo lep\n");
+		output.close();
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
 		Mezo mezo = getMezo().getSzomszed(irany);
 		this.m.lelep(this);

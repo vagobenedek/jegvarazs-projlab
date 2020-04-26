@@ -21,7 +21,4 @@ public class SzereploFactory {
 		}
 		return karakterek;
 	}
-	
-	public void addSzereploToMezo(Mezo m) {
-	}
 }
