@@ -314,7 +314,7 @@ public class Mezo {
 		System.out.println(">Mezo.huzzki()");
 		//System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
 		for (IKarakter szereplo: this.getSzereplok()){
-			if(szereplo.getEszkoz().getNev().equals("Kotel")){
+			if(szereplo.getEszkoz()!=null && szereplo.getEszkoz().getNev().equals("Kotel")){
 				szereplo.huzdKi(sz);
 			}
 		}/*
