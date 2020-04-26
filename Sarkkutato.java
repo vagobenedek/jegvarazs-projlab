@@ -21,10 +21,4 @@ public class Sarkkutato extends Szereplo {
 		f.append("Sarkkutato kepesseg hasznalata sikeres\n");
 		f.close();
 	}
-	
-	@Override
-	public void hitByMedve() {
-		// TODO Auto-generated method stub
-		
-	}
 }

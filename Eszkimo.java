@@ -18,10 +18,4 @@ public class Eszkimo extends Szereplo {
 		f.append("Eszkimo kepesseg hasznalata sikeres\n");
 		f.close();
 	}
-	
-	@Override
-	public void hitByMedve() {
-		// TODO Auto-generated method stub
-		
-	}
 }

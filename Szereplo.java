@@ -318,4 +318,8 @@ public abstract class Szereplo implements IKarakter{
 		m.addKarakter(this);
 		this.setM(m);
 	}
+	
+	public void hitByMedve() {
+		
+	}
 }
