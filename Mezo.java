@@ -275,7 +275,7 @@ public class Mezo {
 	
 	public void targyFelvetele(Szereplo sz) throws IOException {
 		//0425
-		if(feltort) {
+		if(isFeltort()) {
 			targy.felvesz(sz);
 		}
 		else {
