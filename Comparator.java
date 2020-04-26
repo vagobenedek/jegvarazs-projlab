@@ -22,7 +22,7 @@ public class Comparator {
             matched = 0;
             notFound = new ArrayList<>();
             BufferedReader actualOutput;
-            BufferedReader preferredOutput = new BufferedReader(new FileReader("./" + (numberOfTests == 1?args[0]:i) +"_kimenet.txt"));
+            BufferedReader preferredOutput = new BufferedReader(new FileReader("./Tesztesetek/Kimeneti/" + (numberOfTests == 1?args[0]:i) +"_kimenet.txt"));
             testNumber = preferredOutput.readLine();
             System.out.println("Test case: " + testNumber);
             while ((pOutput = preferredOutput.readLine()) != null){

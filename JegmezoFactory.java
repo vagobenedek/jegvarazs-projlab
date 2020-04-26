@@ -17,7 +17,7 @@ public class JegmezoFactory {
 		f.close();
 		List<Mezo> mezok = new ArrayList<>();
 		for (int j = 0; j != i;j++){
-			mezok.add(new Mezo());
+			mezok.add(new Stabil());
 		}
 		return mezok;
 	}
