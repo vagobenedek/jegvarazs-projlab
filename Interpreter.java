@@ -159,6 +159,7 @@ public class Interpreter {
         else if (splitted[0].equals("buvarruha")){
             eszkozok.put(splitted[1], new Buvarruha());
             eszkozok.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
+            mezok.get(splitted[2]).setTargy(eszkozok.get(splitted[1]));
             buvarruha.put(splitted[1], new Buvarruha());
             buvarruha.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
         }

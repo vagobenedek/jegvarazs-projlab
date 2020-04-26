@@ -297,7 +297,9 @@ public abstract class Szereplo implements IKarakter{
 	public void eszkozFelvetele(Eszkoz e) throws IOException{
 
 		this.e = e;
-        getjListener().hoviharSzamlaloCsokkentoListener();
+		if (getjListener() != null) {
+			getjListener().hoviharSzamlaloCsokkentoListener();
+		}
         setLepesszam(getLepesszam()-1);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
 		output.write("Szereplo targyfelvetele sikeres.\n");
