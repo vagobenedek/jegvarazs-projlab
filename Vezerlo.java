@@ -138,4 +138,18 @@ public class Vezerlo implements JegvarazsListener{
 	public void kovetkezoSzereploListener() {
 		kovetkezoSzereplo();
 	}
+
+	@Override
+	public void SzereplokMeetMedve(Jegesmedve jmedve) {
+		for (Szereplo szereplo: szereplok){
+			try{
+				Mezo mezo = jmedve.getMezo();
+			if(mezo.equals(szereplo.getMezo())&&mezo.getMedvetolVedett()){
+				szereplo.hitByMedve();
+			}}
+			catch (Exception e){
+				e.printStackTrace();
+			}
+		}
+	}
 }

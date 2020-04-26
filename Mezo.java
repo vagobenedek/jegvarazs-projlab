@@ -44,7 +44,9 @@ public class Mezo {
 		f.append("Mezo letrejott\n");
 		f.close();
 	}
-
+	public boolean getMedvetolVedett(){
+		return medvetolVedett;
+	}
 	public ArrayList<IKarakter> getSzereplok() {
 		return szereplok;
 	}
@@ -324,13 +326,13 @@ public class Mezo {
 		}*/
 		System.out.println("<Mezo.huzzki()");
 	}
-	public void szereplokMeetMedve(){
+	/*public void szereplokMeetMedve(){
 		if(medvetolVedett){
 			for (IKarakter szereplo: szereplok){
 				szereplo.hitByMedve();
 			}
 		}
-	}
+	}*/
 	public void setTeherbiras(int teherb) {
 		teherbiras = teherb;
 	}

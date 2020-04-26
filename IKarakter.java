@@ -10,5 +10,6 @@ public interface IKarakter {
 	public Eszkoz getEszkoz();
 	public Alkatresz getAlkatresz();
 	void setM(Mezo m);
+	Mezo getMezo() throws IOException;
 	public void addKarakterToMezo(Mezo m);
 }

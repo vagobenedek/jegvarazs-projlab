@@ -2,14 +2,23 @@ import java.io.IOException;
 
 public class Jegesmedve implements IKarakter {
 	private Mezo mezo;
-
+	private JegvarazsListener jListener;
 	@Override
 	public void lep(int irany)throws IOException {
 		Mezo mezo =this.mezo.getSzomszed(irany);
 		this.mezo.lelep(this);
 		mezo.ralep(this);
+		jListener.SzereplokMeetMedve(this);
 		// TODO Auto-generated method stub
 		
+	}
+	public void setjListener(JegvarazsListener jListener){
+		this.jListener=jListener;
+	}
+
+	@Override
+	public Mezo getMezo() throws IOException{
+		return mezo;
 	}
 
 	@Override

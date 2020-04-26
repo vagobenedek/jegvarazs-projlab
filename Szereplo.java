@@ -34,6 +34,7 @@ public abstract class Szereplo implements IKarakter{
 	 * a metodus a Szereplo mezojet adja meg
 	 * @return Mezo
 	 */
+	@Override
 	public Mezo getMezo() throws IOException {
 		/*
 		System.out.println(">Szereplo.getMezo()");
