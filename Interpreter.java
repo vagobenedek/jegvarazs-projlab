@@ -185,9 +185,9 @@ public class Interpreter {
         }
         //Sator letrehozasa
         else if (splitted[0].equals("sator")){
-            eszkozok.put(splitted[1], new Sator());
+            eszkozok.put(splitted[1], new Sator(mezok.get(splitted[2])));
             eszkozok.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
-            sator.put(splitted[1], new Sator());
+            sator.put(splitted[1], new Sator(mezok.get(splitted[2])));
             sator.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
         }
         //Hozzárendel egy eszközt a szereplőhöz.
