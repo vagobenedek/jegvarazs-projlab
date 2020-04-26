@@ -14,8 +14,6 @@ public class Mezo {
 	private boolean hovihartolVedett;
 	private boolean medvetolVedett;
 	private Mezo[] szomszedMezok = new Mezo[4];
-	private Eszkoz eszkoz;
-	private Alkatresz alkatresz;
 
 
 	public void setSzomszedMezo(Mezo szomszedMezo, int irany) {
@@ -75,9 +73,6 @@ public class Mezo {
 	public void addKarakter(IKarakter szereplo) {
 		this.szereplok.add(szereplo);
 	}
-
-	public void setAlkatresz(Alkatresz a){this.alkatresz=a;}
-	public void setEszkoz(Eszkoz e){this.eszkoz=e;}
 
 	public void removeSzereplo(IKarakter szereplo){
 		this.szereplok.remove(szereplo);
