@@ -116,6 +116,7 @@ public abstract class Szereplo implements IKarakter{
 			setTestho(getTestho()-1);
 		}
 		else {
+			f.append("A jateknak vege: vesztettel");
 			if (getjListener() != null) {
 				getjListener().jatekVegeListener();
 			}
@@ -207,7 +208,8 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void tesoTeVizbeEstel() throws IOException {
-		System.out.println(">Szereplo.tesoTeVizbeEstel()");
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Szereplo havat as\n");
 		if (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha")){
 			for (int i = 0; i<4;i++){
 				Mezo mezo = this.getMezo().getSzomszed(i);
@@ -215,11 +217,12 @@ public abstract class Szereplo implements IKarakter{
 			}
 		}
 		else{
+			f.append("A jateknak vege: vesztettel.");
 			if (getjListener() != null){
 				getjListener().jatekVegeListener();
 			}
 		}
-
+		f.close();
 		/*
 		System.out.println("Van rajtad buvarruha?");
 		System.out.println("1.: Van\n2.: Nincs");
@@ -324,35 +327,6 @@ public abstract class Szereplo implements IKarakter{
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);
 		}
-		//new Mezo().getSzomszed(irany);
-		/*System.out.println("Milyen mezore lepunk?");
-		//kiirja a lehetosegeket, hogy milyen mezokre lephetunk
-		System.out.println("1.: Stabil mezo\t2.: Instabil mezo\t3.: Tengerre\t4.: Lyuk");
-		// a beolvasasert felelos objektum
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String string = br.readLine();
-		//ha egyest irt be akkor leleptetjuk a mezorol es raleptetjuk egy stabil mezore
-		if(string.equals("1")) {
-			new Mezo().lelep(new Eszkimo());
-			new Stabil().ralep(new Sarkkutato());
-		}
-		//ha ketest irt be akkor leleptetjuk a mezorol es raleptetjuk egy instabil mezore
-		else if(string.equals("2")) {
-			new Mezo().lelep(new Eszkimo());
-			new Instabil().ralep(new Sarkkutato());
-		}
-		//ha harmast irt be akkor leleptetjuk a mezorol es raleptetjuk egy tenger mezore
-		else if(string.equals(("3"))) {
-			new Mezo().lelep(new Eszkimo());
-			new Tenger().ralep(new Sarkkutato());
-		}
-		//ha negyest irt be akkor leleptetjuk a mezorol es raleptetjuk egy lyuk mezore
-		else if(string.equals(("4"))) {
-			new Mezo().lelep(new Eszkimo());
-			//ez az Instabil osztaly ralep fuggvenyet hivja meg
-			new Lyuk().ralep(new Sarkkutato());
-		}*/
-
 	}
 
 	/**
@@ -395,19 +369,8 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void huzdKi(Szereplo sz) throws IOException {
-		System.out.println(">Szereplo.huzdKi()");
 		getEszkoz().hasznal(sz);
 		this.getMezo().ralep(sz);
-		/*//hasznaljuk a kotelet, ami a szereplonek van
-		new Kotel().hasznal(new Eszkimo());
-		//raleptetjuk arra mezore a parameterkent kapott szereplot, amelyiken ez a Szereplo all
-		new Mezo().ralep(new Eszkimo());*/
-		System.out.println("<Szereplo.huzdKi()");
-	}
-	//A parameterkent kapott mezon elhelyezi a szereplot
-	public void addSzerploToMezo(Mezo m){
-		System.out.println(">Szereplo.addSzereploToMezo()");
-		System.out.println("<Szereplo.addSzereploToMezo()");
 	}
 	public void addKarakterToMezo(Mezo m){
 		m.addKarakter(this);
