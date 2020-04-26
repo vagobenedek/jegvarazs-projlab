@@ -8,7 +8,8 @@ public class Jegesmedve implements IKarakter {
 		Mezo mezo =this.mezo.getSzomszed(irany);
 		this.mezo.lelep(this);
 		mezo.ralep(this);
-		jListener.SzereplokMeetMedve(this);
+		mezo.szereplokMeetMedve();
+		//jListener.SzereplokMeetMedve(this);
 		// TODO Auto-generated method stub
 		
 	}

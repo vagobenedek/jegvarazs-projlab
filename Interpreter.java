@@ -59,7 +59,6 @@ public class Interpreter {
 
     public void Translate(String command) throws IOException {
         String[] splitted = command.split("\\s+");
-
         //TODO: atalakitani
         StringTokenizer split = new StringTokenizer(command);
         String split0 = split.nextToken();
@@ -91,7 +90,9 @@ public class Interpreter {
         //Szereplo lepese
         else if (splitted[0].equals("lep")){
             try {
+                System.out.println("elotte");
                 (szereplok.get(splitted[1])).lep(Integer.parseInt(splitted[2]));
+                System.out.println("utana");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -136,6 +137,7 @@ public class Interpreter {
         //Sarkkutato letrehozasa
         else if (splitted[0].equals("sarkkutato")){
             szereplok.put(splitted[1], new Sarkkutato());
+            new Vezerlo(szereplok.get(splitted[1]), new Jegesmedve());
             szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
             (mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
             sarkkutatok.put(splitted[1], new Sarkkutato());
@@ -189,9 +191,10 @@ public class Interpreter {
         }
         //Sator letrehozasa
         else if (splitted[0].equals("sator")){
-            eszkozok.put(splitted[1], new Sator(mezok.get(splitted[2])));
+            Sator s = new Sator(mezok.get(splitted[2]));
+            eszkozok.put(splitted[1], s);
             eszkozok.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
-            sator.put(splitted[1], new Sator(mezok.get(splitted[2])));
+            sator.put(splitted[1], s);
             sator.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
         }
         //Hozzárendel egy eszközt a szereplőhöz.
@@ -237,7 +240,9 @@ public class Interpreter {
         }
         //Eszkoz hasznalata
         else if (splitted[0].equals("hasznal")){
+            System.out.println("hasznal elott");
             szereplok.get(splitted[1]).hasznal();
+            System.out.println("pls work");
         }
         //Alkatreszek osszeszerelese
         else if (splitted[0].equals("osszeszerel")){
@@ -254,6 +259,10 @@ public class Interpreter {
         //Hovihar
         else if (splitted[0].equals("hovihar")){
             mezok.get(splitted[1]).hovihar();
+        }
+        else if (splitted[0].equals("kor")){
+            Vezerlo v = new Vezerlo(new Eszkimo(), null);
+            v.getAktualisSzerelo().setLepesszam(0);
         }
     }
 }

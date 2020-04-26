@@ -3,12 +3,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 abstract public  class Mezo {
 	/**
 	 * Mezon allo szereploket tarolja
 	 */
-	private ArrayList<IKarakter> szereplok;
+	private List<IKarakter> szereplok = new ArrayList<>();
 	/**
 	 * Mezon levo targy
 	 */
@@ -100,7 +101,7 @@ abstract public  class Mezo {
 	 * visszaadja a szereploket
 	 * @return szereplok
 	 */
-	public ArrayList<IKarakter> getSzereplok() {
+	public List<IKarakter> getSzereplok() {
 		return szereplok;
 	}
 
@@ -108,7 +109,15 @@ abstract public  class Mezo {
 	 * lekerdezi a targyat
 	 * @return targy
 	 */
-	public ITargy getTargy() {
+	public ITargy getTargy() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		if (targy == null){
+			f.append("A mezon nincs targy.\n");
+		}
+		else {
+			f.append("A mezon van targy.\n");
+		}
+		f.close();
 		return targy;
 	}
 
@@ -157,6 +166,8 @@ abstract public  class Mezo {
 	 * @param szereplo IKarakter
 	 */
 	public void addKarakter(IKarakter szereplo) {
+
+		System.out.println("Adding a character");
 		this.szereplok.add(szereplo);
 	}
 
@@ -274,7 +285,6 @@ abstract public  class Mezo {
 		sz.setM(null);
 		System.out.println("asd");
 		this.removeSzereplo(sz);
-
 	}
 
 	/**
@@ -377,6 +387,7 @@ abstract public  class Mezo {
 		//0425
 		if(isFeltort() && targy != null) {
 			targy.felvesz(sz);
+
 		}
 		else {
 			FileWriter output = new FileWriter("./kimenet.txt", true);
@@ -423,13 +434,13 @@ abstract public  class Mezo {
 		}
 
 	}
-	/*public void szereplokMeetMedve(){
+	public void szereplokMeetMedve(){
 		if(medvetolVedett){
 			for (IKarakter szereplo: szereplok){
 				szereplo.hitByMedve();
 			}
 		}
-	}*/
+	}
 
 	/**
 	 * mezo teherbirast allitja be

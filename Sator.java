@@ -5,18 +5,24 @@ public class Sator extends Eszkoz implements IEpulet {
 	 * sator mezo attributuma
 	 */
 	private Mezo mezo;
-
+	public Sator() throws IOException {
+		super();
+		System.out.println("Sator letrejot");
+	}
 	/**
 	 * sator mezejet allitja be
 	 * @param mezo Mezo
 	 * @throws IOException
 	 */
 	public Sator(Mezo mezo) throws IOException {
+		super();
+		System.out.println("A sator letrejott");
 		this.mezo=mezo;
-		//super();
 		// TODO Auto-generated constructor stub
 	}
-
+	public String getNev(){
+		return "Sator";
+	}
 	/**
 	 * mezo satratepit fuggvenyet meghivja
 	 * @param sz Szereplo

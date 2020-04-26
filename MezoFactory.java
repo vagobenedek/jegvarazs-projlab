@@ -13,7 +13,7 @@ public class MezoFactory {
 		List<Mezo> mezok = new ArrayList<>();
 		int row = (int) Math.sqrt(i);
 		for (int j = 0; j != i ; j++){
-			mezok.add(new Mezo());
+			mezok.add(new Stabil());
 
 		}
 		for (int j = 0; j != i; j++){

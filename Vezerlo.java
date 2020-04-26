@@ -24,10 +24,13 @@ public class Vezerlo implements JegvarazsListener{
 		palya=new Palya(10,10, karakterek);
 		aktualisSzereplo = szereplok.get(0);
 	}
-	public Vezerlo(Szereplo szereplo) throws IOException {
+	public Vezerlo(Szereplo szereplo, Jegesmedve medve) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Vezerlo letrejott.\n");
 		f.close();
+		if (medve != null){
+			medve.setjListener(this);
+		}
 		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
 		//palya = new Palya(10, 10);
 		setAktualisSzereplo(szereplo);
@@ -51,6 +54,9 @@ public class Vezerlo implements JegvarazsListener{
 			}
 		}
 	}
+	public Szereplo getAktualisSzerelo(){
+		return aktualisSzereplo;
+	}
 	/**
 	 * A Vezerlo alabb lathato fuggvenyei mind listenereken keresztul hivodnak majd meg
 	 * bizonyos esemenyke bekovetkeztekor
@@ -70,7 +76,7 @@ public class Vezerlo implements JegvarazsListener{
 					setAktualisSzereplo(szereplok.get(0));
 				}
 				else
-					setAktualisSzereplo(szereplok.get(i));
+					setAktualisSzereplo(szereplok.get(i+1));
 			}
 		}
 		System.out.println("<Vezerlo.kovetkezoSzereplo()");
@@ -139,7 +145,7 @@ public class Vezerlo implements JegvarazsListener{
 		kovetkezoSzereplo();
 	}
 
-	@Override
+	/*@Override
 	public void SzereplokMeetMedve(Jegesmedve jmedve) {
 		for (Szereplo szereplo: szereplok){
 			try{
@@ -151,5 +157,5 @@ public class Vezerlo implements JegvarazsListener{
 				e.printStackTrace();
 			}
 		}
-	}
+	}*/
 }

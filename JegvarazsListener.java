@@ -3,5 +3,5 @@ public interface JegvarazsListener{
     void gyozelemListener();
     void hoviharSzamlaloCsokkentoListener();
     void kovetkezoSzereploListener();
-    void SzereplokMeetMedve(Jegesmedve jmedve);
+    //void SzereplokMeetMedve(Jegesmedve jmedve);
 }

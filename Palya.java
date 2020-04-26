@@ -34,7 +34,7 @@ public class Palya {
 	public void hovihar() throws IOException {
 		System.out.println(">Palya.hovihar()");
 		//Egyes kivalaszott mezokre a hovihar fuggveny segitsegevel havat teszunk
-		new Mezo().hovihar();
+		new Stabil().hovihar();
 		System.out.println("<Palya.hovihar()");
 	}
 }

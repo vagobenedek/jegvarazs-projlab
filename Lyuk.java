@@ -9,7 +9,7 @@ public class Lyuk extends Instabil {
         f.close();
     }
     public Lyuk(ITargy t, IEpulet e, int hoSzint,int teherbiras, boolean hovihartolVedett, boolean medvetolVedett)throws IOException{
-        super(t,e,hoSzint,teherbiras,hovihartolVedett,medvetolVedett);
+        //super(t,e,hoSzint,teherbiras,hovihartolVedett,medvetolVedett);
         FileWriter f = new FileWriter("./kimenet.txt", true);
         f.append("Lyuk letrejott.\n");
         f.close();

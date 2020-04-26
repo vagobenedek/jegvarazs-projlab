@@ -13,7 +13,7 @@ public class Tenger extends Mezo {
 	 * @param sz: Szereplo
 	 * @throws IOException
 	 */
-	public void ralep(Szereplo sz) throws IOException {
+	public void ralep(IKarakter sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A Szereplo tengerbe esett\n");
 		f.close();
