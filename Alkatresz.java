@@ -39,7 +39,9 @@ public abstract class Alkatresz implements ITargy {
 	 */
 	@Override
 	public void felvesz(Szereplo sz) throws IOException {
-
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Szereplo felveszi az alkatreszt\n");
+		f.close();
 		sz.alkatreszFelvetele(this);
 	}
 

@@ -279,7 +279,7 @@ public class Mezo {
 	 */
 	public void targyFelvetele(Szereplo sz) throws IOException {
 		//0425
-		if(isFeltort()) {
+		if(isFeltort() && targy != null) {
 			targy.felvesz(sz);
 		}
 		else {
