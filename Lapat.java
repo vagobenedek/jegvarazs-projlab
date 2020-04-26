@@ -14,7 +14,6 @@ public class Lapat extends Eszkoz {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Lapat hasznalata\n");
 		f.close();
-		
 		Sz.hoAsas(1);
 	}
 }

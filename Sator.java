@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class Sator extends Eszkoz implements IEpulet, ITargy {
+public class Sator extends Eszkoz implements IEpulet {
 	private Mezo mezo;
 	public Sator(Mezo mezo) throws IOException {
 		this.mezo=mezo;
