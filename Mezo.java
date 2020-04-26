@@ -5,21 +5,63 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Mezo {
+	/**
+	 * Mezon allo szereploket tarolja
+	 */
 	private ArrayList<IKarakter> szereplok;
+	/**
+	 * Mezon levo targy
+	 */
 	private ITargy targy;
+	/**
+	 * Mezon levo epulet
+	 */
 	private IEpulet epulet;
+	/**
+	 * fel van e torve a mezo
+	 */
 	private boolean feltort;
+	/**
+	 * mezo hoszintje
+	 */
 	private int hoSzint;
+	/**
+	 * mezo teherbirasa
+	 */
 	private int teherbiras;
+	/**
+	 * hovihartol vedett e a mezo
+	 */
 	private boolean hovihartolVedett;
+	/**
+	 * medvetol vedett e a mezo
+	 */
 	private boolean medvetolVedett;
+	/**
+	 * Mezo szomszedai
+	 */
 	private Mezo[] szomszedMezok = new Mezo[4];
 
 
+	/**
+	 * beallitja a mezo szomszedjat: a parameterben megadott mezot a parameterben megadott iranyba
+	 * @param szomszedMezo Mezo
+	 * @param irany int
+	 */
 	public void setSzomszedMezo(Mezo szomszedMezo, int irany) {
 		szomszedMezok[irany] = szomszedMezo;
 	}
 
+	/**
+	 * Mezo konstruktor ami beallitja a Mezo parametereit
+	 * @param t ITargy
+	 * @param e IEpulet
+	 * @param hoSzint int
+	 * @param teherbiras int
+	 * @param hovihartolVedett boolean
+	 * @param medvetolVedett boolean
+	 * @throws IOException
+	 */
 	public Mezo(ITargy t, IEpulet e, int hoSzint,int teherbiras, boolean hovihartolVedett, boolean medvetolVedett) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo letrejott\n");
@@ -32,71 +74,143 @@ public class Mezo {
 		this.hovihartolVedett = hovihartolVedett;
 		this.medvetolVedett = medvetolVedett;
 	}
+
+	/**
+	 * Mezo konstuktor
+	 * @throws IOException
+	 */
 	public Mezo() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo letrejott\n");
 		f.close();
 	}
+
+	/**
+	 * Mezo konstruktor
+	 * @param s String
+	 * @throws IOException
+	 */
 	public Mezo(String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo letrejott\n");
 		f.close();
 	}
+
+	/**
+	 * visszaadja a szereploket
+	 * @return szereplok
+	 */
 	public ArrayList<IKarakter> getSzereplok() {
 		return szereplok;
 	}
 
+	/**
+	 * lekerdezi a targyat
+	 * @return targy
+	 */
 	public ITargy getTargy() {
 		return targy;
 	}
 
+	/**
+	 * lekerdezi az epuletet
+	 * @return epulet
+	 */
 	public IEpulet getEpulet() {
 		return epulet;
 	}
 
+	/**
+	 * visszaadja hogy a mezo fel van e torve
+	 * @return feltort
+	 */
 	public boolean isFeltort() {
 		return feltort;
 	}
 
+	/**
+	 * visszaadja a mezo hoszintjet
+	 * @return hoszint
+	 */
 	public int getHoSzint() {
 		return hoSzint;
 	}
 
+	/**
+	 * visszaadja hogy a mezo hovihartol vedett e
+	 * @return hovihartolVedett boolean
+	 */
 	public boolean isHovihartolVedett() {
 		return hovihartolVedett;
 	}
 
+	/**
+	 * visszaadja hogy a mezo medvetol vedett e
+	 * @return medvetolVedett boolean
+	 */
 	public boolean isMedvetolVedett() {
 		return medvetolVedett;
 	}
 
+	/**
+	 * karaktert ad a mezohoz
+	 * @param szereplo IKarakter
+	 */
 	public void addKarakter(IKarakter szereplo) {
 		this.szereplok.add(szereplo);
 	}
 
+	/**
+	 * kivesz egy szereplot a listabol (a mezonrol eltavolit egy szereplot)
+	 * @param szereplo IKarakter
+	 */
 	public void removeSzereplo(IKarakter szereplo){
 		this.szereplok.remove(szereplo);
 	}
+
+	/**
+	 * beallitja a targyat
+	 * @param targy ITargy
+	 */
 	public void setTargy(ITargy targy) {
 		this.targy = targy;
 	}
 
+	/**
+	 * beallitja az epuletet
+	 * @param epulet Iepulet
+	 */
 	public void setEpulet(IEpulet epulet) {
 		this.epulet = epulet;
 	}
 
+	/**
+	 * beallitja a hoszintet
+	 * @param hoSzint int
+	 */
 	public void setHoSzint(int hoSzint) {
 		this.hoSzint = hoSzint;
 	}
 
+	/**
+	 * hovihartol vedettre allitja a mezot
+	 */
 	public void setHovihartolVedett(boolean hovihartolVedett) {
 		this.hovihartolVedett = hovihartolVedett;
 	}
 
+	/**
+	 * medvetol vedettre allitja a mezot
+	 * @param medvetolVedett boolean
+	 */
 	public void setMedvetolVedett(boolean medvetolVedett) {
 		this.medvetolVedett = medvetolVedett;
 	}
 
+	/**
+	 * hovihat fuggveny
+	 * @throws IOException
+	 */
 	public void hovihar() throws IOException {
 		//Noveli a mezon levo hoegysegek szamat
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -108,22 +222,6 @@ public class Mezo {
 				szereplok.get(i).hovihar();
 			}
 		}
-		/*Amennyiben van iglu a mezon, nem foglalkoznk azzal, hogy van-e szereplo a mezon
-		Amennyiben nincs iglu, megkerdezzuk hogy szereplo van-e
-		A kapott valasznak megfeleloen cselekszunk*/
-		/*System.out.println("Van iglu a mezon?");
-		System.out.println("1.: Nincs\n2.: Van");
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String str = br.readLine();
-		if(str.equals("1")) {
-			System.out.println("Van szereplo a mezon?");
-			System.out.println("1.: Nincs\n2.: Van");
-			str = br.readLine();
-			if (str.equals("2")){
-				//Ha vedetlen szereplo talalhato a mezon, lemegy egy testhoje
-				new Sarkkutato().hovihar();
-			}
-		}*/
 	}
 
 	/**
@@ -138,36 +236,33 @@ public class Mezo {
 		addKarakter(sz);
 		System.out.println("<Mezo.ralep()");
 	}
+
+	/**
+	 * sator epitesenel beallitja a mezo vedelmet
+	 * @param sator Sator
+	 */
 	public void satratEpit(Sator sator){
 		sator.SetVedelem();
 	}
+
+	/**
+	 * sator szetszedesert felelos fuggveny
+	 */
 	public void Satorszetszed(){
 		this.setHovihartolVedett(false);
 		this.setMedvetolVedett(false);
 	}
+
+	/**
+	 * teherbiras lekerdezes
+	 * @return teherbiras int
+	 * @throws IOException
+	 */
 	public int getTeherBiras() throws IOException {
 
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Teherbiras lekerdezese\n");
 		f.close();
-		/*
-		System.out.println("\t>Mezo.getTeherBiras()");
-		System.out.println("Milyen tipusu mezon allok?");
-		System.out.println("1.: Stabil\n2.: Instabil\n3.: Tenger");
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String str = br.readLine();
-		if(str.equals("1")) {
-			new Stabil().getTeherBiras();
-		}
-		if(str.equals("2")) {
-			new Instabil().getTeherBiras();
-		}
-		if(str.equals("3")) {
-			new Tenger().getTeherBiras();
-		}
-		System.out.println("\t<Mezo.getTeherBiras()");
-		*/
-		//random visszateresi ertek
 
 		return teherbiras;
 	}
@@ -183,12 +278,6 @@ public class Mezo {
 		sz.setM(null);
 		this.removeSzereplo(sz);
 
-		/*
-		System.out.println(">Mezo.lelep()");
-		sz.setM(null);
-		this.removeSzereplo(sz);
-		System.out.println("<Mezo.lelep()");
-		 */
 	}
 
 	/**
@@ -259,7 +348,7 @@ public class Mezo {
 
 	/**
 	 * Szereplo osszeszerel fuggvenye hivja meg, megvizsgalja, hogy minden alkatresz egy mezon van e
-	 * @param sz
+	 * @param sz Szereplo
 	 * @throws IOException
 	 */
 	public void epit(Szereplo sz) throws IOException {
@@ -284,7 +373,7 @@ public class Mezo {
 
 	/**
 	 * Tárgy felvétele
-	 * @param sz
+	 * @param sz Szereplo
 	 * @throws IOException
 	 */
 	public void targyFelvetele(Szereplo sz) throws IOException {
@@ -299,6 +388,10 @@ public class Mezo {
 		}
 	}
 
+	/**
+	 * iglut epit a mezore
+	 * @throws IOException
+	 */
 	public void iglutEpit() throws IOException {
 		new Iglu(this);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
@@ -330,17 +423,8 @@ public class Mezo {
 			if(sz.getjListener()!=null) {
 				sz.getjListener().jatekVegeListener();
 			}
-		}/*
-		// a beolvasert felelos objektum
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		// ha van a szereplon kotel, vagyis egyest irt be
-		if (br.readLine().equals("1")) {
-			//szolunk a mezon allo szereplonek, hogy huzza ki a parameterkent kapott szereplot
-			//majd ezt a parametert adjuk tovabb
-			new Sarkkutato().huzdKi(new Eszkimo());
-		}*/
+		}
 
-		System.out.println("<Mezo.huzzki()");
 	}
 	/*public void szereplokMeetMedve(){
 		if(medvetolVedett){
@@ -349,6 +433,11 @@ public class Mezo {
 			}
 		}
 	}*/
+
+	/**
+	 * mezo teherbirast allitja be
+	 * @param teherb int
+	 */
 	public void setTeherbiras(int teherb) {
 		teherbiras = teherb;
 	}

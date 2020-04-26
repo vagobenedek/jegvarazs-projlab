@@ -10,11 +10,21 @@ public abstract class Eszkoz implements ITargy {
 	 */
 	String nev;
 
+	/**
+	 * Konstuktor
+	 * @throws IOException
+	 */
 	public Eszkoz() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Eszkoz letrejott\n");
 		f.close();
 	}
+
+	/**
+	 * Konstuktor
+	 * @param s String
+	 * @throws IOException
+	 */
 	public Eszkoz(String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Eszkoz letrejott\n");
@@ -31,7 +41,11 @@ public abstract class Eszkoz implements ITargy {
 		return nev;
 	}
 
-	//A parameterkent kapott mezon elhelyezi a szereplot
+	/**
+	 * Parameterben kapott mezon elhelyezi a szereplot
+	 * @param m Mezo
+	 * @throws IOException
+	 */
 	public void addEszkozToMezo(Mezo m) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Eszkoz hozaadodott a mezohoz\n");
@@ -51,7 +65,13 @@ public abstract class Eszkoz implements ITargy {
 		f.close();
 		Sz.eszkozFelvetele(this);
 	}
-	
+
+	/**
+	 * abstract hasznal fuggveny
+	 * leszarmazo osztalyok valositjak meg
+	 * @param sz Szereplo
+	 * @throws IOException
+	 */
 	abstract public void hasznal(Szereplo sz) throws IOException;
 
 }

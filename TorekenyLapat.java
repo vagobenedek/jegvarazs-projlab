@@ -2,6 +2,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class TorekenyLapat extends Lapat {
+	/**
+	 * TorekenyLapat elettartama
+	 */
 	private int elettartam;
 	
 	/**

@@ -5,19 +5,57 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public abstract class Szereplo implements IKarakter{
+	/**
+	 * szereplo testhoje
+	 */
 	private int testho;
+	/**
+	 * szereplonel levo eszkoz
+	 */
 	private Eszkoz e;
+	/**
+	 * szereplonel levo alkatresz
+	 */
 	private Alkatresz a;
+	/**
+	 * testho attributum
+	 */
 	private int maxTestho;
+	/**
+	 * lepesszam attributum
+	 */
 	private int lepesszam = 4;
+	/**
+	 * Mezo attributum
+	 */
 	private Mezo m;
+	/**
+	 *listener attributum
+	 */
 	private JegvarazsListener jListener;
+
+	/**
+	 * epitett satrat az elozo korben bool tipusu parameter
+	 */
 	private boolean epitettSatratElozoKorben;
+
+	/**
+	 * Szereplo konstruktor
+	 * @throws IOException
+	 */
 	public Szereplo() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Jelzofeny letrejott\n");
 		f.close();
 	}
+
+	/**
+	 * Szereplo konstruktor
+	 * beallitja a testhot
+	 * @param testho int
+	 * @param s String
+	 * @throws IOException
+	 */
 	public Szereplo(int testho, String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Jelzofeny letrejott\n");
@@ -27,6 +65,10 @@ public abstract class Szereplo implements IKarakter{
 
 	}
 
+	/**
+	 * szereplo konstruktor
+	 * @param s String
+	 */
 	public Szereplo(String s) {
 	}
 
@@ -45,21 +87,51 @@ public abstract class Szereplo implements IKarakter{
 		f.close();
 		return m;
 	}
+
+	/**
+	 * beallitja az epitettsatratElozoKorben parametert
+	 * @param epitettSatratElozoKorben boolean
+	 */
 	public void setEpitettSatratElozoKorben(boolean epitettSatratElozoKorben){
 		this.epitettSatratElozoKorben=epitettSatratElozoKorben;
 	}
+
+	/**
+	 * visszaadja hogy epitett e elozo korben satrat
+	 * @return epitettsatratElozoKorben
+	 */
 	public boolean getEpitettSatratElozoKorben(){
 		return epitettSatratElozoKorben;
 	}
+
+	/**
+	 * visszaadja a testhot
+	 * @return maxTestho
+	 */
 	public int getMaxTestho(){
 		return maxTestho;
 	}
+
+	/**
+	 * visszaadja a listenert
+	 * @return jListener
+	 */
 	public JegvarazsListener getjListener(){
 	    return jListener;
     }
+
+	/**
+	 * beallitja a listenert
+	 * @param jListener Listener
+	 */
 	public void setjListener(JegvarazsListener jListener){
 		this.jListener=jListener;
 	}
+
+	/**
+	 * beallitja a tetshot
+	 * @param testho int
+	 */
 	public void setTestho(int testho) {
 		this.testho = testho;
 		if(this.testho<=0){
@@ -69,14 +141,26 @@ public abstract class Szereplo implements IKarakter{
 		}
 	}
 
+	/**
+	 * beallitja az eszkozt
+	 * @param e Eszkoz
+	 */
 	public void setEszkoz(Eszkoz e) {
 		this.e = e;
 	}
 
+	/**
+	 * beallitja az alkatreszt
+	 * @param a Alkatresz
+	 */
 	public void setAlkatresz(Alkatresz a) {
 		this.a = a;
 	}
 
+	/**
+	 * beallitja a szereplo lepesszamat
+	 * @param lepesszam int
+	 */
 	public void setLepesszam(int lepesszam) {
 		this.lepesszam = lepesszam;
 		if(this.lepesszam<=0){
@@ -86,28 +170,51 @@ public abstract class Szereplo implements IKarakter{
 		}
 	}
 
+	/**
+	 * beallitja a mezot
+	 * @param m Mezo
+	 */
 	public void setM(Mezo m) {
 		this.m = m;
 	}
 
+	/**
+	 * visszaadja a szereplo testhojet
+	 * @return testho
+	 */
 	public int getTestho() {
 		return testho;
 	}
 
+	/**
+	 * visszaadja az eszkozt
+	 * @return eszkoz
+	 */
 	public Eszkoz getEszkoz() {
 		return e;
 	}
 
+	/**
+	 * visszaadja az alkatreszt
+	 * @return alkatresz
+	 */
 	public Alkatresz getAlkatresz() {
 		return a;
 	}
 
+	/**
+	 * visszaadja a lepesszamot
+	 * @return lepesszam
+	 */
 	public int getLepesszam() {
 		return lepesszam;
 	}
 
-	/*Csokkenti a szerplo testhojet
-        Csak akkor hivdik meg, ha hoviar aldozata lesz, es nincs igluban*/
+	/**
+	 * Csokkenti a szerplo testhojet
+	 * Csak akkor hivdik meg, ha hoviar aldozata lesz, es nincs igluban
+	 * @throws IOException
+	 */
 	public void hovihar() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szereplo mezojen hovihar tamadt\n");
@@ -122,7 +229,11 @@ public abstract class Szereplo implements IKarakter{
 			}
 		}
 	}
-	
+
+	/**
+	 *mezo targyfelvetele fuggvenyet hivja meg
+	 * @throws IOException
+	 */
 	public void felvesz() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplo megprobalja felvenni a targyat\n");
@@ -151,7 +262,11 @@ public abstract class Szereplo implements IKarakter{
 		}
 
 	}
-	
+
+	/**
+	 * hasznal fuggveny
+	 * @throws IOException
+	 */
 	public void hasznal() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		if (getEszkoz() != null){
@@ -171,36 +286,6 @@ public abstract class Szereplo implements IKarakter{
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);
 		}
-		/*
-		System.out.println("Van nalam eszkoz? Ha igen, milyen?");
-		System.out.println("1.: Nincs nalam eszkoz.\n2.: Van, kotel.\n3.: Van, lapat.\n4.: Van, elelem.");
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String str = br.readLine();
-		if(str.equals("1")){
-			System.out.println(">Szereplo.hasznal()");
-			System.out.println("Nincs nalam eszkoz, ezert az eszkozhasznalat nem lehetseges.");
-			System.out.println("<Szereplo.hasznal()");
-		}
-		if(str.equals("2")){
-			System.out.println(">Szereplo.hasznal()");
-			//Mivel a kotelet onmagaban nem tudja hasznalni, nem tortenik semmi.
-			//Kotelet akkor lehet hasznalni, ha egy mezotol huzdKi() keres erkezik.
-			System.out.println("Kotel hasznalata nem lehetseges.");
-			System.out.println("<Szereplo.hasznal()");
-		}
-		if(str.equals("3")){
-			System.out.println(">Szereplo.hasznal()");
-			//Meghivjuk a Lapat hasznal() fuggvenyet.
-			new Lapat().hasznal(new Eszkimo());
-			System.out.println("<Szereplo.hasznal()");
-		}
-		if(str.equals("4")){
-			System.out.println(">Szereplo.hasznal()");
-			//Meghivjuk az Elelem hasznal() fuggvenyet.
-			new Elelem().hasznal(new Eszkimo());
-			System.out.println("<Szereplo.hasznal()");
-		}
-		 */
 	}
 
 	/**
@@ -223,27 +308,7 @@ public abstract class Szereplo implements IKarakter{
 			}
 		}
 		f.close();
-		/*
-		System.out.println("Van rajtad buvarruha?");
-		System.out.println("1.: Van\n2.: Nincs");
-		// a beolvasasert felelos objektum
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		//ha a felhasznalo kettest irt be
-		if(br.readLine().equals("2")){
-			//lekerdezi annak a mezonek szomszedjat, amelyiken a szereplo van
-			//parameterkent az iranyt adja meg (ebben az esetben most egy tetszoleges szam:0)
-			new Mezo().getSzomszed(0);
-			System.out.println("Van a szomszedos mezon Szereplo?");
-			System.out.println("1.: Igen\t 2.: Nem");
-			//ha a felhasznalo egyest irt be
-			if (br.readLine().equals("1")){
-				//szolunk a mezonek h huzza ki a parameterkent adott szereplot
-				new Mezo().huzzKi(new Eszkimo());
-			}
-			System.out.println("<Szereplo.tesoTeVizbeEstel()");
-		}*/
 
-		System.out.println("<Szereplo.tesoTeVizbeEstel()");
 	}
 	
 	/**
@@ -262,7 +327,13 @@ public abstract class Szereplo implements IKarakter{
 			setLepesszam(getLepesszam() - 1);
 		}
 	}
-	
+
+	/**
+	 * abstract kepesseghasznalat fuggveny
+	 * eszkimo es sarkkutato valositja meg
+	 * @param i int
+	 * @throws IOException
+	 */
 	abstract public void kepessegHasznalat(int i) throws IOException ;
 
 	/**
@@ -340,7 +411,11 @@ public abstract class Szereplo implements IKarakter{
 			setLepesszam(getLepesszam() - 1);
 		}
 	}
-	
+
+	/**
+	 * elfogyasztott elelemmel a szereplo testhoje no
+	 * @throws IOException
+	 */
 	public void etkezes() throws IOException {
 		/*
 		System.out.println("\t\t>Szereplo.etkezes()");
@@ -372,11 +447,19 @@ public abstract class Szereplo implements IKarakter{
 		getEszkoz().hasznal(sz);
 		this.getMezo().ralep(sz);
 	}
+
+	/**
+	 *karaktert a mezohoz adja
+	 * @param m Mezo
+	 */
 	public void addKarakterToMezo(Mezo m){
 		m.addKarakter(this);
 		this.setM(m);
 	}
-	
+
+	/**
+	 * medvevel talolkozasert felelos fuggveny
+	 */
 	public void hitByMedve() {
 		if (getjListener() != null) {
 			getjListener().jatekVegeListener();
