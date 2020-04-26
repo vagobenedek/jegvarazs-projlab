@@ -228,7 +228,7 @@ public class Mezo {
 	}
 
 	/**
-	 * Ha a hoszint nagyobb 0-nal, csokkenti a hoszintet 1-gyel és ezt fajlba irva jelzi.
+	 * Ha a hoszint nagyobb 0-nal, csokkenti a hoszintet 1-gyel ï¿½s ezt fajlba irva jelzi.
 	 * @throws IOException
 	 */
 	public void hoCsokkento() throws IOException {
@@ -319,6 +319,9 @@ public class Mezo {
 	public void huzzKi(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.huzzki()");
 		//System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
+		FileWriter output = new FileWriter("./kimenet.txt", true);
+		output.write("Szereplo kihuzasa\n");
+		output.close();
 		boolean vankotel = false;
 		for (IKarakter szereplo: this.getSzereplok()){
 			if(szereplo.getEszkoz()!=null && szereplo.getEszkoz().getNev().equals("Kotel")){
@@ -327,6 +330,8 @@ public class Mezo {
 			}
 		}
 		if (!vankotel) {
+
+			output.write("A jateknak vege: vesztettel.\n");
 			if(sz.getjListener()!=null) {
 				sz.getjListener().jatekVegeListener();
 			}
