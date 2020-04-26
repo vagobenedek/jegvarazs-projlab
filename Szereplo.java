@@ -63,7 +63,9 @@ public abstract class Szereplo implements IKarakter{
 	public void setTestho(int testho) {
 		this.testho = testho;
 		if(this.testho<=0){
-			jListener.jatekVegeListener();
+			if(getjListener()!=null) {
+				getjListener().jatekVegeListener();
+			}
 		}
 	}
 
@@ -78,7 +80,9 @@ public abstract class Szereplo implements IKarakter{
 	public void setLepesszam(int lepesszam) {
 		this.lepesszam = lepesszam;
 		if(this.lepesszam<=0){
-			jListener.kovetkezoSzereploListener();
+			if(getjListener()!=null) {
+				getjListener().kovetkezoSzereploListener();
+			}
 		}
 	}
 
@@ -112,7 +116,9 @@ public abstract class Szereplo implements IKarakter{
 			setTestho(getTestho()-1);
 		}
 		else {
-			getjListener().jatekVegeListener();
+			if(getjListener()!=null) {
+				getjListener().jatekVegeListener();
+			}
 		}
 	}
 	
@@ -128,10 +134,13 @@ public abstract class Szereplo implements IKarakter{
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplo feltori a jeget.\n");
 		f.close();
-		if(m.getHoSzint()==0){
+		if(m.getHoSzint()==0) {
 			m.feltor();
-			getjListener().hoviharSzamlaloCsokkentoListener();
-			setLepesszam(getLepesszam()-1);}
+			if (getjListener() != null) {
+				getjListener().hoviharSzamlaloCsokkentoListener();
+				setLepesszam(getLepesszam() - 1);
+			}
+		}
 		else {
 			f.append("A mezo nem tort fel.\n");
 		}
@@ -153,8 +162,10 @@ public abstract class Szereplo implements IKarakter{
 			f.append("Nincs eszkoz a szereplonel\n");
 		}
 		f.close();
-        getjListener().hoviharSzamlaloCsokkentoListener();
-        setLepesszam(getLepesszam()-1);
+		if(getjListener()!=null) {
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam() - 1);
+		}
 		/*
 		System.out.println("Van nalam eszkoz? Ha igen, milyen?");
 		System.out.println("1.: Nincs nalam eszkoz.\n2.: Van, kotel.\n3.: Van, lapat.\n4.: Van, elelem.");
@@ -193,14 +204,22 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void tesoTeVizbeEstel() throws IOException {
 		System.out.println(">Szereplo.tesoTeVizbeEstel()");
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A Szereplo vizbe esett\n");
+
 		if (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha")){
+
 			for (int i = 0; i<4;i++){
 				Mezo mezo = this.getMezo().getSzomszed(i);
 				mezo.huzzKi(this);
 			}
 		}
-		else
-            getjListener().jatekVegeListener();
+		else{
+			f.append("A szereplon van buvarruha");
+		}
+
+
+		f.close();
 		/*
 		System.out.println("Van rajtad buvarruha?");
 		System.out.println("1.: Van\n2.: Nincs");
@@ -230,8 +249,10 @@ public abstract class Szereplo implements IKarakter{
 		f.append("Szereplo havat as\n");
 		f.close();
 		getMezo().hoAso(lapat);
-        getjListener().hoviharSzamlaloCsokkentoListener();
-        setLepesszam(getLepesszam()-1);
+		if(getjListener()!=null) {
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam() - 1);
+		}
 	}
 	
 	abstract public void kepessegHasznalat(int i) throws IOException ;
@@ -253,9 +274,10 @@ public abstract class Szereplo implements IKarakter{
 			this.a = a;
 			temp.addAlkatreszToMezo(m);
 		}
-
-        getjListener().hoviharSzamlaloCsokkentoListener();
-        setLepesszam(getLepesszam()-1);
+		if(getjListener()!=null) {
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam() - 1);
+		}
 		FileWriter output = new FileWriter("./kimenet.txt", true);
 		output.write("Szereplo alkatreszfelvetele sikeres.\n");
 		output.write("Felvett targy: " + a.getNev() + ".\n");
@@ -291,8 +313,10 @@ public abstract class Szereplo implements IKarakter{
 		Mezo mezo = getMezo().getSzomszed(irany);
 		this.m.lelep(this);
 		mezo.ralep(this);
-        getjListener().hoviharSzamlaloCsokkentoListener();
-        setLepesszam(getLepesszam()-1);
+		if(getjListener()!=null) {
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam() - 1);
+		}
 		//new Mezo().getSzomszed(irany);
 		/*System.out.println("Milyen mezore lepunk?");
 		//kiirja a lehetosegeket, hogy milyen mezokre lephetunk
@@ -330,8 +354,10 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void osszerak() throws IOException {
         getMezo().epit(this);
-        getjListener().hoviharSzamlaloCsokkentoListener();
-        setLepesszam(getLepesszam()-1);
+		if(getjListener()!=null) {
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam() - 1);
+		}
 	}
 	
 	public void etkezes() throws IOException {
@@ -351,7 +377,8 @@ public abstract class Szereplo implements IKarakter{
 	 * Mezo epit fuggvenye hivja meg
 	 */
 	public void elsut() {
-		getjListener().gyozelemListener();
+		if(getjListener()!=null)
+			getjListener().gyozelemListener();
 	}
 
 	/**
@@ -380,6 +407,7 @@ public abstract class Szereplo implements IKarakter{
 	}
 	
 	public void hitByMedve() {
+		if(getjListener()!=null)
         getjListener().jatekVegeListener();
 	}
 }

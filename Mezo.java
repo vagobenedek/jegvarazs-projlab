@@ -44,9 +44,6 @@ public class Mezo {
 		f.append("Mezo letrejott\n");
 		f.close();
 	}
-	public boolean getMedvetolVedett(){
-		return medvetolVedett;
-	}
 	public ArrayList<IKarakter> getSzereplok() {
 		return szereplok;
 	}
@@ -311,9 +308,16 @@ public class Mezo {
 	public void huzzKi(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.huzzki()");
 		//System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
+		boolean vankotel = false;
 		for (IKarakter szereplo: this.getSzereplok()){
-			if(szereplo.getEszkoz().getNev().equals("Kotel")){
+			if(szereplo.getEszkoz()!=null && szereplo.getEszkoz().getNev().equals("Kotel")){
 				szereplo.huzdKi(sz);
+				vankotel = true;
+			}
+		}
+		if (!vankotel) {
+			if(sz.getjListener()!=null) {
+				sz.getjListener().jatekVegeListener();
 			}
 		}/*
 		// a beolvasert felelos objektum
@@ -324,6 +328,7 @@ public class Mezo {
 			//majd ezt a parametert adjuk tovabb
 			new Sarkkutato().huzdKi(new Eszkimo());
 		}*/
+
 		System.out.println("<Mezo.huzzki()");
 	}
 	/*public void szereplokMeetMedve(){

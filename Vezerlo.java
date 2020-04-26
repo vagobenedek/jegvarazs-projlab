@@ -144,7 +144,7 @@ public class Vezerlo implements JegvarazsListener{
 		for (Szereplo szereplo: szereplok){
 			try{
 				Mezo mezo = jmedve.getMezo();
-			if(mezo.equals(szereplo.getMezo())&&mezo.getMedvetolVedett()){
+			if(mezo.equals(szereplo.getMezo())&&mezo.isMedvetolVedett()){
 				szereplo.hitByMedve();
 			}}
 			catch (Exception e){

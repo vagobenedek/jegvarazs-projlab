@@ -12,9 +12,12 @@ public class Stabil extends Jegmezo {
 	 * a parameterkent kaptt szereplot ralepteti a stabil mezore
 	 * @param sz: Szereplo
 	 */
-	public void ralep(IKarakter sz) {
-		System.out.println(">Stabil.ralep()");
-		System.out.println("<Stabil.ralep()");
+	public void ralep(IKarakter sz)throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		sz.setM(this);
+		addKarakter(sz);
+		f.append("A Szereplo stabil mezon all\n");
+		f.close();
 	}
 	/*public int getTeherBiras() throws IOException {
 		System.out.println("\t\t>Stabil.getTeherBiras()");
