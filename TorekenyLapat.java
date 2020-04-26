@@ -10,7 +10,6 @@ public class TorekenyLapat extends Lapat {
 		f.append("Torekeny lapat letrejott\n");
 		f.close();
 	}
-	
 	@Override
 	public void hasznal(Szereplo sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -18,7 +17,8 @@ public class TorekenyLapat extends Lapat {
 		f.close();
 		
 		elettartam -= 1;
-		if (elettartam < 0){
+		if (elettartam <= 0){
+			sz.setEszkoz(null);
 		} else {
 			sz.hoAsas(1);
 		}

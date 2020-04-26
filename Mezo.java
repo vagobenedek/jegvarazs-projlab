@@ -91,10 +91,6 @@ public class Mezo {
 		this.epulet = epulet;
 	}
 
-	public void setFeltort(boolean feltort) {
-		this.feltort = feltort;
-	}
-
 	public void setHoSzint(int hoSzint) {
 		this.hoSzint = hoSzint;
 	}
@@ -244,14 +240,9 @@ public class Mezo {
 	// Ha nincs feltorve -> feltori.
 	public void feltor() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		
-		if(hoSzint == 0) {
-			feltort = true;
-			f.append("A mezo feltort.\n");
-		}
-		else {
-			f.append("A mezo nem tort fel.\n");
-		}
+		this.feltort=true;
+		f.append("A mezo feltort.\n");
+
 		
 		f.close();
 	}

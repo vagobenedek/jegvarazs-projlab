@@ -99,7 +99,7 @@ public abstract class Szereplo implements IKarakter{
 			setTestho(getTestho()-1);
 		}
 		else {
-			//SZABI
+			getjListener().jatekVegeListener();
 		}
 	}
 	
@@ -111,11 +111,14 @@ public abstract class Szereplo implements IKarakter{
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplo feltori a jeget.\n");
 		f.close();
-		
-		m.feltor();
+		if(m.getHoSzint()==0){
+			m.feltor();
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam()-1);}
+		else {
+			f.append("A mezo nem tort fel.\n");
+		}
 
-        getjListener().hoviharSzamlaloCsokkentoListener();
-        setLepesszam(getLepesszam()-1);
 	}
 	
 	public void hasznal() throws IOException {
@@ -130,6 +133,8 @@ public abstract class Szereplo implements IKarakter{
 			f.append("Nincs eszkoz a szereplonel\n");
 		}
 		f.close();
+        getjListener().hoviharSzamlaloCsokkentoListener();
+        setLepesszam(getLepesszam()-1);
 		/*
 		System.out.println("Van nalam eszkoz? Ha igen, milyen?");
 		System.out.println("1.: Nincs nalam eszkoz.\n2.: Van, kotel.\n3.: Van, lapat.\n4.: Van, elelem.");
@@ -205,9 +210,7 @@ public abstract class Szereplo implements IKarakter{
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szereplo havat as\n");
 		f.close();
-		
 		getMezo().hoAso(lapat);
-
         getjListener().hoviharSzamlaloCsokkentoListener();
         setLepesszam(getLepesszam()-1);
 	}
@@ -320,6 +323,7 @@ public abstract class Szereplo implements IKarakter{
 		 */
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Etkezes sikeres\n");
+		//if(getTestho()<)
 		f.close();
 	}
 
