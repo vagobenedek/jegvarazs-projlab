@@ -12,6 +12,9 @@ public class Kotel extends Eszkoz {
 		f.append("Kotel letrejott\n");
 		f.close();
 	}
+	public String getNev(){
+		return "Kotel";
+	}
 
 	/**
 	 * a metodus a kotel hasznalataert felel

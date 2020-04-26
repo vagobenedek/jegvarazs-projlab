@@ -50,7 +50,9 @@ abstract public  class Mezo {
 	 * @param irany int
 	 */
 	public void setSzomszedMezo(Mezo szomszedMezo, int irany) {
+		System.out.println(szomszedMezo +  "-- ITT VAGYOK BASZKI");
 		szomszedMezok[irany] = szomszedMezo;
+		System.out.println(szomszedMezo);
 	}
 
 	/**
@@ -426,7 +428,6 @@ abstract public  class Mezo {
 			}
 		}
 		if (!vankotel) {
-
 			output.write("A jateknak vege: vesztettel.\n");
 			if(sz.getjListener()!=null) {
 				sz.getjListener().jatekVegeListener();

@@ -297,20 +297,20 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void tesoTeVizbeEstel() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Szereplo havat as\n");
-		if (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha")){
+		f.append("A Szereplo vizbe esett.\n");
+		f.close();
+		if (this.getEszkoz() == null || (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha"))){
 			for (int i = 0; i<4;i++){
 				Mezo mezo = this.getMezo().getSzomszed(i);
 				mezo.huzzKi(this);
 			}
 		}
-		else{
-			f.append("A jateknak vege: vesztettel.");
-			if (getjListener() != null){
-				getjListener().jatekVegeListener();
-			}
+		else if (this.getEszkoz()!=null && this.getEszkoz().getNev().equals("Buvarruha")){
+			f = new FileWriter("./kimenet.txt", true);
+			f.append("A szereplon van buvarruha.");
+			f.close();
 		}
-		f.close();
+
 
 	}
 	

@@ -11,7 +11,9 @@ public class Buvarruha extends Eszkoz {
 		f.append("Buvarruha letrejott.\n");
 		f.close();
 	}
-
+	public String getNev(){
+		return "Buvarruha";
+	}
 	/**
 	 * hasznal fuggveny
 	 * @param sz Szereplo

@@ -77,6 +77,7 @@ public class Interpreter {
         else if (splitted[0].equals("setszomszed")){
             Mezo mezo1 = mezok.get(splitted[1]);
             Mezo mezo2 = mezok.get(splitted[3]);
+
             mezo1.setSzomszedMezo(mezo2, Integer.parseInt(splitted[2]));
         }
         //Eszkimo letrehozasa
@@ -114,7 +115,7 @@ public class Interpreter {
         }
         //Lyuk letrehozasa
         else if (splitted[0].equals("lyuk")){
-            mezok.put(splitted[1], new Stabil());
+            mezok.put(splitted[1], new Lyuk());
             lyukak.put(splitted[1], new Lyuk());
             if (splitted.length == 3){
                 (mezok.get(splitted[1])).setHoSzint(Integer.parseInt(splitted[2]));
@@ -123,7 +124,7 @@ public class Interpreter {
         }
         //Tenger letrehozasa
         else if (splitted[0].equals("tenger")){
-            mezok.put(splitted[1], new Stabil());
+            mezok.put(splitted[1], new Tenger());
             tenger.put(splitted[1], new Tenger());
             if (splitted.length == 3){
                 (mezok.get(splitted[1])).setHoSzint(Integer.parseInt(splitted[2]));
