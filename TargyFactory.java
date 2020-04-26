@@ -8,10 +8,10 @@ public class TargyFactory {
 		f.append("TargyFactory letrejott\n");
 		f.close();
 	}
-	public ArrayList<Targy> createTargy(int i) {
+	public ArrayList<ITargy> createTargy(int i) {
 
 		System.out.println(">TargyFactory.createTargy(int i)");
 		System.out.println("<TargyFactory.createTargy(int i)");
-		return new ArrayList<Targy>();
+		return new ArrayList<ITargy>();
 	}
 }
