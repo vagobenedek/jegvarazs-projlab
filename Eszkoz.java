@@ -16,7 +16,7 @@ public abstract class Eszkoz implements ITargy {
 	 */
 	public Eszkoz() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Eszkoz letrejott\n");
+		f.append("Eszkoz letrejott.\n");
 		f.close();
 	}
 
@@ -27,7 +27,7 @@ public abstract class Eszkoz implements ITargy {
 	 */
 	public Eszkoz(String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Eszkoz letrejott\n");
+		f.append("Eszkoz letrejott.\n");
 		f.close();
 
 		nev = s;
@@ -48,7 +48,7 @@ public abstract class Eszkoz implements ITargy {
 	 */
 	public void addEszkozToMezo(Mezo m) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Eszkoz hozaadodott a mezohoz\n");
+		f.append("Eszkoz hozaadodott a mezohoz.\n");
 		f.close();
 		m.setTargy(this);
 	}
@@ -61,7 +61,7 @@ public abstract class Eszkoz implements ITargy {
 	public void felvesz(Szereplo Sz) throws IOException {
 		//0425
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Eszkoz felveteti magat a szereplovel\n");
+		f.append("Eszkoz felveteti magat a szereplovel.\n");
 		f.close();
 		Sz.eszkozFelvetele(this);
 	}

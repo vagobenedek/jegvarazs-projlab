@@ -5,12 +5,12 @@ public class Stabil extends Jegmezo {
 	public Stabil(ITargy t, IEpulet e, int hoSzint,int teherbiras, boolean hovihartolVedett, boolean medvetolVedett) throws IOException {
 		super(t,e,hoSzint,teherbiras,hovihartolVedett,medvetolVedett);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Stabil letrejott\n");
+		f.append("Stabil letrejott.\n");
 		f.close();
 	}
 	public Stabil()throws IOException{
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-        f.append("Jegmezo letrejott\n");
+        f.append("Jegmezo letrejott.\n");
         f.close();
 	}
 
@@ -22,7 +22,7 @@ public class Stabil extends Jegmezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		sz.setM(this);
 		addKarakter(sz);
-		f.append("A Szereplo stabil mezon all\n");
+		f.append("A Szereplo stabil mezon all.\n");
 		f.close();
 	}
 	/*public int getTeherBiras() throws IOException {

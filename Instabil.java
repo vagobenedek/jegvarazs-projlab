@@ -8,17 +8,17 @@ public class Instabil extends Jegmezo {
 	public Instabil(ITargy t, IEpulet e, int hoSzint,int teherbiras, boolean hovihartolVedett, boolean medvetolVedett) throws IOException {
 		super(t,e,hoSzint,teherbiras,hovihartolVedett,medvetolVedett);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Instabil letrejott\n");
+		f.append("Instabil letrejott.\n");
 		f.close();
 	}
 	public Instabil() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Instabil letrejott\n");
+		f.append("Instabil letrejott.\n");
 		f.close();
 	}
 	public void atfordul() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Az Instabil mez oatfordult\n");
+		f.append("Az Instabil mezo atfordult.\n");
 		f.close();
 		for (IKarakter szereplo : this.getSzereplok()){
 			szereplo.tesoTeVizbeEstel();
@@ -32,7 +32,7 @@ public class Instabil extends Jegmezo {
 	 */
 	public void ralep(IKarakter sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("A Szereplo Instabil mezore lepett\n");
+		f.append("A Szereplo Instabil mezore lepett.\n");
 		f.close();
 		sz.setM(this);
 		this.addKarakter(sz);
