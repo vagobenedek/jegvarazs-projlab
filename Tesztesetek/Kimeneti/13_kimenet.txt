@@ -1,4 +1,4 @@
-A szereplő használja a képességét.
-A mező teherbírása: *.
-A szereplő használja a képességét.
-A mező teherbírása: 2.
+A szereplo hasznalja a kepesseget.
+A mezo teherbirasa: *.
+A szereplo hasznalja a kepesseget.
+A mezo teherbirasa: 2.

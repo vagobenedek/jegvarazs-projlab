@@ -16,7 +16,7 @@ public class TorekenyLapat extends Lapat {
 		super();
 		this.elettartam = 3;
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Torekeny lapat letrejott\n");
+		f.append("Torekeny lapat letrejott.\n");
 		f.close();
 	}
 	
@@ -30,7 +30,7 @@ public class TorekenyLapat extends Lapat {
 	@Override
 	public void hasznal(Szereplo sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Torekeny lapat hasznalata\n");
+		f.append("Torekeny lapat hasznalata.\n");
 		f.close();
 		
 		if (elettartam <= 0) {

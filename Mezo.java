@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Mezo {
+abstract public  class Mezo {
 	/**
 	 * Mezon allo szereploket tarolja
 	 */
@@ -214,7 +214,7 @@ public class Mezo {
 	public void hovihar() throws IOException {
 		//Noveli a mezon levo hoegysegek szamat
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Mezon hovihar tamadt\n");
+		f.append("Mezon hovihar tamadt.\n");
 		f.close();
 		hoNovelo();
 		if (!this.isHovihartolVedett()){
@@ -230,12 +230,8 @@ public class Mezo {
 	 * @param sz: Szereplo
 	 * @throws IOException
 	 */
-	public void ralep(IKarakter sz) throws IOException {
-		System.out.println(">Mezo.ralep()");
-		sz.setM(this);
-		addKarakter(sz);
-		System.out.println("<Mezo.ralep()");
-	}
+	abstract public void ralep(IKarakter sz) throws IOException ;
+
 
 	/**
 	 * sator epitesenel beallitja a mezo vedelmet
@@ -261,7 +257,7 @@ public class Mezo {
 	public int getTeherBiras() throws IOException {
 
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Teherbiras lekerdezese\n");
+		f.append("Teherbiras lekerdezese.\n");
 		f.close();
 
 		return teherbiras;
@@ -273,7 +269,7 @@ public class Mezo {
 	 */
 	public void lelep(IKarakter sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Szereplo lelep a mezorol\n");
+		f.append("Szereplo lelep a mezorol.\n");
 		f.close();
 		sz.setM(null);
 		System.out.println("asd");
@@ -288,7 +284,7 @@ public class Mezo {
 	 */
 	public Mezo getSzomszed(int irany) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Szomszéd lekérdezése\n");
+		f.append("Szomszed lekerdezese.\n");
 		f.close();
 		//ebben az esetben nem kell semmit visszaadni
 		return szomszedMezok[irany];
@@ -302,7 +298,7 @@ public class Mezo {
 	 */
 	public void hoAso(int lapat) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Mezo hoasas\n");
+		f.append("Mezo hoasas.\n");
 
 		for (int i=0; i<=lapat; i++){
 			this.hoCsokkento();
@@ -320,7 +316,7 @@ public class Mezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		if(hoSzint > 0) {
 			hoSzint -= 1;
-			f.append("Hoszint eggyel csokkent\n");
+			f.append("Hoszint eggyel csokkent.\n");
 		}
 		f.close();
 	}
@@ -332,7 +328,7 @@ public class Mezo {
 	public void hoNovelo() throws IOException {
 		setHoSzint(getHoSzint()+1);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Hoszint megnott\n");
+		f.append("Hoszint megnott.\n");
 		f.close();
 	}
 
@@ -396,7 +392,7 @@ public class Mezo {
 	public void iglutEpit() throws IOException {
 		new Iglu(this);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("Iglu epitese sikeres\n");
+		output.write("Iglu epitese sikeres.\n");
 		output.close();
 	}
 
@@ -409,7 +405,7 @@ public class Mezo {
 		System.out.println(">Mezo.huzzki()");
 		//System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("Szereplo kihuzasa\n");
+		output.write("Szereplo kihuzasa.\n");
 		output.close();
 		boolean vankotel = false;
 		for (IKarakter szereplo: this.getSzereplok()){

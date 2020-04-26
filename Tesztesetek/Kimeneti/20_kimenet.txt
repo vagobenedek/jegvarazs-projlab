@@ -1,2 +1,2 @@
-A mező feltört.
-A mező nem tört fel.
+A mezo feltort.
+A mezo nem tort fel.
