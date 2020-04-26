@@ -4,12 +4,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public abstract class Szereplo implements IKarakter {
+public abstract class Szereplo implements IKarakter{
 	private int testho;
 	private Eszkoz e;
 	private Alkatresz a;
 	private int lepesszam = 4;
 	private Mezo m;
+	private JegvarazsListener jListener;
 	public Szereplo() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Jelzofeny letrejott\n");
@@ -40,9 +41,14 @@ public abstract class Szereplo implements IKarakter {
 		f.close();
 		return m;
 	}
-
+	public void setjListener(JegvarazsListener jListener){
+		this.jListener=jListener;
+	}
 	public void setTestho(int testho) {
 		this.testho = testho;
+		if(this.testho<=0){
+			jListener.jatekVegeListener();
+		}
 	}
 
 	public void setEszkoz(Eszkoz e) {
@@ -55,6 +61,9 @@ public abstract class Szereplo implements IKarakter {
 
 	public void setLepesszam(int lepesszam) {
 		this.lepesszam = lepesszam;
+		if(this.lepesszam<=0){
+			jListener.kovetkezoSzereploListener();
+		}
 	}
 
 	public void setM(Mezo m) {
@@ -72,8 +81,6 @@ public abstract class Szereplo implements IKarakter {
 	public Alkatresz getAlkatresz() {
 		return a;
 	}
-
-
 
 	public int getLepesszam() {
 		return lepesszam;
@@ -146,7 +153,7 @@ public abstract class Szereplo implements IKarakter {
 	 */
 	public void tesoTeVizbeEstel() throws IOException {
 		System.out.println(">Szereplo.tesoTeVizbeEstel()");
-		if (true/*this.getEszkoz().toString().equals("Buvarruha")*/){
+		if (this.getEszkoz().toString().equals("Buvarruha")){
 			for (int i = 0; i<4;i++){
 				Mezo mezo = this.getMezo().getSzomszed(i);
 				mezo.huzzKi(this);
@@ -269,8 +276,8 @@ public abstract class Szereplo implements IKarakter {
 
 	}
 	
-	public void osszerak() throws IOException {
-		m.epit(this);
+	public void osszerak() {
+
 	}
 	
 	public void etkezes() throws IOException {
@@ -284,6 +291,7 @@ public abstract class Szereplo implements IKarakter {
 	}
 	
 	public void elsut() {
+		jListener.gyozelemListener();
 	}
 
 	/**

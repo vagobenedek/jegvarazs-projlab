@@ -30,6 +30,7 @@ public class Palya {
 		for (int i = 0; i != eszkozok.size(); i++){
 			eszkozok.get(i).addEszkozToMezo(mezok.get(i));
 		}
+
 	}
 	public void hovihar() throws IOException {
 		System.out.println(">Palya.hovihar()");
