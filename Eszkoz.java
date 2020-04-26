@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class Eszkoz implements ITargy {
+
 	/**
 	 * nev parameter, eszkoz nevet adja meg
 	 */

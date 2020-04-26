@@ -328,4 +328,9 @@ public class Mezo {
 		}*/
 		System.out.println("<Mezo.huzzki()");
 	}
+
+	public void setTeherbiras(int teherb) {
+		teherbiras = teherb;
+	}
+
 }
