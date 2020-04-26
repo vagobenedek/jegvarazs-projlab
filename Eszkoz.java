@@ -36,7 +36,7 @@ public abstract class Eszkoz implements ITargy {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Eszkoz hozaadodott a mezohoz\n");
 		f.close();
-		m.setEszkoz(this);
+		m.setTargy(this);
 	}
 
 	/**
