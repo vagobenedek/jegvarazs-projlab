@@ -1,4 +1,4 @@
-Szereplő tárgyfelvétele sikeres.
-Felvett tárgy: kötél.
-Szereplő tárgyfelvétele meghíúsult.
-Szereplő tárgyfelvétele meghiúsult.
+Szereplo targyfelvetele sikeres.
+Felvett targy: kotel.
+Szereplo targyfelvetele meghiusult.
+Szereplo targyfelvetele meghiusult.

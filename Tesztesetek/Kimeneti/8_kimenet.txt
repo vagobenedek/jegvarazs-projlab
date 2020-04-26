@@ -1,2 +1,2 @@
-A szereplő vízbe esett.
-A játéknak vége: vesztettél.
+A szereplo vizbe esett.
+A jateknak vege: vesztettel.
