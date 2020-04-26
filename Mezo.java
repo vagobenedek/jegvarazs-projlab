@@ -299,7 +299,7 @@ public class Mezo {
 	 */
 	public void huzzKi(Szereplo sz) throws IOException {
 		System.out.println(">Mezo.huzzki()");
-		System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
+		//System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
 		for (IKarakter szereplo: this.getSzereplok()){
 			if(szereplo.getEszkoz().getNev().equals("Kotel")){
 				szereplo.huzdKi(sz);
