@@ -8,7 +8,7 @@ public class Elelem extends Eszkoz {
 	 */
 	public Elelem() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Elelem letrejott\n");
+		f.append("Elelem letrejott.\n");
 		f.close();
 	}
 
@@ -31,7 +31,7 @@ public class Elelem extends Eszkoz {
 	public void hasznal(Szereplo Sz) throws IOException {
 		Sz.etkezes();
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Elelem hasznalata\n");
+		f.append("Elelem hasznalata.\n");
 		f.close();
 		/*
 		System.out.println("\t>Elelem.hasznal()");

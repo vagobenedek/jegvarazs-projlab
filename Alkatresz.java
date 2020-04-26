@@ -21,13 +21,13 @@ public abstract class Alkatresz implements ITargy {
 
 	public Alkatresz() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Alkatresz letrejott\n");
+		f.append("Alkatresz letrejott.\n");
 		f.close();
 	}
 
 	public Alkatresz(String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Alkatresz letrejott\n");
+		f.append("Alkatresz letrejott.\n");
 		f.close();
 		nev = s;
 	}
@@ -49,7 +49,7 @@ public abstract class Alkatresz implements ITargy {
 	@Override
 	public void felvesz(Szereplo sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Szereplo felveszi az alkatreszt\n");
+		f.append("Szereplo felveszi az alkatreszt.\n");
 		f.close();
 		sz.alkatreszFelvetele(this);
 	}

@@ -12,7 +12,7 @@ public class Vezerlo implements JegvarazsListener{
 	private int hovihar_szamlalo;
 	public Vezerlo(String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Vezerlo letrejott\n");
+		f.append("Vezerlo letrejott.\n");
 		f.close();
 		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
 		jegesmedve = new Jegesmedve();
@@ -26,7 +26,7 @@ public class Vezerlo implements JegvarazsListener{
 	}
 	public Vezerlo(Szereplo szereplo) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Vezerlo letrejott\n");
+		f.append("Vezerlo letrejott.\n");
 		f.close();
 		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
 		//palya = new Palya(10, 10);
