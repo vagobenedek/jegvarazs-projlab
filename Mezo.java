@@ -276,6 +276,7 @@ public class Mezo {
 		f.append("Szereplo lelep a mezorol\n");
 		f.close();
 		sz.setM(null);
+		System.out.println("asd");
 		this.removeSzereplo(sz);
 
 	}

@@ -393,6 +393,7 @@ public abstract class Szereplo implements IKarakter{
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
 		Mezo mezo = getMezo().getSzomszed(irany);
 		this.m.lelep(this);
+		System.out.println("This is it: \n" + mezo.getHoSzint()+"\nThis was it");
 		mezo.ralep(this);
 		if (getjListener() != null) {
 			getjListener().hoviharSzamlaloCsokkentoListener();
