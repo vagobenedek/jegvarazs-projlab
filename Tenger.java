@@ -7,6 +7,12 @@ public class Tenger extends Mezo {
 		f.append("Tenger letrejott\n");
 		f.close();
 	}
+	public Tenger(ITargy t, IEpulet e, int hoSzint,int teherbiras, boolean hovihartolVedett, boolean medvetolVedett)throws IOException{
+		super(t,e,hoSzint,teherbiras,hovihartolVedett,medvetolVedett);
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Lyuk letrejott\n");
+		f.close();
+	}
 
 	/**
 	 * A Tenger mezore lepteteseert felelos fuggveny
@@ -24,6 +30,6 @@ public class Tenger extends Mezo {
 		System.out.println("\t\t>Tenger.getTeherBiras()");
 		System.out.println("\t\t<Tenger.getTeherBiras()");
 		//random visszateresi értek
-		return 1;
+		return 0;
 	}
 }

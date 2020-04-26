@@ -2,6 +2,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Kotel extends Eszkoz {
+	/**
+	 * Konstruktor
+	 * @throws IOException
+	 */
 	public Kotel() throws IOException {
 		super();
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -11,7 +15,7 @@ public class Kotel extends Eszkoz {
 
 	/**
 	 * a metodus a kotel hasznalataert felel
-	 * @param sz
+	 * @param sz Szereplo
 	 */
 	public void hasznal(Szereplo sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);

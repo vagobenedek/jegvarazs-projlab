@@ -2,10 +2,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Stabil extends Jegmezo {
-	public Stabil() throws IOException {
+	public Stabil(ITargy t, IEpulet e, int hoSzint,int teherbiras, boolean hovihartolVedett, boolean medvetolVedett) throws IOException {
+		super(t,e,hoSzint,teherbiras,hovihartolVedett,medvetolVedett);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Stabil letrejott\n");
 		f.close();
+	}
+	public Stabil()throws IOException{
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+        f.append("Jegmezo letrejott\n");
+        f.close();
 	}
 
 	/**

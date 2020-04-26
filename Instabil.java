@@ -5,8 +5,8 @@ import java.io.InputStreamReader;
 
 public class Instabil extends Jegmezo {
 	private int teherbiras;
-	public Instabil(ITargy t, int hoSzint,int teherbiras, boolean vedett) throws IOException {
-		//super(t,e,hoSzint,teherbiras,vedett);
+	public Instabil(ITargy t, IEpulet e, int hoSzint,int teherbiras, boolean hovihartolVedett, boolean medvetolVedett) throws IOException {
+		super(t,e,hoSzint,teherbiras,hovihartolVedett,medvetolVedett);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Instabil letrejott\n");
 		f.close();
