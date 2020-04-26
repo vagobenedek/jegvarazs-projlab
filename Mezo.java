@@ -80,7 +80,7 @@ public class Mezo {
 	public void setAlkatresz(Alkatresz a){this.alkatresz=a;}
 	public void setEszkoz(Eszkoz e){this.eszkoz=e;}
 
-	public void removeSzereplo(Szereplo szereplo){
+	public void removeSzereplo(IKarakter szereplo){
 		this.szereplok.remove(szereplo);
 	}
 	public void setTargy(ITargy targy) {
@@ -138,13 +138,19 @@ public class Mezo {
 	 * @param sz: Szereplo
 	 * @throws IOException
 	 */
-	public void ralep(Szereplo sz) throws IOException {
+	public void ralep(IKarakter sz) throws IOException {
 		System.out.println(">Mezo.ralep()");
 		sz.setM(this);
 		addKarakter(sz);
 		System.out.println("<Mezo.ralep()");
 	}
-
+	public void satratEpit(Sator sator){
+		sator.SetVedelem();
+	}
+	public void Satorszetszed(){
+		this.setHovihartolVedett(false);
+		this.setMedvetolVedett(false);
+	}
 	public int getTeherBiras() throws IOException {
 
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -176,11 +182,10 @@ public class Mezo {
 	 * ez a fuggveny lepteti le a parameterkent kapott szereplot, a mezorol
 	 * @param sz : Szereplo
 	 */
-	public void lelep(Szereplo sz) throws IOException {
+	public void lelep(IKarakter sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szereplo lelep a mezorol\n");
 		f.close();
-
 		sz.setM(null);
 		this.removeSzereplo(sz);
 
@@ -202,7 +207,7 @@ public class Mezo {
 		f.append("Szomszéd lekérdezése\n");
 		f.close();
 		//ebben az esetben nem kell semmit visszaadni
-		return null;
+		return szomszedMezok[irany];
 	}
 	
 	// Ha nincs lapat -> 1  db hoCsokkento() hivodik.
@@ -230,7 +235,7 @@ public class Mezo {
 	}
 	
 	public void hoNovelo() throws IOException {
-		hoSzint++;
+		setHoSzint(getHoSzint()+1);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Hoszint megnott\n");
 		f.close();
@@ -318,5 +323,12 @@ public class Mezo {
 			new Sarkkutato().huzdKi(new Eszkimo());
 		}*/
 		System.out.println("<Mezo.huzzki()");
+	}
+	public void szereplokMeetMedve(){
+		if(medvetolVedett){
+			for (IKarakter szereplo: szereplok){
+				szereplo.hitByMedve();
+			}
+		}
 	}
 }

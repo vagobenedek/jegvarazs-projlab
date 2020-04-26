@@ -9,5 +9,6 @@ public interface IKarakter {
 	public void hitByMedve();
 	public Eszkoz getEszkoz();
 	public Alkatresz getAlkatresz();
+	void setM(Mezo m);
 	public void addKarakterToMezo(Mezo m);
 }

@@ -37,10 +37,19 @@ public class Vezerlo implements JegvarazsListener{
 		/*for (Szereplo szereplo:szereplok){
 			szereplo.setjListener(this);
 		}*/
+
 		aktualisSzereplo.setjListener(this);
 	}
 	public void setAktualisSzereplo(Szereplo szereplo){
 		aktualisSzereplo=szereplo;
+		if(szereplo.getEpitettSatratElozoKorben()){
+			try {
+				szereplo.getMezo().Satorszetszed();
+				szereplo.setEpitettSatratElozoKorben(false);
+			}catch (Exception e){
+				e.printStackTrace();
+			}
+		}
 	}
 	/**
 	 * A Vezerlo alabb lathato fuggvenyei mind listenereken keresztul hivodnak majd meg

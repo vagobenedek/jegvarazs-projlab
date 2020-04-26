@@ -15,6 +15,7 @@ public class Sarkkutato extends Szereplo {
 		f.append("Sarkkutato letrejott\n");
 		f.close();
 	}
+	@Override
 	public void kepessegHasznalat(int i) throws IOException {
 		getMezo().getSzomszed(i).getTeherBiras();
 		FileWriter f = new FileWriter("./kimenet.txt", true);

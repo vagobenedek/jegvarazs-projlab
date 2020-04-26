@@ -9,19 +9,17 @@ public class Iglu implements IEpulet {
 		f.close();
 		//Az iglu amint letrejon, vedelmet allit be a mezonek
 		this.m = m;
-		setVedelem();
+		SetVedelem();
 	}
-	public void hovihar() {
-	}
-	
-	public void setVedelem() {
+	/*public void hovihar() {
+	}*/
+
+	@Override
+	public void SetVedelem() {
 		System.out.println("\t\t\t>Iglu.setVedelem()");
+		m.setHovihartolVedett(true);
+		m.setMedvetolVedett(true);
 		System.out.println("\t\t\t<Iglu.setVedelem()");
 	}
-	
-	@Override
-	public void felvesz(Szereplo sz) throws IOException {
-		// TODO Auto-generated method stub
-		
-	}
+
 }

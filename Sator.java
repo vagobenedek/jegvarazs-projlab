@@ -1,18 +1,23 @@
 import java.io.IOException;
 
-public class Sator extends Eszkoz implements IEpulet {
-
-	public Sator() throws IOException {
-		super();
+public class Sator extends Eszkoz implements IEpulet, ITargy {
+	private Mezo mezo;
+	public Sator(Mezo mezo) throws IOException {
+		this.mezo=mezo;
+		//super();
 		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public void hasznal(Szereplo sz) throws IOException {
 		// TODO Auto-generated method stub
+		mezo.satratEpit(this);
 		
 	}
-	public void setVedelem(Mezo m) {
-		
+
+	@Override
+	public void SetVedelem() {
+		mezo.setMedvetolVedett(false);
+		mezo.setHovihartolVedett(true);
 	}
 
 }

@@ -1,4 +1,4 @@
 
-public interface IEpulet extends ITargy {
-	
+public interface IEpulet {
+	void SetVedelem();
 }

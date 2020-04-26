@@ -24,7 +24,7 @@ public class Instabil extends Jegmezo {
 	 * @param sz: Szereplo
 	 * @throws IOException
 	 */
-	public void ralep(Szereplo sz) throws IOException {
+	public void ralep(IKarakter sz) throws IOException {
 		System.out.println(">Instabil.ralep()");
 		sz.setM(this);
 		this.addKarakter(sz);

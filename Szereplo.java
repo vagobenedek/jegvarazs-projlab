@@ -8,9 +8,11 @@ public abstract class Szereplo implements IKarakter{
 	private int testho;
 	private Eszkoz e;
 	private Alkatresz a;
+	private int maxTestho;
 	private int lepesszam = 4;
 	private Mezo m;
 	private JegvarazsListener jListener;
+	private boolean epitettSatratElozoKorben;
 	public Szereplo() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Jelzofeny letrejott\n");
@@ -21,6 +23,7 @@ public abstract class Szereplo implements IKarakter{
 		f.append("Jelzofeny letrejott\n");
 		f.close();
 		this.testho = testho;
+		this.maxTestho = testho;
 
 	}
 
@@ -40,6 +43,15 @@ public abstract class Szereplo implements IKarakter{
 		f.append("Mezo lekerdezese\n");
 		f.close();
 		return m;
+	}
+	public void setEpitettSatratElozoKorben(boolean epitettSatratElozoKorben){
+		this.epitettSatratElozoKorben=epitettSatratElozoKorben;
+	}
+	public boolean getEpitettSatratElozoKorben(){
+		return epitettSatratElozoKorben;
+	}
+	public int getMaxTestho(){
+		return maxTestho;
 	}
 	public JegvarazsListener getjListener(){
 	    return jListener;
@@ -127,9 +139,12 @@ public abstract class Szereplo implements IKarakter{
 	
 	public void hasznal() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		if (e != null){
+		if (getEszkoz() != null){
+			if(getEszkoz().getNev().equals("Sator")){
+				this.setEpitettSatratElozoKorben(true);
+			}
 			e.hasznal(this);
-			if(e == null) {
+			if(getEszkoz() == null) {
 				f.append("A szereplonel nincs eszkoz.\n");
 			}
 		}
@@ -323,7 +338,9 @@ public abstract class Szereplo implements IKarakter{
 		 */
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Etkezes sikeres\n");
-		//if(getTestho()<)
+		if(getTestho()<getMaxTestho()){
+			setTestho(getTestho()+1);
+		}
 		f.close();
 	}
 

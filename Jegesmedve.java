@@ -1,9 +1,13 @@
+import java.io.IOException;
 
 public class Jegesmedve implements IKarakter {
 	private Mezo mezo;
 
 	@Override
-	public void lep(int irany) {
+	public void lep(int irany)throws IOException {
+		Mezo mezo =this.mezo.getSzomszed(irany);
+		this.mezo.lelep(this);
+		mezo.ralep(this);
 		// TODO Auto-generated method stub
 		
 	}

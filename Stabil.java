@@ -12,7 +12,7 @@ public class Stabil extends Jegmezo {
 	 * a parameterkent kaptt szereplot ralepteti a stabil mezore
 	 * @param sz: Szereplo
 	 */
-	public void ralep(Szereplo sz) {
+	public void ralep(IKarakter sz) {
 		System.out.println(">Stabil.ralep()");
 		System.out.println("<Stabil.ralep()");
 	}
