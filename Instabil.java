@@ -50,11 +50,11 @@ public class Instabil extends Jegmezo {
 		}*/
 	}
 
-	public int getTeherBiras() throws IOException {
+	/*public int getTeherBiras() throws IOException {
 		System.out.println("\t\t>Instabil.getTeherBiras()");
 		System.out.println("\t\t<Instabil.getTeherBiras()");
 		//random visszateresi ertek
 		return teherbiras;
-	}
+	}*/
 
 }

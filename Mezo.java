@@ -331,4 +331,7 @@ public class Mezo {
 			}
 		}
 	}
+	public void setTeherbiras(int teherb) {
+		teherbiras = teherb;
+	}
 }
