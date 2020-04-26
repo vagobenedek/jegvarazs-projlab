@@ -91,10 +91,16 @@ public abstract class Szereplo implements IKarakter{
 
 	/*Csokkenti a szerplo testhojet
         Csak akkor hivdik meg, ha hoviar aldozata lesz, es nincs igluban*/
-	public void hovihar() {
-		System.out.println(">Szereplo.hovihar()");
-		System.out.println("Szereplo testhoje csokken");
-		System.out.println("<Szereplo.hovihar()");
+	public void hovihar() throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Szereplo mezojen hovihar tamadt\n");
+		f.close();
+		if (0 < getTestho()){
+			setTestho(getTestho()-1);
+		}
+		else {
+			//SZABI
+		}
 	}
 	
 	public void felvesz(){

@@ -1,11 +1,13 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Vezerlo implements JegvarazsListener{
 	private Szereplo aktualisSzereplo;
-	private ArrayList<Szereplo> szereplok;
+	private List<Szereplo> szereplok = new ArrayList<>();
+	private Jegesmedve jegesmedve;
 	private Palya palya;
 	private int hovihar_szamlalo;
 	public Vezerlo(String s) throws IOException {
@@ -13,7 +15,14 @@ public class Vezerlo implements JegvarazsListener{
 		f.append("Vezerlo letrejott\n");
 		f.close();
 		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
-		palya=new Palya(10,10);
+		jegesmedve = new Jegesmedve();
+		List<IKarakter> karakterek =  new SzereploFactory().createSzereplo(3);
+		for (int i = 0; i != karakterek.size(); i++){
+			szereplok.add((Szereplo) karakterek.get(i));
+		}
+		karakterek.add(jegesmedve);
+		palya=new Palya(10,10, karakterek);
+		aktualisSzereplo = szereplok.get(0);
 	}
 	public Vezerlo(Szereplo szereplo) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);

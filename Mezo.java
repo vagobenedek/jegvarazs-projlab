@@ -109,8 +109,11 @@ public class Mezo {
 
 	public void hovihar() throws IOException {
 		//Noveli a mezon levo hoegysegek szamat
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Mezon hovihar tamadt\n");
+		f.close();
 		hoNovelo();
-		if (true){													//Ez itt még elég szar, bocsi :(
+		if (!this.isHovihartolVedett()){
 			for (int i = 0; i != szereplok.size(); i++){
 				szereplok.get(i).hovihar();
 			}
