@@ -84,6 +84,7 @@ public class Interpreter {
         else if (splitted[0].equals("eszkimo")){
             szereplok.put(splitted[1], new Eszkimo());
             szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
+            (mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
             eszkimok.put(splitted[1], new Eszkimo());
             eszkimok.get(splitted[1]).setM(mezok.get(splitted[2]));
         }
@@ -136,12 +137,14 @@ public class Interpreter {
         else if (splitted[0].equals("sarkkutato")){
             szereplok.put(splitted[1], new Sarkkutato());
             szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
+            (mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
             sarkkutatok.put(splitted[1], new Sarkkutato());
             sarkkutatok.get(splitted[1]).setM(mezok.get(splitted[2]));
         }
         //Jegesmedve letrehozasa
         else if (splitted[0].equals("jegesmedve")){
             jegesmedvek.put(splitted[1], new Jegesmedve());
+            (mezok.get(splitted[2])).addKarakter(jegesmedvek.get(splitted[1]));
             jegesmedvek.get(splitted[1]).setM(mezok.get(splitted[2]));
         }
         //Testho beallitasa
