@@ -30,7 +30,7 @@ public class Instabil extends Jegmezo {
 	 * @param sz: Szereplo
 	 * @throws IOException
 	 */
-	public void ralep(Szereplo sz) throws IOException {
+	public void ralep(IKarakter sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A Szereplo Instabil mezore lepett\n");
 		f.close();

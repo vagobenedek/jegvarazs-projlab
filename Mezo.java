@@ -21,7 +21,7 @@ public class Mezo {
 	public void setSzomszedMezo(Mezo szomszedMezo, int irany) {
 		szomszedMezok[irany] = szomszedMezo;
 	}
-	
+
 	public Mezo(ITargy t, IEpulet e, int hoSzint,int teherbiras, boolean hovihartolVedett, boolean medvetolVedett) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo letrejott\n");
@@ -68,7 +68,7 @@ public class Mezo {
 	public boolean isHovihartolVedett() {
 		return hovihartolVedett;
 	}
-	
+
 	public boolean isMedvetolVedett() {
 		return medvetolVedett;
 	}
@@ -80,7 +80,7 @@ public class Mezo {
 	public void setAlkatresz(Alkatresz a){this.alkatresz=a;}
 	public void setEszkoz(Eszkoz e){this.eszkoz=e;}
 
-	public void removeSzereplo(Szereplo szereplo){
+	public void removeSzereplo(IKarakter szereplo){
 		this.szereplok.remove(szereplo);
 	}
 	public void setTargy(ITargy targy) {
@@ -91,10 +91,6 @@ public class Mezo {
 		this.epulet = epulet;
 	}
 
-	public void setFeltort(boolean feltort) {
-		this.feltort = feltort;
-	}
-
 	public void setHoSzint(int hoSzint) {
 		this.hoSzint = hoSzint;
 	}
@@ -102,7 +98,7 @@ public class Mezo {
 	public void setHovihartolVedett(boolean hovihartolVedett) {
 		this.hovihartolVedett = hovihartolVedett;
 	}
-	
+
 	public void setMedvetolVedett(boolean medvetolVedett) {
 		this.medvetolVedett = medvetolVedett;
 	}
@@ -142,13 +138,19 @@ public class Mezo {
 	 * @param sz: Szereplo
 	 * @throws IOException
 	 */
-	public void ralep(Szereplo sz) throws IOException {
+	public void ralep(IKarakter sz) throws IOException {
 		System.out.println(">Mezo.ralep()");
 		sz.setM(this);
 		addKarakter(sz);
 		System.out.println("<Mezo.ralep()");
 	}
-
+	public void satratEpit(Sator sator){
+		sator.SetVedelem();
+	}
+	public void Satorszetszed(){
+		this.setHovihartolVedett(false);
+		this.setMedvetolVedett(false);
+	}
 	public int getTeherBiras() throws IOException {
 
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -180,11 +182,10 @@ public class Mezo {
 	 * ez a fuggveny lepteti le a parameterkent kapott szereplot, a mezorol
 	 * @param sz : Szereplo
 	 */
-	public void lelep(Szereplo sz) throws IOException {
+	public void lelep(IKarakter sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szereplo lelep a mezorol\n");
 		f.close();
-
 		sz.setM(null);
 		this.removeSzereplo(sz);
 
@@ -206,23 +207,23 @@ public class Mezo {
 		f.append("Szomszéd lekérdezése\n");
 		f.close();
 		//ebben az esetben nem kell semmit visszaadni
-		return null;
+		return szomszedMezok[irany];
 	}
-	
+
 	// Ha nincs lapat -> 1  db hoCsokkento() hivodik.
 	// Ha van lapat -> 2 db hoCsokkento() hivodik.
 	public void hoAso(int lapat) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo hoasas\n");
-		
+
 		for (int i=0; i<=lapat; i++){
 			this.hoCsokkento();
 		}
-		
+
 		f.append("A hoszint a mezon: " + this.hoSzint + ".\n");
 		f.close();
 	}
-	
+
 	// Csokkenti a hoszintet eggyel.
 	public void hoCsokkento() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
@@ -232,27 +233,22 @@ public class Mezo {
 		}
 		f.close();
 	}
-	
+
 	public void hoNovelo() throws IOException {
-		hoSzint++;
+		setHoSzint(getHoSzint()+1);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Hoszint megnott\n");
 		f.close();
 	}
-	
+
 	// Ha fel van torve a jegtabla -> nem csinal semmit.
 	// Ha nincs feltorve -> feltori.
 	public void feltor() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		
-		if(hoSzint == 0) {
-			feltort = true;
-			f.append("A mezo feltort.\n");
-		}
-		else {
-			f.append("A mezo nem tort fel.\n");
-		}
-		
+		this.feltort=true;
+		f.append("A mezo feltort.\n");
+
+
 		f.close();
 	}
 
@@ -297,7 +293,7 @@ public class Mezo {
 			output.close();
 		}
 	}
-	
+
 	public void iglutEpit() throws IOException {
 		new Iglu(this);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
@@ -327,5 +323,12 @@ public class Mezo {
 			new Sarkkutato().huzdKi(new Eszkimo());
 		}*/
 		System.out.println("<Mezo.huzzki()");
+	}
+	public void szereplokMeetMedve(){
+		if(medvetolVedett){
+			for (IKarakter szereplo: szereplok){
+				szereplo.hitByMedve();
+			}
+		}
 	}
 }
