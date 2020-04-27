@@ -150,6 +150,7 @@ public abstract class Szereplo implements IKarakter{
 				jListener.jatekVegeListener();
 			}
 		}
+		f.close();
 	}
 
 	/**
@@ -493,7 +494,10 @@ public abstract class Szereplo implements IKarakter{
 	/**
 	 * medvevel talolkozasert felelos fuggveny
 	 */
-	public void hitByMedve() {
+	public void hitByMedve() throws IOException {
+		FileWriter output = new FileWriter("./kimenet.txt", true);
+		output.write("A jatek veget ert.\n");
+		output.close();
 		if (getjListener() != null) {
 			getjListener().jatekVegeListener();
 		}

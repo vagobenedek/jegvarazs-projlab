@@ -37,7 +37,7 @@ public interface IKarakter {
 	/**
 	 * Medve megtamadja a szereplot
 	 */
-	public void hitByMedve();
+	public void hitByMedve() throws IOException;
 
 	/**
 	 * Eszkoz lekerdezo fuggveny
