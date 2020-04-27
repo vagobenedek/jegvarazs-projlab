@@ -447,7 +447,7 @@ public abstract class Szereplo implements IKarakter{
 		 */
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		if (getTestho()==getMaxTestho()){
-			f.append("A szereplo testhoje maximalis.");
+			f.append("A szereplo testhoje maximalis.\n");
 		}
 		if(getTestho()<getMaxTestho()){
 			setTestho(getTestho()+1);
