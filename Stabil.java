@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Stabil mezo osztaly
+ * Jegmezobol szarmazik le
+ */
 public class Stabil extends Jegmezo {
 	/**
 	 * Konstukrot

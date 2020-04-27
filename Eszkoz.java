@@ -3,6 +3,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Eszkoz osztaly
+ * ITargybol szarmazik le
+ */
 public abstract class Eszkoz implements ITargy {
 
 	/**

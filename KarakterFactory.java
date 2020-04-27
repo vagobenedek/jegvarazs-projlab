@@ -2,6 +2,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * KarakterFactory
+ * Letrehozza a karaktereket
+ */
 public class KarakterFactory {
 	/**
 	 * Konstruktoraban letrehozzuk a Factoryt

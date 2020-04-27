@@ -1,5 +1,8 @@
 import java.io.IOException;
 
+/**
+ * Epulet interfesz
+ */
 public interface IEpulet {
     /**
      * Setvedelem fuggveny

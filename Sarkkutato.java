@@ -3,6 +3,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Sarkkutato osztaly
+ * Szereplo osztalybol szarmazik le
+ */
 public class Sarkkutato extends Szereplo {
 	/**
 	 * Konstuktor

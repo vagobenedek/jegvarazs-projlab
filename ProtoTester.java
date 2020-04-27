@@ -2,9 +2,16 @@ import javax.rmi.ssl.SslRMIClientSocketFactory;
 import java.io.*;
 import java.lang.reflect.Parameter;
 
+/**
+ * Prototester osztaly
+ */
 public class ProtoTester {
 
-    //TODO: ezzel mukodjon
+    /**
+     * Prototesztelesert felelos fuggveny
+     * @param args String[]
+     * @throws IOException
+     */
     public static void test(String[] args) throws IOException {
         File f = new File("./kimenet.txt");
         f.delete();

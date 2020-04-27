@@ -5,6 +5,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Mezo osztaly
+ * Kulonbozo tipusu mezoket valositja meg (tenger, stabil, instabil, lyuk)
+ */
 abstract public  class Mezo {
 	/**
 	 * Mezon allo szereploket tarolja

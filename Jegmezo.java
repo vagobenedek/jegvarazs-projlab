@@ -1,6 +1,9 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Jegmezo osztaly, Mezobol szarmazik le
+ */
 public abstract class Jegmezo extends Mezo {
     /**
      * Konstruktor

@@ -2,6 +2,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Letrehozza a palyat
+ */
 public class Palya {
 	/*private Mezo mezok;*/
 

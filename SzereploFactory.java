@@ -3,6 +3,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * SzereploFactory osztaly
+ * Szereploket hoz letre
+ */
 public class SzereploFactory {
 	/**
 	 * Konstruktoraban letrehozzuk a Factoryt

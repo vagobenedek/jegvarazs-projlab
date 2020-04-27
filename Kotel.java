@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Kotel osztaly
+ * Eszkozbol szamrazik le
+ */
 public class Kotel extends Eszkoz {
 	/**
 	 * Konstruktor

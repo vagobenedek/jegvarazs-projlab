@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Pisztoly osztaly
+ * Alkatreszbol szarmazik le
+ */
 public class Pisztoly extends Alkatresz {
     /**
      * Konstruktor

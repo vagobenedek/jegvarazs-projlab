@@ -3,6 +3,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Alkatresz osztaly
+ * ITargy-ból származik le
+ */
 public abstract class Alkatresz implements ITargy {
 	/**
 	 * Mezo parameter

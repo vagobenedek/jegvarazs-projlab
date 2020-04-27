@@ -1,5 +1,9 @@
 import java.io.IOException;
 
+/**
+ * Sator osztaly
+ * Eszkozbol szarmazik le
+ */
 public class Sator extends Eszkoz implements IEpulet {
 	/**
 	 * sator mezo attributuma

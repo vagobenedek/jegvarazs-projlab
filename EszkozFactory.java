@@ -4,6 +4,10 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * EszkozFactory
+ * Ez hozza letre az eszkozoket
+ */
 public class EszkozFactory {
 	/**
 	 * Konstruktoraban letrehozzuk a Factoryt

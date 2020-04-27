@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * Szereplo osztaly
+ * IKarakter intefeszbol szarmazik le
+ */
 public abstract class Szereplo implements IKarakter{
 	/**
 	 * szereplo testhoje

@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Lyuk osztaly
+ * Instabilbol szarmazik le
+ */
 public class Lyuk extends Instabil {
     /**
      * Konstuktor

@@ -3,6 +3,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Mezoket hozza letre
+ */
 public class MezoFactory {
 	/**
 	 * Konstruktor

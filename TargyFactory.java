@@ -2,6 +2,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * TargyFactory osztaly
+ * Targyakat hoz letre
+ */
 public class TargyFactory {
 	/**
 	 * Konstuktor

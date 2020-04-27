@@ -5,6 +5,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * Instabil osztaly, jegmezobol szarmazik le
+ */
 public class Instabil extends Jegmezo {
 	/**
 	 * Teherbiras

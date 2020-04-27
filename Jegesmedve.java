@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Jegedmesve karakter
+ * IKarakter interfesz szarmazik le belole
+ */
 public class Jegesmedve implements IKarakter {
 	/**
 	 * Mezo attributum

@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Iglu osztaly
+ * IEpuletbol szarmazik le
+ */
 public class Iglu implements IEpulet {
 	/**
 	 * Mezo parameter

@@ -82,6 +82,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Comparator osztaly hasonlitja ossze az elvart es a kapott kimenetet
+ */
 public class Comparator {
     private static void readOutput(String[] args) throws IOException {
         List<String> notFound;
