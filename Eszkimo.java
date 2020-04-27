@@ -37,7 +37,9 @@ public class Eszkimo extends Szereplo {
 		//f.append("Eszkimo kepesseg hasznalata sikeres.\n");
 		f.append("A szereplo hasznalja a kepesseget.\n");
 		f.close();
-		getjListener().hoviharSzamlaloCsokkentoListener();
-		setLepesszam(getLepesszam()-1);
+		if(getjListener()!=null) {
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam() - 1);
+		}
 	}
 }
