@@ -57,4 +57,9 @@ A hoszint a mezon: 1.
 A szereplonel van eszkoz.
 Mezo lekerdezese
 A mezon nincs targy.
+Torekeny lapat hasznalata.
+A szereplonel van eszkoz.
+A szereplonel nincs eszkoz.
+Mezo lekerdezese
+A mezon nincs targy.
 
