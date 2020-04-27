@@ -43,7 +43,9 @@ public class Sarkkutato extends Szereplo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplo hasznalja a kepesseget.\n");
 		f.close();
-		getjListener().hoviharSzamlaloCsokkentoListener();
+		if(getjListener()!=null){
+			getjListener().hoviharSzamlaloCsokkentoListener();
+		}
 		setLepesszam(getLepesszam()-1);
 	}
 }
