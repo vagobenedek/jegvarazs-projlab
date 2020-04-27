@@ -150,6 +150,7 @@ public abstract class Szereplo implements IKarakter{
 				jListener.jatekVegeListener();
 			}
 		}
+		f.close();
 	}
 
 	/**
