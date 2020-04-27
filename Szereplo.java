@@ -136,8 +136,10 @@ public abstract class Szereplo implements IKarakter{
 		this.testho = testho;
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplo testhoje "+this.testho+".\n");
-		f.close();
+		System.out.println(this.testho);
 		if(this.testho<=0){
+			f.append("A jateknak vege: vesztettel.\n");
+			f.close();
 			if (getjListener() != null) {
 				jListener.jatekVegeListener();
 			}
