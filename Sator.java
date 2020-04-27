@@ -7,7 +7,7 @@ public class Sator extends Eszkoz implements IEpulet {
 	private Mezo mezo;
 	public Sator() throws IOException {
 		super();
-		System.out.println("Sator letrejot");
+		
 	}
 	/**
 	 * sator mezejet allitja be
@@ -16,7 +16,6 @@ public class Sator extends Eszkoz implements IEpulet {
 	 */
 	public Sator(Mezo mezo) throws IOException {
 		super();
-		System.out.println("A sator letrejott");
 		this.mezo=mezo;
 		// TODO Auto-generated constructor stub
 	}
