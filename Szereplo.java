@@ -79,10 +79,7 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	@Override
 	public Mezo getMezo() throws IOException {
-		/*
-		System.out.println(">Szereplo.getMezo()");
-		System.out.println("<Szereplo.getMezo()");
-		 */
+		
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo lekerdezese\n");
 		f.close();
@@ -420,9 +417,7 @@ public abstract class Szereplo implements IKarakter{
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
 		Mezo mezo = getMezo().getSzomszed(irany);
 		this.m.lelep(this);
-		System.out.println("This is it: \n" + mezo.getHoSzint()+"\nThis was it");
 		mezo.ralep(this);
-		System.out.println("Raleptem");
 		if (getjListener() != null) {
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);
