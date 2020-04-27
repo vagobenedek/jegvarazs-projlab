@@ -22,4 +22,7 @@ public class Pisztoly extends Alkatresz {
         f.append("Pisztoly letrejott\n");
         f.close();
     }
+    public String getNev(){
+        return "Pisztoly";
+    }
 }
