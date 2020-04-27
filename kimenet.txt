@@ -1,27 +1,20 @@
-24
+25
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
+Iglu letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
-A szereplo testhoje 2.
+A szereplo testhoje 5.
 Mezon hovihar tamadt.
 A hoszint a mezon: 1.
 Hoszint megnott.
 A hoszint a mezon: 2.
-Szereplo mezojen hovihar tamadt
-A szereplo testhoje 1.
 
