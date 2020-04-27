@@ -1,99 +1,3 @@
-1
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Jelzofeny letrejott
-Eszkimo letrejott.
-Jelzofeny letrejott
-Eszkimo letrejott.
-Szereplo lep
-Mezo lekerdezese
-Szomszed lekerdezese.
-Szereplo lelep a mezorol.
-A Szereplo stabil mezon all
-
-2
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Instabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Instabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Instabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Instabil letrejott
-Jelzofeny letrejott
-Eszkimo letrejott.
-Jelzofeny letrejott
-Eszkimo letrejott.
-Szereplo lep
-Mezo lekerdezese
-Szomszed lekerdezese.
-Szereplo lelep a mezorol.
-A szereplo instabil mezon all.
-Teherbiras lekerdezese.
-
-3
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Tenger letrejott
-Mezo letrejott
-Tenger letrejott
-Jelzofeny letrejott
-Eszkimo letrejott.
-Jelzofeny letrejott
-Eszkimo letrejott.
-Eszkoz letrejott.
-Buvarruha letrejott.
-Eszkoz hozaadodott a mezohoz.
-Eszkoz letrejott.
-Buvarruha letrejott.
-Eszkoz hozaadodott a mezohoz.
-A szereplo feltori a jeget.
-Mezo lekerdezese
-Mezo lekerdezese
-A mezo feltort.
-Mezo lekerdezese
-Eszkoz felveteti magat a szereplovel.
-Szereplo targyfelvetele sikeres.
-Felvett targy: Buvarruha.
-Szereplo lep
-Mezo lekerdezese
-Szomszed lekerdezese.
-Szereplo lelep a mezorol.
-A Szereplo tengerbe esett.
-A Szereplo vizbe esett.
-Mezo lekerdezese
-A szereplon van buvarruha.
 4
 Mezo letrejott
 Jegmezo letrejott.
@@ -138,7 +42,7 @@ Mezo lekerdezese
 Szomszed lekerdezese.
 Szereplo lelep a mezorol.
 A Szereplo tengerbe esett.
-A Szereplo vizbe esett.
+A szereplo vizbe esett.
 Mezo lekerdezese
 Mezo lekerdezese
 Mezo lekerdezese
@@ -149,9 +53,7 @@ Szereplo kihuzasa.
 Mezo lekerdezese
 Szereplo lelep a mezorol.
 Kotel hasznalata
-A Szereplot kihuztak
+A szereplot kihuztak.
 Mezo lekerdezese
-A Szereplo stabil mezon all
-Mezo lekerdezese
-Mezo lekerdezese
-Szomszed lekerdezese.
+A Szereplo stabil mezon all.
+

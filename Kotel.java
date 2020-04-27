@@ -24,6 +24,7 @@ public class Kotel extends Eszkoz {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Kotel hasznalata\n");
 		sz.getMezo().lelep(sz);
+		sz.setKihuzott(true);
 		f.append("A szereplot kihuztak.\n");
 		f.close();
 		/*
