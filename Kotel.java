@@ -12,6 +12,9 @@ public class Kotel extends Eszkoz {
 		f.append("Kotel letrejott\n");
 		f.close();
 	}
+	public String getNev(){
+		return "Kotel";
+	}
 
 	/**
 	 * a metodus a kotel hasznalataert felel
@@ -21,7 +24,7 @@ public class Kotel extends Eszkoz {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Kotel hasznalata\n");
 		sz.getMezo().lelep(sz);
-		f.append("A Szereplot kihuztak\n");
+		f.append("A szereplot kihuztak.\n");
 		f.close();
 		/*
 		System.out.println(">Kotel.hasznal()");

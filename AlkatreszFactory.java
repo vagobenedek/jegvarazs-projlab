@@ -4,13 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AlkatreszFactory {
-	//Konstruktoraban letrehozzuk a Factoryt
+	/**
+	 * Konstruktoraban letrehozzuk a Factoryt
+	 * @throws IOException
+	 */
 	public AlkatreszFactory() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("AlkatreszFactory letrejott\n");
 		f.close();
 	}
-	//A factory legyartja a megfelelo szamu egyseget
+
+	/**
+	 * A factory legyartja a megfelelo szamu egyseget
+	 * @param i int
+	 * @return alkatreszek
+	 * @throws IOException
+	 */
 	public List<Alkatresz> createAlkatresz(int i) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("AlkatreszFactory letrehozta az alkatreszeket\n");
@@ -24,7 +33,11 @@ public class AlkatreszFactory {
 		alkatreszek.add(new Jelzofeny("init"));
 		return alkatreszek;
 	}
-	
+
+	/**
+	 * Alkatreszt Mezohoz ad
+	 * @param m Mezo
+	 */
 	public void addAlkatreszToMezo(Mezo m) {
 	}
 }

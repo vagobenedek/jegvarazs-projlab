@@ -132,8 +132,11 @@ public abstract class Szereplo implements IKarakter{
 	 * beallitja a tetshot
 	 * @param testho int
 	 */
-	public void setTestho(int testho) {
+	public void setTestho(int testho) throws IOException{
 		this.testho = testho;
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A szereplo testhoje "+this.testho+".\n");
+		f.close();
 		if(this.testho<=0){
 			if (getjListener() != null) {
 				jListener.jatekVegeListener();
@@ -238,7 +241,8 @@ public abstract class Szereplo implements IKarakter{
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplo megprobalja felvenni a targyat\n");
 		f.close();
-		m.targyFelvetele(this);
+		getMezo().targyFelvetele(this);
+		System.out.println("tF utan");
 	}
 	
 	/**
@@ -270,6 +274,7 @@ public abstract class Szereplo implements IKarakter{
 	public void hasznal() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		if (getEszkoz() != null){
+			f.append("A szereplonel van eszkoz.\n");
 			if(getEszkoz().getNev().equals("Sator")){
 				this.setEpitettSatratElozoKorben(true);
 			}
@@ -279,13 +284,14 @@ public abstract class Szereplo implements IKarakter{
 			}
 		}
 		else {
-			f.append("Nincs eszkoz a szereplonel\n");
+			f.append("A szereplonel nincs eszkoz.\n");
 		}
 		f.close();
 		if (getjListener() != null) {
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);
 		}
+		getMezo().getTargy();
 	}
 
 	/**
@@ -294,20 +300,25 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void tesoTeVizbeEstel() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Szereplo havat as\n");
-		if (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha")){
-			for (int i = 0; i<4;i++){
-				Mezo mezo = this.getMezo().getSzomszed(i);
-				mezo.huzzKi(this);
-			}
-		}
-		else{
-			f.append("A jateknak vege: vesztettel.");
-			if (getjListener() != null){
-				getjListener().jatekVegeListener();
-			}
-		}
+		f.append("A szereplo vizbe esett.\n");
 		f.close();
+
+		System.out.println(this.getMezo()+"getmezo");
+		if (this.getEszkoz() == null || (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha"))){
+			for (int i = 0; i<4;i++){
+				System.out.println(this.getMezo());
+				if (this.getMezo().getSzomszed(i)!=null) {
+					Mezo mezo = this.getMezo().getSzomszed(i);
+					mezo.huzzKi(this);
+				}
+			}
+		}
+		else if (this.getEszkoz()!=null && this.getEszkoz().getNev().equals("Buvarruha")){
+			f = new FileWriter("./kimenet.txt", true);
+			f.append("A szereplon van buvarruha.");
+			f.close();
+		}
+
 
 	}
 	
@@ -345,12 +356,12 @@ public abstract class Szereplo implements IKarakter{
 		//0425
 		if(this.a==null)
 		{
-			this.a = a;
+			this.setAlkatresz(a);
 		}
 		else
 		{
 			Alkatresz temp = this.a;
-			this.a = a;
+			this.setAlkatresz(a);
 			temp.addAlkatreszToMezo(m);
 		}
 		if (getjListener() != null) {
@@ -369,8 +380,7 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void eszkozFelvetele(Eszkoz e) throws IOException{
-
-		this.e = e;
+		this.setEszkoz(e);
 		if (getjListener() != null) {
 			getjListener().hoviharSzamlaloCsokkentoListener();
 		}
@@ -423,9 +433,12 @@ public abstract class Szereplo implements IKarakter{
 		System.out.println("\t\t<Szereplo.etkezes()");
 		 */
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Etkezes sikeres\n");
+		if (getTestho()==getMaxTestho()){
+			f.append("A szereplo testhoje maximalis.");
+		}
 		if(getTestho()<getMaxTestho()){
 			setTestho(getTestho()+1);
+			f.append("Etkezes sikeres\n");
 		}
 		f.close();
 	}
@@ -433,7 +446,9 @@ public abstract class Szereplo implements IKarakter{
 	/**
 	 * Mezo epit fuggvenye hivja meg
 	 */
-	public void elsut() {
+	public void elsut() throws IOException{
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A szereplonek sikerult osszeszerelni az alkatreszeket.\n");
 		if (getjListener() != null) {
 			getjListener().gyozelemListener();
 		}
@@ -447,6 +462,7 @@ public abstract class Szereplo implements IKarakter{
 	public void huzdKi(Szereplo sz) throws IOException {
 		getEszkoz().hasznal(sz);
 		this.getMezo().ralep(sz);
+
 	}
 
 	/**

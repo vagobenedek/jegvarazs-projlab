@@ -13,6 +13,13 @@ public class Buvarruha extends Eszkoz {
 	}
 
 	/**
+	 * Nev lekerdezo fuggveny
+	 * @return String
+	 */
+	public String getNev(){
+		return "Buvarruha";
+	}
+	/**
 	 * hasznal fuggveny
 	 * @param sz Szereplo
 	 */

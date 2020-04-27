@@ -30,6 +30,7 @@ public class Elelem extends Eszkoz {
 	@Override
 	public void hasznal(Szereplo Sz) throws IOException {
 		Sz.etkezes();
+		Sz.setEszkoz(null);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Elelem hasznalata.\n");
 		f.close();

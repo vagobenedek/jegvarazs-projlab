@@ -4,16 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MezoFactory {
+	/**
+	 * Konstruktor
+	 * @throws IOException
+	 */
 	public MezoFactory() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("MezoFactory letrejott\n");
 		f.close();
 	}
+
+	/**
+	 * Letrehozza a mezoket es beallitja a szomszedait
+	 * @param i int
+	 * @return mezok
+	 * @throws IOException
+	 */
 	public List<Mezo> createMezo(int i) throws IOException {
 		List<Mezo> mezok = new ArrayList<>();
 		int row = (int) Math.sqrt(i);
 		for (int j = 0; j != i ; j++){
-			mezok.add(new Mezo());
+			mezok.add(new Stabil());
 
 		}
 		for (int j = 0; j != i; j++){

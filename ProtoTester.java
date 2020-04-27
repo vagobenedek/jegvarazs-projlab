@@ -20,17 +20,19 @@ public class ProtoTester {
             } else {
                 numberOfTests = 1;
             }
-            FileWriter output = new FileWriter("./kimenet.txt", true);
+            FileWriter output;
             //output.write("1_teszt");
             for (int i = 1; i != numberOfTests+1; i++){
                 System.out.println(i);
-                output.append((numberOfTests == 1 ?args[0]:i) +"\n");
                 Interpreter interpreter = new Interpreter();
                 BufferedReader reader;
                 //TODO: bemeneti mappabol szedje
                 //reader = new BufferedReader(new FileReader("./Tesztesetek/Bemeneti/6_bemenet.txt"));
                 reader = new BufferedReader(new FileReader("./Tesztesetek/Bemeneti/"+ (numberOfTests == 1?args[0]:i) +"_bemenet.txt"));
                 System.out.println(reader);
+                output = new FileWriter("./kimenet.txt", true);
+                output.append((numberOfTests == 1 ?args[0]:i) +"\n");
+                output.close();
                 while ((line = reader.readLine()) != null) {
                     System.out.println(line);
                     //parancs ertelmezese
@@ -38,9 +40,10 @@ public class ProtoTester {
                     // kovetkezo sor beolvasasa
                 }
                 reader.close();
-                output.write("\n\n");
+                output = new FileWriter("./kimenet.txt", true);
+                output.write("\n");
+                output.close();
             }
-            output.close();
         }
     }
 }

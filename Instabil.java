@@ -4,23 +4,47 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Instabil extends Jegmezo {
+	/**
+	 * Teherbiras
+	 */
 	private int teherbiras;
+
+	/**
+	 * Konstruktor
+	 * @param t Targy
+	 * @param hoSzint int
+	 * @param teherbiras int
+	 * @param vedett boolean
+	 * @throws IOException
+	 */
 	public Instabil(ITargy t, int hoSzint,int teherbiras, boolean vedett) throws IOException {
 		//super(t,e,hoSzint,teherbiras,vedett);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Instabil letrejott\n");
 		f.close();
 	}
+
+	/**
+	 * Konstruktor
+	 * @throws IOException
+	 */
 	public Instabil() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Instabil letrejott\n");
 		f.close();
 	}
+
+	/**
+	 * Instabil mezo atfordul fuggveny, szereplo vizbe esik
+	 * @throws IOException
+	 */
 	public void atfordul() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Az Instabil mez oatfordult\n");
+		f.append("Az Instabil mezo atfordult\n");
 		f.close();
 		for (IKarakter szereplo : this.getSzereplok()){
+			System.out.println("atfordul?"+this.getSzereplok());
+
 			szereplo.tesoTeVizbeEstel();
 		}
 	}
@@ -32,7 +56,7 @@ public class Instabil extends Jegmezo {
 	 */
 	public void ralep(IKarakter sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("A Szereplo Instabil mezore lepett\n");
+		f.append("A szereplo instabil mezon all.\n");
 		f.close();
 		sz.setM(this);
 		this.addKarakter(sz);

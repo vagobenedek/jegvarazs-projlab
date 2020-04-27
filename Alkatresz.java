@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public abstract class Alkatresz implements ITargy {
+	/**
+	 * Mezo parameter
+	 */
 	private Mezo m;
 
 	/**
@@ -11,20 +14,37 @@ public abstract class Alkatresz implements ITargy {
 	 */
 	String nev;
 
+	/**
+	 * Mezot kerdez le
+	 * @return m Mezo
+	 */
 	public Mezo getM() {
 		return m;
 	}
 
+	/**
+	 * Mezot allit be
+	 * @param m Mezo
+	 */
 	public void setM(Mezo m) {
 		this.m = m;
 	}
 
+	/**
+	 * Alkatresz konstruktor
+	 * @throws IOException
+	 */
 	public Alkatresz() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Alkatresz letrejott.\n");
 		f.close();
 	}
 
+	/**
+	 * Alkatresz konstruktor
+	 * @param s String
+	 * @throws IOException
+	 */
 	public Alkatresz(String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Alkatresz letrejott.\n");
@@ -63,7 +83,7 @@ public abstract class Alkatresz implements ITargy {
 		//0425
 		m.setTargy(this);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("Alkatresz hozaadodott a mezohoz.\n");
+		output.write("Korabbi alkatresz mezobe kerult vissza.\n");
 		output.close();
 	}
 }
