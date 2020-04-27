@@ -314,7 +314,7 @@ public abstract class Szereplo implements IKarakter{
 		System.out.println(this.getMezo()+"getmezo");
 		if (this.getEszkoz() == null || (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha"))){
 			for (int i = 0; i<4;i++){
-				System.out.println(this.getMezo());
+				System.out.println(this.getMezo()+" "+i);
 				if (this.getMezo().getSzomszed(i)!=null) {
 					Mezo mezo = this.getMezo().getSzomszed(i);
 					mezo.huzzKi(this);
@@ -473,7 +473,9 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void huzdKi(Szereplo sz) throws IOException {
-
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A szereplot epp huzzak ki.\n");
+		f.close();
 		getEszkoz().hasznal(sz);
 		this.getMezo().ralep(sz);
 

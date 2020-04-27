@@ -2,7 +2,7 @@ stabil stl1 5
 stabil stl2 0
 instabil instl1 0 2
 setszomszed stl1 0 instl1
-szetszmszed instl1 0 stl2
+setszomszed instl1 0 stl2
 eszkimo e stl1
 eszkimo e1 stl2
 kotel k1 stl2
