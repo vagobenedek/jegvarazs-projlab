@@ -5,25 +5,55 @@ import java.util.List;
 import java.util.Random;
 
 public class Vezerlo implements JegvarazsListener{
+	/**
+	 * az eppen soron levo jatekos
+	 */
 	private Szereplo aktualisSzereplo;
+	/**
+	 * az osszes szereplot tarolo lista
+	 */
 	private List<Szereplo> szereplok = new ArrayList<>();
+	/**
+	 * a vezerlo jegesmedve objektuma
+	 */
 	private Jegesmedve jegesmedve;
+	/**
+	 * a vezorlo palya eleme
+	 */
 	private Palya palya;
+	/**
+	 * a a hatralevo idot tarolja a kovetkezo hoviharig
+	 */
 	private int hovihar_szamlalo;
+
+	/**
+	 * Vezerlo Skeleton konstruktora
+	 * @param s: String
+	 * @throws IOException
+	 */
 	public Vezerlo(String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Vezerlo letrejott.\n");
 		f.close();
-		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
 		jegesmedve = new Jegesmedve();
 		List<IKarakter> karakterek =  new SzereploFactory().createSzereplo(3);
 		for (int i = 0; i != karakterek.size(); i++){
 			szereplok.add((Szereplo) karakterek.get(i));
 		}
+		//hozzaadja a jegesmedvet a karakterek listajahoz
 		karakterek.add(jegesmedve);
+		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
 		palya=new Palya(10,10, karakterek);
+		//beallitjuk az aktualis szereplot
 		aktualisSzereplo = szereplok.get(0);
 	}
+
+	/**
+	 * Vezerlo Proto konstruktora
+	 * @param szereplo: Szereplo
+	 * @param medve: Jegesmedve
+	 * @throws IOException
+	 */
 	public Vezerlo(Szereplo szereplo, Jegesmedve medve) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Vezerlo letrejott.\n");
@@ -36,15 +66,21 @@ public class Vezerlo implements JegvarazsListener{
 		setAktualisSzereplo(szereplo);
 		Init();
 	}
-	private void Init(){
-		/*for (Szereplo szereplo:szereplok){
-			szereplo.setjListener(this);
-		}*/
 
+	/**
+	 * a listener hozzaadasa a szereplohoz (Protonal)
+	 */
+	private void Init(){
 		aktualisSzereplo.setjListener(this);
 	}
+
+	/**
+	 * beallitja az aktualis szereplot
+	 * @param szereplo
+	 */
 	public void setAktualisSzereplo(Szereplo szereplo){
 		aktualisSzereplo=szereplo;
+		// ha ez a szereplo epitett satrat az elozo korben akkor a satrat lebontjuk
 		if(szereplo.getEpitettSatratElozoKorben()){
 			try {
 				szereplo.getMezo().Satorszetszed();
@@ -54,21 +90,26 @@ public class Vezerlo implements JegvarazsListener{
 			}
 		}
 	}
+
+	/**
+	 * az aktualis szereplot adja vissza
+	 * @return
+	 */
 	public Szereplo getAktualisSzerelo(){
 		return aktualisSzereplo;
 	}
 	/**
-	 * A Vezerlo alabb lathato fuggvenyei mind listenereken keresztul hivodnak majd meg
-	 * bizonyos esemenyke bekovetkeztekor
+	 * A jatekvegeert felelos fuggveny
+	 *
 	 */
 	public void jatekVege() {
-		//System.out.println(">Vezerlo.jatekVege()");
-		System.out.println("A jateknak vege");
-		//System.out.println("<Vezerlo.jatekVege()");
 	}
-	
+
+	/**
+	 * beallitja a kovetkeo szereplot, aki jon a sorban
+	 * ha nincs mar tobb, akkor az elso lesz ujra az aktualis szereplo
+	 */
 	public void kovetkezoSzereplo() {
-		//System.out.println(">Vezerlo.kovetkezoSzereplo()");
 		for(int i=0;i<szereplok.size();i++){
 			if(aktualisSzereplo.equals(szereplok.get(i))){
 				if(i+1==szereplok.size()){
@@ -79,15 +120,22 @@ public class Vezerlo implements JegvarazsListener{
 					setAktualisSzereplo(szereplok.get(i+1));
 			}
 		}
-		//System.out.println("<Vezerlo.kovetkezoSzereplo()");
 	}
-	
+
+	/**
+	 * beallitja a hpviharszamlali erteket
+	 * @param hovihar_szamlalo: int
+	 */
 	public void sethoviharSzamlalo(int hovihar_szamlalo) {
 		this.hovihar_szamlalo=hovihar_szamlalo;
 	}
-	
+
+	/**
+	 * csokkentjuk a hovihar szamlalot random ertekkel
+	 * ha nulla akkor meghivjuk a palya hovihar fuggvenyet
+	 * es uj erteket kap a hovihar szamlalo
+	 */
 	public void hoviharSzamlaloCsokkentes() {
-		//System.out.println(">Vezerlo.hoviharSzamlaloCsokkentes()");
 		hovihar_szamlalo -= new Random().nextInt(4) ;
 		if(hovihar_szamlalo==0){
 			try {
@@ -99,7 +147,6 @@ public class Vezerlo implements JegvarazsListener{
 			}
 
 		}
-		//System.out.println("<Vezerlo.hoviharSzamlaloCsokkentes()");
 	}
 
 	/**
@@ -111,19 +158,27 @@ public class Vezerlo implements JegvarazsListener{
 		output.close();
 	}
 
+	/**
+	 * feltolti az osszes szereplo lepesszamat maximalisra
+	 */
 	public void lepesekFeltoltese() {
-		//System.out.println(">Vezerlo.lepesekFeltoltese()");
 		for (Szereplo szereplo: this.szereplok){
 			szereplo.setLepesszam(4);
 		}
 		//System.out.println("<Vezerlo.lepesekFeltoltese()");
 	}
 
+	/**
+	 * a jatek vegeert felelos listener Jegvarazslistener felulirtja
+	 */
 	@Override
 	public void jatekVegeListener() {
 		jatekVege();
 	}
 
+	/**
+	 * a gyozelem listenerje JegvarazsListener felulirtja
+	 */
 	@Override
 	public void gyozelemListener() {
 		try {
@@ -133,11 +188,17 @@ public class Vezerlo implements JegvarazsListener{
 		}
 	}
 
+	/**
+	 * hoviharszamlalocsokkentes listenerje JegvarazsListener felulirtja
+	 */
 	@Override
 	public void hoviharSzamlaloCsokkentoListener() {
 		hoviharSzamlaloCsokkentes();
 	}
 
+	/**
+	 * ez a Listener hivja meg a kovetkezo szereplo beallitasaert felelos fuggvenyt
+	 */
 	@Override
 	public void kovetkezoSzereploListener() {
 		kovetkezoSzereplo();
