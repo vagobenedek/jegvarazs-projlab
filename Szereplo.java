@@ -494,7 +494,7 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void hitByMedve() throws IOException {
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("A jatek veget ert.\n");
+		output.write("A jateknak vege: vesztettel.\n");
 		output.close();
 		if (getjListener() != null) {
 			getjListener().jatekVegeListener();
