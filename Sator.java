@@ -41,7 +41,7 @@ public class Sator extends Eszkoz implements IEpulet {
 	 * hovihartol vedett
 	 */
 	@Override
-	public void SetVedelem() {
+	public void SetVedelem() throws IOException {
 		mezo.setMedvetolVedett(false);
 		mezo.setHovihartolVedett(true);
 	}

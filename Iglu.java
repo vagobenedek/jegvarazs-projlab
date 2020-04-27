@@ -28,7 +28,7 @@ public class Iglu implements IEpulet {
 	 * hovihartol és medvetol is vedett legyen
 	 */
 	@Override
-	public void SetVedelem() {
+	public void SetVedelem()throws IOException {
 		//System.out.println("\t\t\t>Iglu.setVedelem()");
 		m.setHovihartolVedett(true);
 		m.setMedvetolVedett(true);

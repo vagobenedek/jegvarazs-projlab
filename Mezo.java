@@ -217,7 +217,10 @@ abstract public  class Mezo {
 	 * medvetol vedettre allitja a mezot
 	 * @param medvetolVedett boolean
 	 */
-	public void setMedvetolVedett(boolean medvetolVedett) {
+	public void setMedvetolVedett(boolean medvetolVedett)throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A mezon sator van.\n");
+		f.close();
 		this.medvetolVedett = medvetolVedett;
 	}
 
@@ -252,14 +255,14 @@ abstract public  class Mezo {
 	 * sator epitesenel beallitja a mezo vedelmet
 	 * @param sator Sator
 	 */
-	public void satratEpit(Sator sator){
+	public void satratEpit(Sator sator)throws IOException{
 		sator.SetVedelem();
 	}
 
 	/**
 	 * sator szetszedesert felelos fuggveny
 	 */
-	public void Satorszetszed(){
+	public void Satorszetszed()throws IOException{
 		this.setHovihartolVedett(false);
 		this.setMedvetolVedett(false);
 	}
