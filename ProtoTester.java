@@ -31,8 +31,6 @@ public class ProtoTester {
             for (int i = 1; i != numberOfTests+1; i++){
                 Interpreter interpreter = new Interpreter();
                 BufferedReader reader;
-                //TODO: bemeneti mappabol szedje
-                //reader = new BufferedReader(new FileReader("./Tesztesetek/Bemeneti/6_bemenet.txt"));
                 reader = new BufferedReader(new FileReader("./Tesztesetek/Bemeneti/"+ (numberOfTests == 1?args[0]:i) +"_bemenet.txt"));
                 output = new FileWriter("./kimenet.txt", true);
                 output.append((numberOfTests == 1 ?args[0]:i) +"\n");

@@ -37,7 +37,6 @@ public class Tenger extends Mezo {
 	 * @throws IOException
 	 */
 	public int getTeherBiras() throws IOException {
-		
 		//random visszateresi értek
 		return 1;
 	}

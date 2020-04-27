@@ -4,12 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Vezerlo osztály
+ */
 public class Vezerlo implements JegvarazsListener{
 	private Szereplo aktualisSzereplo;
 	private List<Szereplo> szereplok = new ArrayList<>();
 	private Jegesmedve jegesmedve;
 	private Palya palya;
 	private int hovihar_szamlalo;
+
+	/**
+	 * Vezerlo konstruktor
+	 * @param s
+	 * @throws IOException
+	 */
 	public Vezerlo(String s) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Vezerlo letrejott.\n");
@@ -24,6 +33,13 @@ public class Vezerlo implements JegvarazsListener{
 		palya=new Palya(10,10, karakterek);
 		aktualisSzereplo = szereplok.get(0);
 	}
+
+	/**
+	 * Vezerlo konstruktor
+	 * @param szereplo
+	 * @param medve
+	 * @throws IOException
+	 */
 	public Vezerlo(Szereplo szereplo, Jegesmedve medve) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Vezerlo letrejott.\n");
@@ -36,6 +52,10 @@ public class Vezerlo implements JegvarazsListener{
 		setAktualisSzereplo(szereplo);
 		Init();
 	}
+
+	/**
+	 * Init fuggveny
+	 */
 	private void Init(){
 		/*for (Szereplo szereplo:szereplok){
 			szereplo.setjListener(this);
@@ -43,6 +63,11 @@ public class Vezerlo implements JegvarazsListener{
 
 		aktualisSzereplo.setjListener(this);
 	}
+
+	/**
+	 * Aktualis szereplo beallitasara szolgalo fuggveny
+	 * @param szereplo
+	 */
 	public void setAktualisSzereplo(Szereplo szereplo){
 		aktualisSzereplo=szereplo;
 		if(szereplo.getEpitettSatratElozoKorben()){
@@ -81,11 +106,18 @@ public class Vezerlo implements JegvarazsListener{
 		}
 		//System.out.println("<Vezerlo.kovetkezoSzereplo()");
 	}
-	
+
+	/**
+	 * Hoviharszamlalo allitasa
+	 * @param hovihar_szamlalo
+	 */
 	public void sethoviharSzamlalo(int hovihar_szamlalo) {
 		this.hovihar_szamlalo=hovihar_szamlalo;
 	}
-	
+
+	/**
+	 * Hovihar szamlalo csokkentesere szolgalo fuggveny
+	 */
 	public void hoviharSzamlaloCsokkentes() {
 		//System.out.println(">Vezerlo.hoviharSzamlaloCsokkentes()");
 		hovihar_szamlalo -= new Random().nextInt(4) ;

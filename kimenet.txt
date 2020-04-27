@@ -90,7 +90,6 @@ Szomszed lekerdezese.
 Szereplo lelep a mezorol.
 A Szereplo tengerbe esett.
 A szereplo vizbe esett.
-Mezo lekerdezese
 A szereplon van buvarruha.
 4
 Mezo letrejott
@@ -135,8 +134,6 @@ Szomszed lekerdezese.
 Szereplo lelep a mezorol.
 A Szereplo tengerbe esett.
 A szereplo vizbe esett.
-Mezo lekerdezese
-Mezo lekerdezese
 Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
@@ -192,7 +189,11 @@ Szereplo lelep a mezorol.
 A Szereplo tengerbe esett.
 A szereplo vizbe esett.
 Mezo lekerdezese
+Szomszed lekerdezese.
 Mezo lekerdezese
+Szomszed lekerdezese.
+Szereplo kihuzasa.
+A jateknak vege: vesztettel.
 Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
@@ -200,20 +201,11 @@ Szomszed lekerdezese.
 Szereplo kihuzasa.
 A jateknak vege: vesztettel.
 Mezo lekerdezese
-Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
 Szomszed lekerdezese.
 Szereplo kihuzasa.
 A jateknak vege: vesztettel.
-Mezo lekerdezese
-Mezo lekerdezese
-Szomszed lekerdezese.
-Mezo lekerdezese
-Szomszed lekerdezese.
-Szereplo kihuzasa.
-A jateknak vege: vesztettel.
-Mezo lekerdezese
 Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
@@ -260,7 +252,6 @@ Teherbiras lekerdezese.
 A mezo teherbirasa: 0.
 Az Instabil mezo atfordult
 A szereplo vizbe esett.
-Mezo lekerdezese
 A szereplon van buvarruha.
 7
 Mezo letrejott
@@ -323,8 +314,6 @@ A mezo teherbirasa: 0.
 Az Instabil mezo atfordult
 A szereplo vizbe esett.
 Mezo lekerdezese
-Mezo lekerdezese
-Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
 Szomszed lekerdezese.
@@ -384,7 +373,11 @@ A mezo teherbirasa: 0.
 Az Instabil mezo atfordult
 A szereplo vizbe esett.
 Mezo lekerdezese
+Szomszed lekerdezese.
 Mezo lekerdezese
+Szomszed lekerdezese.
+Szereplo kihuzasa.
+A jateknak vege: vesztettel.
 Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
@@ -392,20 +385,11 @@ Szomszed lekerdezese.
 Szereplo kihuzasa.
 A jateknak vege: vesztettel.
 Mezo lekerdezese
-Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
 Szomszed lekerdezese.
 Szereplo kihuzasa.
 A jateknak vege: vesztettel.
-Mezo lekerdezese
-Mezo lekerdezese
-Szomszed lekerdezese.
-Mezo lekerdezese
-Szomszed lekerdezese.
-Szereplo kihuzasa.
-A jateknak vege: vesztettel.
-Mezo lekerdezese
 Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
@@ -454,7 +438,6 @@ Teherbiras lekerdezese.
 A mezo teherbirasa: 0.
 Az Instabil mezo atfordult
 A szereplo vizbe esett.
-Mezo lekerdezese
 A szereplon van buvarruha.
 10
 Mezo letrejott
@@ -506,8 +489,6 @@ Teherbiras lekerdezese.
 A mezo teherbirasa: 0.
 Az Instabil mezo atfordult
 A szereplo vizbe esett.
-Mezo lekerdezese
-Mezo lekerdezese
 Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
@@ -570,7 +551,11 @@ A mezo teherbirasa: 0.
 Az Instabil mezo atfordult
 A szereplo vizbe esett.
 Mezo lekerdezese
+Szomszed lekerdezese.
 Mezo lekerdezese
+Szomszed lekerdezese.
+Szereplo kihuzasa.
+A jateknak vege: vesztettel.
 Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
@@ -578,20 +563,11 @@ Szomszed lekerdezese.
 Szereplo kihuzasa.
 A jateknak vege: vesztettel.
 Mezo lekerdezese
-Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
 Szomszed lekerdezese.
 Szereplo kihuzasa.
 A jateknak vege: vesztettel.
-Mezo lekerdezese
-Mezo lekerdezese
-Szomszed lekerdezese.
-Mezo lekerdezese
-Szomszed lekerdezese.
-Szereplo kihuzasa.
-A jateknak vege: vesztettel.
-Mezo lekerdezese
 Mezo lekerdezese
 Szomszed lekerdezese.
 Mezo lekerdezese
