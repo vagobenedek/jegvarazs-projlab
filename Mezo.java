@@ -272,9 +272,11 @@ abstract public  class Mezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Teherbiras lekerdezese.\n");
 		if(teherbiras==-1){
-			f.append("A mezo teherbirasa: *\n");
+			f.append("A mezo teherbirasa: *.\n");
 		}
-		f.append("A mezo teherbirasa: "+teherbiras+"\n");
+		else {
+			f.append("A mezo teherbirasa: "+teherbiras+".\n");
+		}
 		f.close();
 
 		return teherbiras;
