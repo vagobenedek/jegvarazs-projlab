@@ -19,9 +19,6 @@ public class TargyFactory {
 	 * @return
 	 */
 	public ArrayList<ITargy> createTargy(int i) {
-
-		System.out.println(">TargyFactory.createTargy(int i)");
-		System.out.println("<TargyFactory.createTargy(int i)");
 		return new ArrayList<ITargy>();
 	}
 }
