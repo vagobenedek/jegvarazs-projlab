@@ -350,6 +350,7 @@ abstract public  class Mezo {
 		setHoSzint(getHoSzint()+1);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Hoszint megnott.\n");
+		f.append("A hoszint a mezon: " + hoSzint + ".\n");
 		f.close();
 	}
 

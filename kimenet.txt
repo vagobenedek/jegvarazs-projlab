@@ -21,6 +21,7 @@ A szereplo testhoje 2.
 Mezon hovihar tamadt.
 A hoszint a mezon: 1.
 Hoszint megnott.
+A hoszint a mezon: 2.
 Szereplo mezojen hovihar tamadt
 A szereplo testhoje 1.
 
