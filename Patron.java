@@ -22,4 +22,7 @@ public class Patron extends Alkatresz {
         f.append("Patron letrejott\n");
         f.close();
     }
+    public String getNev(){
+        return "Patron";
+    }
 }

@@ -272,9 +272,11 @@ abstract public  class Mezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Teherbiras lekerdezese.\n");
 		if(teherbiras==-1){
-			f.append("A mezo teherbirasa: *\n");
+			f.append("A mezo teherbirasa: *.\n");
 		}
-		f.append("A mezo teherbirasa: "+teherbiras+"\n");
+		else {
+			f.append("A mezo teherbirasa: "+teherbiras+".\n");
+		}
 		f.close();
 
 		return teherbiras;
@@ -435,7 +437,9 @@ abstract public  class Mezo {
 			}
 		}
 		if (!vankotel) {
+			output = new FileWriter("./kimenet.txt", true);
 			output.write("A jateknak vege: vesztettel.\n");
+			output.close();
 			if(sz.getjListener()!=null) {
 				sz.getjListener().jatekVegeListener();
 			}
