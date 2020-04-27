@@ -51,7 +51,6 @@ abstract public  class Mezo {
 	 */
 	public void setSzomszedMezo(Mezo szomszedMezo, int irany) {
 		szomszedMezok[irany] = szomszedMezo;
-		System.out.println(szomszedMezo);
 	}
 
 	/**
