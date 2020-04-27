@@ -1,27 +1,34 @@
-24
+26
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
+Eszkoz letrejott.
+Eszkoz hozaadodott a mezohoz.
+Eszkoz hozaadodott a mezohoz.
 Jelzofeny letrejott
 Eszkimo letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
-A szereplo testhoje 2.
+A szereplo feltori a jeget.
+Mezo lekerdezese
+Mezo lekerdezese
+A mezo feltort.
+Mezo lekerdezese
+Eszkoz felveteti magat a szereplovel.
+Szereplo targyfelvetele sikeres.
+Felvett targy: Sator.
+A szereplonel van eszkoz.
+A szereplonel nincs eszkoz.
+Mezo lekerdezese
+A mezon nincs targy.
+A szereplo testhoje 5.
 Mezon hovihar tamadt.
-A hoszint a mezon: 1.
+A hoszint a mezon: 0.
 Hoszint megnott.
-A hoszint a mezon: 2.
-Szereplo mezojen hovihar tamadt
-A szereplo testhoje 1.
+A hoszint a mezon: 1.
 
