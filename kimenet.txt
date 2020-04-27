@@ -1,0 +1,82 @@
+18
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Jelzofeny letrejott
+Sarkkutato letrejott
+Vezerlo letrejott.
+Jelzofeny letrejott
+Sarkkutato letrejott
+Jelzofeny letrejott
+Sarkkutato letrejott
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Alkatresz letrejott.
+Pisztoly letrejott
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Pisztoly letrejott
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Jelzofeny letrejott.
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Jelzofeny letrejott.
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Patron letrejott
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Patron letrejott
+Korabbi alkatresz mezobe kerult vissza.
+A szereplo feltori a jeget.
+Mezo lekerdezese
+Mezo lekerdezese
+A mezo feltort.
+A szereplo feltori a jeget.
+Mezo lekerdezese
+Mezo lekerdezese
+A mezo feltort.
+A szereplo feltori a jeget.
+Mezo lekerdezese
+Mezo lekerdezese
+A mezo feltort.
+Mezo lekerdezese
+Szereplo felveszi az alkatreszt.
+Szereplo targyfelvetele sikeres.
+Felvett alkatresz: Jelzofeny.
+Mezo lekerdezese
+Szereplo felveszi az alkatreszt.
+Szereplo targyfelvetele sikeres.
+Felvett alkatresz: Patron.
+Mezo lekerdezese
+Szereplo felveszi az alkatreszt.
+Szereplo targyfelvetele sikeres.
+Felvett alkatresz: Pisztoly.
+Szereplo lep
+Mezo lekerdezese
