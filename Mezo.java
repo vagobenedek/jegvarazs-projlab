@@ -285,7 +285,6 @@ abstract public  class Mezo {
 		f.append("Szereplo lelep a mezorol.\n");
 		f.close();
 		sz.setM(null);
-		System.out.println("asd");
 		this.removeSzereplo(sz);
 	}
 
@@ -298,6 +297,9 @@ abstract public  class Mezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szomszed lekerdezese.\n");
 		f.close();
+		System.out.println("szomszedmezok");
+		if(szomszedMezok[irany].equals(null))
+			return null;
 		//ebben az esetben nem kell semmit visszaadni
 		return szomszedMezok[irany];
 	}
@@ -425,6 +427,7 @@ abstract public  class Mezo {
 			if(szereplo.getEszkoz()!=null && szereplo.getEszkoz().getNev().equals("Kotel")){
 				szereplo.huzdKi(sz);
 				vankotel = true;
+				break;
 			}
 		}
 		if (!vankotel) {

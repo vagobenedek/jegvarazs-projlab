@@ -17,6 +17,8 @@ public class Tenger extends Mezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A Szereplo tengerbe esett.\n");
 		f.close();
+		sz.setM(this);
+		this.addKarakter(sz);
 		//a Tengeren egybol vizbeesik a szereplo
 		sz.tesoTeVizbeEstel();
 	}

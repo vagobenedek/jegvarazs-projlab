@@ -21,6 +21,8 @@ public class Instabil extends Jegmezo {
 		f.append("Az Instabil mez oatfordult\n");
 		f.close();
 		for (IKarakter szereplo : this.getSzereplok()){
+			System.out.println("atfordul?"+this.getSzereplok());
+
 			szereplo.tesoTeVizbeEstel();
 		}
 	}
