@@ -1,5 +1,5 @@
 stabil stl1 1
 stabil stl2 1
-Eszkimo eszki stl1
+eszkimo eszki stl1
 settestho eszki 2
 hovihar stl1
