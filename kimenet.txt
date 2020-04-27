@@ -1,54 +1,20 @@
-7
+20
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Stabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Instabil letrejott
-Mezo letrejott
-Jegmezo letrejott.
-Instabil letrejott
 Jelzofeny letrejott
 Eszkimo letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
-Jelzofeny letrejott
-Eszkimo letrejott.
-Jelzofeny letrejott
-Eszkimo letrejott.
-Eszkoz letrejott.
-Kotel letrejott
-Eszkoz hozaadodott a mezohoz.
-Eszkoz letrejott.
-Kotel letrejott
-Eszkoz hozaadodott a mezohoz.
 A szereplo feltori a jeget.
 Mezo lekerdezese
 Mezo lekerdezese
 A mezo feltort.
-Mezo lekerdezese
-Eszkoz felveteti magat a szereplovel.
-Szereplo targyfelvetele sikeres.
-Felvett targy: Kotel.
-Szereplo lep
-Mezo lekerdezese
-Szomszed lekerdezese.
-Szereplo lelep a mezorol.
-A szereplo instabil mezon all.
-Teherbiras lekerdezese.
-A mezo teherbirasa: 0
-Az Instabil mezo atfordult
-A szereplo vizbe esett.
+A szereplo feltori a jeget.
 Mezo lekerdezese
 Mezo lekerdezese
-Mezo lekerdezese
-Szomszed lekerdezese.
+A mezo feltort.
+
