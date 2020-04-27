@@ -139,7 +139,6 @@ public abstract class Szereplo implements IKarakter{
 		this.testho = testho;
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplo testhoje "+this.testho+".\n");
-		System.out.println(this.testho);
 		if(this.testho<=0){
 			f.append("A jateknak vege: vesztettel.\n");
 			f.close();
@@ -312,16 +311,15 @@ public abstract class Szereplo implements IKarakter{
 		f.append("A szereplo vizbe esett.\n");
 		f.close();
 
-		System.out.println(this.getMezo()+"getmezo");
 		if (this.getEszkoz() == null || (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha"))){
 			for (int i = 0; i<4;i++){
-				System.out.println(this.getMezo()+" "+i);
+				
 				if (this.getMezo().getSzomszed(i)!=null) {
 					Mezo mezo = this.getMezo().getSzomszed(i);
 					mezo.huzzKi(this);
 					if(IsKihuzott()){
 						setKihuzott(false);
-						System.out.println("kihuzott?");
+						
 						break;
 					}
 				}
