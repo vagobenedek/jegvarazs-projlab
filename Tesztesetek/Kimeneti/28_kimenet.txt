@@ -1,7 +1,3 @@
 28
-A szereplo testhoje: 3.
-<<<<<<< HEAD
+A szereplo testhoje 3.
 A szereplonel nincs eszkoz.
-=======
-A szereplonel nincs eszkoz.
->>>>>>> 52dd2cdd1253c0f5a3f8daa846bb236ed9bf0387
