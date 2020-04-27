@@ -123,6 +123,9 @@ public class Comparator {
                 actualOutput.close();
             }
             preferredOutput.close();
+            if (numberOfLines < matched){
+                matched = numberOfLines;
+            }
             System.out.println(matched + "/" + numberOfLines);
             System.out.println("A(z) " + testNumber + "-es szamu teszt " + (matched == numberOfLines?"sikeres": "sikertelen") + " volt.");
             if (matched != numberOfLines){
