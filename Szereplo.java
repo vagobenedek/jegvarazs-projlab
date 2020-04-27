@@ -382,8 +382,8 @@ public abstract class Szereplo implements IKarakter{
 			setLepesszam(getLepesszam() - 1);
 		}
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("Szereplo alkatreszfelvetele sikeres.\n");
-		output.write("Felvett targy: " + a.getNev() + ".\n");
+		output.write("Szereplo targyfelvetele sikeres.\n");
+		output.write("Felvett alkatresz: " + a.getNev() + ".\n");
 		output.close();
 	}
 
