@@ -37,7 +37,7 @@ public class Sarkkutato extends Szereplo {
 		getMezo().getSzomszed(i).getTeherBiras();
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		//f.append("Sarkkutato kepesseg hasznalata sikeres\n");
-		f.append("A szereplo hasznalja a kepesseget\n");
+		f.append("A szereplo hasznalja a kepesseget.\n");
 		f.close();
 		getjListener().hoviharSzamlaloCsokkentoListener();
 		setLepesszam(getLepesszam()-1);
