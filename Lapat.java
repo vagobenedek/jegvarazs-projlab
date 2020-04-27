@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Lapat osztaly
+ * Eszkozbol szarmazik le
+ */
 public class Lapat extends Eszkoz {
 	/**
 	 * Konstruktor

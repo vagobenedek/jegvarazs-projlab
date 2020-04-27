@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Buvarruha osztaly
+ * Eszkozbol szarmozik le
+ */
 public class Buvarruha extends Eszkoz {
 	/**
 	 * Konstuktor

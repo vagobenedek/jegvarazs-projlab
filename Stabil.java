@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Stabil mezo osztaly
+ * Jegmezobol szarmazik le
+ */
 public class Stabil extends Jegmezo {
 	/**
 	 * Konstukrot
@@ -25,8 +29,7 @@ public class Stabil extends Jegmezo {
 		f.close();
 	}
 	/*public int getTeherBiras() throws IOException {
-		System.out.println("\t\t>Stabil.getTeherBiras()");
-		System.out.println("\t\t<Stabil.getTeherBiras()");
+		
 		//random visszateresi ertek
 		return teherbiras;
 	}*/

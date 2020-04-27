@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Jelzofeny osztaly
+ * Alkatreszbol szarmazik le
+ */
 public class Jelzofeny extends Alkatresz {
     /**
      * Konstuktor: letrehozza a jelzofenyt

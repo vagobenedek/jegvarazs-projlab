@@ -2,6 +2,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * KarakterFactory
+ * Letrehozza a karaktereket
+ */
 public class KarakterFactory {
 	/**
 	 * Konstruktoraban letrehozzuk a Factoryt
@@ -20,9 +24,7 @@ public class KarakterFactory {
 	 * @throws IOException
 	 */
 	public ArrayList<Szereplo> createKarakter(int n) throws IOException {
-		System.out.println(">KarakterFactory.createKarakter()");
 		Szereplo s = new Eszkimo("init");
-		System.out.println("<KarakterFactory.createKarakter()");
 		return new ArrayList<Szereplo>();
 	}
 

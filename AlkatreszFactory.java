@@ -3,6 +3,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * AlkatreszFacotry hozza letre az alkatreszeket
+ */
 public class AlkatreszFactory {
 	/**
 	 * Konstruktoraban letrehozzuk a Factoryt

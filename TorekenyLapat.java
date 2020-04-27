@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Torekenylapat osztaly
+ * Lapatbol szarmazik le, de ez torekeny
+ */
 public class TorekenyLapat extends Lapat {
 	/**
 	 * TorekenyLapat elettartama

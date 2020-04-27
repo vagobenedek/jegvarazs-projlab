@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ * Szereplo osztaly
+ * IKarakter intefeszbol szarmazik le
+ */
 public abstract class Szereplo implements IKarakter{
 	/**
 	 * szereplo testhoje
@@ -79,10 +83,7 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	@Override
 	public Mezo getMezo() throws IOException {
-		/*
-		System.out.println(">Szereplo.getMezo()");
-		System.out.println("<Szereplo.getMezo()");
-		 */
+		
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo lekerdezese\n");
 		f.close();
@@ -142,7 +143,6 @@ public abstract class Szereplo implements IKarakter{
 		this.testho = testho;
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplo testhoje "+this.testho+".\n");
-		System.out.println(this.testho);
 		if(this.testho<=0){
 			f.append("A jateknak vege: vesztettel.\n");
 			f.close();
@@ -315,16 +315,15 @@ public abstract class Szereplo implements IKarakter{
 		f.append("A szereplo vizbe esett.\n");
 		f.close();
 
-		System.out.println(this.getMezo()+"getmezo");
 		if (this.getEszkoz() == null || (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha"))){
 			for (int i = 0; i<4;i++){
-				System.out.println(this.getMezo()+" "+i);
+				
 				if (this.getMezo().getSzomszed(i)!=null) {
 					Mezo mezo = this.getMezo().getSzomszed(i);
 					mezo.huzzKi(this);
 					if(IsKihuzott()){
 						setKihuzott(false);
-						System.out.println("kihuzott?");
+						
 						break;
 					}
 				}
@@ -420,9 +419,7 @@ public abstract class Szereplo implements IKarakter{
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
 		Mezo mezo = getMezo().getSzomszed(irany);
 		this.m.lelep(this);
-		System.out.println("This is it: \n" + mezo.getHoSzint()+"\nThis was it");
 		mezo.ralep(this);
-		System.out.println("Raleptem");
 		if (getjListener() != null) {
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);

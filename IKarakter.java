@@ -1,5 +1,10 @@
 import java.io.IOException;
 
+/**
+ * IKarakter
+ * interfesz
+ * Szereplok szarmaznak le belole
+ */
 public interface IKarakter {
 	/**
 	 * Lep fuggveny

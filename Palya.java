@@ -2,6 +2,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Letrehozza a palyat
+ */
 public class Palya {
 	/*private Mezo mezok;*/
 
@@ -45,9 +48,6 @@ public class Palya {
 	 * @throws IOException
 	 */
 	public void hovihar() throws IOException {
-		//System.out.println(">Palya.hovihar()");
-		//Egyes kivalaszott mezokre a hovihar fuggveny segitsegevel havat teszunk
-		//new Stabil().hovihar();
-		//System.out.println("<Palya.hovihar()");
+		
 	}
 }

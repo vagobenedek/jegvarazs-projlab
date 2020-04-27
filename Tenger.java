@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Tenger osztaly
+ * Mezobol szarmazik le
+ */
 public class Tenger extends Mezo {
 	/**
 	 * Konstruktor

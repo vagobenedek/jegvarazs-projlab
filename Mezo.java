@@ -5,6 +5,10 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Mezo osztaly
+ * Kulonbozo tipusu mezoket valositja meg (tenger, stabil, instabil, lyuk)
+ */
 abstract public  class Mezo {
 	/**
 	 * Mezon allo szereploket tarolja
@@ -51,7 +55,6 @@ abstract public  class Mezo {
 	 */
 	public void setSzomszedMezo(Mezo szomszedMezo, int irany) {
 		szomszedMezok[irany] = szomszedMezo;
-		System.out.println(szomszedMezo);
 	}
 
 	/**
@@ -168,7 +171,7 @@ abstract public  class Mezo {
 	 */
 	public void addKarakter(IKarakter szereplo) {
 
-		System.out.println("Adding a character");
+		
 		this.szereplok.add(szereplo);
 	}
 
@@ -185,7 +188,7 @@ abstract public  class Mezo {
 	 * @param targy ITargy
 	 */
 	public void setTargy(ITargy targy) {
-		System.out.println(targy);
+		
 		this.targy = targy;
 	}
 
@@ -307,7 +310,7 @@ abstract public  class Mezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szomszed lekerdezese.\n");
 		f.close();
-		System.out.println("szomszedmezok");
+	
 		if(szomszedMezok[irany].equals(null))
 			return null;
 		//ebben az esetben nem kell semmit visszaadni
@@ -400,7 +403,6 @@ abstract public  class Mezo {
 	 */
 	public void targyFelvetele(Szereplo sz) throws IOException {
 		//0425
-		System.out.println(this.isFeltort());
 		if(this.isFeltort() && targy != null) {
 			targy.felvesz(sz);
 			setTargy(null);

@@ -1,3 +1,6 @@
+/**
+ * Listerner interfesz
+ */
 public interface JegvarazsListener{
     /**
      * Listener jatek vegere

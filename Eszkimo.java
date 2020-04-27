@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Eszkimo szereplo
+ * Szereplobol szarmazik le
+ */
 public class Eszkimo extends Szereplo {
 	/**
 	 * Konstuktor

@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Patron osztaly
+ * Alkatresz osztalybol szarmazik le
+ */
 public class Patron extends Alkatresz {
     /**
      * Konstruktor

@@ -3,6 +3,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * JegmezoFactory
+ * Letrehozza a jegmezoket
+ */
 public class JegmezoFactory {
 	/**
 	 * Konstruktoraban letrehozzuk a Factoryt

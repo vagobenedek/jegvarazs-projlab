@@ -2,6 +2,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * TargyFactory osztaly
+ * Targyakat hoz letre
+ */
 public class TargyFactory {
 	/**
 	 * Konstuktor
@@ -19,9 +23,6 @@ public class TargyFactory {
 	 * @return
 	 */
 	public ArrayList<ITargy> createTargy(int i) {
-
-		System.out.println(">TargyFactory.createTargy(int i)");
-		System.out.println("<TargyFactory.createTargy(int i)");
 		return new ArrayList<ITargy>();
 	}
 }

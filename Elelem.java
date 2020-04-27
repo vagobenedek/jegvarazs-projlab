@@ -1,6 +1,10 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Elelem osztaly
+ * Eszkozbol -> Itargybol szarmazik le
+ */
 public class Elelem extends Eszkoz implements ITargy {
 	/**
 	 * Konstruktor

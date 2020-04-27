@@ -96,10 +96,9 @@ public class Interpreter {
         //Szereplo lepese
         else if (splitted[0].equals("lep")){
             try {
-                System.out.println("elotte");
+                
                 (ikarakterek.get(splitted[1])).lep(Integer.parseInt(splitted[2]));
                 //(szereplok.get(splitted[1])).lep(Integer.parseInt(splitted[2]));
-                System.out.println("utana");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -262,7 +261,7 @@ public class Interpreter {
         }
         //Eszkoz hasznalata
         else if (splitted[0].equals("hasznal")){
-            System.out.println("hasznal elott");
+            
             //szereplok.get(splitted[1]).hasznal();
             ikarakterek.get(splitted[1]).hasznal();
         }
