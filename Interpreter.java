@@ -83,14 +83,13 @@ public class Interpreter {
         }
         //Eszkimo letrehozasa
         else if (splitted[0].equals("eszkimo")){
-            //szereplok.put(splitted[1], new Eszkimo());
-            //szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
-            //(mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
-            //eszkimok.put(splitted[1], new Eszkimo());
-            //eszkimok.get(splitted[1]).setM(mezok.get(splitted[2]));
+            szereplok.put(splitted[1], new Eszkimo());
+            szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
+            (mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
+            eszkimok.put(splitted[1], new Eszkimo());
+            eszkimok.get(splitted[1]).setM(mezok.get(splitted[2]));
             ikarakterek.put(splitted[1], new Eszkimo());
             ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
-            (mezok.get(splitted[2])).addKarakter(ikarakterek.get(splitted[1]));
         }
         //Szereplo lepese
         else if (splitted[0].equals("lep")){
@@ -142,30 +141,24 @@ public class Interpreter {
         }
         //Sarkkutato letrehozasa
         else if (splitted[0].equals("sarkkutato")){
-            //szereplok.put(splitted[1], new Sarkkutato());
+            szereplok.put(splitted[1], new Sarkkutato());
+            new Vezerlo(szereplok.get(splitted[1]), new Jegesmedve());
+            szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
+            (mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
+            sarkkutatok.put(splitted[1], new Sarkkutato());
+            sarkkutatok.get(splitted[1]).setM(mezok.get(splitted[2]));
             ikarakterek.put(splitted[1], new Sarkkutato());
             ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
-            (mezok.get(splitted[2])).addKarakter(ikarakterek.get(splitted[1]));
-            new Vezerlo((Szereplo)ikarakterek.get(splitted[1]), new Jegesmedve());
-            //szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
-            //(mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
-            //sarkkutatok.put(splitted[1], new Sarkkutato());
-            //sarkkutatok.get(splitted[1]).setM(mezok.get(splitted[2]));
-            //ikarakterek.put(splitted[1], new Sarkkutato());
-            //ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
+
         }
         //Jegesmedve letrehozasa
         else if (splitted[0].equals("jegesmedve")){
+            jegesmedvek.put(splitted[1], new Jegesmedve());
+            (mezok.get(splitted[2])).addKarakter(jegesmedvek.get(splitted[1]));
+            jegesmedvek.get(splitted[1]).setM(mezok.get(splitted[2]));
+            mezok.get(splitted[2]).szereplokMeetMedve();
             ikarakterek.put(splitted[1], new Jegesmedve());
             ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
-            (mezok.get(splitted[2])).addKarakter(ikarakterek.get(splitted[1]));
-
-            //jegesmedvek.put(splitted[1], new Jegesmedve());
-            //(mezok.get(splitted[2])).addKarakter(jegesmedvek.get(splitted[1]));
-            //jegesmedvek.get(splitted[1]).setM(mezok.get(splitted[2]));
-            //mezok.get(splitted[2]).szereplokMeetMedve();
-            //ikarakterek.put(splitted[1], new Jegesmedve());
-            //ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
         }
         //Testho beallitasa
         else if (splitted[0].equals("settestho")){
@@ -191,14 +184,14 @@ public class Interpreter {
             eszkozok.put(splitted[1], new Kotel());
             eszkozok.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
             kotel.put(splitted[1], new Kotel());
-            //kotel.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
+            kotel.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
         }
         //Lapat letrehozasa
         else if (splitted[0].equals("lapat")){
             eszkozok.put(splitted[1], new Lapat());
             eszkozok.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
             lapat.put(splitted[1], new Lapat());
-            //lapat.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
+            lapat.get(splitted[1]).addEszkozToMezo(mezok.get(splitted[2]));
         }
         //Torkenyaso letrehozasa
         else if (splitted[0].equals("torekenyaso")){
