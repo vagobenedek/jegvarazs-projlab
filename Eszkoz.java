@@ -48,7 +48,7 @@ public abstract class Eszkoz implements ITargy {
 	 */
 	public void addEszkozToMezo(Mezo m) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Eszkoz hozaadodott a mezohoz.\n");
+		f.append("Eszkoz hozzaadodott a mezohoz.\n");
 		f.close();
 		m.setTargy(this);
 	}

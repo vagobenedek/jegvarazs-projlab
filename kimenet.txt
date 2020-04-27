@@ -1,0 +1,33 @@
+27
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Jelzofeny letrejott
+Eszkimo letrejott.
+Eszkoz letrejott.
+Elelem letrejott.
+Eszkoz hozzaadodott a mezohoz.
+Eszkoz letrejott.
+Elelem letrejott.
+Eszkoz hozzaadodott a mezohoz.
+A szereplo feltori a jeget.
+Mezo lekerdezese
+Mezo lekerdezese
+A mezo feltort.
+Mezo lekerdezese
+Eszkoz felveteti magat a szereplovel.
+Szereplo targyfelvetele sikeres.
+Felvett targy: Elelem.
+A szereplo testhoje maximalis.Elelem hasznalata.
+A szereplonel van eszkoz.
+A szereplonel nincs eszkoz.
+Mezo lekerdezese
+A mezon nincs targy.
+

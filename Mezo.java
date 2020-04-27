@@ -186,6 +186,7 @@ abstract public  class Mezo {
 	 * @param targy ITargy
 	 */
 	public void setTargy(ITargy targy) {
+		System.out.println(targy);
 		this.targy = targy;
 	}
 
