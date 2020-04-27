@@ -1,0 +1,40 @@
+36
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Instabil letrejott
+Szomszed lekerdezese.
+Szereplo lelep a mezorol.
+A szereplo instabil mezon all.
+Teherbiras lekerdezese.
+A mezo teherbirasa: 0.
+Az Instabil mezo atfordult
+A jegesmedve beleesett a vizbe.
+A jegesmedve lepett.
+

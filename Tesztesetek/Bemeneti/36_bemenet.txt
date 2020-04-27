@@ -1,4 +1,5 @@
 stabil stl1 1
+jegesmedve jegesmedve stl1
 instabil istl2 0 1
 instabil istl3 0 1
 instabil istl4 0 1
