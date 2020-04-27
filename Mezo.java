@@ -401,7 +401,8 @@ abstract public  class Mezo {
 	 */
 	public void targyFelvetele(Szereplo sz) throws IOException {
 		//0425
-		if(isFeltort() && targy != null) {
+		System.out.println(this.isFeltort());
+		if(this.isFeltort() && targy != null) {
 			targy.felvesz(sz);
 			setTargy(null);
 		}

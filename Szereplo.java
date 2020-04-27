@@ -253,7 +253,6 @@ public abstract class Szereplo implements IKarakter{
 		f.append("A szereplo megprobalja felvenni a targyat\n");
 		f.close();
 		getMezo().targyFelvetele(this);
-		System.out.println("tF utan");
 	}
 	
 	/**
@@ -267,13 +266,15 @@ public abstract class Szereplo implements IKarakter{
 		f.close();
 		if(getMezo().getHoSzint()==0) {
 			getMezo().feltor();
-			if (getjListener() != null) {
+			if (this.getjListener() != null) {
 				getjListener().hoviharSzamlaloCsokkentoListener();
 				setLepesszam(getLepesszam() - 1);
 			}
 		}
 		else {
+			f = new FileWriter("./kimenet.txt", true);
 			f.append("A mezo nem tort fel.\n");
+			f.close();
 		}
 
 	}
