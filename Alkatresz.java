@@ -83,7 +83,7 @@ public abstract class Alkatresz implements ITargy {
 		//0425
 		m.setTargy(this);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("Alkatresz hozaadodott a mezohoz.\n");
+		output.write("Korabbi alkatresz mezobe kerult vissza.\n");
 		output.close();
 	}
 }

@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Jegesmedve implements IKarakter {
@@ -21,6 +22,10 @@ public class Jegesmedve implements IKarakter {
 		this.mezo.lelep(this);
 		mezo.ralep(this);
 		mezo.szereplokMeetMedve();
+
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A jegesmede lepett.\n");
+		f.close();
 		//jListener.SzereplokMeetMedve(this);
 		// TODO Auto-generated method stub
 		
@@ -66,9 +71,11 @@ public class Jegesmedve implements IKarakter {
 	 * Vizbeeses fuggvenye
 	 */
 	@Override
-	public void tesoTeVizbeEstel() {
+	public void tesoTeVizbeEstel() throws IOException{
 		// TODO Auto-generated method stub
-		
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A jegesmedve beleesett a vizbe.\n");
+		f.close();
 	}
 
 	/**

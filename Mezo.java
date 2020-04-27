@@ -271,6 +271,10 @@ abstract public  class Mezo {
 
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Teherbiras lekerdezese.\n");
+		if(teherbiras==-1){
+			f.append("A mezo teherbirasa: *\n");
+		}
+		f.append("A mezo teherbirasa: "+teherbiras+"\n");
 		f.close();
 
 		return teherbiras;
@@ -407,7 +411,7 @@ abstract public  class Mezo {
 	public void iglutEpit() throws IOException {
 		new Iglu(this);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
-		output.write("Iglu epitese sikeres.\n");
+		output.write("Az eszkimo iglut epitett.\n");
 		output.close();
 	}
 

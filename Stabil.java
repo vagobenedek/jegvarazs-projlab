@@ -10,6 +10,7 @@ public class Stabil extends Jegmezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Stabil letrejott\n");
 		f.close();
+		setTeherbiras(-1);
 	}
 
 	/**
@@ -20,7 +21,7 @@ public class Stabil extends Jegmezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		sz.setM(this);
 		addKarakter(sz);
-		f.append("A Szereplo stabil mezon all\n");
+		f.append("A Szereplo stabil mezon all.\n");
 		f.close();
 	}
 	/*public int getTeherBiras() throws IOException {

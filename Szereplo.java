@@ -132,8 +132,11 @@ public abstract class Szereplo implements IKarakter{
 	 * beallitja a tetshot
 	 * @param testho int
 	 */
-	public void setTestho(int testho) {
+	public void setTestho(int testho) throws IOException{
 		this.testho = testho;
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A szereplo testhoje "+this.testho+".\n");
+		f.close();
 		if(this.testho<=0){
 			if (getjListener() != null) {
 				jListener.jatekVegeListener();
@@ -297,7 +300,7 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void tesoTeVizbeEstel() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("A Szereplo vizbe esett.\n");
+		f.append("A szereplo vizbe esett.\n");
 		f.close();
 
 		System.out.println(this.getMezo()+"getmezo");
@@ -430,9 +433,12 @@ public abstract class Szereplo implements IKarakter{
 		System.out.println("\t\t<Szereplo.etkezes()");
 		 */
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Etkezes sikeres\n");
+		if (getTestho()==getMaxTestho()){
+			f.append("A szereplo testhoje maximalis.");
+		}
 		if(getTestho()<getMaxTestho()){
 			setTestho(getTestho()+1);
+			f.append("Etkezes sikeres\n");
 		}
 		f.close();
 	}
@@ -440,7 +446,9 @@ public abstract class Szereplo implements IKarakter{
 	/**
 	 * Mezo epit fuggvenye hivja meg
 	 */
-	public void elsut() {
+	public void elsut() throws IOException{
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("A szereplonek sikerult osszeszerelni az alkatreszeket.\n");
 		if (getjListener() != null) {
 			getjListener().gyozelemListener();
 		}

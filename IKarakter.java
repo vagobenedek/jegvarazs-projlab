@@ -17,7 +17,7 @@ public interface IKarakter {
 	/**
 	 * Elsut fuggveny
 	 */
-	public void elsut();
+	public void elsut() throws IOException;
 
 	/**
 	 * tesoTeVizbeEstel fuggevny
