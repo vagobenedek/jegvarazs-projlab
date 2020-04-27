@@ -28,6 +28,7 @@ public class Interpreter {
     HashMap<String, Patron> patron;
 
     HashMap<String, Iglu> igluk;
+    HashMap<String, IKarakter> ikarakterek;
 
     Interpreter(){
         mezok = new HashMap<String, Mezo>();
@@ -54,7 +55,7 @@ public class Interpreter {
         patron = new HashMap<String, Patron>();
 
         igluk = new HashMap<String, Iglu>();
-
+        ikarakterek = new HashMap<String, IKarakter>();
     }
 
     public void Translate(String command) throws IOException {
@@ -87,12 +88,14 @@ public class Interpreter {
             (mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
             eszkimok.put(splitted[1], new Eszkimo());
             eszkimok.get(splitted[1]).setM(mezok.get(splitted[2]));
+            ikarakterek.put(splitted[1], new Eszkimo());
         }
         //Szereplo lepese
         else if (splitted[0].equals("lep")){
             try {
                 System.out.println("elotte");
-                (szereplok.get(splitted[1])).lep(Integer.parseInt(splitted[2]));
+                (ikarakterek.get(splitted[1])).lep(Integer.parseInt(splitted[2]));
+                //(szereplok.get(splitted[1])).lep(Integer.parseInt(splitted[2]));
                 System.out.println("utana");
             } catch (IOException e) {
                 e.printStackTrace();
@@ -143,6 +146,8 @@ public class Interpreter {
             (mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
             sarkkutatok.put(splitted[1], new Sarkkutato());
             sarkkutatok.get(splitted[1]).setM(mezok.get(splitted[2]));
+            ikarakterek.put(splitted[1], new Sarkkutato());
+
         }
         //Jegesmedve letrehozasa
         else if (splitted[0].equals("jegesmedve")){
@@ -150,6 +155,8 @@ public class Interpreter {
             (mezok.get(splitted[2])).addKarakter(jegesmedvek.get(splitted[1]));
             jegesmedvek.get(splitted[1]).setM(mezok.get(splitted[2]));
             mezok.get(splitted[2]).szereplokMeetMedve();
+            ikarakterek.put(splitted[1], new Jegesmedve());
+            ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
         }
         //Testho beallitasa
         else if (splitted[0].equals("settestho")){

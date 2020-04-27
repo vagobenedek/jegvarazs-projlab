@@ -24,7 +24,7 @@ public class Jegesmedve implements IKarakter {
 		mezo.szereplokMeetMedve();
 
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("A jegesmede lepett.\n");
+		f.append("A jegesmedve lepett.\n");
 		f.close();
 		//jListener.SzereplokMeetMedve(this);
 		// TODO Auto-generated method stub
