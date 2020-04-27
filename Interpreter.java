@@ -99,7 +99,6 @@ public class Interpreter {
                 
                 (ikarakterek.get(splitted[1])).lep(Integer.parseInt(splitted[2]));
                 //(szereplok.get(splitted[1])).lep(Integer.parseInt(splitted[2]));
-                System.out.println("utana");
             } catch (IOException e) {
                 e.printStackTrace();
             }
