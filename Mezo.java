@@ -186,6 +186,7 @@ abstract public  class Mezo {
 	 * @param targy ITargy
 	 */
 	public void setTargy(ITargy targy) {
+		System.out.println(targy);
 		this.targy = targy;
 	}
 
@@ -228,6 +229,7 @@ abstract public  class Mezo {
 		//Noveli a mezon levo hoegysegek szamat
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezon hovihar tamadt.\n");
+		f.append("A hoszint a mezon: " + hoSzint + ".\n");
 		f.close();
 		hoNovelo();
 		if (!this.isHovihartolVedett()){
@@ -349,6 +351,7 @@ abstract public  class Mezo {
 		setHoSzint(getHoSzint()+1);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Hoszint megnott.\n");
+		f.append("A hoszint a mezon: " + hoSzint + ".\n");
 		f.close();
 	}
 
