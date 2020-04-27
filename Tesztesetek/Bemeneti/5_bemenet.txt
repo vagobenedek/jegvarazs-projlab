@@ -1,8 +1,13 @@
 stabil stl1 5
 stabil stl2 2
+stabil stl3 4
+stabil stl4 3
 tenger t1 2
 setszomszed stl1 0 t1
 setszomszed t1 0 stl2
+setszomszed t1 1 stl1
+setszomszed t1 2 stl3
+setszomszed t1 3 stl4
 eszkimo e stl1
 eszkimo e2 stl2
 lep e 0
