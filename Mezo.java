@@ -228,6 +228,7 @@ abstract public  class Mezo {
 		//Noveli a mezon levo hoegysegek szamat
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezon hovihar tamadt.\n");
+		f.append("A hoszint a mezon: " + hoSzint + ".\n");
 		f.close();
 		hoNovelo();
 		if (!this.isHovihartolVedett()){

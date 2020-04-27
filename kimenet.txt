@@ -1,4 +1,10 @@
-23
+24
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
+Mezo letrejott
+Jegmezo letrejott.
+Stabil letrejott
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
@@ -11,55 +17,10 @@ Jelzofeny letrejott
 Eszkimo letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
-Eszkoz letrejott.
-Lapat letrejott
-Torekeny lapat letrejott.
-Eszkoz hozaadodott a mezohoz.
-Eszkoz letrejott.
-Lapat letrejott
-Torekeny lapat letrejott.
-Eszkoz hozaadodott a mezohoz.
-A szereplo feltori a jeget.
-Mezo lekerdezese
-Mezo lekerdezese
-A mezo feltort.
-Mezo lekerdezese
-Eszkoz felveteti magat a szereplovel.
-Szereplo targyfelvetele sikeres.
-Felvett targy: Lapat.
-Torekeny lapat hasznalata.
-Szereplo havat as
-Mezo lekerdezese
-Hoszint eggyel csokkent.
-Hoszint eggyel csokkent.
-Mezo hoasas.
-A hoszint a mezon: 5.
-A szereplonel van eszkoz.
-Mezo lekerdezese
-A mezon nincs targy.
-Torekeny lapat hasznalata.
-Szereplo havat as
-Mezo lekerdezese
-Hoszint eggyel csokkent.
-Hoszint eggyel csokkent.
-Mezo hoasas.
-A hoszint a mezon: 3.
-A szereplonel van eszkoz.
-Mezo lekerdezese
-A mezon nincs targy.
-Torekeny lapat hasznalata.
-Szereplo havat as
-Mezo lekerdezese
-Hoszint eggyel csokkent.
-Hoszint eggyel csokkent.
-Mezo hoasas.
+A szereplo testhoje 2.
+Mezon hovihar tamadt.
 A hoszint a mezon: 1.
-A szereplonel van eszkoz.
-Mezo lekerdezese
-A mezon nincs targy.
-Torekeny lapat hasznalata.
-A szereplonel van eszkoz.
-A szereplonel nincs eszkoz.
-Mezo lekerdezese
-A mezon nincs targy.
+Hoszint megnott.
+Szereplo mezojen hovihar tamadt
+A szereplo testhoje 1.
 
