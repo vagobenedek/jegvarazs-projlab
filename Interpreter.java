@@ -89,6 +89,7 @@ public class Interpreter {
             eszkimok.put(splitted[1], new Eszkimo());
             eszkimok.get(splitted[1]).setM(mezok.get(splitted[2]));
             ikarakterek.put(splitted[1], new Eszkimo());
+            ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
         }
         //Szereplo lepese
         else if (splitted[0].equals("lep")){
@@ -147,6 +148,7 @@ public class Interpreter {
             sarkkutatok.put(splitted[1], new Sarkkutato());
             sarkkutatok.get(splitted[1]).setM(mezok.get(splitted[2]));
             ikarakterek.put(splitted[1], new Sarkkutato());
+            ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
 
         }
         //Jegesmedve letrehozasa
