@@ -33,6 +33,7 @@ public abstract class Szereplo implements IKarakter{
 	 *listener attributum
 	 */
 	private JegvarazsListener jListener;
+	private boolean kihuzott = false;
 
 	/**
 	 * epitett satrat az elozo korben bool tipusu parameter
@@ -119,7 +120,12 @@ public abstract class Szereplo implements IKarakter{
 	public JegvarazsListener getjListener(){
 	    return jListener;
     }
-
+	public boolean IsKihuzott(){
+		return kihuzott;
+	}
+	public void setKihuzott(boolean kihuzott){
+		this.kihuzott=kihuzott;
+	}
 	/**
 	 * beallitja a listenert
 	 * @param jListener Listener
@@ -312,6 +318,10 @@ public abstract class Szereplo implements IKarakter{
 				if (this.getMezo().getSzomszed(i)!=null) {
 					Mezo mezo = this.getMezo().getSzomszed(i);
 					mezo.huzzKi(this);
+					if(IsKihuzott()){
+						setKihuzott(false);
+						break;
+					}
 				}
 			}
 		}
