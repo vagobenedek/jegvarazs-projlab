@@ -1,4 +1,4 @@
-14
+16
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
@@ -29,32 +29,32 @@ Jelzofeny letrejott
 Eszkimo letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
-Eszkoz letrejott.
-Kotel letrejott
-Eszkoz hozaadodott a mezohoz.
-Eszkoz letrejott.
-Kotel letrejott
-Eszkoz hozaadodott a mezohoz.
-Eszkoz letrejott.
-Kotel letrejott
-Eszkoz hozaadodott a mezohoz.
-Eszkoz letrejott.
-Kotel letrejott
-Eszkoz hozaadodott a mezohoz.
-Eszkoz letrejott.
-Kotel letrejott
-Eszkoz hozaadodott a mezohoz.
-Eszkoz letrejott.
-Kotel letrejott
-Eszkoz hozaadodott a mezohoz.
+Alkatresz letrejott.
+Pisztoly letrejott
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Pisztoly letrejott
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Jelzofeny letrejott.
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Jelzofeny letrejott.
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Patron letrejott
+Korabbi alkatresz mezobe kerult vissza.
+Alkatresz letrejott.
+Patron letrejott
+Korabbi alkatresz mezobe kerult vissza.
 A szereplo feltori a jeget.
 Mezo lekerdezese
 Mezo lekerdezese
 A mezo feltort.
 Mezo lekerdezese
-Eszkoz felveteti magat a szereplovel.
+Szereplo felveszi az alkatreszt.
 Szereplo targyfelvetele sikeres.
-Felvett targy: Kotel.
+Felvett targy: null.
 Mezo lekerdezese
 Szereplo targyfelvetele meghiusult.
 A szereplo feltori a jeget.
