@@ -10,6 +10,7 @@ public class Eszkimo extends Szereplo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Eszkimo letrejott.\n");
 		f.close();
+		setMaxtestho(5);
 
 	}
 
