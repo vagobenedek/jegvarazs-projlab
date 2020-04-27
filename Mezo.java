@@ -438,6 +438,10 @@ abstract public  class Mezo {
 		}
 
 	}
+
+	/**
+	 * Szereplok talalkoznak a medvevel
+	 */
 	public void szereplokMeetMedve(){
 		if(medvetolVedett){
 			for (IKarakter szereplo: szereplok){

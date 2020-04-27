@@ -5,13 +5,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EszkozFactory {
-	//Konstruktoraban letrehozzuk a Factoryt
+	/**
+	 * Konstruktoraban letrehozzuk a Factoryt
+	 * @throws IOException
+	 */
 	public EszkozFactory() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("EszkozFactory letrejott.\n");
 		f.close();
 	}
-	//A factory legyartja a megfelelo szamu egyseget
+
+	/**
+	 * A factory legyartja a megfelelo szamu egyseget
+	 * @param i int
+	 * @return eszkozok
+	 * @throws IOException
+	 */
 	public List<Eszkoz> createEszkoz(int i) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("EszkozFactory letrehozta az eszkozoket.\n");
@@ -23,7 +32,11 @@ public class EszkozFactory {
 		}
 		return eszkozok;
 	}
-	
+
+	/**
+	 * addEszkozToMezo fuggveny
+	 * @param m
+	 */
 	public void addEszkozToMezo(Mezo m) {
 	}
 }

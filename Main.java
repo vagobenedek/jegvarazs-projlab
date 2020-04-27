@@ -4,6 +4,9 @@ import java.lang.reflect.Parameter;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Main fuggveny
+ */
 public class Main {
     public static void main(String args[]){
         try {

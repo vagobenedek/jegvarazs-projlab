@@ -4,6 +4,14 @@ import java.util.List;
 
 public class Palya {
 	/*private Mezo mezok;*/
+
+	/**
+	 * Palya letrehozasa
+	 * @param szelesseg int
+	 * @param magassag int
+	 * @param karakterek List
+	 * @throws IOException
+	 */
 	public Palya(int szelesseg, int magassag, List<IKarakter> karakterek) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Palya letrejott\n");
@@ -31,10 +39,15 @@ public class Palya {
 		}
 
 	}
+
+	/**
+	 * Hovihar fuggveny
+	 * @throws IOException
+	 */
 	public void hovihar() throws IOException {
-		System.out.println(">Palya.hovihar()");
+		//System.out.println(">Palya.hovihar()");
 		//Egyes kivalaszott mezokre a hovihar fuggveny segitsegevel havat teszunk
-		new Stabil().hovihar();
-		System.out.println("<Palya.hovihar()");
+		//new Stabil().hovihar();
+		//System.out.println("<Palya.hovihar()");
 	}
 }

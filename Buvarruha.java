@@ -11,6 +11,11 @@ public class Buvarruha extends Eszkoz {
 		f.append("Buvarruha letrejott.\n");
 		f.close();
 	}
+
+	/**
+	 * Nev lekerdezo fuggveny
+	 * @return String
+	 */
 	public String getNev(){
 		return "Buvarruha";
 	}
