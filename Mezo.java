@@ -327,7 +327,7 @@ abstract public  class Mezo {
 	}
 
 	/**
-	 * Ha a hoszint nagyobb 0-nal, csokkenti a hoszintet 1-gyel �s ezt fajlba irva jelzi.
+	 * Ha a hoszint nagyobb 0-nal, csokkenti a hoszintet 1-gyel es ezt fajlba irva jelzi.
 	 * @throws IOException
 	 */
 	public void hoCsokkento() throws IOException {

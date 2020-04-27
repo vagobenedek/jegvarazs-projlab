@@ -461,6 +461,7 @@ public abstract class Szereplo implements IKarakter{
 	public void elsut() throws IOException{
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A szereplonek sikerult osszeszerelni az alkatreszeket.\n");
+		f.close();
 		if (getjListener() != null) {
 			getjListener().gyozelemListener();
 		}
@@ -472,6 +473,7 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void huzdKi(Szereplo sz) throws IOException {
+
 		getEszkoz().hasznal(sz);
 		this.getMezo().ralep(sz);
 
