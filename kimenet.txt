@@ -1,4 +1,4 @@
-20
+21
 Mezo letrejott
 Jegmezo letrejott.
 Stabil letrejott
@@ -9,12 +9,9 @@ Jelzofeny letrejott
 Eszkimo letrejott.
 Jelzofeny letrejott
 Eszkimo letrejott.
-A szereplo feltori a jeget.
+Szereplo havat as
 Mezo lekerdezese
-Mezo lekerdezese
-A mezo feltort.
-A szereplo feltori a jeget.
-Mezo lekerdezese
-Mezo lekerdezese
-A mezo feltort.
+Hoszint eggyel csokkent.
+Mezo hoasas.
+A hoszint a mezon: 4.
 
