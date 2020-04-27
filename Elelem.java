@@ -11,6 +11,7 @@ public class Elelem extends Eszkoz implements ITargy {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Elelem letrejott.\n");
 		f.close();
+
 	}
 	public String getNev(){
 		return "Elelem";

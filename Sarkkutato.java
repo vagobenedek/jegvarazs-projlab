@@ -12,6 +12,8 @@ public class Sarkkutato extends Szereplo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Sarkkutato letrejott\n");
 		f.close();
+		setTestho(4);
+		setMaxTestho(4);
 	}
 
 	/**

@@ -213,7 +213,9 @@ public abstract class Szereplo implements IKarakter{
 	public Alkatresz getAlkatresz() {
 		return a;
 	}
-
+		public void setMaxTestho(int maxTestho){
+		this.maxTestho=maxTestho;
+		}
 	/**
 	 * visszaadja a lepesszamot
 	 * @return lepesszam
