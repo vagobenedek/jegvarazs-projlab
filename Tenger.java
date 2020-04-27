@@ -2,6 +2,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Tenger extends Mezo {
+	/**
+	 * Konstruktor
+	 * @throws IOException
+	 */
 	public Tenger() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Tenger letrejott\n");
@@ -22,6 +26,12 @@ public class Tenger extends Mezo {
 		//a Tengeren egybol vizbeesik a szereplo
 		sz.tesoTeVizbeEstel();
 	}
+
+	/**
+	 * Teherbirasat kerdezi le
+	 * @return
+	 * @throws IOException
+	 */
 	public int getTeherBiras() throws IOException {
 		System.out.println("\t\t>Tenger.getTeherBiras()");
 		System.out.println("\t\t<Tenger.getTeherBiras()");
