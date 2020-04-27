@@ -437,7 +437,9 @@ abstract public  class Mezo {
 			}
 		}
 		if (!vankotel) {
+			output = new FileWriter("./kimenet.txt", true);
 			output.write("A jateknak vege: vesztettel.\n");
+			output.close();
 			if(sz.getjListener()!=null) {
 				sz.getjListener().jatekVegeListener();
 			}
