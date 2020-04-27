@@ -1,5 +1,5 @@
-Stabil stl1 0
-Eszkimo eszki stl1
+stabil stl1 0
+eszkimo eszki stl1
 settestho eszki 2
 elelem etel1 stl1
 feltor eszki

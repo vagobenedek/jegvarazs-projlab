@@ -1,17 +1,21 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Elelem extends Eszkoz {
+public class Elelem extends Eszkoz implements ITargy {
 	/**
 	 * Konstruktor
 	 * @throws IOException
 	 */
 	public Elelem() throws IOException {
+		super();
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Elelem letrejott.\n");
 		f.close();
-	}
 
+	}
+	public String getNev(){
+		return "Elelem";
+	}
 	/**
 	 * Konstruktor
 	 * @param s String

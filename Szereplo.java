@@ -213,7 +213,9 @@ public abstract class Szereplo implements IKarakter{
 	public Alkatresz getAlkatresz() {
 		return a;
 	}
-
+		public void setMaxTestho(int maxTestho){
+		this.maxTestho=maxTestho;
+		}
 	/**
 	 * visszaadja a lepesszamot
 	 * @return lepesszam
@@ -447,7 +449,7 @@ public abstract class Szereplo implements IKarakter{
 		 */
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		if (getTestho()==getMaxTestho()){
-			f.append("A szereplo testhoje maximalis.");
+			f.append("A szereplo testhoje maximalis.\n");
 		}
 		if(getTestho()<getMaxTestho()){
 			setTestho(getTestho()+1);
