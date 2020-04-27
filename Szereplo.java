@@ -323,6 +323,7 @@ public abstract class Szereplo implements IKarakter{
 					mezo.huzzKi(this);
 					if(IsKihuzott()){
 						setKihuzott(false);
+						System.out.println("kihuzott?");
 						break;
 					}
 				}
@@ -420,6 +421,7 @@ public abstract class Szereplo implements IKarakter{
 		this.m.lelep(this);
 		System.out.println("This is it: \n" + mezo.getHoSzint()+"\nThis was it");
 		mezo.ralep(this);
+		System.out.println("Raleptem");
 		if (getjListener() != null) {
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);

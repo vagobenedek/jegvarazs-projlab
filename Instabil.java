@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Instabil extends Jegmezo {
 	/**
@@ -42,9 +44,12 @@ public class Instabil extends Jegmezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Az Instabil mezo atfordult\n");
 		f.close();
-		for (IKarakter szereplo : this.getSzereplok()){
-			System.out.println("atfordul?"+this.getSzereplok());
-
+		System.out.println(this.getSzereplok());
+		for (Iterator<IKarakter> szereplok = this.getSzereplok().iterator(); szereplok.hasNext();){
+			if(this.getSzereplok().isEmpty()){
+				break;
+			}
+			IKarakter szereplo = szereplok.next();
 			szereplo.tesoTeVizbeEstel();
 		}
 	}
@@ -63,8 +68,8 @@ public class Instabil extends Jegmezo {
 		if (this.getTeherBiras()<this.getSzereplok().size()){
 			atfordul();
 		}
-		/*System.out.println("Van meg hely a mezon?");
-		System.out.println("1.: Igen\t2.: Nem");
+		System.out.println("Van meg hely a mezon?");
+		/*System.out.println("1.: Igen\t2.: Nem");
 		//a beolvasasertfelelos eszkoz;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String string = br.readLine();
