@@ -7,6 +7,8 @@ public interface IKarakter {
 	 * @throws IOException
 	 */
 	public void lep(int irany) throws IOException;
+	public void hasznal() throws IOException;
+
 
 	/**
 	 * Hovihar fuggveny
@@ -69,4 +71,10 @@ public interface IKarakter {
 	 * @param m Mezo
 	 */
 	public void addKarakterToMezo(Mezo m);
+
+	void setTestho(int parseInt) throws IOException;
+	void hoAsas(int parseInt) throws IOException;
+	void osszerak() throws IOException;
+	void feltor() throws IOException;
+	void kepessegHasznalat(int parseInt) throws IOException;
 }

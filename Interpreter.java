@@ -83,13 +83,15 @@ public class Interpreter {
         }
         //Eszkimo letrehozasa
         else if (splitted[0].equals("eszkimo")){
-            szereplok.put(splitted[1], new Eszkimo());
-            szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
-            (mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
-            eszkimok.put(splitted[1], new Eszkimo());
-            eszkimok.get(splitted[1]).setM(mezok.get(splitted[2]));
+            //szereplok.put(splitted[1], new Eszkimo());
+            //szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
             ikarakterek.put(splitted[1], new Eszkimo());
             ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
+            //(mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
+            (mezok.get(splitted[2])).addKarakter(ikarakterek.get(splitted[1]));
+            //eszkimok.put(splitted[1], new Eszkimo());
+            //eszkimok.get(splitted[1]).setM(mezok.get(splitted[2]));
+
         }
         //Szereplo lepese
         else if (splitted[0].equals("lep")){
@@ -141,28 +143,33 @@ public class Interpreter {
         }
         //Sarkkutato letrehozasa
         else if (splitted[0].equals("sarkkutato")){
-            szereplok.put(splitted[1], new Sarkkutato());
-            new Vezerlo(szereplok.get(splitted[1]), new Jegesmedve());
-            szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
-            (mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
-            sarkkutatok.put(splitted[1], new Sarkkutato());
-            sarkkutatok.get(splitted[1]).setM(mezok.get(splitted[2]));
+            //szereplok.put(splitted[1], new Sarkkutato());
+            //szereplok.get(splitted[1]).setM(mezok.get(splitted[2]));
             ikarakterek.put(splitted[1], new Sarkkutato());
             ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
+            //new Vezerlo(szereplok.get(splitted[1]), new Jegesmedve());
+            new Vezerlo((Szereplo)ikarakterek.get(splitted[1]), new Jegesmedve());
+            //(mezok.get(splitted[2])).addKarakter(szereplok.get(splitted[1]));
+            (mezok.get(splitted[2])).addKarakter(ikarakterek.get(splitted[1]));
+            sarkkutatok.put(splitted[1], new Sarkkutato());
+            sarkkutatok.get(splitted[1]).setM(mezok.get(splitted[2]));
+
 
         }
         //Jegesmedve letrehozasa
         else if (splitted[0].equals("jegesmedve")){
-            jegesmedvek.put(splitted[1], new Jegesmedve());
-            (mezok.get(splitted[2])).addKarakter(jegesmedvek.get(splitted[1]));
-            jegesmedvek.get(splitted[1]).setM(mezok.get(splitted[2]));
-            mezok.get(splitted[2]).szereplokMeetMedve();
+            //jegesmedvek.put(splitted[1], new Jegesmedve());
+            //jegesmedvek.get(splitted[1]).setM(mezok.get(splitted[2]));
             ikarakterek.put(splitted[1], new Jegesmedve());
             ikarakterek.get(splitted[1]).setM(mezok.get(splitted[2]));
+            //(mezok.get(splitted[2])).addKarakter(jegesmedvek.get(splitted[1]));
+            (mezok.get(splitted[2])).addKarakter(ikarakterek.get(splitted[1]));
+            mezok.get(splitted[2]).szereplokMeetMedve();
         }
         //Testho beallitasa
         else if (splitted[0].equals("settestho")){
-            (szereplok.get(splitted[1])).setTestho(Integer.parseInt(splitted[2]));
+            //(szereplok.get(splitted[1])).setTestho(Integer.parseInt(splitted[2]));
+            (ikarakterek.get(splitted[1])).setTestho(Integer.parseInt(splitted[2]));
         }
         //Elelem letrehozasa
         else if (splitted[0].equals("elelem")){
@@ -210,7 +217,8 @@ public class Interpreter {
         }
         //Hozzárendel egy eszközt a szereplőhöz.
         else if (splitted[0].equals("addeszkoz")){
-            eszkozok.get(splitted[1]).felvesz(szereplok.get(splitted[2]));
+            //eszkozok.get(splitted[1]).felvesz(szereplok.get(splitted[2]));
+            eszkozok.get(splitted[1]).felvesz((Szereplo) ikarakterek.get(splitted[2]));
         }
         //Pisztoly letrehozasa
         else if (splitted[0].equals("pisztoly")){
@@ -235,7 +243,8 @@ public class Interpreter {
         }
         //Alkatrész hozzaadasa
         else if (splitted[0].equals("addalkatresz")){
-            alkatreszek.get(splitted[1]).felvesz(szereplok.get(splitted[2]));
+            //alkatreszek.get(splitted[1]).felvesz(szereplok.get(splitted[2]));
+            alkatreszek.get(splitted[1]).felvesz((Szereplo) ikarakterek.get(splitted[2]));
         }
         //Iglu letrehozasa
         else if (splitted[0].equals("iglu")){
@@ -243,29 +252,35 @@ public class Interpreter {
         }
         //Kepesseghasznalat
         else if (splitted[0].equals("kepesseg")){
-            szereplok.get(splitted[1]).kepessegHasznalat(Integer.parseInt(splitted[2]));
+            //szereplok.get(splitted[1]).kepessegHasznalat(Integer.parseInt(splitted[2]));
+            ikarakterek.get(splitted[1]).kepessegHasznalat(Integer.parseInt(splitted[2]));
         }
         //Targy felvetele
         else if (splitted[0].equals("felvesz")){
-            szereplok.get(splitted[1]).getMezo().targyFelvetele(szereplok.get(splitted[1]));
+            /*szereplok.get(splitted[1]).getMezo().targyFelvetele(szereplok.get(splitted[1]));*/
+            ikarakterek.get(splitted[1]).getMezo().targyFelvetele((Szereplo) ikarakterek.get(splitted[1]));
         }
         //Eszkoz hasznalata
         else if (splitted[0].equals("hasznal")){
             System.out.println("hasznal elott");
-            szereplok.get(splitted[1]).hasznal();
+            //szereplok.get(splitted[1]).hasznal();
+            ikarakterek.get(splitted[1]).hasznal();
             System.out.println("pls work");
         }
         //Alkatreszek osszeszerelese
         else if (splitted[0].equals("osszeszerel")){
-            szereplok.get(splitted[1]).osszerak();
+            //szereplok.get(splitted[1]).osszerak();
+            ikarakterek.get(splitted[1]).osszerak();
         }
         //Asas
         else if (splitted[0].equals("asas")){
-            szereplok.get((splitted[1])).hoAsas(0);
+            //szereplok.get((splitted[1])).hoAsas(0);
+            ikarakterek.get((splitted[1])).hoAsas(0);
         }
         //Mezo feltorese
         else if (splitted[0].equals("feltor")){
-            szereplok.get(splitted[1]).feltor();
+            //szereplok.get(splitted[1]).feltor();
+            ikarakterek.get(splitted[1]).feltor();
         }
         //Hovihar
         else if (splitted[0].equals("hovihar")){

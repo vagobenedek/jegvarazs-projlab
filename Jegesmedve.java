@@ -31,6 +31,11 @@ public class Jegesmedve implements IKarakter {
 		
 	}
 
+	@Override
+	public void hasznal() throws IOException {
+
+	}
+
 	/**
 	 * Listener fuggveny
 	 * @param jListener
@@ -123,6 +128,31 @@ public class Jegesmedve implements IKarakter {
 	public void addKarakterToMezo(Mezo m) {
 		this.setM(m);
 		m.addKarakter(this);
+	}
+
+	@Override
+	public void setTestho(int parseInt) throws IOException {
+
+	}
+
+	@Override
+	public void hoAsas(int parseInt) throws IOException {
+
+	}
+
+	@Override
+	public void osszerak() throws IOException {
+
+	}
+
+	@Override
+	public void feltor() throws IOException {
+
+	}
+
+	@Override
+	public void kepessegHasznalat(int parseInt) throws IOException {
+
 	}
 
 	/**
