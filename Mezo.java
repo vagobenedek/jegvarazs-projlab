@@ -50,7 +50,6 @@ abstract public  class Mezo {
 	 * @param irany int
 	 */
 	public void setSzomszedMezo(Mezo szomszedMezo, int irany) {
-		System.out.println(szomszedMezo +  "-- ITT VAGYOK BASZKI");
 		szomszedMezok[irany] = szomszedMezo;
 		System.out.println(szomszedMezo);
 	}
@@ -430,7 +429,6 @@ abstract public  class Mezo {
 	 * @throws IOException
 	 */
 	public void huzzKi(Szereplo sz) throws IOException {
-		System.out.println(">Mezo.huzzki()");
 		//System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
 		FileWriter output = new FileWriter("./kimenet.txt", true);
 		output.write("Szereplo kihuzasa.\n");

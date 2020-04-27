@@ -265,7 +265,6 @@ public class Interpreter {
             System.out.println("hasznal elott");
             //szereplok.get(splitted[1]).hasznal();
             ikarakterek.get(splitted[1]).hasznal();
-            System.out.println("pls work");
         }
         //Alkatreszek osszeszerelese
         else if (splitted[0].equals("osszeszerel")){

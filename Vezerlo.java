@@ -62,13 +62,13 @@ public class Vezerlo implements JegvarazsListener{
 	 * bizonyos esemenyke bekovetkeztekor
 	 */
 	public void jatekVege() {
-		System.out.println(">Vezerlo.jatekVege()");
+		//System.out.println(">Vezerlo.jatekVege()");
 		System.out.println("A jateknak vege");
-		System.out.println("<Vezerlo.jatekVege()");
+		//System.out.println("<Vezerlo.jatekVege()");
 	}
 	
 	public void kovetkezoSzereplo() {
-		System.out.println(">Vezerlo.kovetkezoSzereplo()");
+		//System.out.println(">Vezerlo.kovetkezoSzereplo()");
 		for(int i=0;i<szereplok.size();i++){
 			if(aktualisSzereplo.equals(szereplok.get(i))){
 				if(i+1==szereplok.size()){
@@ -79,17 +79,15 @@ public class Vezerlo implements JegvarazsListener{
 					setAktualisSzereplo(szereplok.get(i+1));
 			}
 		}
-		System.out.println("<Vezerlo.kovetkezoSzereplo()");
+		//System.out.println("<Vezerlo.kovetkezoSzereplo()");
 	}
 	
 	public void sethoviharSzamlalo(int hovihar_szamlalo) {
-		System.out.println(">Vezerlo.hoviharSzamlalo()");
 		this.hovihar_szamlalo=hovihar_szamlalo;
-		System.out.println("<Vezerlo.hoviharSzamlalo()");
 	}
 	
 	public void hoviharSzamlaloCsokkentes() {
-		System.out.println(">Vezerlo.hoviharSzamlaloCsokkentes()");
+		//System.out.println(">Vezerlo.hoviharSzamlaloCsokkentes()");
 		hovihar_szamlalo -= new Random().nextInt(4) ;
 		if(hovihar_szamlalo==0){
 			try {
@@ -101,7 +99,7 @@ public class Vezerlo implements JegvarazsListener{
 			}
 
 		}
-		System.out.println("<Vezerlo.hoviharSzamlaloCsokkentes()");
+		//System.out.println("<Vezerlo.hoviharSzamlaloCsokkentes()");
 	}
 
 	/**
@@ -114,11 +112,11 @@ public class Vezerlo implements JegvarazsListener{
 	}
 
 	public void lepesekFeltoltese() {
-		System.out.println(">Vezerlo.lepesekFeltoltese()");
+		//System.out.println(">Vezerlo.lepesekFeltoltese()");
 		for (Szereplo szereplo: this.szereplok){
 			szereplo.setLepesszam(4);
 		}
-		System.out.println("<Vezerlo.lepesekFeltoltese()");
+		//System.out.println("<Vezerlo.lepesekFeltoltese()");
 	}
 
 	@Override

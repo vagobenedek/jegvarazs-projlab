@@ -13,7 +13,7 @@ public class Main {
             //Szereplo szereplo = new Eszkimo();
             //SkeletonTesterClass.Test();
             ProtoTester.test(args);
-            System.out.println("Vegeztem gyokerek!!");
+            System.out.println("Vegeztem!!");
             //new Vezerlo(szereplo);
             //szereplo.elsut();
         }
