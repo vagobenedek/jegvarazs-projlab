@@ -149,6 +149,7 @@ public class Interpreter {
             jegesmedvek.put(splitted[1], new Jegesmedve());
             (mezok.get(splitted[2])).addKarakter(jegesmedvek.get(splitted[1]));
             jegesmedvek.get(splitted[1]).setM(mezok.get(splitted[2]));
+            mezok.get(splitted[2]).szereplokMeetMedve();
         }
         //Testho beallitasa
         else if (splitted[0].equals("settestho")){

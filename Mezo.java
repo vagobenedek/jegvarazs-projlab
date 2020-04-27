@@ -446,8 +446,8 @@ abstract public  class Mezo {
 	/**
 	 * Szereplok talalkoznak a medvevel
 	 */
-	public void szereplokMeetMedve(){
-		if(medvetolVedett){
+	public void szereplokMeetMedve() throws IOException {
+		if(!medvetolVedett){
 			for (IKarakter szereplo: szereplok){
 				szereplo.hitByMedve();
 			}
