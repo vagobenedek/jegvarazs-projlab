@@ -44,7 +44,6 @@ public class Instabil extends Jegmezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Az Instabil mezo atfordult\n");
 		f.close();
-		System.out.println(this.getSzereplok());
 		for (Iterator<IKarakter> szereplok = this.getSzereplok().iterator(); szereplok.hasNext();){
 			if(this.getSzereplok().isEmpty()){
 				break;
@@ -68,7 +67,7 @@ public class Instabil extends Jegmezo {
 		if (this.getTeherBiras()<this.getSzereplok().size()){
 			atfordul();
 		}
-		System.out.println("Van meg hely a mezon?");
+		
 		/*System.out.println("1.: Igen\t2.: Nem");
 		//a beolvasasertfelelos eszkoz;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
