@@ -16,6 +16,7 @@ public class Sarkkutato extends Szereplo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Sarkkutato letrejott\n");
 		f.close();
+		setTestho(4);
 		setMaxTestho(4);
 	}
 
@@ -45,7 +46,8 @@ public class Sarkkutato extends Szereplo {
 		f.close();
 		if(getjListener()!=null){
 			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam()-1);
 		}
-		setLepesszam(getLepesszam()-1);
+		
 	}
 }
