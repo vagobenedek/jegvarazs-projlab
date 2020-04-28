@@ -16,6 +16,7 @@ public class Sarkkutato extends Szereplo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Sarkkutato letrejott\n");
 		f.close();
+		setTestho(4);
 		setMaxTestho(4);
 	}
 
@@ -41,10 +42,12 @@ public class Sarkkutato extends Szereplo {
 	public void kepessegHasznalat(int i) throws IOException {
 		getMezo().getSzomszed(i).getTeherBiras();
 		FileWriter f = new FileWriter("./kimenet.txt", true);
-		//f.append("Sarkkutato kepesseg hasznalata sikeres\n");
 		f.append("A szereplo hasznalja a kepesseget.\n");
 		f.close();
-		getjListener().hoviharSzamlaloCsokkentoListener();
-		setLepesszam(getLepesszam()-1);
+		if(getjListener()!=null){
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam()-1);
+		}
+		
 	}
 }

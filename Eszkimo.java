@@ -16,7 +16,6 @@ public class Eszkimo extends Szereplo {
 		f.close();
 		setTestho(5);
 		setMaxTestho(5);
-
 	}
 
 	/**

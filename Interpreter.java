@@ -3,6 +3,9 @@ import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
+/**
+ * Interpreter osztaly
+ */
 public class Interpreter {
     HashMap<String, Mezo> mezok;
     HashMap<String, Stabil> stabilMezok;
@@ -30,6 +33,9 @@ public class Interpreter {
     HashMap<String, Iglu> igluk;
     HashMap<String, IKarakter> ikarakterek;
 
+    /**
+     * Interpreter konstruktor
+     */
     Interpreter(){
         mezok = new HashMap<String, Mezo>();
         szereplok = new HashMap<String, Szereplo>();
@@ -58,6 +64,11 @@ public class Interpreter {
         ikarakterek = new HashMap<String, IKarakter>();
     }
 
+    /**
+     * Fordito fuggveny
+     * @param command
+     * @throws IOException
+     */
     public void Translate(String command) throws IOException {
         String[] splitted = command.split("\\s+");
         //TODO: atalakitani
