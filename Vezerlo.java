@@ -47,7 +47,9 @@ public class Vezerlo implements JegvarazsListener{
 		//beallitjuk az aktualis szereplot
 		aktualisSzereplo = szereplok.get(0);
 	}
-
+	public Palya getPalya(){
+		return palya;
+	}
 	/**
 	 * Vezerlo Proto konstruktora
 	 * @param szereplo: Szereplo
