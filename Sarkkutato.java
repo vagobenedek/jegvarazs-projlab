@@ -40,13 +40,15 @@ public class Sarkkutato extends Szereplo {
 	 */
 	@Override
 	public void kepessegHasznalat(int i) throws IOException {
-		getMezo().getSzomszed(i).getTeherBiras();
-		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("A szereplo hasznalja a kepesseget.\n");
-		f.close();
-		if(getjListener()!=null){
-			getjListener().hoviharSzamlaloCsokkentoListener();
-			setLepesszam(getLepesszam()-1);
+		if(i!=-1) {
+			getMezo().getSzomszed(i).getTeherBiras();
+			FileWriter f = new FileWriter("./kimenet.txt", true);
+			f.append("A szereplo hasznalja a kepesseget.\n");
+			f.close();
+			if (getjListener() != null) {
+				getjListener().hoviharSzamlaloCsokkentoListener();
+				setLepesszam(getLepesszam() - 1);
+			}
 		}
 		
 	}
