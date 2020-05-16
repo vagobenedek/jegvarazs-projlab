@@ -220,7 +220,7 @@ public class ViewJatek extends JComponent implements IDrawable {
         Szereplo sz = vezerlo.getAktualisSzerelo();
         //Lekerdezi a szereplo tulajdonsagait es megjeleníti (testho, lepesszam...stb.)
         //DrawTulajdonsagok(sz.getLepesszam(), sz.getTestho(), sz.getEszkoz(), sz.getAlkatresz());
-        DrawTulajdonsagok(sz);
+        DrawTulajdonsagok();
 
     }
 
@@ -261,7 +261,7 @@ public class ViewJatek extends JComponent implements IDrawable {
     }
     */
      @Override
-    public void DrawTulajdonsagok(Szereplo sz)
+    public void DrawTulajdonsagok()
      {
 
      }
