@@ -1,19 +1,15 @@
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class ViewJatek extends JComponent {
-    HashMap<Mezo,ViewMezo> mezoHashMap;
+public class ViewJatek extends JComponent implements IDrawable {
+    HashMap<ViewMezo, Mezo> mezoHashMap = new HashMap<ViewMezo, Mezo>();
     HashMap<IKarakter,ViewKarakter> karakterHashMap;
     HashMap<ITargy,ViewTargy> targyHashMap;
     private Vezerlo vezerlo;
@@ -27,7 +23,6 @@ public class ViewJatek extends JComponent {
     private static JPanel[] buttons = new JPanel[100];
     public static JFrame frame;
 
-
     public void viewGame() throws IOException {
         frame = new JFrame();
         frame.setTitle("Jegvarazs");
@@ -37,26 +32,14 @@ public class ViewJatek extends JComponent {
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         gamePanel.setLayout(new GridLayout(10,10));
         for(int i = 0; i<100; i++){
-            BufferedImage stabil = null;
-            stabil = ImageIO.read(new File("images/stabil-instabil.png"));
-            BufferedImage finalStabil = stabil;
+            buttons[i] = new JPanel();
+            buttons[i].setBorder(BorderFactory.createLineBorder(Color.black));
 
-            BufferedImage tenger = null;
-            tenger = ImageIO.read(new File("images/tenger.png"));
-            BufferedImage finalTenger = tenger;
-
-            BufferedImage eszkimo = null;
-            eszkimo = ImageIO.read(new File("images/eszkimo.png"));
-            BufferedImage finalEszkimo = eszkimo;
-
-            buttons[i] = new JPanel() {
-                @Override
-                protected void paintComponent(Graphics g) {
-                    super.paintComponent(g);
-                    g.drawImage(finalTenger, 0, 0, null);
-                    g.drawImage(finalEszkimo, 0, 0, null);
-                }
-            };
+            ImageIcon tenger = new ImageIcon(getClass().getResource("images/stabil-instabil.png"));
+            JLabel tengerLabel = new JLabel(tenger);
+            ImageIcon eszkimo = new ImageIcon(getClass().getResource("images/eszkimo.png"));
+            JLabel eszkimoLabel = new JLabel(eszkimo);
+            buttons[i].add(tengerLabel);
             gamePanel.add(buttons[i]);
         }
         gamePanel.setVisible(true);
@@ -133,7 +116,11 @@ public class ViewJatek extends JComponent {
                 catch (Exception ex){
                     ex.printStackTrace();
                 }
-                drawAll();
+                try {
+                    drawAll();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
                 code=e.getKeyChar();
             }
 
@@ -143,16 +130,17 @@ public class ViewJatek extends JComponent {
             }
         });
     }
-    public void addMezoToHashmap(Mezo m, ViewMezo vm) throws IOException {
-        Mezo mezo = new Stabil();
-        ViewMezo viewMezo = new ViewStabil();
-        mezoHashMap = new HashMap<Mezo, ViewMezo>();
+    public void addMezoToHashmap(Mezo m, ViewMezo vm){
+        mezoHashMap = new HashMap<ViewMezo, Mezo>();
         Palya palya = vezerlo.getPalya();
         List<Mezo> mezok = palya.getMezoelemek();
-       /* for (Mezo mezo : mezok) {
+        for (Mezo mezo : mezok) {
             //...
+            if(mezo instanceof Stabil)
+            {
+                mezoHashMap.put(new ViewStabil(), mezo);
+            }
         }
-        */
     }
     public void addKarakterToHashmap(IKarakter k, ViewKarakter vk){
 
@@ -160,7 +148,73 @@ public class ViewJatek extends JComponent {
     public void addTargyToHashmap(ITargy t, ViewTargy vt){
 
     }
-    public void drawAll(){
+    public void drawAll() throws IOException {
+        /*Set<Mezo> setMezok = mezoHashMap.keySet();
+        ArrayList<Mezo> mezok = new ArrayList<Mezo>();
+        mezok.addAll(setMezok);
+
+        for(int i=0; i<mezoHashMap.size(); i++)
+        {
+            DrawMezo();
+            mezoHashMap.get()
+        }
+
+        for (HashMap<Mezo, ViewMezo> m:
+             mezoHashMap) {
+            mezoHashMap
+        }
+        if (!targyHashMap.isEmpty())
+        {
+            DrawTargy();
+        }*/
+
+        for(Map.Entry<ViewMezo, Mezo> m: mezoHashMap.entrySet())
+        {
+            ViewMezo key = m.getKey();
+            Mezo value = m.getValue();
+            DrawMezo();
+
+            mezoHashMap.get(key).isFeltort();
+        }
+
+        //hianyzik tobbi
+
+
+
+    }
+
+    @Override
+    public void DrawMezo() throws IOException {
+
+    }
+
+    @Override
+    public void DrawTargy() {
+        if
+    }
+
+    @Override
+    public void DrawJeg() {
+
+    }
+
+    @Override
+    public void DrawHo() {
+
+    }
+
+    @Override
+    public void DrawIKarakter() {
+
+    }
+
+    @Override
+    public void DrawEpulet() {
+
+    }
+
+    @Override
+    public void DrawTulajdonsagok() {
 
     }
 }
