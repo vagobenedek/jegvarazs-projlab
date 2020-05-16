@@ -9,5 +9,5 @@ public interface IDrawable {
     void DrawHo();
     void DrawIKarakter();
     void DrawEpulet();
-    void DrawTulajdonsagok();
+    void DrawTulajdonsagok(Szereplo sz);
 }

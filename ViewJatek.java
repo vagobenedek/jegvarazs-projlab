@@ -1,17 +1,22 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class ViewJatek extends JComponent implements IDrawable {
     HashMap<ViewMezo, Mezo> mezoHashMap = new HashMap<ViewMezo, Mezo>();
-    HashMap<IKarakter,ViewKarakter> karakterHashMap;
-    HashMap<ITargy,ViewTargy> targyHashMap;
+    HashMap<ViewKarakter,IKarakter> karakterHashMap;
+    HashMap<ViewTargy, ITargy> targyHashMap;
     private Vezerlo vezerlo;
     private char code;
     public ViewJatek() throws IOException {
@@ -32,14 +37,26 @@ public class ViewJatek extends JComponent implements IDrawable {
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         gamePanel.setLayout(new GridLayout(10,10));
         for(int i = 0; i<100; i++){
-            buttons[i] = new JPanel();
-            buttons[i].setBorder(BorderFactory.createLineBorder(Color.black));
+            BufferedImage stabil = null;
+            stabil = ImageIO.read(new File("images/stabil-instabil.png"));
+            BufferedImage finalStabil = stabil;
 
-            ImageIcon tenger = new ImageIcon(getClass().getResource("images/stabil-instabil.png"));
-            JLabel tengerLabel = new JLabel(tenger);
-            ImageIcon eszkimo = new ImageIcon(getClass().getResource("images/eszkimo.png"));
-            JLabel eszkimoLabel = new JLabel(eszkimo);
-            buttons[i].add(tengerLabel);
+            BufferedImage tenger = null;
+            tenger = ImageIO.read(new File("images/tenger.png"));
+            BufferedImage finalTenger = tenger;
+
+            BufferedImage eszkimo = null;
+            eszkimo = ImageIO.read(new File("images/eszkimo.png"));
+            BufferedImage finalEszkimo = eszkimo;
+
+            buttons[i] = new JPanel() {
+                @Override
+                protected void paintComponent(Graphics g) {
+                    super.paintComponent(g);
+                    g.drawImage(finalTenger, 0, 0, null);
+                    g.drawImage(finalEszkimo, 0, 0, null);
+                }
+            };
             gamePanel.add(buttons[i]);
         }
         gamePanel.setVisible(true);
@@ -130,15 +147,17 @@ public class ViewJatek extends JComponent implements IDrawable {
             }
         });
     }
-    public void addMezoToHashmap(Mezo m, ViewMezo vm){
+    public void addMezoToHashmap(Mezo m, ViewMezo vm) throws IOException {
+        Mezo mezo = new Stabil();
+        ViewMezo viewMezo = new ViewStabil();
         mezoHashMap = new HashMap<ViewMezo, Mezo>();
         Palya palya = vezerlo.getPalya();
         List<Mezo> mezok = palya.getMezoelemek();
-        for (Mezo mezo : mezok) {
+        for (Mezo me : mezok) {
             //...
-            if(mezo instanceof Stabil)
+            if(me instanceof Stabil)
             {
-                mezoHashMap.put(new ViewStabil(), mezo);
+                mezoHashMap.put(new ViewStabil(), me);
             }
         }
     }
@@ -148,49 +167,71 @@ public class ViewJatek extends JComponent implements IDrawable {
     public void addTargyToHashmap(ITargy t, ViewTargy vt){
 
     }
+
+    /**
+     * Draw szekvencia
+     * mindent újra kirajzol
+     */
     public void drawAll() throws IOException {
-        /*Set<Mezo> setMezok = mezoHashMap.keySet();
-        ArrayList<Mezo> mezok = new ArrayList<Mezo>();
-        mezok.addAll(setMezok);
-
-        for(int i=0; i<mezoHashMap.size(); i++)
-        {
-            DrawMezo();
-            mezoHashMap.get()
-        }
-
-        for (HashMap<Mezo, ViewMezo> m:
-             mezoHashMap) {
-            mezoHashMap
-        }
-        if (!targyHashMap.isEmpty())
-        {
-            DrawTargy();
-        }*/
 
         for(Map.Entry<ViewMezo, Mezo> m: mezoHashMap.entrySet())
         {
-            ViewMezo key = m.getKey();
-            Mezo value = m.getValue();
+            ViewMezo keyMezo = m.getKey();
+            Mezo valueMezo = m.getValue();
+            //mezoket kirajzolja
             DrawMezo();
 
-            mezoHashMap.get(key).isFeltort();
+            //mezon levo targyakat rajzolja ki
+            if(mezoHashMap.get(keyMezo).getTargy() != null)
+            {
+                DrawTargy();
+            }
+
+            //ha a mezo nincs feltorve kirajzolja a jeget
+            //ha a mezon van ho kirajzolja
+            if(!mezoHashMap.get(keyMezo).isFeltort())
+            {
+                DrawJeg();
+            } else if(mezoHashMap.get(keyMezo).getHoSzint()!=0)
+            {
+                DrawHo();
+            }
+
+            //karakterek kirajzolasa a mezon
+            for(Map.Entry<ViewKarakter, IKarakter> k: karakterHashMap.entrySet())
+            {
+                ViewKarakter keyKarakter = k.getKey();
+                IKarakter valueKarakter = k.getValue();
+                //ha a jelenlegi mezo megegyezik a karakter mezojevel
+                if(mezoHashMap.get(keyMezo) == karakterHashMap.get(keyKarakter).getMezo())
+                {
+                    DrawIKarakter();
+                }
+
+            }
+
+            //ha van a mezon epulet
+            if(mezoHashMap.get(keyMezo).getEpulet() != null)
+            {
+                DrawEpulet();
+            }
         }
 
-        //hianyzik tobbi
-
-
+        Szereplo sz = vezerlo.getAktualisSzerelo();
+        //Lekerdezi a szereplo tulajdonsagait es megjeleníti (testho, lepesszam...stb.)
+        //DrawTulajdonsagok(sz.getLepesszam(), sz.getTestho(), sz.getEszkoz(), sz.getAlkatresz());
+        DrawTulajdonsagok(sz);
 
     }
 
     @Override
-    public void DrawMezo() throws IOException {
+    public void DrawMezo(){
 
     }
 
     @Override
     public void DrawTargy() {
-        if
+        //if
     }
 
     @Override
@@ -213,8 +254,15 @@ public class ViewJatek extends JComponent implements IDrawable {
 
     }
 
+    /*
     @Override
-    public void DrawTulajdonsagok() {
+    public void DrawTulajdonsagok(int lepesszam, int testho, Eszkoz e, Alkatresz a) {
 
     }
+    */
+     @Override
+    public void DrawTulajdonsagok(Szereplo sz)
+     {
+
+     }
 }
