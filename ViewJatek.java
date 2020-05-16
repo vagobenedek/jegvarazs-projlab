@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -26,6 +27,7 @@ public class ViewJatek extends JComponent {
     private static JPanel[] buttons = new JPanel[100];
     public static JFrame frame;
 
+
     public void viewGame() throws IOException {
         frame = new JFrame();
         frame.setTitle("Jegvarazs");
@@ -35,14 +37,26 @@ public class ViewJatek extends JComponent {
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         gamePanel.setLayout(new GridLayout(10,10));
         for(int i = 0; i<100; i++){
-            buttons[i] = new JPanel();
-            buttons[i].setBorder(BorderFactory.createLineBorder(Color.black));
+            BufferedImage stabil = null;
+            stabil = ImageIO.read(new File("images/stabil-instabil.png"));
+            BufferedImage finalStabil = stabil;
 
-            ImageIcon tenger = new ImageIcon(getClass().getResource("images/stabil-instabil.png"));
-            JLabel tengerLabel = new JLabel(tenger);
-            ImageIcon eszkimo = new ImageIcon(getClass().getResource("images/eszkimo.png"));
-            JLabel eszkimoLabel = new JLabel(eszkimo);
-            buttons[i].add(tengerLabel);
+            BufferedImage tenger = null;
+            tenger = ImageIO.read(new File("images/tenger.png"));
+            BufferedImage finalTenger = tenger;
+
+            BufferedImage eszkimo = null;
+            eszkimo = ImageIO.read(new File("images/eszkimo.png"));
+            BufferedImage finalEszkimo = eszkimo;
+
+            buttons[i] = new JPanel() {
+                @Override
+                protected void paintComponent(Graphics g) {
+                    super.paintComponent(g);
+                    g.drawImage(finalTenger, 0, 0, null);
+                    g.drawImage(finalEszkimo, 0, 0, null);
+                }
+            };
             gamePanel.add(buttons[i]);
         }
         gamePanel.setVisible(true);
@@ -129,13 +143,16 @@ public class ViewJatek extends JComponent {
             }
         });
     }
-    public void addMezoToHashmap(Mezo m, ViewMezo vm){
+    public void addMezoToHashmap(Mezo m, ViewMezo vm) throws IOException {
+        Mezo mezo = new Stabil();
+        ViewMezo viewMezo = new ViewStabil();
         mezoHashMap = new HashMap<Mezo, ViewMezo>();
         Palya palya = vezerlo.getPalya();
         List<Mezo> mezok = palya.getMezoelemek();
-        for (Mezo mezo : mezok) {
+       /* for (Mezo mezo : mezok) {
             //...
         }
+        */
     }
     public void addKarakterToHashmap(IKarakter k, ViewKarakter vk){
 
