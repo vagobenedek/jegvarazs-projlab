@@ -6,8 +6,12 @@ import java.util.List;
  * Letrehozza a palyat
  */
 public class Palya {
-	/*private Mezo mezok;*/
 
+	private List<Mezo> mezoelemek;
+
+	public List<Mezo> getMezoelemek() {
+		return mezoelemek;
+	}
 	/**
 	 * Palya letrehozasa
 	 * @param szelesseg int
@@ -21,6 +25,7 @@ public class Palya {
 		f.close();
 		//A JegmezoFactory legyartja, es visszaadja a szamukra szukseges jegmezoket
 		List<Mezo> mezok =  new JegmezoFactory().createJegmezo(szelesseg*magassag);
+		mezoelemek = mezok;
 
 		//A jegmezok elredezese utan, nehany jegtablara egy hovihar segitsegevel haat teszunk
 		for (int i = 0; i != 4; i++){
@@ -40,6 +45,7 @@ public class Palya {
 		for (int i = 0; i != eszkozok.size(); i++){
 			eszkozok.get(i).addEszkozToMezo(mezok.get(i));
 		}
+
 
 	}
 

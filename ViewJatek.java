@@ -1,7 +1,15 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
+
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class ViewJatek extends JComponent {
     HashMap<Mezo,ViewMezo> mezoHashMap;
@@ -9,9 +17,42 @@ public class ViewJatek extends JComponent {
     HashMap<ITargy,ViewTargy> targyHashMap;
     private Vezerlo vezerlo;
     private char code;
-    public ViewJatek(){
+    public ViewJatek() throws IOException {
+        viewGame();
         Init();
     }
+
+    public static JPanel gamePanel;
+    private static JPanel[] buttons = new JPanel[100];
+    public static JFrame frame;
+
+    public void viewGame() throws IOException {
+        frame = new JFrame();
+        frame.setTitle("Jegvarazs");
+        gamePanel = new JPanel();
+        frame.setSize(500,500);
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        gamePanel.setLayout(new GridLayout(10,10));
+        for(int i = 0; i<100; i++){
+            buttons[i] = new JPanel();
+            buttons[i].setBorder(BorderFactory.createLineBorder(Color.black));
+
+            ImageIcon tenger = new ImageIcon(getClass().getResource("images/stabil-instabil.png"));
+            JLabel tengerLabel = new JLabel(tenger);
+            ImageIcon eszkimo = new ImageIcon(getClass().getResource("images/eszkimo.png"));
+            JLabel eszkimoLabel = new JLabel(eszkimo);
+            buttons[i].add(tengerLabel);
+            gamePanel.add(buttons[i]);
+        }
+        gamePanel.setVisible(true);
+        frame.add(gamePanel);
+
+        frame.setVisible(true);
+    }
+
+
+
     public void Init(){
         this.setFocusable(true);
         this.addKeyListener(new KeyListener() {
@@ -89,7 +130,12 @@ public class ViewJatek extends JComponent {
         });
     }
     public void addMezoToHashmap(Mezo m, ViewMezo vm){
-
+        mezoHashMap = new HashMap<Mezo, ViewMezo>();
+        Palya palya = vezerlo.getPalya();
+        List<Mezo> mezok = palya.getMezoelemek();
+        for (Mezo mezo : mezok) {
+            //...
+        }
     }
     public void addKarakterToHashmap(IKarakter k, ViewKarakter vk){
 
