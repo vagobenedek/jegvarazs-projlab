@@ -24,9 +24,9 @@ public class ViewJatek extends JComponent implements IDrawable {
         Init();
     }
 
-    public static JPanel gamePanel;
-    private static JPanel[] buttons = new JPanel[100];
-    public static JFrame frame;
+    public JPanel gamePanel;
+    private JPanel[] buttons = new JPanel[100];
+    public JFrame frame;
 
     public void viewGame() throws IOException {
         frame = new JFrame();
@@ -37,6 +37,7 @@ public class ViewJatek extends JComponent implements IDrawable {
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         gamePanel.setLayout(new GridLayout(10,10));
         for(int i = 0; i<100; i++){
+            /*
             BufferedImage stabil = null;
             stabil = ImageIO.read(new File("images/stabil-instabil.png"));
             BufferedImage finalStabil = stabil;
@@ -48,17 +49,21 @@ public class ViewJatek extends JComponent implements IDrawable {
             BufferedImage eszkimo = null;
             eszkimo = ImageIO.read(new File("images/eszkimo.png"));
             BufferedImage finalEszkimo = eszkimo;
+            */
+            buttons[i] = ViewStabil.DrawMezo(buttons[i]);
+            /*
+                buttons[i] = new JPanel() {
+                    @Override
+                    protected void paintComponent(Graphics g) {
+                        super.paintComponent(g);
+                        g.drawImage(finalTenger, 0, 0, null);
+                        g.drawImage(finalEszkimo, 0, 0, null);
+                    }
+                };
 
-            buttons[i] = new JPanel() {
-                @Override
-                protected void paintComponent(Graphics g) {
-                    super.paintComponent(g);
-                    g.drawImage(finalTenger, 0, 0, null);
-                    g.drawImage(finalEszkimo, 0, 0, null);
-                }
-            };
-            gamePanel.add(buttons[i]);
-        }
+             */
+                gamePanel.add(buttons[i]);
+            }
         gamePanel.setVisible(true);
         frame.add(gamePanel);
 

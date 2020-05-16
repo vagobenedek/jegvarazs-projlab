@@ -4,7 +4,8 @@ import java.io.IOException;
 
 public abstract class ViewMezo implements IDrawable{
     @Override
-    abstract public void DrawMezo() throws IOException;
+    public void DrawMezo() throws IOException {
+    }
     @Override
     public void DrawTargy() {}
     @Override
