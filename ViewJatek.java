@@ -26,7 +26,7 @@ public class ViewJatek extends Canvas implements IDrawable {
         Init();
     }
     public ViewJatek(ViewController vc) throws IOException {
-        vezerlo = new Vezerlo(0,0,0);
+        vezerlo = new Vezerlo(vc.getMeret(),vc.getSSzam(),vc.getESzam());
         palya = vezerlo.getPalya();
         List<Mezo> mezok = palya.getMezoelemek();
         ViewMezo vm = null;
