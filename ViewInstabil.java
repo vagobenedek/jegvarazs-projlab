@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class ViewInstabil extends ViewMezo {
     @Override
-    public void DrawMezo(Graphics g, Integer id) throws IOException {
+    public void DrawMezo(Graphics2D g, Integer id) throws IOException {
 
     }
     @Override

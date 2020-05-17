@@ -35,12 +35,10 @@ public class ViewStabil extends ViewMezo{
         }
     */
     @Override
-    public void DrawMezo(Graphics g, Integer id) throws IOException {
-        BufferedImage stabil = null;
-        stabil = ImageIO.read(new File("images/tenger.png"));
-        BufferedImage finalStabil = stabil;
+    public void DrawMezo(Graphics2D g, Integer id) throws IOException {
+        BufferedImage stabil = ImageIO.read(new File("images/tenger.png"));
 
-        g.drawImage(finalStabil, 0, 0, null);
+        g.drawImage(stabil, 0, 0, null);
     }
 
     @Override

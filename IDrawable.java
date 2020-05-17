@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public interface IDrawable {
     //JPanel DrawMezo() throws IOException;
-    public void DrawMezo(Graphics g, Integer id) throws IOException;
+    public void DrawMezo(Graphics2D g, Integer id) throws IOException;
     /*
     void DrawMezo() throws IOException;
      */

@@ -3,7 +3,7 @@ import java.awt.*;
 
 public abstract class ViewKarakter implements IDrawable{
 
-    public void DrawMezo(Graphics g, Integer id){
+    public void DrawMezo(Graphics2D g, Integer id){
     }
 
     @Override

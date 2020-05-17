@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public abstract class ViewTargy implements IDrawable{
-    public void DrawMezo(Graphics g, Integer id){
+    public void DrawMezo(Graphics2D g, Integer id){
     }
 
     @Override

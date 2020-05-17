@@ -5,7 +5,7 @@ import java.io.IOException;
 public abstract class ViewMezo implements IDrawable{
 
     @Override
-    public abstract void DrawMezo(Graphics g, Integer id) throws IOException;
+    public abstract void DrawMezo(Graphics2D g, Integer id) throws IOException;
     /*
     @Override
     public void DrawMezo() throws IOException  {}

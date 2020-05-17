@@ -134,10 +134,15 @@ public class ViewJatek extends JComponent implements IDrawable {
     public void paint(Graphics g){
         super.paint(g);
         ViewMezo vm = new ViewStabil();
-        try {
-            vm.DrawMezo(g, 1);
-        } catch (IOException e) {
-            e.printStackTrace();
+        for (int i = 0; i<mezoHashMap.size();i++) {
+            double position = Math.sqrt(mezoHashMap.size());
+            Graphics2D g2 = (Graphics2D)g.create();
+            g2.translate(i%position*50,i/position*50);
+            try {
+                vm.DrawMezo(g2, 1);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -337,7 +342,7 @@ public class ViewJatek extends JComponent implements IDrawable {
 
 
     @Override
-    public void DrawMezo(Graphics g, Integer id) throws IOException {
+    public void DrawMezo(Graphics2D g, Integer id) throws IOException {
 
     }
 
