@@ -15,11 +15,11 @@ public class ViewTenger extends ViewMezo {
 
     @Override
     public void DrawJeg(Graphics2D g) {
-
     }
 
     @Override
-    public void DrawHo(Graphics2D g) {
-
+    public void DrawHo(Graphics2D g) throws IOException{
+        BufferedImage img = ImageIO.read(new File("images/ho.png"));
+        g.drawImage(img, 0, 0, null);
     }
 }

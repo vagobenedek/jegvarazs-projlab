@@ -42,7 +42,6 @@ public class ViewStabil extends ViewMezo{
 
     @Override
     public void DrawJeg(Graphics2D g) {
-
     }
 
     @Override

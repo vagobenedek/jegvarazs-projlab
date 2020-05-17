@@ -14,9 +14,9 @@ public class ViewController extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Jegvarazs");
 		
-		//vm = new ViewMenu(this);
-		//add(vm);
-		CreateUjJatek();
+		vm = new ViewMenu(this);
+		add(vm);
+		//CreateUjJatek();
 	}
 	
     public static void main(String args[]){
@@ -30,7 +30,9 @@ public class ViewController extends JFrame{
 
     public void CreateUjJatek() throws IOException {
         new ViewJatek(this);
-        //this.remove(vm);
+        vm.setVisible(false);
+        this.setSize(meret*50+20, meret*50+30);
+        this.remove(vm);
     }
 
 	public int getMeret() {

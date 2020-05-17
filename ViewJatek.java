@@ -29,6 +29,7 @@ public class ViewJatek extends JComponent{
         vezerlo = new Vezerlo(vc.getMeret(),vc.getSSzam(),vc.getESzam());
         palya = vezerlo.getPalya();
         vc.add(this);
+        this.setSize(vc.getMeret()*50, vc.getMeret()*50+30);
         List<Mezo> mezok = palya.getMezoelemek();
         ViewMezo vm = null;
         ViewKarakter vk = null;
