@@ -281,7 +281,7 @@ public class ViewJatek extends JComponent{
             Mezo valueMezo = m.getValue();
             double position = Math.sqrt(mezoHashMap.size());
             Graphics2D g2 = (Graphics2D)g.create();
-            g2.translate(number%position*50,number/position*50);
+            g2.translate(number%position*50,((int)(number/position)*50));
             try {
                 keyMezo.DrawMezo(g2);
             } catch (IOException e) {

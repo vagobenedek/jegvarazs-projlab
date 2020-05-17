@@ -14,7 +14,8 @@ public class ViewInstabil extends ViewMezo {
     }
     @Override
     public void DrawJeg(Graphics2D g){
-
+        g.setColor(new Color(0,0,255,128));
+        g.fillRect(0,0,50,50);
     }
 
     @Override
