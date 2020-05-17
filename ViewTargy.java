@@ -22,5 +22,5 @@ public abstract class ViewTargy implements IDrawable{
     public void DrawEpulet(Graphics2D g) throws IOException {}
 
     @Override
-    public void DrawTulajdonsagok(Graphics2D g) {}
+    public void DrawTulajdonsagok(Graphics2D g) throws IOException{}
 }

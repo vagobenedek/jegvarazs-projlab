@@ -13,5 +13,5 @@ public interface IDrawable {
     void DrawHo(Graphics2D g) throws IOException;
     void DrawIKarakter(Graphics2D g) throws IOException;
     void DrawEpulet(Graphics2D g) throws IOException;
-    void DrawTulajdonsagok(Graphics2D g);
+    void DrawTulajdonsagok(Graphics2D g)throws IOException;
 }

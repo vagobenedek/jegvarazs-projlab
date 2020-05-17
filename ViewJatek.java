@@ -21,11 +21,13 @@ public class ViewJatek extends JComponent{
     private Vezerlo vezerlo;
     private Palya palya;
     private char code;
+    private ViewController vc;
     public ViewJatek() throws IOException {
         viewGame();
         Init();
     }
     public ViewJatek(ViewController vc) throws IOException {
+        this.vc = vc;
         vezerlo = new Vezerlo(vc.getMeret(),vc.getSSzam(),vc.getESzam());
         palya = vezerlo.getPalya();
         vc.add(this);
@@ -167,37 +169,37 @@ public class ViewJatek extends JComponent{
                         case 'w':
                             //ha lenyomtuk a k billentyut, akkor a kepesseget hasznaltuk
                             if(code=='k'){
-                                szereplo.kepessegHasznalat(0);
+                                szereplo.kepessegHasznalat(1);
                             }
                             else
-                            szereplo.lep(0);
+                            szereplo.lep(1);
                             break;
                         //a szereplo lep s gomb hatasara 1 iranyba
                         case 's':
                             if(code=='k'){
                                 //ha lenyomtuk a k billentyut, akkor a kepesseget hasznaltuk
-                            szereplo.kepessegHasznalat(1);
+                            szereplo.kepessegHasznalat(0);
                             }
                             else
-                                szereplo.lep(1);
+                                szereplo.lep(0);
                             break;
                         //a szereplo lep a gomb hatasara 3 iranyba
                         case 'a':
                             if(code=='k'){
                                 //ha lenyomtuk a k billentyut, akkor a kepesseget hasznaltuk
-                            szereplo.kepessegHasznalat(3);
+                            szereplo.kepessegHasznalat(2);
                             }
                             else
-                                szereplo.lep(3);
+                                szereplo.lep(2);
                             break;
                         //a szereplo lep d gomb hatasara 2 iranyba
                         case 'd':
                             if(code=='k'){
                                 //ha lenyomtuk a k billentyut, akkor a kepesseget hasznaltuk
-                                szereplo.kepessegHasznalat(2);
+                                szereplo.kepessegHasznalat(3);
                             }
                             else
-                                szereplo.lep(2);
+                                szereplo.lep(3);
                             break;
                             // a szereplo az iglu kepesseget hasznalja
                         case 'i':
@@ -247,7 +249,7 @@ public class ViewJatek extends JComponent{
 
             }
         });
-        this.updateUI();
+        this.repaint();
     }
     public void addMezoToHashmap(Mezo m, ViewMezo vm) throws IOException {
         Mezo mezo = new Stabil();

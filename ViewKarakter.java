@@ -23,5 +23,5 @@ public abstract class ViewKarakter implements IDrawable{
     public void DrawEpulet(Graphics2D g) {}
 
     @Override
-    abstract public void DrawTulajdonsagok(Graphics2D g);
+    abstract public void DrawTulajdonsagok(Graphics2D g) throws IOException;
 }

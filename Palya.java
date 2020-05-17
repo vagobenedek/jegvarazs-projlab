@@ -26,7 +26,7 @@ public class Palya {
 		f.append("Palya letrejott\n");
 		f.close();
 		//A JegmezoFactory legyartja, es visszaadja a szamukra szukseges jegmezoket
-
+		meret = szelesseg;
 		List<Mezo> mezok =  new MezoFactory().createMezo(szelesseg*magassag, karakterek.size());
 		mezoelemek = mezok;
 

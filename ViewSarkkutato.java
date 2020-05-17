@@ -12,7 +12,8 @@ public class ViewSarkkutato extends ViewKarakter{
     }
 
     @Override
-    public void DrawTulajdonsagok(Graphics2D g){
-
+    public void DrawTulajdonsagok(Graphics2D g)throws IOException{
+        BufferedImage sarkkutato = ImageIO.read(new File("images/kijelolo.png"));
+        g.drawImage(sarkkutato, 0, 0, null);
     }
 }
