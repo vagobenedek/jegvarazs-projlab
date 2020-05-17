@@ -48,7 +48,6 @@ public class ViewJatek extends Canvas implements IDrawable {
                 if (nev.equals("Sarkkutato")) vk = new ViewSarkkutato();
                 else if (nev.equals("Eszkimo")) vk = new ViewEszkimo();
                 else if (nev.equals("Jegesmedve")) vk = new ViewJegesmedve();
-                vk = new ViewSarkkutato();
                 karakterHashMap.put(vk, k);
             }
             ITargy t = m.getTargy();
@@ -62,7 +61,6 @@ public class ViewJatek extends Canvas implements IDrawable {
             else if (nev.equals("Pisztoly")) vt = new ViewPisztoly();
             else if (nev.equals("Sator")) vt = new ViewSator();
             else if (nev.equals("Torekenylapat")) vt = new ViewTorekenyLapat();
-            vt = new ViewElelem();
             targyHashMap.put(vt, t);
         }
         viewGame();
