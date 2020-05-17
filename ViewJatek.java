@@ -1,3 +1,5 @@
+import javafx.collections.ArrayChangeListener;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -7,6 +9,7 @@ import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,8 +21,28 @@ public class ViewJatek extends JComponent implements IDrawable {
     HashMap<ViewKarakter,IKarakter> karakterHashMap;
     HashMap<ViewTargy, ITargy> targyHashMap;
     private Vezerlo vezerlo;
+    private Palya palya;
     private char code;
     public ViewJatek() throws IOException {
+        viewGame();
+        Init();
+    }
+    public ViewJatek(ViewController vc) throws IOException {
+        vezerlo = new Vezerlo("");
+        palya = vezerlo.getPalya();
+        List<Mezo> mezok = palya.getMezoelemek();
+        ViewMezo vm;
+        for (int i = 0; i != mezok.size(); i++){
+            Mezo m = mezok.get(i);
+            vm = new ViewTenger();                        //THAT IS NO GOOD, WILL BE EDITED LATER :(
+            mezoHashMap.put(vm, m);
+            List<IKarakter> karakterek = m.getKarakterek();
+            for (int j = 0; j!= karakterek.size(); j ++){
+                // TO BE CONTINUED !! 
+            }
+
+        }
+
         viewGame();
         Init();
     }
