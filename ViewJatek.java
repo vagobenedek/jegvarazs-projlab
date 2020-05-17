@@ -277,9 +277,13 @@ public class ViewJatek extends JComponent{
     public void drawAll(Graphics g) throws IOException {
 
         int number = 0;
-        for(Map.Entry<ViewMezo, Mezo> m: mezoHashMap.entrySet()) {
-            ViewMezo keyMezo = m.getKey();
-            Mezo valueMezo = m.getValue();
+        for(Mezo valueMezo:vezerlo.getPalya().getMezoelemek()) {
+            ViewMezo keyMezo = null;
+            for (Map.Entry<ViewMezo, Mezo> m: mezoHashMap.entrySet()){
+                if (valueMezo.equals(m.getValue())){
+                    keyMezo=m.getKey();
+                }
+            }
             System.out.println(number + ": " + valueMezo.getNev() + "-- This is this" );
             double position = Math.sqrt(mezoHashMap.size());
             Graphics2D g2 = (Graphics2D)g.create();
