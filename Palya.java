@@ -1,6 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Letrehozza a palyat
@@ -8,6 +9,7 @@ import java.util.List;
 public class Palya {
 
 	private List<Mezo> mezoelemek;
+	private int meret;
 
 	public List<Mezo> getMezoelemek() {
 		return mezoelemek;
@@ -36,15 +38,15 @@ public class Palya {
 		Majd elhelyezzuk oket a palya megyes mezoin
 		 */
 		for (int i = 0; i != karakterek.size(); i++){
-			karakterek.get(i).addKarakterToMezo(mezok.get(i));
+			karakterek.get(i).addKarakterToMezo(mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1));
 		}
 		List<Alkatresz> alkatreszek =  new AlkatreszFactory().createAlkatresz(3);
 		for (int i = 0; i != alkatreszek.size(); i++){
-			alkatreszek.get(i).addAlkatreszToMezo(mezok.get(i));
+			alkatreszek.get(i).addAlkatreszToMezo(mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1));
 		}
 		List<Eszkoz> eszkozok =  new EszkozFactory().createEszkoz(3);
 		for (int i = 0; i != eszkozok.size(); i++){
-			eszkozok.get(i).addEszkozToMezo(mezok.get(i));
+			eszkozok.get(i).addEszkozToMezo(mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1));
 		}
 
 
@@ -55,6 +57,6 @@ public class Palya {
 	 * @throws IOException
 	 */
 	public void hovihar() throws IOException {
-		
+		mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1).hovihar();
 	}
 }
