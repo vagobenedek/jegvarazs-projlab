@@ -14,7 +14,7 @@ import java.util.Map;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class ViewJatek extends JComponent implements IDrawable {
+public class ViewJatek extends JComponent{
     HashMap<ViewMezo, Mezo> mezoHashMap = new HashMap<ViewMezo, Mezo>();
     HashMap<ViewKarakter,IKarakter> karakterHashMap= new HashMap<ViewKarakter,IKarakter>();
     HashMap<ViewTargy, ITargy> targyHashMap = new HashMap<ViewTargy, ITargy>();
@@ -133,16 +133,11 @@ public class ViewJatek extends JComponent implements IDrawable {
     @Override
     public void paint(Graphics g){
         super.paint(g);
-        ViewMezo vm = new ViewStabil();
-        for (int i = 0; i<mezoHashMap.size();i++) {
-            double position = Math.sqrt(mezoHashMap.size());
-            Graphics2D g2 = (Graphics2D)g.create();
-            g2.translate(i%position*50,i/position*50);
-            try {
-                vm.DrawMezo(g2);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        try{
+            drawAll(g);
+        }
+        catch (Exception e){
+            e.printStackTrace();
         }
     }
 
@@ -237,12 +232,7 @@ public class ViewJatek extends JComponent implements IDrawable {
                 catch (Exception ex){
                     ex.printStackTrace();
                 }
-                try {
-                    // ujrarajzolunk a billentyu lenyomas utan
-                    drawAll();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
+
 
             }
             // a gomb felengedesenek felulirasa
@@ -282,29 +272,43 @@ public class ViewJatek extends JComponent implements IDrawable {
      * Draw szekvencia
      * mindent újra kirajzol
      */
-    public void drawAll() throws IOException {
+    public void drawAll(Graphics g) throws IOException {
 
+        int number = 0;
         for(Map.Entry<ViewMezo, Mezo> m: mezoHashMap.entrySet())
         {
             ViewMezo keyMezo = m.getKey();
             Mezo valueMezo = m.getValue();
+            double position = Math.sqrt(mezoHashMap.size());
+            Graphics2D g2 = (Graphics2D)g.create();
+            g2.translate(number%position*50,number/position*50);
+            try {
+                keyMezo.DrawMezo(g2);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             //mezoket kirajzolja
-            DrawMezo();
 
             //mezon levo targyakat rajzolja ki
-            if(mezoHashMap.get(keyMezo).getTargy() != null)
+            ITargy targy = mezoHashMap.get(keyMezo).getTargy();
+            if( targy != null)
             {
-                DrawTargy();
+                for (Map.Entry<ViewTargy,ITargy> t:targyHashMap.entrySet()) {
+                    if (t.getValue().equals(targy)) {
+                        t.getKey().DrawTargy(g2);
+                    }
+                }
             }
 
             //ha a mezo nincs feltorve kirajzolja a jeget
             //ha a mezon van ho kirajzolja
             if(!mezoHashMap.get(keyMezo).isFeltort())
             {
-                DrawJeg();
-            } else if(mezoHashMap.get(keyMezo).getHoSzint()!=0)
+                keyMezo.DrawJeg(g2);
+            }
+            if(mezoHashMap.get(keyMezo).getHoSzint()!=0)
             {
-                DrawHo();
+                keyMezo.DrawHo(g2);
             }
 
             //karakterek kirajzolasa a mezon
@@ -315,71 +319,34 @@ public class ViewJatek extends JComponent implements IDrawable {
                 //ha a jelenlegi mezo megegyezik a karakter mezojevel
                 if(mezoHashMap.get(keyMezo) == karakterHashMap.get(keyKarakter).getMezo())
                 {
-                    DrawIKarakter();
+                    keyKarakter.DrawIKarakter(g2);
                 }
 
             }
-
+            IEpulet epulet = mezoHashMap.get(keyMezo).getEpulet();
             //ha van a mezon epulet
-            if(mezoHashMap.get(keyMezo).getEpulet() != null)
+            if(epulet != null)
             {
-                DrawEpulet();
+                if (mezoHashMap.get(keyMezo).isMedvetolVedett()&&!mezoHashMap.get(keyMezo).isHovihartolVedett())
+                    new ViewSator().DrawEpulet(g2);
+                else if (mezoHashMap.get(keyMezo).isMedvetolVedett()&&mezoHashMap.get(keyMezo).isHovihartolVedett())
+                    new ViewIglu().DrawEpulet(g2);
             }
+            number++;
         }
-
+        Graphics2D g3 = (Graphics2D)g.create();
+        g3.translate(0,this.getHeight());
         ////////////MEG KELL MEG IRNI////////////
         Szereplo sz = vezerlo.getAktualisSzerelo();
         //Lekerdezi a szereplo tulajdonsagait es megjeleníti (testho, lepesszam...stb.)
         //DrawTulajdonsagok(sz.getLepesszam(), sz.getTestho(), sz.getEszkoz(), sz.getAlkatresz());
-        DrawTulajdonsagok();
+        for(Map.Entry<ViewKarakter, IKarakter> k: karakterHashMap.entrySet()) {
+            ViewKarakter keyKarakter = k.getKey();
+            IKarakter valueKarakter = k.getValue();
+            if (sz.equals(valueKarakter)) {
+                keyKarakter.DrawTulajdonsagok(g3);
+            }
+        }
         ////////////MEG KELL MEG IRNI VEGE////////////
-
     }
-
-    public static JPanel DrawMezo(){
-        return null;
-    }
-
-
-    @Override
-    public void DrawMezo(Graphics2D g, Integer id) throws IOException {
-
-    }
-
-    @Override
-    public void DrawTargy() {
-        //if
-    }
-
-    @Override
-    public void DrawJeg() {
-
-    }
-
-    @Override
-    public void DrawHo() {
-
-    }
-
-    @Override
-    public void DrawIKarakter() {
-
-    }
-
-    @Override
-    public void DrawEpulet() {
-
-    }
-
-    /*
-    @Override
-    public void DrawTulajdonsagok(int lepesszam, int testho, Eszkoz e, Alkatresz a) {
-
-    }
-    */
-     @Override
-    public void DrawTulajdonsagok()
-     {
-
-     }
 }
