@@ -133,7 +133,7 @@ public class ViewMenu extends JComponent {
 		sarkkutatoPanel.add(sarkkutatoPlus);
 		text3.setEditable(false);
 		text3.setHorizontalAlignment(SwingConstants.CENTER);
-		text3.setText(Integer.toString(view.getESzam()));
+		text3.setText(Integer.toString(view.getSSzam()));
 		add(sarkkutatoPanel);
 		add(Box.createRigidArea(new Dimension(0, 20)));
 		/**
@@ -176,8 +176,10 @@ public class ViewMenu extends JComponent {
 	final class MeretMinusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("meretMinus")) {
-				view.setMeret(view.getMeret() - 1);
-				text1.setText(Integer.toString(view.getMeret()));
+				if(view.getMeret()-1 > 4) {
+					view.setMeret(view.getMeret() - 1);
+					text1.setText(Integer.toString(view.getMeret()));
+				}
 			}
 		}
 	}
@@ -190,8 +192,10 @@ public class ViewMenu extends JComponent {
 	final class MeretPlusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("meretPlus")) {
-				view.setMeret(view.getMeret() + 1);
-				text1.setText(Integer.toString(view.getMeret()));
+				if(view.getMeret()+1 < 16) {
+					view.setMeret(view.getMeret() + 1);
+					text1.setText(Integer.toString(view.getMeret()));
+				}
 			}
 		}
 	}
@@ -204,8 +208,10 @@ public class ViewMenu extends JComponent {
 	final class EszkimoMinusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("eszkimoMinus")) {
-				view.setESzam(view.getESzam() - 1);
-				text2.setText(Integer.toString(view.getESzam()));
+				if(view.getSSzam() + (view.getESzam()-1) > 2 && view.getESzam()-1 >= 0) {
+					view.setESzam(view.getESzam() - 1);
+					text2.setText(Integer.toString(view.getESzam()));
+				}
 			}
 		}
 	}
@@ -218,8 +224,10 @@ public class ViewMenu extends JComponent {
 	final class EszkimoPlusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("eszkimoPlus")) {
-				view.setESzam(view.getESzam() + 1);
-				text2.setText(Integer.toString(view.getESzam()));
+				if(view.getSSzam() + (view.getESzam()+1) < 11) {
+					view.setESzam(view.getESzam() + 1);
+					text2.setText(Integer.toString(view.getESzam()));
+				}
 			}
 		}
 	}
@@ -232,8 +240,10 @@ public class ViewMenu extends JComponent {
 	final class SarkkutatoMinusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("sarkkutatoMinus")) {
-				view.setSSzam(view.getSSzam() - 1);
-				text3.setText(Integer.toString(view.getSSzam()));
+				if(view.getESzam() + (view.getSSzam()-1) > 2 && view.getSSzam()-1 >= 0) {
+					view.setSSzam(view.getSSzam() - 1);
+					text3.setText(Integer.toString(view.getSSzam()));
+				}
 			}
 		}
 	}
@@ -246,8 +256,10 @@ public class ViewMenu extends JComponent {
 	final class SarkkutatoPlusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("sarkkutatoPlus")) {
-				view.setSSzam(view.getSSzam() + 1);
-				text3.setText(Integer.toString(view.getSSzam()));
+				if(view.getESzam() + (view.getSSzam()+1) < 11) {
+					view.setSSzam(view.getSSzam() + 1);
+					text3.setText(Integer.toString(view.getSSzam()));
+				}
 			}
 		}
 	}
