@@ -15,7 +15,7 @@ public abstract class ViewMezo implements IDrawable{
     @Override
     abstract public void DrawJeg(Graphics2D g);
     @Override
-    abstract public void DrawHo(Graphics2D g);
+    abstract public void DrawHo(Graphics2D g) throws IOException;
     @Override
     public void DrawIKarakter(Graphics2D g) {}
     @Override
