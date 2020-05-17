@@ -29,16 +29,32 @@ public class MezoFactory {
 		int row = (int) Math.sqrt(i);
 		for (int j = 0; j != i ; j++){
 			if (j < row){
-				mezok.add(new Tenger());
+				Tenger t = new Tenger();
+				for(int x = 0; x != 4; x++){
+					t.setSzomszedMezo(null,x);
+				}
+				mezok.add(t);
 			}
 			else if (Math.floor(j/row) == row-1) {
-				mezok.add(new Tenger());
+				Tenger t = new Tenger();
+				for(int x = 0; x != 4; x++){
+					t.setSzomszedMezo(null,x);
+				}
+				mezok.add(t);
 			}
 			else if (j%row == row-1){
-				mezok.add(new Tenger());
+				Tenger t = new Tenger();
+				for(int x = 0; x != 4; x++){
+					t.setSzomszedMezo(null,x);
+				}
+				mezok.add(t);
 			}
 			else if (j%row == 0) {
-				mezok.add(new Tenger());
+				Tenger t = new Tenger();
+				for(int x = 0; x != 4; x++){
+					t.setSzomszedMezo(null,x);
+				}
+				mezok.add(t);
 			}
 			else {
 				int p = new Random().nextInt(10);
@@ -58,6 +74,7 @@ public class MezoFactory {
 			if (j%row == 0){
 				System.out.println(j+"36");
 				mezok.get(j).setSzomszedMezo(mezok.get(j+1), 3);
+
 			}
 			if (j < row){
 				System.out.println(j+"46");

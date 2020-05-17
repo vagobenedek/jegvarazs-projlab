@@ -312,7 +312,7 @@ abstract public  class Mezo {
 		f.append("Szomszed lekerdezese.\n");
 		f.close();
 	
-		if(szomszedMezok[irany].equals(null))
+		if(szomszedMezok[irany] == null)
 			return null;
 		//ebben az esetben nem kell semmit visszaadni
 		return szomszedMezok[irany];
