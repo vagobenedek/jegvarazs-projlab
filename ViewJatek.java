@@ -1,4 +1,3 @@
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -30,18 +29,42 @@ public class ViewJatek extends Canvas implements IDrawable {
         vezerlo = new Vezerlo("");
         palya = vezerlo.getPalya();
         List<Mezo> mezok = palya.getMezoelemek();
-        ViewMezo vm;
+        ViewMezo vm = null;
+        ViewKarakter vk = null;
+        ViewTargy vt = null;
+        String nev;
         for (int i = 0; i != mezok.size(); i++){
             Mezo m = mezok.get(i);
-            vm = new ViewTenger();                        //THAT IS NO GOOD, WILL BE EDITED LATER :(
+            nev = m.getNev();
+            if (nev.equals("Instabil")) vm = new ViewInstabil();
+            else if (nev.equals("Stabil")) vm = new ViewStabil();
+            else if (nev.equals("Lyuk")) vm = new ViewLyuk();
+            else if (nev.equals("Tenger")) vm = new ViewTenger();
             mezoHashMap.put(vm, m);
             List<IKarakter> karakterek = m.getKarakterek();
             for (int j = 0; j!= karakterek.size(); j ++){
-                // TO BE CONTINUED !!
+                IKarakter k = karakterek.get(j);
+                nev = k.getNev();
+                if (nev.equals("Sarkkutato")) vk = new ViewSarkkutato();
+                else if (nev.equals("Eszkimo")) vk = new ViewEszkimo();
+                else if (nev.equals("Jegesmedve")) vk = new ViewJegesmedve();
+                vk = new ViewSarkkutato();
+                karakterHashMap.put(vk, k);
             }
-
+            ITargy t = m.getTargy();
+            nev = t.getNev();
+            if (nev.equals("Buvarruha")) vt = new ViewBuvarruha();
+            else if (nev.equals("Elelem")) vt = new ViewElelem();
+            else if (nev.equals("Jelzofeny")) vt = new ViewJelzofeny();
+            else if (nev.equals("Kotel")) vt = new ViewKotel();
+            else if (nev.equals("Lapat")) vt = new ViewLapat();
+            else if (nev.equals("Patron")) vt = new ViewPatron();
+            else if (nev.equals("Pisztoly")) vt = new ViewPisztoly();
+            else if (nev.equals("Sator")) vt = new ViewSator();
+            else if (nev.equals("Torekenylapat")) vt = new ViewTorekenyLapat();
+            vt = new ViewElelem();
+            targyHashMap.put(vt, t);
         }
-
         viewGame();
         Init();
     }

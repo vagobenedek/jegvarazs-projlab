@@ -6,6 +6,11 @@ import java.io.IOException;
  * Jegmezobol szarmazik le
  */
 public class Stabil extends Jegmezo {
+	@Override
+	public String getNev() {
+		return "Stabil";
+	}
+
 	/**
 	 * Konstukrot
 	 * @throws IOException

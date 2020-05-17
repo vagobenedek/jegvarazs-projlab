@@ -9,6 +9,8 @@ public class Lyuk extends Instabil {
     /**
      * Konstuktor
      */
+    @Override
+    public String getNev(){return "Lyuk";}
     public Lyuk() throws IOException {
         super();
         FileWriter f = new FileWriter("./kimenet.txt", true);

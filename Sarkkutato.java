@@ -32,6 +32,11 @@ public class Sarkkutato extends Szereplo {
 		f.close();
 	}
 
+	@Override
+	public String getNev() {
+		return "Sarkkutato";
+	}
+
 	/**
 	 * kepesseg hasznalata fuggveny: csokken a lepesszama
 	 * es hasznalja a kepesseget a szereplo

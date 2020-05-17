@@ -28,22 +28,21 @@ public class Vezerlo implements JegvarazsListener{
 
 	/**
 	 * Vezerlo Skeleton konstruktora
-	 * @param s: String
 	 * @throws IOException
 	 */
-	public Vezerlo(String s) throws IOException {
+	public Vezerlo(int meret, int sarkkutato, int eszkimo) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Vezerlo letrejott.\n");
 		f.close();
 		jegesmedve = new Jegesmedve();
-		List<IKarakter> karakterek =  new SzereploFactory().createSzereplo(3);
+		List<IKarakter> karakterek =  new SzereploFactory().createSzereplo(eszkimo, sarkkutato);
 		for (int i = 0; i != karakterek.size(); i++){
 			szereplok.add((Szereplo) karakterek.get(i));
 		}
 		//hozzaadja a jegesmedvet a karakterek listajahoz
 		karakterek.add(jegesmedve);
 		//Letrehozzuk a palyat, ami konstruktoraban gondoskodik az egyeb elemek letrehozasarol
-		palya=new Palya(10,10, karakterek);
+		palya=new Palya(meret, meret, karakterek);
 		//beallitjuk az aktualis szereplot
 		aktualisSzereplo = szereplok.get(0);
 	}

@@ -40,6 +40,11 @@ public class Jegesmedve implements IKarakter {
 
 	}
 
+	@Override
+	public String getNev() {
+		return "Jegesmedve";
+	}
+
 	/**
 	 * Listener fuggveny
 	 * @param jListener

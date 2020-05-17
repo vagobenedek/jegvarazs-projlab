@@ -20,6 +20,7 @@ public class Buvarruha extends Eszkoz {
 	 * Nev lekerdezo fuggveny
 	 * @return String
 	 */
+	@Override
 	public String getNev(){
 		return "Buvarruha";
 	}

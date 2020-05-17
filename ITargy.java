@@ -11,4 +11,5 @@ public interface ITargy {
 	 * @throws IOException
 	 */
 	void felvesz(Szereplo sz) throws IOException;
+	String getNev();
 }

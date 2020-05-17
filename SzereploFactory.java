@@ -24,13 +24,16 @@ public class SzereploFactory {
 	 * @return
 	 * @throws IOException
 	 */
-	public List<IKarakter>  createSzereplo(int n) throws IOException {
+	public List<IKarakter>  createSzereplo(int eszkimo, int sarkkutato) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("SzereploFactory letrehozta a karaktereket\n");
 		f.close();
 		List<IKarakter> karakterek = new ArrayList<>();
-		for (int i = 0; i != n; i++){
+		for (int i = 0; i != eszkimo; i++){
 			karakterek.add(new Eszkimo());
+		}
+		for (int i = 0; i!= sarkkutato;i++){
+			karakterek.add(new Sarkkutato());
 		}
 		return karakterek;
 	}

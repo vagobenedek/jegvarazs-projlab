@@ -84,6 +84,7 @@ abstract public  class Mezo {
 	 * Mezo konstuktor
 	 * @throws IOException
 	 */
+	public abstract String getNev();
 	public Mezo() throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo letrejott\n");

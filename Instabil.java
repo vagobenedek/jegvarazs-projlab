@@ -29,6 +29,11 @@ public class Instabil extends Jegmezo {
 		f.close();
 	}
 
+	@Override
+	public String getNev() {
+		return "Instabil";
+	}
+
 	/**
 	 * Konstruktor
 	 * @throws IOException

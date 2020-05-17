@@ -29,6 +29,7 @@ public class Lapat extends Eszkoz {
 		f.close();
 		Sz.hoAsas(1);
 	}
+	@Override
 	public String getNev(){
 		return "Lapat";
 	}

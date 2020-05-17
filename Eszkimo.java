@@ -29,6 +29,11 @@ public class Eszkimo extends Szereplo {
 		f.close();
 	}
 
+	@Override
+	public String getNev() {
+		return "Eszkimo";
+	}
+
 	/**
 	 * Eszkimo kepesseghasznalata fuggveny, hasznalja a kepesseget es csokken a lepesszama
 	 * @param i int

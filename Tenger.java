@@ -6,6 +6,11 @@ import java.io.IOException;
  * Mezobol szarmazik le
  */
 public class Tenger extends Mezo {
+	@Override
+	public String getNev() {
+		return "Tenger";
+	}
+
 	/**
 	 * Konstruktor
 	 * @throws IOException

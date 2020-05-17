@@ -17,7 +17,7 @@ public class Elelem extends Eszkoz implements ITargy {
 		f.close();
 
 	}
-
+	@Override
 	public String getNev(){
 		return "Elelem";
 	}

@@ -10,7 +10,8 @@ public class TorekenyLapat extends Lapat {
 	 * TorekenyLapat elettartama
 	 */
 	private int elettartam;
-	
+	@Override
+	public String getNev(){return "Torekenylapat";}
 	/**
 	 * A torekeny lapat konstruktora.
 	 * Beallitja az elettartam attributum erteket 3-ra.

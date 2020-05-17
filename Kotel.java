@@ -16,6 +16,7 @@ public class Kotel extends Eszkoz {
 		f.append("Kotel letrejott\n");
 		f.close();
 	}
+	@Override
 	public String getNev(){
 		return "Kotel";
 	}

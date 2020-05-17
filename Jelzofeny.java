@@ -26,6 +26,7 @@ public class Jelzofeny extends Alkatresz {
         f.append("Jelzofeny letrejott.\n");
         f.close();
     }
+    @Override
     public String getNev(){
         return "Jelzofeny";
     }

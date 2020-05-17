@@ -13,7 +13,7 @@ public interface IKarakter {
 	 */
 	public void lep(int irany) throws IOException;
 	public void hasznal() throws IOException;
-
+	public String getNev();
 
 	/**
 	 * Hovihar fuggveny

@@ -23,6 +23,7 @@ public class Sator extends Eszkoz implements IEpulet {
 		this.mezo=mezo;
 		// TODO Auto-generated constructor stub
 	}
+	@Override
 	public String getNev(){
 		return "Sator";
 	}
