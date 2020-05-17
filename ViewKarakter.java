@@ -1,9 +1,9 @@
 import javax.swing.*;
+import java.awt.*;
 
 public abstract class ViewKarakter implements IDrawable{
 
-    public static JPanel DrawMezo(){
-        return null;
+    public void DrawMezo(Graphics g, Integer id){
     }
 
     @Override

@@ -1,10 +1,12 @@
 import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
 
 public class ViewLyuk extends ViewMezo{
-    public static JPanel DrawMezo(){
-        return null;
-    }
+    @Override
+    public void DrawMezo(Graphics g, Integer id) throws IOException {
 
+    }
     @Override
     public void DrawJeg() {
 

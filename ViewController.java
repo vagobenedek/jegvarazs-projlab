@@ -7,13 +7,16 @@ public class ViewController extends JFrame{
 	private int meret = 10;
 	private int eSzam = 2;
 	private int sSzam = 1;
-	
-	public ViewController() {
+	ViewMenu vm;
+
+
+	public ViewController() throws IOException {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Jegvarazs");
 		
-		ViewMenu vm = new ViewMenu(this);
-		add(vm);
+		//vm = new ViewMenu(this);
+		//add(vm);
+		CreateUjJatek();
 	}
 	
     public static void main(String args[]){
@@ -27,6 +30,7 @@ public class ViewController extends JFrame{
 
     public void CreateUjJatek() throws IOException {
         new ViewJatek(this);
+        //this.remove(vm);
     }
 
 	public int getMeret() {

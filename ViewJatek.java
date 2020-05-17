@@ -14,7 +14,7 @@ import java.util.Map;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class ViewJatek extends Canvas implements IDrawable {
+public class ViewJatek extends JComponent implements IDrawable {
     HashMap<ViewMezo, Mezo> mezoHashMap = new HashMap<ViewMezo, Mezo>();
     HashMap<ViewKarakter,IKarakter> karakterHashMap= new HashMap<ViewKarakter,IKarakter>();
     HashMap<ViewTargy, ITargy> targyHashMap = new HashMap<ViewTargy, ITargy>();
@@ -28,6 +28,7 @@ public class ViewJatek extends Canvas implements IDrawable {
     public ViewJatek(ViewController vc) throws IOException {
         vezerlo = new Vezerlo(vc.getMeret(),vc.getSSzam(),vc.getESzam());
         palya = vezerlo.getPalya();
+        vc.add(this);
         List<Mezo> mezok = palya.getMezoelemek();
         ViewMezo vm = null;
         ViewKarakter vk = null;
@@ -67,38 +68,17 @@ public class ViewJatek extends Canvas implements IDrawable {
                 targyHashMap.put(vt, t);
             }
         }
+        this.setVisible(true);
         viewGame();
         Init();
     }
 
-    public JPanel gamePanel;
-    private JPanel[] buttons = new JPanel[100];
-    public JFrame frame;
-
     public void viewGame() throws IOException {
-        frame = new JFrame();
-        frame.setTitle("Jegvarazs");
-        gamePanel = new JPanel();
-        frame.setSize(500,500);
-        frame.setResizable(false);
-        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-
-        Canvas canvas = new Canvas();
-        canvas.setSize(500,500);
-        canvas.setBackground(Color.red);
-        ViewStabil s = new ViewStabil();
-        s.rajzol(canvas);
-
-        frame.add(canvas);
-
-        gamePanel.setLayout(new GridLayout(10,10));
 
         HashMap<ViewMezo, Mezo> stabilmezok = new HashMap<>();
         Mezo stabil = new Stabil();
         ViewStabil viewStabil = new ViewStabil();
         stabilmezok.put(viewStabil, stabil);
-
 
         for(Map.Entry<ViewMezo, Mezo> m: stabilmezok.entrySet()) {
             ViewMezo keyMezo = m.getKey();
@@ -117,10 +97,8 @@ public class ViewJatek extends Canvas implements IDrawable {
         for(int i = 0; i<100; i++){
 
             if (azonosito.get(i) instanceof Stabil){
-                buttons[i] = ViewStabil.DrawMezo(buttons[i]);
-                buttons[i] = ViewEszkimo.DrawEszkimo(buttons[i]);
+                ViewStabil vs = new ViewStabil();
             } else {
-                buttons[i] = new JPanel();
             }
 
 
@@ -149,14 +127,19 @@ public class ViewJatek extends Canvas implements IDrawable {
                 };
 
              */
-                gamePanel.add(buttons[i]);
             }
-        gamePanel.setVisible(true);
-        frame.add(gamePanel);
-
-        frame.setVisible(true);
     }
 
+    @Override
+    public void paint(Graphics g){
+        super.paint(g);
+        ViewMezo vm = new ViewStabil();
+        try {
+            vm.DrawMezo(g, 1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /**
      * A billentyuesemenyek hozzadasa a komponenshez
@@ -350,6 +333,12 @@ public class ViewJatek extends Canvas implements IDrawable {
 
     public static JPanel DrawMezo(){
         return null;
+    }
+
+
+    @Override
+    public void DrawMezo(Graphics g, Integer id) throws IOException {
+
     }
 
     @Override

@@ -1,8 +1,8 @@
 import javax.swing.*;
+import java.awt.*;
 
 public abstract class ViewTargy implements IDrawable{
-    public static JPanel DrawMezo(){
-        return null;
+    public void DrawMezo(Graphics g, Integer id){
     }
 
     @Override
