@@ -1,4 +1,3 @@
-//import javafx.collections.ArrayChangeListener;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
