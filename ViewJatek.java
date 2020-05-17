@@ -139,7 +139,7 @@ public class ViewJatek extends JComponent implements IDrawable {
             Graphics2D g2 = (Graphics2D)g.create();
             g2.translate(i%position*50,i/position*50);
             try {
-                vm.DrawMezo(g2, 1);
+                vm.DrawMezo(g2);
             } catch (IOException e) {
                 e.printStackTrace();
             }

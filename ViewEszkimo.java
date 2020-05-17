@@ -7,10 +7,11 @@ import java.io.IOException;
 
 public class ViewEszkimo extends ViewKarakter{
     @Override
-    public void DrawIKarakter() {
-
+    public void DrawIKarakter(Graphics2D g) throws IOException {
+        BufferedImage img = ImageIO.read(new File("images/eszkimo.png"));
+        g.drawImage(img, 0, 0, null);
     }
-
+/*
     public static JPanel DrawEszkimo(JPanel button) throws IOException {
         BufferedImage stabil = null;
         stabil = ImageIO.read(new File("images/eszkimo.png"));
@@ -24,10 +25,10 @@ public class ViewEszkimo extends ViewKarakter{
             }
         };
         return panel;
-    }
+    }*/
 
     @Override
-    public void DrawTulajdonsagok() {
+    public void DrawTulajdonsagok(Graphics2D g) {
 
     }
 }
