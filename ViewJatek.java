@@ -16,7 +16,7 @@ import java.util.Map;
 
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
-public class ViewJatek extends JComponent implements IDrawable {
+public class ViewJatek extends Canvas implements IDrawable {
     HashMap<ViewMezo, Mezo> mezoHashMap = new HashMap<ViewMezo, Mezo>();
     HashMap<ViewKarakter,IKarakter> karakterHashMap;
     HashMap<ViewTargy, ITargy> targyHashMap;
@@ -58,8 +58,48 @@ public class ViewJatek extends JComponent implements IDrawable {
         frame.setSize(500,500);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+
+        Canvas canvas = new Canvas();
+        canvas.setSize(500,500);
+        canvas.setBackground(Color.red);
+        ViewStabil s = new ViewStabil();
+        s.rajzol(canvas);
+
+        frame.add(canvas);
+
         gamePanel.setLayout(new GridLayout(10,10));
+
+        HashMap<ViewMezo, Mezo> stabilmezok = new HashMap<>();
+        Mezo stabil = new Stabil();
+        ViewStabil viewStabil = new ViewStabil();
+        stabilmezok.put(viewStabil, stabil);
+
+
+        for(Map.Entry<ViewMezo, Mezo> m: stabilmezok.entrySet()) {
+            ViewMezo keyMezo = m.getKey();
+            Mezo valueMezo = m.getValue();
+        }
+
+        HashMap<Integer, Mezo> azonosito = new HashMap<>();
+        azonosito.put(1, stabil);
+
+        for(Map.Entry<Integer, Mezo> m: azonosito.entrySet()) {
+            Integer keyMezo = m.getKey();
+            Mezo valueMezo = m.getValue();
+        }
+
+
         for(int i = 0; i<100; i++){
+
+            if (azonosito.get(i) instanceof Stabil){
+                buttons[i] = ViewStabil.DrawMezo(buttons[i]);
+                buttons[i] = ViewEszkimo.DrawEszkimo(buttons[i]);
+            } else {
+                buttons[i] = new JPanel();
+            }
+
+
             /*
             BufferedImage stabil = null;
             stabil = ImageIO.read(new File("images/stabil-instabil.png"));
@@ -73,7 +113,7 @@ public class ViewJatek extends JComponent implements IDrawable {
             eszkimo = ImageIO.read(new File("images/eszkimo.png"));
             BufferedImage finalEszkimo = eszkimo;
             */
-            buttons[i] = ViewStabil.DrawMezo(buttons[i]);
+            //buttons[i] = ViewMezo.DrawMezo(buttons[i]);
             /*
                 buttons[i] = new JPanel() {
                     @Override
@@ -254,9 +294,8 @@ public class ViewJatek extends JComponent implements IDrawable {
 
     }
 
-    @Override
-    public void DrawMezo(){
-
+    public static JPanel DrawMezo(){
+        return null;
     }
 
     @Override

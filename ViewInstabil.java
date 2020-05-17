@@ -1,7 +1,8 @@
-public class ViewInstabil extends ViewMezo {
-    @Override
-    public void DrawMezo() {
+import javax.swing.*;
 
+public class ViewInstabil extends ViewMezo {
+    public static JPanel DrawMezo(){
+        return null;
     }
 
     @Override
