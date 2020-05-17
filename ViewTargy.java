@@ -7,7 +7,7 @@ public abstract class ViewTargy implements IDrawable{
     }
 
     @Override
-    abstract public void DrawTargy(Graphics2D g) throws IOException;
+    public abstract void DrawTargy(Graphics2D g) throws IOException;
 
     @Override
     public void DrawJeg(Graphics2D g) {}

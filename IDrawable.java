@@ -10,7 +10,7 @@ public interface IDrawable {
      */
     void DrawTargy(Graphics2D g) throws IOException;
     void DrawJeg(Graphics2D g);
-    void DrawHo(Graphics2D g);
+    void DrawHo(Graphics2D g) throws IOException;
     void DrawIKarakter(Graphics2D g) throws IOException;
     void DrawEpulet(Graphics2D g) throws IOException;
     void DrawTulajdonsagok(Graphics2D g);
