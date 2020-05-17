@@ -27,6 +27,7 @@ public class Palya {
 		f.close();
 		//A JegmezoFactory legyartja, es visszaadja a szamukra szukseges jegmezoket
 
+		meret = szelesseg;
 		List<Mezo> mezok =  new MezoFactory().createMezo(szelesseg*magassag, karakterek.size());
 		mezoelemek = mezok;
 
@@ -48,8 +49,6 @@ public class Palya {
 		for (int i = 0; i != eszkozok.size(); i++){
 			eszkozok.get(i).addEszkozToMezo(mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1));
 		}
-
-
 	}
 
 	/**
