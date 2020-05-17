@@ -38,7 +38,7 @@ public class ViewJatek extends JComponent implements IDrawable {
             mezoHashMap.put(vm, m);
             List<IKarakter> karakterek = m.getKarakterek();
             for (int j = 0; j!= karakterek.size(); j ++){
-                // TO BE CONTINUED !! 
+                // TO BE CONTINUED !!
             }
 
         }
