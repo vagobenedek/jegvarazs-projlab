@@ -135,7 +135,7 @@ public class ViewJatek extends JComponent{
 
     @Override
     public void paint(Graphics g){
-        super.paint(g);
+        //super.paint(g);
         try{
             drawAll(g);
         }
@@ -235,8 +235,7 @@ public class ViewJatek extends JComponent{
                 catch (Exception ex){
                     ex.printStackTrace();
                 }
-
-
+                repaint();
             }
             // a gomb felengedesenek felulirasa
             @Override
@@ -249,7 +248,11 @@ public class ViewJatek extends JComponent{
 
             }
         });
-        this.repaint();
+
+    }
+    @Override
+    public void paintComponent(Graphics g){
+        paint(g);
     }
     public void addMezoToHashmap(Mezo m, ViewMezo vm) throws IOException {
         Mezo mezo = new Stabil();
