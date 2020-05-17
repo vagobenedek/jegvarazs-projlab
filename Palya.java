@@ -36,7 +36,7 @@ public class Palya {
 		Majd elhelyezzuk oket a palya megyes mezoin
 		 */
 		for (int i = 0; i != karakterek.size(); i++){
-			karakterek.get(i).addKarakterToMezo(mezok.get(i+33));
+			karakterek.get(i).addKarakterToMezo(mezok.get(i));
 		}
 		List<Alkatresz> alkatreszek =  new AlkatreszFactory().createAlkatresz(3);
 		for (int i = 0; i != alkatreszek.size(); i++){

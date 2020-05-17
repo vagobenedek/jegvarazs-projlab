@@ -277,10 +277,10 @@ public class ViewJatek extends JComponent{
     public void drawAll(Graphics g) throws IOException {
 
         int number = 0;
-        for(Map.Entry<ViewMezo, Mezo> m: mezoHashMap.entrySet())
-        {
+        for(Map.Entry<ViewMezo, Mezo> m: mezoHashMap.entrySet()) {
             ViewMezo keyMezo = m.getKey();
             Mezo valueMezo = m.getValue();
+            System.out.println(number + ": " + valueMezo.getNev() + "-- This is this" );
             double position = Math.sqrt(mezoHashMap.size());
             Graphics2D g2 = (Graphics2D)g.create();
             g2.translate(number%position*50,((int)(number/position)*50));

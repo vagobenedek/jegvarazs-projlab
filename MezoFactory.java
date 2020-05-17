@@ -40,15 +40,17 @@ public class MezoFactory {
 			else if (j%row == 0) {
 				mezok.add(new Tenger());
 			}
-			int p = new Random().nextInt(10);
-			if (p <= 5){
-				mezok.add(new Stabil());
-			}
-			else if (p <= 8){
-				mezok.add(new Instabil(new Random().nextInt(numberOfPlayers)));
-			}
-			else if (p == 9){
-				mezok.add(new Lyuk());
+			else {
+				int p = new Random().nextInt(10);
+				if (p <= 5){
+					mezok.add(new Stabil());
+				}
+				else if (p <= 8){
+					mezok.add(new Instabil(new Random().nextInt(numberOfPlayers)));
+				}
+				else if (p == 9){
+					mezok.add(new Lyuk());
+				}
 			}
 		}
 		for (int j = 0; j != i; j++) {

@@ -67,7 +67,6 @@ public abstract class Szereplo implements IKarakter{
 		f.close();
 		this.testho = testho;
 		this.maxTestho = testho;
-
 	}
 
 	/**
