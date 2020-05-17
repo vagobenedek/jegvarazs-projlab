@@ -25,9 +25,7 @@ public class Palya {
 		f.close();
 		//A JegmezoFactory legyartja, es visszaadja a szamukra szukseges jegmezoket
 
-		System.out.println("szaisafn"
-		);
-		List<Mezo> mezok =  new MezoFactory().createMezo(szelesseg*magassag);
+		List<Mezo> mezok =  new MezoFactory().createMezo(szelesseg*magassag, karakterek.size());
 		mezoelemek = mezok;
 
 		//A jegmezok elredezese utan, nehany jegtablara egy hovihar segitsegevel haat teszunk

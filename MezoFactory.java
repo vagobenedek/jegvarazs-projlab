@@ -2,6 +2,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Mezoket hozza letre
@@ -23,52 +24,55 @@ public class MezoFactory {
 	 * @return mezok
 	 * @throws IOException
 	 */
-	public List<Mezo> createMezo(int i) throws IOException {
+	public List<Mezo> createMezo(int i, int numberOfPlayers) throws IOException {
 		List<Mezo> mezok = new ArrayList<>();
 		int row = (int) Math.sqrt(i);
 		for (int j = 0; j != i ; j++){
-			mezok.add(new Stabil());
-
+			if (j < row){
+				mezok.add(new Tenger());
+			}
+			else if (Math.floor(j/row) == row-1) {
+				mezok.add(new Tenger());
+			}
+			else if (j%row == row-1){
+				mezok.add(new Tenger());
+			}
+			else if (j%row == 0) {
+				mezok.add(new Tenger());
+			}
+			int p = new Random().nextInt(10);
+			if (p <= 5){
+				mezok.add(new Stabil());
+			}
+			else if (p <= 8){
+				mezok.add(new Instabil(new Random().nextInt(numberOfPlayers)));
+			}
+			else if (p == 9){
+				mezok.add(new Lyuk());
+			}
 		}
 		for (int j = 0; j != i; j++) {
+
 			if (j%row == 0){
 				System.out.println(j+"36");
-				Tenger t = new Tenger();
-				mezok.add(t);
-				mezok.get(j).setSzomszedMezo(t, 3);
-			}
-			else {
-				System.out.println(j+"42");
 				mezok.get(j).setSzomszedMezo(mezok.get(j+1), 3);
 			}
 			if (j < row){
 				System.out.println(j+"46");
-				Tenger t = new Tenger();
-				mezok.add(t);
-				mezok.get(j).setSzomszedMezo(t, 0);
-			}
-			else {
-				System.out.println(j+"52");
 				mezok.get(j).setSzomszedMezo(mezok.get(j+row), 0);
 			}
 			if (Math.floor(j/row) == row-1){
 				System.out.println(j+"56");
-				Tenger t = new Tenger();
-				mezok.add(t);
-				mezok.get(j).setSzomszedMezo(t, 1);
-			}
-			else {
-				System.out.println(j+"62");
-				mezok.get(j).setSzomszedMezo(mezok.get(j+row), 1);
+				mezok.get(j).setSzomszedMezo(mezok.get(j-row), 1);
 			}
 			if (j%row == row-1){
 				System.out.println(j+"66");
-				Tenger t = new Tenger();
-				mezok.add(t);
-				mezok.get(j).setSzomszedMezo(t, 2);
+				mezok.get(j).setSzomszedMezo(mezok.get(j-1), 2);
 			}
-			else {
-				System.out.println(j+"72");
+			if ( !(j%row == 0) && !(j < row)  && ! (Math.floor(j/row) == row-1) && !(j%row == row-1) ) {
+				mezok.get(j).setSzomszedMezo(mezok.get(j+1), 3);
+				mezok.get(j).setSzomszedMezo(mezok.get(j+row), 0);
+				mezok.get(j).setSzomszedMezo(mezok.get(j-row), 1);
 				mezok.get(j).setSzomszedMezo(mezok.get(j-1), 2);
 			}
 		}

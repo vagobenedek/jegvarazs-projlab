@@ -16,14 +16,12 @@ public class Instabil extends Jegmezo {
 
 	/**
 	 * Konstruktor
-	 * @param t Targy
-	 * @param hoSzint int
 	 * @param teherbiras int
-	 * @param vedett boolean
 	 * @throws IOException
 	 */
-	public Instabil(ITargy t, int hoSzint,int teherbiras, boolean vedett) throws IOException {
+	public Instabil(int teherbiras) throws IOException {
 		//super(t,e,hoSzint,teherbiras,vedett);
+		setTeherbiras(teherbiras);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Instabil letrejott\n");
 		f.close();
