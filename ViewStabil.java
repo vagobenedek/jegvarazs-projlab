@@ -34,39 +34,18 @@ public class ViewStabil extends ViewMezo{
             g.drawImage(finalStabil, 0, 0, null);
         }
     */
-
-    public static void rajzol(Canvas c) throws IOException {
-        BufferedImage stabil = null;
-        stabil = ImageIO.read(new File("images/tenger.png"));
-        BufferedImage finalStabil = stabil;
-        c.getGraphics().drawImage(stabil, 0,0, null);
-        Graphics g = c.getGraphics();
-        g.drawImage(stabil, 20, 20, null);
-        c.update(g);
-    }
-
-    public static JPanel DrawMezo(JPanel button) throws IOException {
-        BufferedImage stabil = null;
-        stabil = ImageIO.read(new File("images/tenger.png"));
-        BufferedImage finalStabil = stabil;
-
-        JPanel panel = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.drawImage(finalStabil, 0, 0, null);
-            }
-        };
-        return panel;
+    @Override
+    public void DrawMezo(Graphics2D g) throws IOException {
+        BufferedImage stabil = ImageIO.read(new File("images/stabil-instabil.png"));
+        g.drawImage(stabil, 0, 0, null);
     }
 
     @Override
-    public void DrawJeg() {
-
+    public void DrawJeg(Graphics2D g) {
     }
 
     @Override
-    public void DrawHo() {
+    public void DrawHo(Graphics2D g) {
 
     }
 }

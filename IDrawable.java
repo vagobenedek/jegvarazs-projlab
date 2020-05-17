@@ -4,17 +4,14 @@ import java.io.IOException;
 
 public interface IDrawable {
     //JPanel DrawMezo() throws IOException;
-    static JPanel DrawMezo(JPanel button) throws IOException {
-        return null;
-    }
-
+    void DrawMezo(Graphics2D g) throws IOException;
     /*
     void DrawMezo() throws IOException;
      */
-    void DrawTargy();
-    void DrawJeg();
-    void DrawHo();
-    void DrawIKarakter();
-    void DrawEpulet();
-    void DrawTulajdonsagok();
+    void DrawTargy(Graphics2D g) throws IOException;
+    void DrawJeg(Graphics2D g);
+    void DrawHo(Graphics2D g) throws IOException;
+    void DrawIKarakter(Graphics2D g) throws IOException;
+    void DrawEpulet(Graphics2D g) throws IOException;
+    void DrawTulajdonsagok(Graphics2D g);
 }

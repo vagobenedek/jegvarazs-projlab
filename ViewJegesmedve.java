@@ -1,11 +1,18 @@
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
 public class ViewJegesmedve extends ViewKarakter{
     @Override
-    public void DrawIKarakter() {
-
+    public void DrawIKarakter(Graphics2D g) throws IOException {
+        BufferedImage img = ImageIO.read(new File("images/jegesmedve.png"));
+        g.drawImage(img, 0, 0, null);
     }
 
     @Override
-    public void DrawTulajdonsagok() {
+    public void DrawTulajdonsagok(Graphics2D g) {
 
     }
 }

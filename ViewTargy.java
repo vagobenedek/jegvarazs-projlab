@@ -1,25 +1,26 @@
 import javax.swing.*;
+import java.awt.*;
+import java.io.IOException;
 
 public abstract class ViewTargy implements IDrawable{
-    public static JPanel DrawMezo(){
-        return null;
+    public void DrawMezo(Graphics2D g){
     }
 
     @Override
-    abstract public void DrawTargy();
+    public abstract void DrawTargy(Graphics2D g) throws IOException;
 
     @Override
-    public void DrawJeg() {}
+    public void DrawJeg(Graphics2D g) {}
 
     @Override
-    public void DrawHo() {}
+    public void DrawHo(Graphics2D g) {}
 
     @Override
-    public void DrawIKarakter() {}
+    public void DrawIKarakter(Graphics2D g) {}
 
     @Override
-    public void DrawEpulet() {}
+    public void DrawEpulet(Graphics2D g) throws IOException {}
 
     @Override
-    public void DrawTulajdonsagok() {}
+    public void DrawTulajdonsagok(Graphics2D g) {}
 }

@@ -24,7 +24,10 @@ public class Palya {
 		f.append("Palya letrejott\n");
 		f.close();
 		//A JegmezoFactory legyartja, es visszaadja a szamukra szukseges jegmezoket
-		List<Mezo> mezok =  new JegmezoFactory().createJegmezo(szelesseg*magassag);
+
+		System.out.println("szaisafn"
+		);
+		List<Mezo> mezok =  new MezoFactory().createMezo(szelesseg*magassag);
 		mezoelemek = mezok;
 
 		//A jegmezok elredezese utan, nehany jegtablara egy hovihar segitsegevel haat teszunk
@@ -35,7 +38,7 @@ public class Palya {
 		Majd elhelyezzuk oket a palya megyes mezoin
 		 */
 		for (int i = 0; i != karakterek.size(); i++){
-			karakterek.get(i).addKarakterToMezo(mezok.get(i));
+			karakterek.get(i).addKarakterToMezo(mezok.get(i+33));
 		}
 		List<Alkatresz> alkatreszek =  new AlkatreszFactory().createAlkatresz(3);
 		for (int i = 0; i != alkatreszek.size(); i++){
