@@ -1,4 +1,4 @@
-import javafx.collections.ArrayChangeListener;
+//import javafx.collections.ArrayChangeListener;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -134,67 +134,91 @@ public class ViewJatek extends Canvas implements IDrawable {
     }
 
 
-
+    /**
+     * A billentyuesemenyek hozzadasa a komponenshez
+     */
     public void Init(){
+        //erre a fokuszra helyezzuk a fokuszt
         this.setFocusable(true);
+        //a Listenerek hozzaadasa
         this.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
 
             }
-
+            //gomb lenyomasok felulirasa
             @Override
             public void keyPressed(KeyEvent e) {
+                // az aktualis szereplo elerese
                 Szereplo szereplo = vezerlo.getAktualisSzerelo();
 
                 try {
+                    //szetvalasztjuk a lenyomott billentyu
                     switch (e.getKeyChar()) {
+                        //a szereplo lep w gomb hatasara 0 iranyba
                         case 'w':
+                            //ha lenyomtuk a k billentyut, akkor a kepesseget hasznaltuk
                             if(code=='k'){
                                 szereplo.kepessegHasznalat(0);
                             }
                             else
                             szereplo.lep(0);
                             break;
+                        //a szereplo lep s gomb hatasara 1 iranyba
                         case 's':
                             if(code=='k'){
+                                //ha lenyomtuk a k billentyut, akkor a kepesseget hasznaltuk
                             szereplo.kepessegHasznalat(1);
                             }
                             else
                                 szereplo.lep(1);
                             break;
+                        //a szereplo lep a gomb hatasara 3 iranyba
                         case 'a':
                             if(code=='k'){
+                                //ha lenyomtuk a k billentyut, akkor a kepesseget hasznaltuk
                             szereplo.kepessegHasznalat(3);
                             }
                             else
                                 szereplo.lep(3);
                             break;
+                        //a szereplo lep d gomb hatasara 2 iranyba
                         case 'd':
                             if(code=='k'){
+                                //ha lenyomtuk a k billentyut, akkor a kepesseget hasznaltuk
                                 szereplo.kepessegHasznalat(2);
                             }
                             else
                                 szereplo.lep(2);
                             break;
+                            // a szereplo az iglu kepesseget hasznalja
                         case 'i':
                             if(code=='k'){
                             szereplo.kepessegHasznalat(-1);
                             }
                             break;
+                        case 'k':
+                            code=e.getKeyChar();
+                            break;
+                            //a szereplo az eszkozet hasznalja a h billentyu eseten
                         case 'h':szereplo.hasznal();
                             break;
+                        //a szereplo az eszkozet felveszi az f billentyu eseten
                         case 'f':szereplo.felvesz();
                             break;
+                        //a szereplo az mezot feltori a b billentyu eseten
                         case 'b':szereplo.feltor();
                             break;
+                        //a szereplo a havat assa az x billentyu eseten (lapat nelkul)
                         case 'x':szereplo.hoAsas(0);
                             break;
+                        //a szereplo a havat assa az y billentyu eseten lapattal
                         case 'y':
-                            if(szereplo.getEszkoz().getNev().equals("Lapat")) {
+                            if(szereplo.getEszkoz()!=null||szereplo.getEszkoz().getNev().equals("Lapat")) {
                             szereplo.hoAsas(1);
                             }
                             break;
+                            // a kovetkezo szereplore lepunk a passzolassal
                         case 'p':vezerlo.kovetkezoSzereplo();
                     }
                 }
@@ -202,15 +226,21 @@ public class ViewJatek extends Canvas implements IDrawable {
                     ex.printStackTrace();
                 }
                 try {
+                    // ujrarajzolunk a billentyu lenyomas utan
                     drawAll();
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 }
-                code=e.getKeyChar();
-            }
 
+            }
+            // a gomb felengedesenek felulirasa
             @Override
             public void keyReleased(KeyEvent e) {
+                // ha elengedjuk a k gombot utana nem hasznalhatjuk a kepesseget
+                // uj erteket adunk a code valtozonak, olyat amit nem hasznalunk
+                if (code == 'k'){
+                    code = '_';
+                }
 
             }
         });
