@@ -348,6 +348,10 @@ abstract public  class Mezo {
 		f.close();
 	}
 
+	public List<IKarakter> getKarakterek(){
+		return szereplok;
+	}
+
 	/**
 	 * Noveli a hoszintet 1-gyel, majd ezt fajlba irva jelzi.
 	 * @throws IOException
