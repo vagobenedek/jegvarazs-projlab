@@ -45,7 +45,7 @@ public class SkeletonTesterClass {
     public static void initTest() throws IOException {
         /*Letrejon egy Vezerlo peldany, melynek konstruktorában lefut az init szekvencia
         Tuladjonkeppen itt epul fel a jatek*/
-        new Vezerlo("init");
+        //new Vezerlo("init");
     }
     public static void kepessegHasznalatTest() throws IOException {
         System.out.println("Kepesseg hasznalat szekvencia");
