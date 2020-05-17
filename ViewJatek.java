@@ -16,8 +16,8 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 public class ViewJatek extends Canvas implements IDrawable {
     HashMap<ViewMezo, Mezo> mezoHashMap = new HashMap<ViewMezo, Mezo>();
-    HashMap<ViewKarakter,IKarakter> karakterHashMap;
-    HashMap<ViewTargy, ITargy> targyHashMap;
+    HashMap<ViewKarakter,IKarakter> karakterHashMap= new HashMap<ViewKarakter,IKarakter>();
+    HashMap<ViewTargy, ITargy> targyHashMap = new HashMap<ViewTargy, ITargy>();
     private Vezerlo vezerlo;
     private Palya palya;
     private char code;
@@ -48,6 +48,8 @@ public class ViewJatek extends Canvas implements IDrawable {
                 if (nev.equals("Sarkkutato")) vk = new ViewSarkkutato();
                 else if (nev.equals("Eszkimo")) vk = new ViewEszkimo();
                 else if (nev.equals("Jegesmedve")) vk = new ViewJegesmedve();
+                if(vk == null)
+                    System.out.println("hiba");
                 karakterHashMap.put(vk, k);
             }
             ITargy t = m.getTargy();

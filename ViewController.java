@@ -25,8 +25,8 @@ public class ViewController extends JFrame{
         catch (Exception e){}
     }
 
-    public static void CreateUjJatek() throws IOException {
-        new ViewJatek();
+    public void CreateUjJatek() throws IOException {
+        new ViewJatek(this);
     }
 
 	public int getMeret() {
