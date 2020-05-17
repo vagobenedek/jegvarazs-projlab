@@ -30,7 +30,7 @@ public class MezoFactory {
 			mezok.add(new Stabil());
 
 		}
-		for (int j = 0; j != i; j++){
+		for (int j = 0; j != i; j++) {
 			if (j%row == 0){
 				mezok.get(j).setSzomszedMezo(new Tenger(), 3);
 			}
