@@ -246,6 +246,7 @@ public class ViewJatek extends JComponent{
 
             }
         });
+        this.updateUI();
     }
     public void addMezoToHashmap(Mezo m, ViewMezo vm) throws IOException {
         Mezo mezo = new Stabil();

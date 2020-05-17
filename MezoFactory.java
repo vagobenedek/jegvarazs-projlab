@@ -30,32 +30,50 @@ public class MezoFactory {
 			mezok.add(new Stabil());
 
 		}
+
 		for (int j = 0; j != i; j++){
 			if (j%row == 0){
-				mezok.get(j).setSzomszedMezo(new Tenger(), 3);
+				System.out.println(j+"36");
+				Tenger t = new Tenger();
+				mezok.add(t);
+				mezok.get(j).setSzomszedMezo(t, 3);
 			}
 			else {
+				System.out.println(j+"42");
 				mezok.get(j).setSzomszedMezo(mezok.get(j+1), 3);
 			}
 			if (j < row){
-				mezok.get(j).setSzomszedMezo(new Tenger(), 0);
+				System.out.println(j+"46");
+				Tenger t = new Tenger();
+				mezok.add(t);
+				mezok.get(j).setSzomszedMezo(t, 0);
 			}
 			else {
+				System.out.println(j+"52");
 				mezok.get(j).setSzomszedMezo(mezok.get(j+row), 0);
 			}
 			if (Math.floor(j/row) == row-1){
-				mezok.get(j).setSzomszedMezo(new Tenger(), 1);
+				System.out.println(j+"56");
+				Tenger t = new Tenger();
+				mezok.add(t);
+				mezok.get(j).setSzomszedMezo(t, 1);
 			}
 			else {
-				mezok.get(j).setSzomszedMezo(mezok.get(j-row), 1);
+				System.out.println(j+"62");
+				mezok.get(j).setSzomszedMezo(mezok.get(j+row), 1);
 			}
 			if (j%row == row-1){
-				mezok.get(j).setSzomszedMezo(new Tenger(), 2);
+				System.out.println(j+"66");
+				Tenger t = new Tenger();
+				mezok.add(t);
+				mezok.get(j).setSzomszedMezo(t, 2);
 			}
 			else {
+				System.out.println(j+"72");
 				mezok.get(j).setSzomszedMezo(mezok.get(j-1), 2);
 			}
 		}
+		System.out.println("76");
 		return mezok;
 	}
 }
