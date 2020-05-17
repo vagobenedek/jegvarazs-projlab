@@ -39,15 +39,27 @@ public class Palya {
 		Majd elhelyezzuk oket a palya megyes mezoin
 		 */
 		for (int i = 0; i != karakterek.size(); i++){
-			karakterek.get(i).addKarakterToMezo(mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1));
+			Mezo m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
+			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk")) {
+				m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
+			}
+			karakterek.get(i).addKarakterToMezo(m);
 		}
 		List<Alkatresz> alkatreszek =  new AlkatreszFactory().createAlkatresz(3);
 		for (int i = 0; i != alkatreszek.size(); i++){
-			alkatreszek.get(i).addAlkatreszToMezo(mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1));
+			Mezo m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
+			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk")) {
+				m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
+			}
+			alkatreszek.get(i).addAlkatreszToMezo(m);
 		}
 		List<Eszkoz> eszkozok =  new EszkozFactory().createEszkoz(3);
 		for (int i = 0; i != eszkozok.size(); i++){
-			eszkozok.get(i).addEszkozToMezo(mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1));
+			Mezo m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
+			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk")) {
+				m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
+			}
+			eszkozok.get(i).addEszkozToMezo(m);
 		}
 	}
 
