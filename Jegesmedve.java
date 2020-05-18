@@ -24,10 +24,21 @@ public class Jegesmedve implements IKarakter {
 	@Override
 	public void lep(int irany)throws IOException {
 		if (this.mezo.getSzomszed(irany)==null){
-			while(this.mezo.getSzomszed(irany)!=null){
+			while(this.mezo.getSzomszed(irany)==null){
 				irany = new Random().nextInt(4);
 			}
 		}
+		if (this.mezo.getSzomszed(irany).getNev().equals("Tenger")){
+			while(this.mezo.getSzomszed(irany).getNev().equals("Tenger")){
+				irany = new Random().nextInt(4);
+				if (this.mezo.getSzomszed(irany)==null){
+					while(this.mezo.getSzomszed(irany)==null){
+						irany = new Random().nextInt(4);
+					}
+				}
+			}
+		}
+
 		Mezo mezo =this.mezo.getSzomszed(irany);
 		this.mezo.lelep(this);
 		mezo.ralep(this);
