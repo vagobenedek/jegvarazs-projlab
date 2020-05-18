@@ -36,7 +36,7 @@ public class Palya {
 
 		//A jegmezok elredezese utan, nehany jegtablara egy hovihar segitsegevel haat teszunk
 		for (int i = 0; i != 4; i++){
-			//hovihar();
+			hovihar();
 		}
 		/*Letrehozzuk az egyes szereploket, akatreszeket, eszkozoket a factory-k seitsegevel.
 		Majd elhelyezzuk oket a palya megyes mezoin

@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * a jatekhoz tartozo ablakert felelos fuggveny
+ */
 public class ViewController extends JFrame{
 	private int meret = 10;
 	private int eSzam = 2;
