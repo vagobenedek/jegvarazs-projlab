@@ -4,7 +4,15 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * A jegesmedvet reprezentalo grafikus osztaly
+ */
 public class ViewJegesmedve extends ViewKarakter{
+    /**
+     * A karakter kirajzolasaert felelos fuggveny
+     * @param g graphics tipus, amire a rajzolas tortenik
+     * @throws IOException
+     */
     @Override
     public void DrawIKarakter(Graphics2D g) throws IOException {
         BufferedImage img = ImageIO.read(new File("images/jegesmedve.png"));

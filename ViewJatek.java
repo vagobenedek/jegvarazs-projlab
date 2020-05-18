@@ -15,11 +15,20 @@ import java.util.Map;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 /**
- *
+ * A jatek kirajzolasaert es a modellbeli elemek felveteleert, mozgatasaert, es grafikus elemekkel valo osszekapcsolasaert felelos osztaly
  */
 public class ViewJatek extends JComponent{
+    /**
+     * A modellbeli mezoket a grafikus objektumokkal osszekoto map
+     */
     HashMap<ViewMezo, Mezo> mezoHashMap = new HashMap<ViewMezo, Mezo>();
+    /**
+     * A modellbeli karaktereket a grafikus objektumokkal osszekoto map
+     */
     HashMap<ViewKarakter,IKarakter> karakterHashMap= new HashMap<ViewKarakter,IKarakter>();
+    /**
+     * A modellbeli targyakat a grafikus objektumokkal osszekoto map
+     */
     HashMap<ViewTargy, ITargy> targyHashMap = new HashMap<ViewTargy, ITargy>();
     /**
      * a jatekbeli vezerlo
@@ -55,33 +64,44 @@ public class ViewJatek extends JComponent{
         this.setVisible(true);
         //beallitjuk a meretet a mezok szamatol fuggoen
         this.setSize(vc.getMeret()*50+15, vc.getMeret()*50+60);
+
         List<Mezo> mezok = palya.getMezoelemek();
         ViewMezo vm = null;
         ViewKarakter vk = null;
         ViewTargy vt = null;
         String nev;
+        //vegigfutunk az osszes modellbeli mezon, letrehozzuk hozzajuk a grafikus objektumokat
         for (int i = 0; i != mezok.size(); i++){
+            //lekerjuk az eppen vizsgalt mezot
             Mezo m = mezok.get(i);
             nev = m.getNev();
+            //eldontjuk, hogy milyen tipusu a mezo, es ahhoz a megfelelo grafikus objektumot hozzuk letre hozza
             if (nev.equals("Instabil")) vm = new ViewInstabil();
             else if (nev.equals("Stabil")) vm = new ViewStabil();
             else if (nev.equals("Lyuk")) vm = new ViewLyuk();
             else if (nev.equals("Tenger")) vm = new ViewTenger();
+            //a letrehozott grafikus mezot es a hozz tartozo modellbeli mezot osszekapcsolva elmentjuk egy map segitsegevel
+            //azert szukseges, mert igy kesobb ha a modellben barmi valtozik, igy tudjuk a grafikus objektumban is a valtozast felvenni
             mezoHashMap.put(vm, m);
             List<IKarakter> karakterek = m.getKarakterek();
+            //vegigfutunk az osszes mezon talalhato karakteren, letrehozzuk hozzajuk a grafikus objektumokat
             for (int j = 0; j!= karakterek.size(); j ++) {
+                //lekerjuk az eppen vizsgalt karaktert
                 IKarakter k = karakterek.get(j);
                 nev = k.getNev();
+                //eldontjuk, hogy milyen tipusu a karakter, es az ahhoz megfelelo grafikus objektumot hozzuk letre hozza
                 if (nev.equals("Sarkkutato")) vk = new ViewSarkkutato();
                 else if (nev.equals("Eszkimo")) vk = new ViewEszkimo();
                 else if (nev.equals("Jegesmedve")) vk = new ViewJegesmedve();
-                if (vk == null)
-                    System.out.println("hiba");
+                //a letrehozott grafikus karaktert es a hozz tartozo modellbeli karaktert osszekapcsolva elmentjuk egy map segitsegevel
+                //azert szukseges, mert igy kesobb ha a modellben barmi valtozik, igy tudjuk a grafikus objektumban is a valtozast felvenni
                 karakterHashMap.put(vk, k);
             }
+            //vegigfutunk a mezon talalhato targyon (ha van), es letrehozzuk hozzajuk a grafikus objektumokat
             ITargy t = m.getTargy();
             if (t != null) {
                 nev = t.getNev();
+                //eldontjuk, hogy milyen tipusu a karakter, es az ahhoz megfelelo grafikus objektumot hozzuk letre hozza
                 if (nev.equals("Buvarruha")) vt = new ViewBuvarruha();
                 else if (nev.equals("Elelem")) vt = new ViewElelem();
                 else if (nev.equals("Jelzofeny")) vt = new ViewJelzofeny();
@@ -91,10 +111,14 @@ public class ViewJatek extends JComponent{
                 else if (nev.equals("Pisztoly")) vt = new ViewPisztoly();
                 else if (nev.equals("Sator")) vt = new ViewSator();
                 else if (nev.equals("Torekenylapat")) vt = new ViewTorekenyLapat();
+                //a letrehozott grafikus targyat es a hozz tartozo modellbeli targyat osszekapcsolva elmentjuk egy map segitsegevel
+                //azert szukseges, mert igy kesobb ha a modellben barmi valtozik, igy tudjuk a grafikus objektumban is a valtozast felvenni
                 targyHashMap.put(vt, t);
             }
         }
+        //lathatova tesszuk a komponensunket
         this.setVisible(true);
+        //meghivjuk az init fuggvenyt, ami majd elhelyezi az event listenereket
         Init();
     }
 
