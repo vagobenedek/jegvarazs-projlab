@@ -37,6 +37,7 @@ public class EszkozFactory {
 			eszkozok.add(new TorekenyLapat());
 			eszkozok.add(new Sator());
 			eszkozok.add(new Buvarruha());
+			eszkozok.add(new Kotel());
 		}
 		return eszkozok;
 	}

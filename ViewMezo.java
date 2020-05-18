@@ -21,5 +21,5 @@ public abstract class ViewMezo implements IDrawable{
     @Override
     public void DrawEpulet(Graphics2D g) {}
     @Override
-    public void DrawTulajdonsagok(Graphics2D g,Graphics2D g2,Integer lepesszam, String eszkoz,String alkatresz, Integer testho) throws IOException{}
+    public void DrawTulajdonsagok(Graphics2D g,Graphics2D g2,Integer lepesszam,Integer teherbiras, String eszkoz,String alkatresz, Integer testho) throws IOException{}
 }

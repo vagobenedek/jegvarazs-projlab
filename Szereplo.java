@@ -37,6 +37,7 @@ public abstract class Szereplo implements IKarakter{
 	 *listener attributum
 	 */
 	private JegvarazsListener jListener;
+	private int teherbiras =-1;
 	private boolean kihuzott = false;
 
 	/**
@@ -171,6 +172,19 @@ public abstract class Szereplo implements IKarakter{
 		this.a = a;
 	}
 
+	/**
+	 * beallitja a teherbiras erteket
+	 * @param teherbiras
+	 */
+	public void setTeherbiras(int teherbiras){
+		this.teherbiras=teherbiras;
+	}
+	/**
+	 * visszaadja a teherbiras erteket
+	 */
+	public int getTeherbiras(){
+		return teherbiras;
+	}
 	/**
 	 * beallitja a szereplo lepesszamat
 	 * @param lepesszam int

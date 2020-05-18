@@ -13,5 +13,5 @@ public interface IDrawable {
     void DrawHo(Graphics2D g) throws IOException;
     void DrawIKarakter(Graphics2D g) throws IOException;
     void DrawEpulet(Graphics2D g) throws IOException;
-    void DrawTulajdonsagok(Graphics2D g,Graphics2D g2,Integer lepesszam, String eszkoz,String alkatresz, Integer testho)throws IOException;
+    void DrawTulajdonsagok(Graphics2D g,Graphics2D g2,Integer lepesszam,Integer teherbiras, String eszkoz,String alkatresz, Integer testho)throws IOException;
 }

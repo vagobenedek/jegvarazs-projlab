@@ -328,7 +328,7 @@ public class ViewJatek extends JComponent{
                 if (sz.getAlkatresz()!=null){
                     alkatresz = sz.getAlkatresz().getNev();
                 }
-                keyKarakter.DrawTulajdonsagok(g4,g3,sz.getLepesszam(),eszkoz,alkatresz,sz.getTestho());
+                keyKarakter.DrawTulajdonsagok(g4,g3,sz.getLepesszam(),sz.getTeherbiras(),eszkoz,alkatresz,sz.getTestho());
             }
         }
         ////////////MEG KELL MEG IRNI VEGE////////////

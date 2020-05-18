@@ -45,7 +45,7 @@ public class Sarkkutato extends Szereplo {
 	@Override
 	public void kepessegHasznalat(int i) throws IOException {
 		if(i!=-1) {
-			getMezo().getSzomszed(i).getTeherBiras();
+			setTeherbiras(getMezo().getSzomszed(i).getTeherBiras());
 			FileWriter f = new FileWriter("./kimenet.txt", true);
 			f.append("A szereplo hasznalja a kepesseget.\n");
 			f.close();

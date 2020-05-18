@@ -19,7 +19,7 @@ public class Stabil extends Jegmezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Stabil letrejott\n");
 		f.close();
-		setTeherbiras(-1);
+		setTeherbiras((int)Double.POSITIVE_INFINITY);
 	}
 
 	/**
