@@ -176,7 +176,7 @@ public class ViewMenu extends JComponent {
 	final class MeretMinusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("meretMinus")) {
-				if(view.getMeret()-1 > 4) {
+				if(view.getMeret()-1 > 6) {
 					view.setMeret(view.getMeret() - 1);
 					text1.setText(Integer.toString(view.getMeret()));
 				}
