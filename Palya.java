@@ -10,6 +10,8 @@ public class Palya {
 
 	private List<Mezo> mezoelemek;
 	private int meret;
+	private int lastKarakter = -1;
+	private int lastTargy = -1;
 
 	public List<Mezo> getMezoelemek() {
 		return mezoelemek;
@@ -39,27 +41,37 @@ public class Palya {
 		Majd elhelyezzuk oket a palya megyes mezoin
 		 */
 		for (int i = 0; i != karakterek.size(); i++){
-			Mezo m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
-			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk")) {
-				m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
+			int nextKarakter = (new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1;
+			Mezo m = mezoelemek.get(nextKarakter);
+			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk") || nextKarakter == lastKarakter ) {
+				nextKarakter = (new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1;
+				m = mezoelemek.get(lastKarakter);
 			}
 			karakterek.get(i).addKarakterToMezo(m);
+			lastKarakter = nextKarakter;
 		}
 		List<Alkatresz> alkatreszek =  new AlkatreszFactory().createAlkatresz(3);
+		int nextTargy;
 		for (int i = 0; i != alkatreszek.size(); i++){
-			Mezo m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
-			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk")) {
-				m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
+			nextTargy = (new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1;
+			Mezo m = mezoelemek.get(nextTargy);
+			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk") || nextTargy == lastTargy) {
+				nextTargy = (new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1;
+				m = mezoelemek.get(nextTargy);
 			}
 			alkatreszek.get(i).addAlkatreszToMezo(m);
+			lastTargy = nextTargy;
 		}
 		List<Eszkoz> eszkozok =  new EszkozFactory().createEszkoz(3);
 		for (int i = 0; i != eszkozok.size(); i++){
-			Mezo m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
-			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk")) {
-				m = mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1);
+			nextTargy = (new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1;
+			Mezo m = mezoelemek.get(nextTargy);
+			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk") || nextTargy == lastTargy) {
+				nextTargy = (new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1;
+				m = mezoelemek.get(nextTargy);
 			}
 			eszkozok.get(i).addEszkozToMezo(m);
+			lastTargy = nextTargy;
 		}
 	}
 
