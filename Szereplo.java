@@ -191,9 +191,7 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void setLepesszam(int lepesszam) {
 		this.lepesszam = lepesszam;
-		System.out.println(lepesszam);
 		if(this.lepesszam<=0){
-			System.out.println("Valtas");
 			if (getjListener() != null) {
 				jListener.kovetkezoSzereploListener();
 			}
@@ -440,10 +438,9 @@ public abstract class Szereplo implements IKarakter{
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
 		Mezo mezo = getMezo().getSzomszed(irany);
 		this.m.lelep(this);
-		System.out.println(mezo.getNev());
 		mezo.ralep(this);
-		mezo.szereplokMeetMedve();
 		if (getjListener() != null) {
+			jListener.SzereplokMeetMedve();
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);
 		}

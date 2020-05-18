@@ -78,6 +78,7 @@ public class Vezerlo implements JegvarazsListener{
 		for (Szereplo szereplo : szereplok){
 			szereplo.setjListener(this);
 		}
+		jegesmedve.addJListener(this);
 	}
 
 	/**
@@ -221,11 +222,11 @@ public class Vezerlo implements JegvarazsListener{
 		kovetkezoSzereplo();
 	}
 
-	/*@Override
-	public void SzereplokMeetMedve(Jegesmedve jmedve) {
+	@Override
+	public void SzereplokMeetMedve() {
 		for (Szereplo szereplo: szereplok){
 			try{
-				Mezo mezo = jmedve.getMezo();
+				Mezo mezo = jegesmedve.getMezo();
 			if(mezo.equals(szereplo.getMezo())&&mezo.isMedvetolVedett()){
 				szereplo.hitByMedve();
 			}}
@@ -233,5 +234,5 @@ public class Vezerlo implements JegvarazsListener{
 				e.printStackTrace();
 			}
 		}
-	}*/
+	}
 }
