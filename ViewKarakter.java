@@ -51,6 +51,11 @@ public abstract class ViewKarakter implements IDrawable{
             BufferedImage img = ImageIO.read(new File("images/torekenylapat.png"));
             g2.drawImage(img, 60, 0, null);
         }
+        else if(eszkoz.equals("Kotel")){
+            g2.drawRect(60,0,20,20);
+            BufferedImage img = ImageIO.read(new File("images/kotel.png"));
+            g2.drawImage(img, 60, 0, null);
+        }
         else if(eszkoz.equals("Buvarruha")){
             g2.drawRect(60,0,20,20);
             BufferedImage img = ImageIO.read(new File("images/buvarruha.png"));

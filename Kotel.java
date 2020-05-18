@@ -28,6 +28,7 @@ public class Kotel extends Eszkoz {
 	public void hasznal(Szereplo sz) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Kotel hasznalata\n");
+		System.out.println("Kotelet hasznaltam a "+sz.getClass()+"-on");
 		sz.getMezo().lelep(sz);
 		sz.setKihuzott(true);
 		f.append("A szereplot kihuztak.\n");
