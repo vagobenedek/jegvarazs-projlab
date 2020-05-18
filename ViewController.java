@@ -16,6 +16,8 @@ public class ViewController extends JFrame{
 		setTitle("Jegvarazs");
 		vm = new ViewMenu(this);
 		add(vm);
+		Dimension location = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setLocation(location.width/2-this.getWidth()/2,location.height/2-this.getHeight()/2);
 		//CreateUjJatek();
 	}
 	
@@ -31,6 +33,8 @@ public class ViewController extends JFrame{
 		new ViewJatek(this);
 		vm.setVisible(false);
         this.setSize(getMeret()*50+15, getMeret()*50+60);
+		Dimension location = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setLocation(location.width/2-this.getWidth()/2,location.height/2-this.getHeight()/2);
         this.remove(vm);
     }
 	public void Gyoztel()
