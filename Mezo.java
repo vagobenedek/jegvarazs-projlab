@@ -270,6 +270,7 @@ abstract public  class Mezo {
 	public void Satorszetszed()throws IOException{
 		this.setHovihartolVedett(false);
 		this.setMedvetolVedett(false);
+		this.setEpulet(null);
 	}
 
 	/**
@@ -437,27 +438,15 @@ abstract public  class Mezo {
 	 * @throws IOException
 	 */
 	public void huzzKi(Szereplo sz) throws IOException {
-		//System.out.println("Van a szereplonel kotel?\n1.: Igen\t2.: Nem");
 		FileWriter output = new FileWriter("./kimenet.txt", true);
 		output.write("Szereplo kihuzasa.\n");
 		output.close();
-		boolean vankotel = false;
 		for (IKarakter szereplo: this.getSzereplok()){
 			if(szereplo.getEszkoz()!=null && szereplo.getEszkoz().getNev().equals("Kotel")){
 				szereplo.huzdKi(sz);
-				vankotel = true;
 				break;
 			}
 		}
-		if (!vankotel) {
-			output = new FileWriter("./kimenet.txt", true);
-			output.write("A jateknak vege: vesztettel.\n");
-			output.close();
-			if(sz.getjListener()!=null) {
-				sz.getjListener().jatekVegeListener();
-			}
-		}
-
 	}
 
 	/**

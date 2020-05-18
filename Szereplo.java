@@ -336,12 +336,12 @@ public abstract class Szereplo implements IKarakter{
 				if (this.getMezo().getSzomszed(i)!=null) {
 					Mezo mezo = this.getMezo().getSzomszed(i);
 					mezo.huzzKi(this);
-					if(IsKihuzott()){
-						setKihuzott(false);
-						
-						break;
-					}
 				}
+			}
+		}
+		if(!IsKihuzott()){
+			if (jListener!=null){
+				jListener.jatekVegeListener();
 			}
 		}
 		else if (this.getEszkoz()!=null && this.getEszkoz().getNev().equals("Buvarruha")){
