@@ -319,7 +319,6 @@ public abstract class Szereplo implements IKarakter{
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);
 		}
-		getMezo().getTargy();
 	}
 
 	/**
@@ -332,7 +331,7 @@ public abstract class Szereplo implements IKarakter{
 		f.close();
 
 		if (this.getEszkoz() == null || (this.getEszkoz()!=null && !this.getEszkoz().getNev().equals("Buvarruha"))){
-			for (int i = 0; i<4;i++){
+			for (int i = 0; i<4; i++){
 				
 				if (this.getMezo().getSzomszed(i)!=null) {
 					Mezo mezo = this.getMezo().getSzomszed(i);

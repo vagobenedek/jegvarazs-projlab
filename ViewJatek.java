@@ -167,7 +167,6 @@ public class ViewJatek extends JComponent{
                             break;
                             //a szereplo az eszkozet hasznalja a h billentyu eseten
                         case 'h':szereplo.hasznal();
-                            System.out.println(szereplo.getMezo().getEpulet());
                             break;
                         //a szereplo az eszkozet felveszi az f billentyu eseten
                         case 'f':szereplo.felvesz();
