@@ -366,10 +366,12 @@ public abstract class Szereplo implements IKarakter{
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szereplo havat as\n");
 		f.close();
-		getMezo().hoAso(lapat);
-		if (getjListener() != null) {
-			getjListener().hoviharSzamlaloCsokkentoListener();
-			setLepesszam(getLepesszam() - 1);
+		if (getMezo().getHoSzint()>0) {
+			getMezo().hoAso(lapat);
+			if (getjListener() != null) {
+				getjListener().hoviharSzamlaloCsokkentoListener();
+				setLepesszam(getLepesszam() - 1);
+			}
 		}
 	}
 
@@ -440,10 +442,12 @@ public abstract class Szereplo implements IKarakter{
 		this.m.lelep(this);
 		System.out.println(mezo.getNev());
 		mezo.ralep(this);
+		mezo.szereplokMeetMedve();
 		if (getjListener() != null) {
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);
 		}
+
 	}
 
 	/**

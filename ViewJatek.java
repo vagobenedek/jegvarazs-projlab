@@ -167,6 +167,7 @@ public class ViewJatek extends JComponent{
                             break;
                             //a szereplo az eszkozet hasznalja a h billentyu eseten
                         case 'h':szereplo.hasznal();
+                            System.out.println(szereplo.getMezo().getEpulet());
                             break;
                         //a szereplo az eszkozet felveszi az f billentyu eseten
                         case 'f':szereplo.felvesz();
@@ -276,26 +277,30 @@ public class ViewJatek extends JComponent{
                 keyMezo.DrawHo(g2);
             }
 
-            //karakterek kirajzolasa a mezon
-            for(Map.Entry<ViewKarakter, IKarakter> k: karakterHashMap.entrySet())
-            {
-                ViewKarakter keyKarakter = k.getKey();
-                IKarakter valueKarakter = k.getValue();
-                //ha a jelenlegi mezo megegyezik a karakter mezojevel
-                if(valueMezo == karakterHashMap.get(keyKarakter).getMezo())
-                {
-                    keyKarakter.DrawIKarakter(g2);
-                }
 
-            }
             IEpulet epulet = valueMezo.getEpulet();
             //ha van a mezon epulet
             if(epulet != null)
             {
-                if (mezoHashMap.get(keyMezo).isMedvetolVedett()&&!mezoHashMap.get(keyMezo).isHovihartolVedett())
+                if (!mezoHashMap.get(keyMezo).isMedvetolVedett()&&mezoHashMap.get(keyMezo).isHovihartolVedett())
                     new ViewSator().DrawEpulet(g2);
                 else if (mezoHashMap.get(keyMezo).isMedvetolVedett()&&mezoHashMap.get(keyMezo).isHovihartolVedett())
                     new ViewIglu().DrawEpulet(g2);
+                //karakterek kirajzolasa a mezon
+            }
+            else{
+
+                for(Map.Entry<ViewKarakter, IKarakter> k: karakterHashMap.entrySet())
+                {
+                    ViewKarakter keyKarakter = k.getKey();
+                    IKarakter valueKarakter = k.getValue();
+                    //ha a jelenlegi mezo megegyezik a karakter mezojevel
+                    if(valueMezo == karakterHashMap.get(keyKarakter).getMezo())
+                    {
+                        keyKarakter.DrawIKarakter(g2);
+                    }
+
+                }
             }
             number++;
         }
@@ -308,7 +313,6 @@ public class ViewJatek extends JComponent{
         for (int i = 0; i< vezerlo.getPalya().getMezoelemek().size();i++){
             Mezo m = vezerlo.getPalya().getMezoelemek().get(i);
             if (m.equals(sz.getMezo())){
-                System.out.println("benn");
                 number = i;
                 break;
             }
