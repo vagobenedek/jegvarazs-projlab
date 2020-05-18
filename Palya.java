@@ -35,7 +35,7 @@ public class Palya {
 
 		//A jegmezok elredezese utan, nehany jegtablara egy hovihar segitsegevel haat teszunk
 		for (int i = 0; i != 4; i++){
-			hovihar();
+			//hovihar();
 		}
 		/*Letrehozzuk az egyes szereploket, akatreszeket, eszkozoket a factory-k seitsegevel.
 		Majd elhelyezzuk oket a palya megyes mezoin
@@ -45,8 +45,9 @@ public class Palya {
 			Mezo m = mezoelemek.get(nextKarakter);
 			while (m.getNev().equals("Tenger") || m.getNev().equals("Lyuk") || nextKarakter == lastKarakter ) {
 				nextKarakter = (new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1;
-				m = mezoelemek.get(lastKarakter);
+				m = mezoelemek.get(nextKarakter);
 			}
+			System.out.println(lastKarakter +" - "+ nextKarakter);
 			karakterek.get(i).addKarakterToMezo(m);
 			lastKarakter = nextKarakter;
 		}
