@@ -227,7 +227,7 @@ public class Vezerlo implements JegvarazsListener{
 		for (Szereplo szereplo: szereplok){
 			try{
 				Mezo mezo = jegesmedve.getMezo();
-			if(mezo.equals(szereplo.getMezo())&&mezo.isMedvetolVedett()){
+				if(mezo.equals(szereplo.getMezo())&&!mezo.isMedvetolVedett()){
 				szereplo.hitByMedve();
 			}}
 			catch (Exception e){
