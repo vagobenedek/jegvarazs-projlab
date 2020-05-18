@@ -270,6 +270,7 @@ abstract public  class Mezo {
 	public void Satorszetszed()throws IOException{
 		this.setHovihartolVedett(false);
 		this.setMedvetolVedett(false);
+		this.setEpulet(null);
 	}
 
 	/**
