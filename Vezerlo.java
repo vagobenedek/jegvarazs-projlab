@@ -32,8 +32,8 @@ public class Vezerlo implements JegvarazsListener{
 	 * @throws IOException
 	 */
 	public Vezerlo(int meret, int sarkkutato, int eszkimo) throws IOException {
-		FileWriter f = new FileWriter("./kimenet.txt", true);
-		f.append("Vezerlo letrejott.\n");
+		FileWriter f = new FileWriter("./kimenet.txt", false);
+		f.write("Vezerlo letrejott.\n");
 		f.close();
 		jegesmedve = new Jegesmedve();
 		List<IKarakter> karakterek =  new SzereploFactory().createSzereplo(eszkimo, sarkkutato);
