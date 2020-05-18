@@ -20,7 +20,6 @@ public class SzereploFactory {
 
 	/**
 	 * A factory legyartja a megfelelo szamu egyseget
-	 * @param n int
 	 * @return
 	 * @throws IOException
 	 */
