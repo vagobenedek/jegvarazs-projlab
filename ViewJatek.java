@@ -289,6 +289,17 @@ public class ViewJatek extends JComponent{
                     new ViewSator().DrawEpulet(g2);
                 else if (mezoHashMap.get(keyMezo).isMedvetolVedett()&&mezoHashMap.get(keyMezo).isHovihartolVedett())
                     new ViewIglu().DrawEpulet(g2);
+                for(Map.Entry<ViewKarakter, IKarakter> k: karakterHashMap.entrySet())
+                {
+                    ViewKarakter keyKarakter = k.getKey();
+                    IKarakter valueKarakter = k.getValue();
+                    //ha a jelenlegi mezo megegyezik a karakter mezojevel
+                    if( valueKarakter.getNev().equals("Jegesmedve") && valueMezo == karakterHashMap.get(keyKarakter).getMezo())
+                    {
+                        keyKarakter.DrawIKarakter(g2);
+                    }
+
+                }
                 //karakterek kirajzolasa a mezon
             }
             else{
