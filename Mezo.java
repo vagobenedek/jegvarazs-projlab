@@ -260,7 +260,7 @@ abstract public  class Mezo {
 	 * @param sator Sator
 	 */
 	public void satratEpit(Sator sator)throws IOException{
-		sator.SetVedelem();
+		sator.SetVedelem(this);
 		setEpulet(sator);
 	}
 

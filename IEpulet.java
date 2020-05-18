@@ -7,5 +7,5 @@ public interface IEpulet {
     /**
      * Setvedelem fuggveny
      */
-	void SetVedelem() throws IOException;
+	void SetVedelem(Mezo m) throws IOException;
 }

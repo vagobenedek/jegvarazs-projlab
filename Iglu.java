@@ -23,14 +23,14 @@ public class Iglu implements IEpulet {
 		//Az iglu amint letrejon, vedelmet allit be a mezonek
 		this.m = m;
 		m.setEpulet(this);
-		SetVedelem();
+		SetVedelem(this.m);
 	}
 	/**
 	 * Beallitja a mezo vedelmet ugy, hogy
 	 * hovihartol és medvetol is vedett legyen
 	 */
 	@Override
-	public void SetVedelem()throws IOException {
+	public void SetVedelem(Mezo m)throws IOException {
 		m.setHovihartolVedett(true);
 		m.setMedvetolVedett(true);
 	}
