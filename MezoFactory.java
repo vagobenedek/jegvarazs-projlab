@@ -62,7 +62,7 @@ public class MezoFactory {
 					mezok.add(new Stabil());
 				}
 				else if (p <= 8){
-					mezok.add(new Instabil(new Random().nextInt(numberOfPlayers)));
+					mezok.add(new Instabil(new Random().nextInt(numberOfPlayers-2)+2));
 				}
 				else if (p == 9){
 					mezok.add(new Lyuk());
