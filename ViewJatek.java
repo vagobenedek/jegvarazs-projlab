@@ -186,6 +186,10 @@ public class ViewJatek extends JComponent{
                             break;
                             // a kovetkezo szereplore lepunk a passzolassal
                         case 'p':vezerlo.kovetkezoSzereplo();
+                        break;
+                        //osszerakatjuk a szereplovel a harom alkatreszt
+                        case 'o': szereplo.osszerak();
+                            break;
                     }
                 }
                 catch (Exception ex){

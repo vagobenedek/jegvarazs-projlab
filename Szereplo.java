@@ -453,10 +453,6 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void osszerak() throws IOException {
         getMezo().epit(this);
-		if (getjListener() != null) {
-			getjListener().hoviharSzamlaloCsokkentoListener();
-			setLepesszam(getLepesszam() - 1);
-		}
 	}
 
 	/**
@@ -487,7 +483,11 @@ public abstract class Szereplo implements IKarakter{
 		f.append("A szereplonek sikerult osszeszerelni az alkatreszeket.\n");
 		f.close();
 		if (getjListener() != null) {
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam() - 1);
+			if (getLepesszam()>=0){
 			getjListener().gyozelemListener();
+			}
 		}
 	}
 
