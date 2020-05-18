@@ -151,7 +151,7 @@ public class Vezerlo implements JegvarazsListener{
 	 */
 	public void hoviharSzamlaloCsokkentes() {
 		hovihar_szamlalo -= new Random().nextInt(4) ;
-		if(hovihar_szamlalo==0){
+		if(hovihar_szamlalo<=0){
 			try {
 				if(palya!=null) {
 					palya.hovihar();
