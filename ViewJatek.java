@@ -298,7 +298,6 @@ public class ViewJatek extends JComponent{
                     {
                         keyKarakter.DrawIKarakter(g2);
                     }
-
                 }
                 //karakterek kirajzolasa a mezon
             }
@@ -313,7 +312,6 @@ public class ViewJatek extends JComponent{
                     {
                         keyKarakter.DrawIKarakter(g2);
                     }
-
                 }
             }
             number++;

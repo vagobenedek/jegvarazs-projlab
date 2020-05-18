@@ -2,6 +2,8 @@ import javax.swing.JButton;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ViewController extends JFrame{
 	private int meret = 10;
