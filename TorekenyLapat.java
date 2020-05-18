@@ -38,7 +38,7 @@ public class TorekenyLapat extends Lapat {
 		f.append("Torekeny lapat hasznalata.\n");
 		f.close();
 		
-		if (elettartam <= 0) {
+		if (elettartam < 0) {
 			sz.setEszkoz(null);
 		} 
 		else {

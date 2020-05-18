@@ -260,7 +260,7 @@ abstract public  class Mezo {
 	 * @param sator Sator
 	 */
 	public void satratEpit(Sator sator)throws IOException{
-		sator.SetVedelem();
+		sator.SetVedelem(this);
 		setEpulet(sator);
 	}
 
@@ -410,8 +410,7 @@ abstract public  class Mezo {
 	 * @throws IOException
 	 */
 	public void targyFelvetele(Szereplo sz) throws IOException {
-		//0425
-		if(this.isFeltort() && targy != null) {
+		if(this.isFeltort() && targy != null&&this.getHoSzint()<=0) {
 			targy.felvesz(sz);
 		}
 		else {
