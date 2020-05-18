@@ -338,10 +338,10 @@ public abstract class Szereplo implements IKarakter{
 					mezo.huzzKi(this);
 				}
 			}
-		}
-		if(!IsKihuzott()){
-			if (jListener!=null){
-				jListener.jatekVegeListener();
+			if(!IsKihuzott()){
+				if (jListener!=null){
+					jListener.jatekVegeListener();
+				}
 			}
 		}
 		else if (this.getEszkoz()!=null && this.getEszkoz().getNev().equals("Buvarruha")){

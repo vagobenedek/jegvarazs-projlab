@@ -68,7 +68,6 @@ public abstract class Eszkoz implements ITargy {
 		f.append("Eszkoz felveteti magat a szereplovel.\n");
 		f.close();
 		Sz.eszkozFelvetele(this);
-		System.out.println(this.getClass() + " lett felveve.");
 	}
 
 	/**
