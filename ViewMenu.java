@@ -7,6 +7,9 @@ import java.io.IOException;
 import javax.swing.*;
 
 public class ViewMenu extends JComponent {
+	/**
+	 * ViewController, melyhez a menu tartozik.
+	 */
 	private ViewController view;
 	/**
 	 * A menu gombjai.
@@ -34,9 +37,15 @@ public class ViewMenu extends JComponent {
 	private JTextField text2 = new JTextField(15);
 	private JTextField text3 = new JTextField(15);
 	
+	/**
+	 * ViewMenu konstruktor
+	 * @param vc
+	 */
 	public ViewMenu(ViewController vc) {
 		view = vc;
+		// Menu meretenek beallitasa.
 		view.setSize(new Dimension(400, 400));
+		// Menu megjelenitese BoxLayout-tal.
 		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
 		/**
@@ -53,12 +62,12 @@ public class ViewMenu extends JComponent {
 		ActionListener alUjJatek = new UjJatekButtonActionListener();
 		button.addActionListener(alUjJatek);
 		
+		
 		/**
 		 * Palya meretet jelzo label JComponent-hez adasa.
 		 */
 		label1.setAlignmentX(Component.CENTER_ALIGNMENT);
 		add(label1);
-		
 		/**
 		 * A palya meretet jelzo TextField es a ket modositogomb JPanel-hez adasa.
 		 * Majd a JPanel JComponent-hez rendelese.
@@ -85,12 +94,12 @@ public class ViewMenu extends JComponent {
 		ActionListener alMeretPlus = new MeretPlusButtonActionListener();
 		meretPlus.addActionListener(alMeretPlus);
 		
+		
 		/**
 		 * Eszkimok darabszamat jelzo label JComponent-hez adasa.
 		 */
 		label2.setAlignmentX(Component.CENTER_ALIGNMENT);
 		add(label2);
-		
 		/**
 		 * Az eszkimok darabszamat jelzo TextField es a ket modositogomb JPanel-hez adasa.
 		 * Majd a JPanel JComponent-hez rendelese.
@@ -117,12 +126,12 @@ public class ViewMenu extends JComponent {
 		ActionListener alEszkimoPlus = new EszkimoPlusButtonActionListener();
 		eszkimoPlus.addActionListener(alEszkimoPlus);
 		
+		
 		/**
 		 * Sarkkutatok darabszamat jelzo label JComponent-hez adasa.
 		 */
 		label3.setAlignmentX(Component.CENTER_ALIGNMENT);
 		add(label3);
-		
 		/**
 		 * A sarkkutatok darabszamat jelzo TextField es a ket modositogomb JPanel-hez adasa.
 		 * Majd a JPanel JComponent-hez rendelese.
@@ -150,10 +159,9 @@ public class ViewMenu extends JComponent {
 		sarkkutatoPlus.addActionListener(alSarkkutatoPlus);
 	}
 	
+	// BELSO LISTENER OSZTALYOK:
 	/**
-	 * 
-	 * @author dgurz
-	 *
+	 * Az Uj jatek gombhoz tartozo belso listener osztaly.
 	 */
 	final class UjJatekButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
@@ -169,13 +177,12 @@ public class ViewMenu extends JComponent {
 	}
 	
 	/**
-	 * 
-	 * @author dgurz
-	 *
+	 * Az palya meretenek csokkentese gombhoz tartozo belso listener osztaly.
 	 */
 	final class MeretMinusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("meretMinus")) {
+				// A palya minimum merete: 7x7
 				if(view.getMeret()-1 > 6) {
 					view.setMeret(view.getMeret() - 1);
 					text1.setText(Integer.toString(view.getMeret()));
@@ -185,13 +192,12 @@ public class ViewMenu extends JComponent {
 	}
 	
 	/**
-	 * 
-	 * @author dgurz
-	 *
+	 * Az palya meretenek novelese gombhoz tartozo belso listener osztaly.
 	 */
 	final class MeretPlusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("meretPlus")) {
+				// A palya maximum merete: 15x15
 				if(view.getMeret()+1 < 16) {
 					view.setMeret(view.getMeret() + 1);
 					text1.setText(Integer.toString(view.getMeret()));
@@ -201,13 +207,12 @@ public class ViewMenu extends JComponent {
 	}
 	
 	/**
-	 * 
-	 * @author dgurz
-	 *
+	 * Az eszkimok szamanak csokkentese gombhoz tartozo belso listener osztaly.
 	 */
 	final class EszkimoMinusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("eszkimoMinus")) {
+				// Minimum 3 szereplo van a palyan, 0-nal kevesebb eszkimo nem lehet.
 				if(view.getSSzam() + (view.getESzam()-1) > 2 && view.getESzam()-1 >= 0) {
 					view.setESzam(view.getESzam() - 1);
 					text2.setText(Integer.toString(view.getESzam()));
@@ -217,13 +222,12 @@ public class ViewMenu extends JComponent {
 	}
 	
 	/**
-	 * 
-	 * @author dgurz
-	 *
+	 * Az eszkimok szamanak novelese gombhoz tartozo belso listener osztaly.
 	 */
 	final class EszkimoPlusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("eszkimoPlus")) {
+				// Maximum 10 szereplo lehet a palyan.
 				if(view.getSSzam() + (view.getESzam()+1) < 11) {
 					view.setESzam(view.getESzam() + 1);
 					text2.setText(Integer.toString(view.getESzam()));
@@ -233,13 +237,12 @@ public class ViewMenu extends JComponent {
 	}
 	
 	/**
-	 * 
-	 * @author dgurz
-	 *
+	 * A sarkkutatok szamanak csokkentese gombhoz tartozo belso listener osztaly.
 	 */
 	final class SarkkutatoMinusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("sarkkutatoMinus")) {
+				// Minimum 3 szereplo van a palyan, 0-nal kevesebb sarkkutato nem lehet.
 				if(view.getESzam() + (view.getSSzam()-1) > 2 && view.getSSzam()-1 >= 0) {
 					view.setSSzam(view.getSSzam() - 1);
 					text3.setText(Integer.toString(view.getSSzam()));
@@ -249,13 +252,12 @@ public class ViewMenu extends JComponent {
 	}
 	
 	/**
-	 * 
-	 * @author dgurz
-	 *
+	 * A sarkkutatok szamanak novelese gombhoz tartozo belso listener osztaly.
 	 */
 	final class SarkkutatoPlusButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent ae) {
 			if(ae.getActionCommand().equals("sarkkutatoPlus")) {
+				// Maximum 10 szereplo lehet a palyan.
 				if(view.getESzam() + (view.getSSzam()+1) < 11) {
 					view.setSSzam(view.getSSzam() + 1);
 					text3.setText(Integer.toString(view.getSSzam()));
