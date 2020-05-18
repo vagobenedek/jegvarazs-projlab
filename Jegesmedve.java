@@ -32,15 +32,19 @@ public class Jegesmedve implements IKarakter {
 		this.mezo.lelep(this);
 		mezo.ralep(this);
 		mezo.szereplokMeetMedve();
+		if (jListener != null) {
+			jListener.SzereplokMeetMedve();
+		}
 
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("A jegesmedve lepett.\n");
 		f.close();
-		//jListener.SzereplokMeetMedve(this);
 		// TODO Auto-generated method stub
 		
 	}
-
+	public void addJListener(JegvarazsListener jListener){
+		this.jListener=jListener;
+	}
 	@Override
 	public void hasznal() throws IOException {
 

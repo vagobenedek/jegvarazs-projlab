@@ -40,7 +40,7 @@ public class Eszkimo extends Szereplo {
 	 * @throws IOException
 	 */
 	public void kepessegHasznalat(int i) throws IOException {
-		if (getMezo().getEpulet() == null) {
+		if (getMezo().getEpulet() == null&& i == -1) {
 			getMezo().iglutEpit();
 			FileWriter f = new FileWriter("./kimenet.txt", true);
 			//f.append("Eszkimo kepesseg hasznalata sikeres.\n");

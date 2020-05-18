@@ -191,9 +191,7 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void setLepesszam(int lepesszam) {
 		this.lepesszam = lepesszam;
-		System.out.println(lepesszam);
 		if(this.lepesszam<=0){
-			System.out.println("Valtas");
 			if (getjListener() != null) {
 				jListener.kovetkezoSzereploListener();
 			}
@@ -366,10 +364,12 @@ public abstract class Szereplo implements IKarakter{
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Szereplo havat as\n");
 		f.close();
-		getMezo().hoAso(lapat);
-		if (getjListener() != null) {
-			getjListener().hoviharSzamlaloCsokkentoListener();
-			setLepesszam(getLepesszam() - 1);
+		if (getMezo().getHoSzint()>0) {
+			getMezo().hoAso(lapat);
+			if (getjListener() != null) {
+				getjListener().hoviharSzamlaloCsokkentoListener();
+				setLepesszam(getLepesszam() - 1);
+			}
 		}
 	}
 
@@ -438,12 +438,13 @@ public abstract class Szereplo implements IKarakter{
 		//lekerdezi a mezo szomszedjat a megkapott irany parameternek megfeleloen
 		Mezo mezo = getMezo().getSzomszed(irany);
 		this.m.lelep(this);
-		System.out.println(mezo.getNev());
 		mezo.ralep(this);
 		if (getjListener() != null) {
+			jListener.SzereplokMeetMedve();
 			getjListener().hoviharSzamlaloCsokkentoListener();
 			setLepesszam(getLepesszam() - 1);
 		}
+
 	}
 
 	/**
@@ -452,10 +453,6 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void osszerak() throws IOException {
         getMezo().epit(this);
-		if (getjListener() != null) {
-			getjListener().hoviharSzamlaloCsokkentoListener();
-			setLepesszam(getLepesszam() - 1);
-		}
 	}
 
 	/**
@@ -486,7 +483,11 @@ public abstract class Szereplo implements IKarakter{
 		f.append("A szereplonek sikerult osszeszerelni az alkatreszeket.\n");
 		f.close();
 		if (getjListener() != null) {
+			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam() - 1);
+			if (getLepesszam()>=0){
 			getjListener().gyozelemListener();
+			}
 		}
 	}
 

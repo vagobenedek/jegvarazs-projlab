@@ -12,7 +12,7 @@ public class Lyuk extends Instabil {
     @Override
     public String getNev(){return "Lyuk";}
     public Lyuk() throws IOException {
-        super();
+        super(0);
         FileWriter f = new FileWriter("./kimenet.txt", true);
         f.append("Lyuk letrejott.\n");
         f.close();

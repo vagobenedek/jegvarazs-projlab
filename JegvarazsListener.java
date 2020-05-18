@@ -21,5 +21,5 @@ public interface JegvarazsListener{
      * Listener kovetkezo szereplore
      */
     void kovetkezoSzereploListener();
-    //void SzereplokMeetMedve(Jegesmedve jmedve);
+    void SzereplokMeetMedve();
 }

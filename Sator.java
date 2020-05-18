@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 
 /**
@@ -34,14 +35,25 @@ public class Sator extends Eszkoz implements IEpulet {
 	 */
 	@Override
 	public void hasznal(Szereplo sz) throws IOException {
-		// TODO Auto-generated method stub
 		if (mezo.getEpulet()==null)
 		{
 			mezo.satratEpit(this);
 			sz.setEszkoz(null);
 		}
 	}
-
+	/**
+	 * Parameterben kapott mezon elhelyezi a szereplot
+	 * @param m Mezo
+	 * @throws IOException
+	 */
+	@Override
+	public void addEszkozToMezo(Mezo m) throws IOException {
+		FileWriter f = new FileWriter("./kimenet.txt", true);
+		f.append("Eszkoz hozzaadodott a mezohoz.\n");
+		f.close();
+		m.setTargy(this);
+		mezo=m;
+	}
 	/**
 	 * beallitja a mezo vedelmeit
 	 * medvetol nem vedett
