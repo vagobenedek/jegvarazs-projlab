@@ -7,7 +7,7 @@ import java.io.IOException;
 public class ViewBuvarruha extends ViewTargy {
     @Override
     public void DrawTargy(Graphics2D g) throws IOException {
-        BufferedImage buvar = ImageIO.read(new File("images/buvar.png"));
+        BufferedImage buvar = ImageIO.read(new File("images/buvarruha.png"));
         g.drawImage(buvar, 0, 0, null);
     }
 }

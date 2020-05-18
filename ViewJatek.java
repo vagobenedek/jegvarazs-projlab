@@ -23,7 +23,6 @@ public class ViewJatek extends JComponent{
     private char code;
     private ViewController vc;
     public ViewJatek() throws IOException {
-        viewGame();
         Init();
     }
     public ViewJatek(ViewController vc) throws IOException {
@@ -31,7 +30,8 @@ public class ViewJatek extends JComponent{
         vezerlo = new Vezerlo(vc.getMeret(),vc.getSSzam(),vc.getESzam());
         palya = vezerlo.getPalya();
         vc.add(this);
-        this.setSize(vc.getMeret()*50, vc.getMeret()*50+30);
+        this.setVisible(true);
+        this.setSize(vc.getMeret()*50+15, vc.getMeret()*50+60);
         List<Mezo> mezok = palya.getMezoelemek();
         ViewMezo vm = null;
         ViewKarakter vk = null;
@@ -72,67 +72,11 @@ public class ViewJatek extends JComponent{
             }
         }
         this.setVisible(true);
-        viewGame();
+        System.out.println("itt");
         Init();
+
+        System.out.println("itt");
     }
-
-    public void viewGame() throws IOException {
-
-        HashMap<ViewMezo, Mezo> stabilmezok = new HashMap<>();
-        Mezo stabil = new Stabil();
-        ViewStabil viewStabil = new ViewStabil();
-        stabilmezok.put(viewStabil, stabil);
-
-        for(Map.Entry<ViewMezo, Mezo> m: stabilmezok.entrySet()) {
-            ViewMezo keyMezo = m.getKey();
-            Mezo valueMezo = m.getValue();
-        }
-
-        HashMap<Integer, Mezo> azonosito = new HashMap<>();
-        azonosito.put(1, stabil);
-
-        for(Map.Entry<Integer, Mezo> m: azonosito.entrySet()) {
-            Integer keyMezo = m.getKey();
-            Mezo valueMezo = m.getValue();
-        }
-
-
-        for(int i = 0; i<100; i++){
-
-            if (azonosito.get(i) instanceof Stabil){
-                ViewStabil vs = new ViewStabil();
-            } else {
-            }
-
-
-            /*
-            BufferedImage stabil = null;
-            stabil = ImageIO.read(new File("images/stabil-instabil.png"));
-            BufferedImage finalStabil = stabil;
-
-            BufferedImage tenger = null;
-            tenger = ImageIO.read(new File("images/tenger.png"));
-            BufferedImage finalTenger = tenger;
-
-            BufferedImage eszkimo = null;
-            eszkimo = ImageIO.read(new File("images/eszkimo.png"));
-            BufferedImage finalEszkimo = eszkimo;
-            */
-            //buttons[i] = ViewMezo.DrawMezo(buttons[i]);
-            /*
-                buttons[i] = new JPanel() {
-                    @Override
-                    protected void paintComponent(Graphics g) {
-                        super.paintComponent(g);
-                        g.drawImage(finalTenger, 0, 0, null);
-                        g.drawImage(finalEszkimo, 0, 0, null);
-                    }
-                };
-
-             */
-            }
-    }
-
     @Override
     public void paint(Graphics g){
         //super.paint(g);
@@ -142,15 +86,26 @@ public class ViewJatek extends JComponent{
         catch (Exception e){
             e.printStackTrace();
         }
+        if (vezerlo.Gyoztel()){
+               vc.Gyoztel();
+               vc.repaint();
+               vc.remove(this);
+        }
+        if(vezerlo.Vesztettel()) {
+            vc.Vesztettel();
+            vc.repaint();
+            vc.remove(this);
+        }
     }
 
     /**
      * A billentyuesemenyek hozzadasa a komponenshez
      */
     public void Init(){
-        //erre a fokuszra helyezzuk a fokuszt
         this.setFocusable(true);
         //a Listenerek hozzaadasa
+
+        System.out.println("in");
         this.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -161,7 +116,7 @@ public class ViewJatek extends JComponent{
             public void keyPressed(KeyEvent e) {
                 // az aktualis szereplo elerese
                 Szereplo szereplo = vezerlo.getAktualisSzerelo();
-
+                System.out.println("in");
                 try {
                     //szetvalasztjuk a lenyomott billentyu
                     switch (e.getKeyChar()) {
@@ -289,7 +244,6 @@ public class ViewJatek extends JComponent{
                     keyMezo=m.getKey();
                 }
             }
-            System.out.println(number + ": " + valueMezo.getNev() + "-- This is this" );
             double position = Math.sqrt(mezoHashMap.size());
             Graphics2D g2 = (Graphics2D)g.create();
             g2.translate(number%position*50,((int)(number/position)*50));
@@ -313,11 +267,11 @@ public class ViewJatek extends JComponent{
 
             //ha a mezo nincs feltorve kirajzolja a jeget
             //ha a mezon van ho kirajzolja
-            if(!mezoHashMap.get(keyMezo).isFeltort())
+            if(!valueMezo.isFeltort())
             {
                 keyMezo.DrawJeg(g2);
             }
-            if(mezoHashMap.get(keyMezo).getHoSzint()!=0)
+            if(valueMezo.getHoSzint()!=0)
             {
                 keyMezo.DrawHo(g2);
             }
@@ -328,13 +282,13 @@ public class ViewJatek extends JComponent{
                 ViewKarakter keyKarakter = k.getKey();
                 IKarakter valueKarakter = k.getValue();
                 //ha a jelenlegi mezo megegyezik a karakter mezojevel
-                if(mezoHashMap.get(keyMezo) == karakterHashMap.get(keyKarakter).getMezo())
+                if(valueMezo == karakterHashMap.get(keyKarakter).getMezo())
                 {
                     keyKarakter.DrawIKarakter(g2);
                 }
 
             }
-            IEpulet epulet = mezoHashMap.get(keyMezo).getEpulet();
+            IEpulet epulet = valueMezo.getEpulet();
             //ha van a mezon epulet
             if(epulet != null)
             {
@@ -345,17 +299,36 @@ public class ViewJatek extends JComponent{
             }
             number++;
         }
-        Graphics2D g3 = (Graphics2D)g.create();
-        g3.translate(0,this.getHeight());
         ////////////MEG KELL MEG IRNI////////////
         Szereplo sz = vezerlo.getAktualisSzerelo();
+        Graphics2D g3 = (Graphics2D)g.create();
+        g3.translate(0,this.getHeight()-20);
+        Graphics2D g4 = (Graphics2D)g.create();
+        double position = Math.sqrt(mezoHashMap.size());
+        for (int i = 0; i< vezerlo.getPalya().getMezoelemek().size();i++){
+            Mezo m = vezerlo.getPalya().getMezoelemek().get(i);
+            if (m.equals(sz.getMezo())){
+                System.out.println("benn");
+                number = i;
+                break;
+            }
+        }
+        g4.translate(number%position*50,((int)(number/position)*50));
+        String eszkoz = "";
+        String alkatresz = "";
         //Lekerdezi a szereplo tulajdonsagait es megjeleníti (testho, lepesszam...stb.)
         //DrawTulajdonsagok(sz.getLepesszam(), sz.getTestho(), sz.getEszkoz(), sz.getAlkatresz());
         for(Map.Entry<ViewKarakter, IKarakter> k: karakterHashMap.entrySet()) {
             ViewKarakter keyKarakter = k.getKey();
             IKarakter valueKarakter = k.getValue();
             if (sz.equals(valueKarakter)) {
-                keyKarakter.DrawTulajdonsagok(g3);
+                if (sz.getEszkoz()!=null){
+                    eszkoz = sz.getEszkoz().getNev();
+                }
+                if (sz.getAlkatresz()!=null){
+                    alkatresz = sz.getAlkatresz().getNev();
+                }
+                keyKarakter.DrawTulajdonsagok(g4,g3,sz.getLepesszam(),eszkoz,alkatresz,sz.getTestho());
             }
         }
         ////////////MEG KELL MEG IRNI VEGE////////////

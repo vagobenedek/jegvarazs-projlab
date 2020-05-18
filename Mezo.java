@@ -89,6 +89,7 @@ abstract public  class Mezo {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Mezo letrejott\n");
 		f.close();
+		this.feltort=false;
 	}
 
 	/**
@@ -260,6 +261,7 @@ abstract public  class Mezo {
 	 */
 	public void satratEpit(Sator sator)throws IOException{
 		sator.SetVedelem();
+		setEpulet(sator);
 	}
 
 	/**
@@ -410,7 +412,6 @@ abstract public  class Mezo {
 		//0425
 		if(this.isFeltort() && targy != null) {
 			targy.felvesz(sz);
-			setTargy(null);
 		}
 		else {
 			FileWriter output = new FileWriter("./kimenet.txt", true);

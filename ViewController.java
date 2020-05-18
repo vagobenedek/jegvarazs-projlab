@@ -7,13 +7,13 @@ public class ViewController extends JFrame{
 	private int meret = 10;
 	private int eSzam = 2;
 	private int sSzam = 1;
+	private int nyertel = 0;
 	ViewMenu vm;
 
 
 	public ViewController() throws IOException {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Jegvarazs");
-		
 		vm = new ViewMenu(this);
 		add(vm);
 		//CreateUjJatek();
@@ -27,13 +27,41 @@ public class ViewController extends JFrame{
         }
         catch (Exception e){}
     }
-
     public void CreateUjJatek() throws IOException {
-        new ViewJatek(this);
-        vm.setVisible(false);
-        this.setSize(meret*50+20, meret*50+30);
+		new ViewJatek(this);
+		vm.setVisible(false);
+        this.setSize(getMeret()*50+15, getMeret()*50+60);
         this.remove(vm);
     }
+	public void Gyoztel()
+	{
+		nyertel = 1;
+	}
+	public void Vesztettel() {
+		nyertel = 2;
+	}
+	@Override
+	public void paintComponents(Graphics g){
+		/*this.paintAll(g);
+		this.update(g);*/
+		this.paint(g);
+		//super.paintComponents(g);
+	}
+	@Override
+	public void paint(Graphics g){
+		super.paint(g);
+		Graphics g2 = g.create();
+		g2.translate(this.getWidth()/2-this.getWidth()/8,this.getHeight()/2-15);
+		g2.setFont(new Font(Font.SANS_SERIF,Font.ROMAN_BASELINE,30));
+		if(nyertel == 1){
+			g2.drawString("Game over",0,0);
+			g2.drawString("You Won!",0,35);
+		}
+		else if (nyertel == 2){
+			g2.drawString("Game over",0,0);
+			g2.drawString("You Lose!",0,35);
+		}
+	}
 
 	public int getMeret() {
 		return meret;

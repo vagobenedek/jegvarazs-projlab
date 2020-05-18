@@ -25,7 +25,8 @@ public class Vezerlo implements JegvarazsListener{
 	 * a a hatralevo idot tarolja a kovetkezo hoviharig
 	 */
 	private int hovihar_szamlalo;
-
+	private boolean gyoztel = false;
+	private boolean vesztettel = false;
 	/**
 	 * Vezerlo Skeleton konstruktora
 	 * @throws IOException
@@ -45,6 +46,7 @@ public class Vezerlo implements JegvarazsListener{
 		palya=new Palya(meret, meret, karakterek);
 		//beallitjuk az aktualis szereplot
 		aktualisSzereplo = szereplok.get(0);
+		Init();
 	}
 	public Palya getPalya(){
 		return palya;
@@ -67,12 +69,15 @@ public class Vezerlo implements JegvarazsListener{
 		setAktualisSzereplo(szereplo);
 		Init();
 	}
-
+	public boolean Gyoztel(){return gyoztel;}
+	public boolean Vesztettel(){return vesztettel;}
 	/**
-	 * a listener hozzaadasa a szereplohoz (Protonal)
+	 * a listener hozzaadasa a szereplohoz
 	 */
 	private void Init(){
-		aktualisSzereplo.setjListener(this);
+		for (Szereplo szereplo : szereplok){
+			szereplo.setjListener(this);
+		}
 	}
 
 	/**
@@ -104,6 +109,7 @@ public class Vezerlo implements JegvarazsListener{
 	 *
 	 */
 	public void jatekVege() {
+		vesztettel = true;
 	}
 
 	/**
@@ -115,10 +121,17 @@ public class Vezerlo implements JegvarazsListener{
 			if(aktualisSzereplo.equals(szereplok.get(i))){
 				if(i+1==szereplok.size()){
 					lepesekFeltoltese();
+					try {
+						jegesmedve.lep(new Random().nextInt(4));
+					}
+					catch(Exception e){
+						e.printStackTrace();
+					}
 					setAktualisSzereplo(szereplok.get(0));
 				}
 				else
 					setAktualisSzereplo(szereplok.get(i+1));
+				break;
 			}
 		}
 	}
@@ -159,6 +172,7 @@ public class Vezerlo implements JegvarazsListener{
 		FileWriter output = new FileWriter("./kimenet.txt", true);
 		output.write(".A szereplonek sikerult osszeszerelni az alkatreszeket.\n");
 		output.close();
+		gyoztel=true;
 	}
 
 	/**

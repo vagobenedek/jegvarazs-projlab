@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Random;
 
 /**
  * Jegedmesve karakter
@@ -22,6 +23,11 @@ public class Jegesmedve implements IKarakter {
 	 */
 	@Override
 	public void lep(int irany)throws IOException {
+		if (this.mezo.getSzomszed(irany)==null){
+			while(this.mezo.getSzomszed(irany)!=null){
+				irany = new Random().nextInt(4);
+			}
+		}
 		Mezo mezo =this.mezo.getSzomszed(irany);
 		this.mezo.lelep(this);
 		mezo.ralep(this);

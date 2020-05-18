@@ -12,7 +12,7 @@ public class ViewJegesmedve extends ViewKarakter{
     }
 
     @Override
-    public void DrawTulajdonsagok(Graphics2D g) {
+    public void DrawTulajdonsagok(Graphics2D g,Graphics2D g2, Integer lepesszam, String eszkoz, String alkatresz, Integer testho) throws IOException {
 
     }
 }

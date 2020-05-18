@@ -42,10 +42,13 @@ public class ViewStabil extends ViewMezo{
 
     @Override
     public void DrawJeg(Graphics2D g) {
+        g.setColor(new Color(0,0,255,128));
+        g.fillRect(0,0,50,50);
     }
 
     @Override
-    public void DrawHo(Graphics2D g) {
-
+    public void DrawHo(Graphics2D g) throws IOException{
+        BufferedImage ho = ImageIO.read(new File("images/ho.png"));
+        g.drawImage(ho, 0, 0, null);
     }
 }

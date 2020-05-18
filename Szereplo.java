@@ -48,10 +48,13 @@ public abstract class Szereplo implements IKarakter{
 	 * Szereplo konstruktor
 	 * @throws IOException
 	 */
-	public Szereplo() throws IOException {
+	public Szereplo(int testho) throws IOException {
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Jelzofeny letrejott\n");
 		f.close();
+		this.lepesszam=4;
+		this.testho = testho;
+		this.maxTestho = testho;
 	}
 
 	/**
@@ -174,7 +177,9 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void setLepesszam(int lepesszam) {
 		this.lepesszam = lepesszam;
+		System.out.println(lepesszam);
 		if(this.lepesszam<=0){
+			System.out.println("Valtas");
 			if (getjListener() != null) {
 				jListener.kovetkezoSzereploListener();
 			}
@@ -368,10 +373,10 @@ public abstract class Szereplo implements IKarakter{
 	 * @throws IOException
 	 */
 	public void alkatreszFelvetele(Alkatresz a) throws IOException {
-		//0425
 		if(this.a==null)
 		{
 			this.setAlkatresz(a);
+			this.getMezo().setTargy(null);
 		}
 		else
 		{
@@ -396,10 +401,11 @@ public abstract class Szereplo implements IKarakter{
 	 */
 	public void eszkozFelvetele(Eszkoz e) throws IOException{
 		this.setEszkoz(e);
+		this.getMezo().setTargy(null);
 		if (getjListener() != null) {
 			getjListener().hoviharSzamlaloCsokkentoListener();
+			setLepesszam(getLepesszam() - 1);
 		}
-        setLepesszam(getLepesszam()-1);
 		FileWriter output = new FileWriter("./kimenet.txt", true);
 		output.write("Szereplo targyfelvetele sikeres.\n");
 		output.write("Felvett targy: " + e.getNev() + ".\n");

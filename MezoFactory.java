@@ -72,20 +72,16 @@ public class MezoFactory {
 		for (int j = 0; j != i; j++) {
 
 			if (j%row == 0){
-				System.out.println(j+"36");
 				mezok.get(j).setSzomszedMezo(mezok.get(j+1), 3);
 
 			}
 			if (j < row){
-				System.out.println(j+"46");
 				mezok.get(j).setSzomszedMezo(mezok.get(j+row), 0);
 			}
 			if (Math.floor(j/row) == row-1){
-				System.out.println(j+"56");
 				mezok.get(j).setSzomszedMezo(mezok.get(j-row), 1);
 			}
 			if (j%row == row-1){
-				System.out.println(j+"66");
 				mezok.get(j).setSzomszedMezo(mezok.get(j-1), 2);
 			}
 			if ( !(j%row == 0) && !(j < row)  && ! (Math.floor(j/row) == row-1) && !(j%row == row-1) ) {
@@ -95,7 +91,6 @@ public class MezoFactory {
 				mezok.get(j).setSzomszedMezo(mezok.get(j-1), 2);
 			}
 		}
-		System.out.println("76");
 		return mezok;
 	}
 }

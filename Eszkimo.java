@@ -11,11 +11,10 @@ public class Eszkimo extends Szereplo {
  	 * @throws IOException
 	 */
 	public Eszkimo() throws IOException {
+		super(5);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Eszkimo letrejott.\n");
 		f.close();
-		setTestho(5);
-		setMaxTestho(5);
 	}
 
 	/**
@@ -24,6 +23,7 @@ public class Eszkimo extends Szereplo {
 	 * @throws IOException
 	 */
 	public Eszkimo(String s) throws IOException {
+		super(5);
 		FileWriter f = new FileWriter("./kimenet.txt", true);
 		f.append("Eszkimo letrejott.\n");
 		f.close();
@@ -40,14 +40,16 @@ public class Eszkimo extends Szereplo {
 	 * @throws IOException
 	 */
 	public void kepessegHasznalat(int i) throws IOException {
-		getMezo().iglutEpit();
-		FileWriter f = new FileWriter("./kimenet.txt", true);
-		//f.append("Eszkimo kepesseg hasznalata sikeres.\n");
-		f.append("A szereplo hasznalja a kepesseget.\n");
-		f.close();
-		if(getjListener()!=null) {
-			getjListener().hoviharSzamlaloCsokkentoListener();
-			setLepesszam(getLepesszam() - 1);
+		if (getMezo().getEpulet() == null) {
+			getMezo().iglutEpit();
+			FileWriter f = new FileWriter("./kimenet.txt", true);
+			//f.append("Eszkimo kepesseg hasznalata sikeres.\n");
+			f.append("A szereplo hasznalja a kepesseget.\n");
+			f.close();
+			if (getjListener() != null) {
+				getjListener().hoviharSzamlaloCsokkentoListener();
+				setLepesszam(getLepesszam() - 1);
+			}
 		}
 	}
 }

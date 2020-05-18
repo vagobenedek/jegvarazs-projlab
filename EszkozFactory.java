@@ -33,6 +33,10 @@ public class EszkozFactory {
 		List<Eszkoz> eszkozok = new ArrayList<>();
 		for (int j = 0; j!=i; j++){
 			eszkozok.add(new Elelem("init"));
+			eszkozok.add(new Lapat());
+			eszkozok.add(new TorekenyLapat());
+			eszkozok.add(new Sator());
+			eszkozok.add(new Buvarruha());
 		}
 		return eszkozok;
 	}

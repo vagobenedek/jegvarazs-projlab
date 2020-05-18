@@ -68,6 +68,9 @@ public class Palya {
 	 * @throws IOException
 	 */
 	public void hovihar() throws IOException {
-		mezoelemek.get((new Random().nextInt(meret-2)+1)*meret + new Random().nextInt(meret-2)+1).hovihar();
+		int random = new Random().nextInt(16);
+		for(int i = 0; i<random;i++) {
+			mezoelemek.get((new Random().nextInt(meret - 2) + 1) * meret + new Random().nextInt(meret - 2) + 1).hovihar();
+		}
 	}
 }
