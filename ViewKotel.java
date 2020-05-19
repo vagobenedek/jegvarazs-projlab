@@ -10,7 +10,7 @@ import java.io.IOException;
 public class ViewKotel extends ViewTargy{
     /**
      * az ososztaly DrawTargy felulirasa, ami kirajzolja a kotelet
-     * @param g :Graphics 2D
+     * @param g : Graphics 2D
      * @throws IOException
      */
     @Override
