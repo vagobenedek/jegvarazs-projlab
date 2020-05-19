@@ -37,9 +37,18 @@ public abstract class Szereplo implements IKarakter{
 	 *listener attributum
 	 */
 	private JegvarazsListener jListener;
+	/**
+	 * a teherbiras erteke amit majd kirajzolnk
+	 */
 	private int teherbiras =-1;
+	/**
+	 * kihuztak e a szereplot
+	 */
 	private boolean kihuzott = false;
-
+	/**
+	 * melyik mezore epitettunk satrat
+	 */
+	private Mezo satrasmezo;
 	/**
 	 * epitett satrat az elozo korben bool tipusu parameter
 	 */
@@ -197,7 +206,18 @@ public abstract class Szereplo implements IKarakter{
 			}
 		}
 	}
-
+	/**
+	 * beallitjuk a satras mezo erteket
+	 */
+	public void setSatrasmezo(Mezo mezo){
+		this.satrasmezo=mezo;
+	}
+	/**
+	 * visszaadjuk a satras mezot
+	 */
+	public Mezo getSatrasmezo(){
+		return satrasmezo;
+	}
 	/**
 	 * beallitja a mezot
 	 * @param m Mezo

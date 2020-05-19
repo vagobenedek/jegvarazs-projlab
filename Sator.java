@@ -38,6 +38,7 @@ public class Sator extends Eszkoz implements IEpulet {
 		if (mezo.getEpulet()==null)
 		{
 			sz.getMezo().satratEpit(this);
+			sz.setSatrasmezo(sz.getMezo());
 			sz.setEszkoz(null);
 		}
 	}

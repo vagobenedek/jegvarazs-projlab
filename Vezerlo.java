@@ -90,7 +90,8 @@ public class Vezerlo implements JegvarazsListener{
 		// ha ez a szereplo epitett satrat az elozo korben akkor a satrat lebontjuk
 		if(szereplo.getEpitettSatratElozoKorben()){
 			try {
-				szereplo.getMezo().Satorszetszed();
+				szereplo.getSatrasmezo().Satorszetszed();
+				szereplo.setSatrasmezo(null);
 				szereplo.setEpitettSatratElozoKorben(false);
 			}catch (Exception e){
 				e.printStackTrace();
